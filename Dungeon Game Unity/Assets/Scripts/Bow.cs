@@ -6,7 +6,7 @@ public class Bow : MonoBehaviour
 {
     private GameObject playerObj;
     private PlayerController player;
-    [SerializeField] private bool draw;
+    private bool draw;
     private bool fire;
     private GameObject firePointObj;
     private Transform firePoint;

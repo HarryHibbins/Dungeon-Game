@@ -9,6 +9,8 @@ TagManager:
   - Torch
   - Flame Holder
   - Fixed Torch Holder
+  - Enemy
+  - Arrow
   layers:
   - Default
   - TransparentFX

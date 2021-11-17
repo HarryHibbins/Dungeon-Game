@@ -6,29 +6,34 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
 
-    [SerializeField] float speed;
+    private float drawBackMultiplier; 
+    
+    [SerializeField] float baseSpeed;
+    public float actualspeed;
     [SerializeField] private float baseDamage;
-    [SerializeField] private float actualDamage;
+     public float actualDamage;
+    
     private GameObject bowObj;
     Bow bow;
-    private float drawBackMultiplyer; 
+    
+
     [SerializeField] float arrowDespawnTimer;
-    public float damage;
 
 
     private void Awake()
     {
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
-        drawBackMultiplyer = bow.drawBack;
+        drawBackMultiplier = bow.drawBack;
+        actualDamage = baseDamage * drawBackMultiplier;
+        actualspeed = baseSpeed * drawBackMultiplier;
 
-        speed = 30;
-        
+
     }
 
     void Update()
     {
-        transform.Translate(Vector3.forward * (speed * drawBackMultiplyer) * Time.deltaTime);
+        transform.Translate(Vector3.forward * actualspeed * Time.deltaTime);
         arrowDespawnTimer -= Time.deltaTime;
 
         if(arrowDespawnTimer <= 0)
@@ -37,13 +42,8 @@ public class Arrow : MonoBehaviour
         }
     }
     
-    private void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.tag == "Enemy")
-        {
-            //Hit
-            actualDamage = baseDamage * drawBackMultiplyer;
-            Destroy(gameObject);
-        }
-    }
+
+    
+    
+
 }

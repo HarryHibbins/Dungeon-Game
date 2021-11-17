@@ -39,7 +39,7 @@ public class FixedTorch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             canPickUpTorch = true;
         }
@@ -49,7 +49,7 @@ public class FixedTorch : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))     
         {
             canPickUpTorch = false;
         }
