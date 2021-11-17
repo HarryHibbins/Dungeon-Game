@@ -12,6 +12,8 @@ public class Arrow : MonoBehaviour
     public float actualspeed;
     [SerializeField] private float baseDamage;
     public float actualDamage;
+    private float arrowTypeDamageBonus;
+    private float arrowTypeSpeedBonus;
     public float gravity;
     
     private GameObject bowObj;
@@ -21,13 +23,59 @@ public class Arrow : MonoBehaviour
     [SerializeField] float arrowDespawnTimer;
 
 
+    private ArrowTypes.Arrows selectedArrow;
+  
+
     private void Awake()
     {
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
         drawBackMultiplier = bow.drawBack;
-        actualDamage = baseDamage * drawBackMultiplier;
-        actualspeed = baseSpeed * drawBackMultiplier;
+
+        
+        //The selected arrow is determined through the bow
+        selectedArrow = bow.currentArrow;
+
+        switch (selectedArrow)
+        {
+            case ArrowTypes.Arrows.Normal:
+            {
+                arrowTypeDamageBonus = 0;
+                break;
+            }
+            case ArrowTypes.Arrows.Fire:
+            {
+                arrowTypeDamageBonus = 5;
+
+                break;
+            }
+            case ArrowTypes.Arrows.Ice:
+            {
+                arrowTypeDamageBonus = 5;
+
+                break;
+            }
+            case ArrowTypes.Arrows.Explosive:
+            {
+                arrowTypeDamageBonus = 5;
+                //Maybe go slower?
+                arrowTypeSpeedBonus = -5;
+
+
+                break;
+            }
+            case ArrowTypes.Arrows.Speed:
+            {
+                arrowTypeDamageBonus = 0;
+                arrowTypeSpeedBonus = 10;
+
+                break;
+            }
+        }
+        
+        //Modifiers applied depending on arrow type
+        actualDamage = (baseDamage * drawBackMultiplier) + arrowTypeDamageBonus;
+        actualspeed = (baseSpeed * drawBackMultiplier) + arrowTypeSpeedBonus;
 
 
     }

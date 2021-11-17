@@ -16,7 +16,8 @@ public class Bow : MonoBehaviour
     public float drawBack;
     [SerializeField] private float maxDrawBack;
 
-
+    //Controls the type of arrow that the bow will fire
+    public ArrowTypes.Arrows currentArrow;
 
     void Start()
     {
@@ -51,7 +52,7 @@ public class Bow : MonoBehaviour
 
         if (fire)
         {
-            Arrow newArrow = Instantiate(arrow, firePoint.position, firePoint.rotation) as Arrow;
+            Arrow newArrow = Instantiate(arrow, firePoint.position, firePoint.rotation) ;
             fire = false;
             drawBack = 1;
             player.currentMoveSpeed = player.normalMoveSpeed;

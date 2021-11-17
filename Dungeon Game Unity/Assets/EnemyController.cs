@@ -33,6 +33,7 @@ public class EnemyController : MonoBehaviour
             Arrow arrow = other.GetComponent<Arrow>();
             hit = true;
             DamageDealt = Mathf.Round(arrow.actualDamage);
+            
             //Stop the arrow 
             arrow.actualspeed = 0;
             arrow.gravity = 0;
