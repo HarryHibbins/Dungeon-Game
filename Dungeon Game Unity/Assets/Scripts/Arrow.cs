@@ -11,11 +11,12 @@ public class Arrow : MonoBehaviour
     [SerializeField] float baseSpeed;
     public float actualspeed;
     [SerializeField] private float baseDamage;
-     public float actualDamage;
+    public float actualDamage;
+    public float gravity;
     
     private GameObject bowObj;
     Bow bow;
-    
+
 
     [SerializeField] float arrowDespawnTimer;
 
@@ -33,7 +34,10 @@ public class Arrow : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * actualspeed * Time.deltaTime);
+        //Apply Forward Translation
+        transform.Translate((Vector3.forward * actualspeed) * Time.deltaTime);
+        //Apply Downward Translation for gravity
+        transform.Translate((Vector3.down * gravity) * Time.deltaTime);
         arrowDespawnTimer -= Time.deltaTime;
 
         if(arrowDespawnTimer <= 0)
@@ -41,9 +45,15 @@ public class Arrow : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
 
-    
-    
-
+    private void OnTriggerEnter(Collider other)
+    {
+        //If enemy is hit by the arrow round the damage value from the arrow worked out with the multiplier 
+        if (other.gameObject.layer == LayerMask.NameToLayer("Environment"))
+        {
+            Debug.Log("HIT Environment");
+            actualspeed = 0;
+            gravity = 0;
+        }
+    }
 }

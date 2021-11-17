@@ -24,13 +24,9 @@ public class FixedTorch : MonoBehaviour
         {
             Debug.Log("Pick up torch");
           
-            foreach (Transform child in transform)
-            {
-                //child.transform.position = new Vector3(0, 0, 0);
-                child.transform.position = playerTorchHolder.transform.position;
-                child.parent = playerTorchHolder;
+            transform.position = playerTorchHolder.transform.position;
+            transform.parent = playerTorchHolder;
                 
-            }
         }
 
 
