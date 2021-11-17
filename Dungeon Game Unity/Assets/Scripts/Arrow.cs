@@ -6,7 +6,9 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
 
-    private float speed ;
+    [SerializeField] float speed;
+    [SerializeField] private float baseDamage;
+    [SerializeField] private float actualDamage;
     private GameObject bowObj;
     Bow bow;
     private float drawBackMultiplyer; 
@@ -40,6 +42,8 @@ public class Arrow : MonoBehaviour
         if(other.gameObject.tag == "Enemy")
         {
             //Hit
+            actualDamage = baseDamage * drawBackMultiplyer;
+            Destroy(gameObject);
         }
     }
 }

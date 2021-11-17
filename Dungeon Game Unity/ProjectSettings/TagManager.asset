@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Fire Point
   - Bow
+  - Torch
+  - Flame Holder
+  - Fixed Torch Holder
   layers:
   - Default
   - TransparentFX
