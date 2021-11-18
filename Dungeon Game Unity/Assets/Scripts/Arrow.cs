@@ -21,9 +21,10 @@ public class Arrow : MonoBehaviour
 
 
     [SerializeField] float arrowDespawnTimer;
-
-
     [SerializeField] private ArrowTypes.Arrows selectedArrow;
+    
+    private GameObject playerObj;
+    private PlayerInventory playerInventory;
   
 
     private void Awake()
@@ -31,10 +32,12 @@ public class Arrow : MonoBehaviour
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
         drawBackMultiplier = bow.drawBack;
-
         
-        //The selected arrow is determined through the bow
-        selectedArrow = bow.currentArrow;
+        playerObj = GameObject.FindWithTag("Player");
+        playerInventory = playerObj.GetComponent<PlayerInventory>();
+        
+        //The selected arrow is determined through the player inventory
+        selectedArrow = playerInventory.equippedArrow;
 
         switch (selectedArrow)
         {

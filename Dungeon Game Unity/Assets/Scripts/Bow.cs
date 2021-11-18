@@ -21,7 +21,6 @@ public class Bow : MonoBehaviour
 
     //Controls the type of arrow that the bow will fire
     //This gets updated by playerInvetory when the bow is drawn
-    [HideInInspector] public ArrowTypes.Arrows currentArrow;
     
     
     private bool arrowSelected = false;
@@ -45,10 +44,10 @@ public class Bow : MonoBehaviour
         //Hold left click to draw bow
         if (Input.GetButtonDown("Fire1"))
         {
-            if (getSelectedArrowAmmo() >= 1)
+            if (playerInventory.getSelectedArrowAmmo() >= 1)
             {
                 draw = true;
-                Debug.Log("Drawing " + currentArrow + " arrow "+  getSelectedArrowAmmo() + " In Quiver");
+                Debug.Log("Drawing " + playerInventory.equippedArrow + " arrow "+  playerInventory.getSelectedArrowAmmo() + " In Quiver");
 
             }
         }
@@ -76,7 +75,7 @@ public class Bow : MonoBehaviour
             playerController.currentMoveSpeed = playerController.normalMoveSpeed;
 
             //Minus the correct ammo count
-            switch (currentArrow)
+            switch (playerInventory.equippedArrow)
             {
                 case ArrowTypes.Arrows.Normal:
                 {
@@ -112,38 +111,5 @@ public class Bow : MonoBehaviour
         }
     }
 
-    //Checks to see if there is ammo left of the selected type
-    int getSelectedArrowAmmo()
-    {
-
-        currentArrow = playerInventory.equippedArrow;
-
-        switch (currentArrow)
-        {
-            case ArrowTypes.Arrows.Normal:
-            {
-                return ammoCheck = playerInventory.normalArrowCount;
-            }
-            case ArrowTypes.Arrows.Fire:
-            {
-                return ammoCheck = playerInventory.fireArrowCount;
-            }
-            case ArrowTypes.Arrows.Ice:
-            {
-                return ammoCheck = playerInventory.iceArrowCount;
-            }
-            case ArrowTypes.Arrows.Explosive:
-            {
-                return ammoCheck = playerInventory.explosiveArrowCount;
-            }
-            case ArrowTypes.Arrows.Speed:
-            {
-                return ammoCheck = playerInventory.speedArrowCount;
-            }
-        }
-
-        return ammoCheck;
-
-
-    }
+   
 }
