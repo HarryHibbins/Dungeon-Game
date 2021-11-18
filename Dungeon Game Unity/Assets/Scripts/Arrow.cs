@@ -15,6 +15,8 @@ public class Arrow : MonoBehaviour
     private float arrowTypeDamageBonus;
     private float arrowTypeSpeedBonus;
     public float gravity;
+    private bool hasLanded = false;
+    private int canBePickedUp = 0;
     
     private GameObject bowObj;
     Bow bow;
@@ -29,6 +31,9 @@ public class Arrow : MonoBehaviour
 
     private void Awake()
     {
+        canBePickedUp = UnityEngine.Random.Range(0, 2);
+        Debug.Log(canBePickedUp);
+
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
         drawBackMultiplier = bow.drawBack;
@@ -105,6 +110,43 @@ public class Arrow : MonoBehaviour
             Debug.Log("HIT Environment");
             actualspeed = 0;
             gravity = 0;
+            hasLanded = true;
+        }
+        if (other.gameObject.tag == "PlayerPickUp" && hasLanded)
+        {
+            if (canBePickedUp == 1)
+            {
+                switch (selectedArrow)
+                {
+                    case ArrowTypes.Arrows.Normal:
+                        {
+                            playerInventory.normalArrowCount++;
+                            break;
+                        }
+                    case ArrowTypes.Arrows.Fire:
+                        {
+                            playerInventory.fireArrowCount++;
+                            break;
+                        }
+                    case ArrowTypes.Arrows.Ice:
+                        {
+                            playerInventory.iceArrowCount++;
+                            break;
+                        }
+                    case ArrowTypes.Arrows.Explosive:
+                        {
+                            //Probably shouldn't be able to pick up shot explosive arrows
+                            break;
+                        }
+                    case ArrowTypes.Arrows.Speed:
+                        {
+                            playerInventory.speedArrowCount++;
+                            break;
+                        }
+                }
+            }
+            Debug.Log("Pick up Arrow");
+            Destroy(this.gameObject);
         }
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Fixed Torch Holder
   - Enemy
   - Arrow
+  - PlayerPickUp
   layers:
   - Default
   - TransparentFX
