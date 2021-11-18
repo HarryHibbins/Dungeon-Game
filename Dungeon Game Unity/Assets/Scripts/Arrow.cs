@@ -23,7 +23,7 @@ public class Arrow : MonoBehaviour
     [SerializeField] float arrowDespawnTimer;
 
 
-    private ArrowTypes.Arrows selectedArrow;
+    [SerializeField] private ArrowTypes.Arrows selectedArrow;
   
 
     private void Awake()

@@ -15,6 +15,8 @@ public class PlayerController: MonoBehaviour
     private GameObject camObj;
     private Camera cam;
 
+    private PlayerInventory playerInventory;
+  
     
 
     void Start()
@@ -24,6 +26,9 @@ public class PlayerController: MonoBehaviour
         cam = camObj.GetComponent<Camera>();
 
         currentMoveSpeed = normalMoveSpeed;
+        
+        playerInventory = GetComponent<PlayerInventory>();
+
 
     }
     
@@ -47,9 +52,30 @@ public class PlayerController: MonoBehaviour
 
             transform.LookAt(new Vector3(pointToLook.x,transform.position.y,pointToLook.z));
         }
+
+        if (Input.GetButtonDown("Change Ammo"))
+        {
+            changeAmmo();
+        }
     }
     private void FixedUpdate()
     {
         rb.velocity = moveVelocity;
+    }
+
+    //Cycle through ammo types
+    private void changeAmmo()
+    {
+        if (playerInventory.equippedArrow != ArrowTypes.Arrows.Speed)
+        {
+            playerInventory.equippedArrow += 1;
+
+        }
+        else
+        {
+            playerInventory.equippedArrow = 0;
+
+        }
+      
     }
 }
