@@ -268,10 +268,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equippedArrow: 0
+  maxNormalArrows: 20
   normalArrowCount: 0
+  maxFireArrows: 10
   fireArrowCount: 0
+  maxIceArrows: 10
   iceArrowCount: 0
+  maxExplosiveArrows: 5
   explosiveArrowCount: 0
+  maxSpeedArrows: 15
   speedArrowCount: 0
 --- !u!1 &18865533
 GameObject:
@@ -502,8 +507,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -133.6, y: 62.527}
-  m_SizeDelta: {x: 215.7835, y: 52.1}
+  m_AnchoredPosition: {x: -108, y: 58.8828}
+  m_SizeDelta: {x: 215.7835, y: 44.8116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &314440512
 MonoBehaviour:
@@ -514,10 +519,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 314440510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 448db81dac752cb43a810b82e378652e, type: 3}
+  m_Script: {fileID: 11500000, guid: ea0b6f7991d2c3646a16d5dadfeb6042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoType: {fileID: 314440513}
+  ammoCountText: {fileID: 314440513}
 --- !u!114 &314440513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -540,7 +545,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 33
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -551,7 +556,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 10/10
 --- !u!222 &314440514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1156,8 +1161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -107.891754, y: 121.9}
-  m_SizeDelta: {x: 215.78351, y: 66.645325}
+  m_AnchoredPosition: {x: -107.891754, y: 109.95001}
+  m_SizeDelta: {x: 215.7835, y: 57.3222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404055363
 MonoBehaviour:
@@ -1185,7 +1190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
