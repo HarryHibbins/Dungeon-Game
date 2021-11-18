@@ -23,7 +23,7 @@ public class Arrow : MonoBehaviour
 
 
     [SerializeField] float arrowDespawnTimer;
-    [SerializeField] private ArrowTypes.Arrows selectedArrow;
+    public ArrowTypes.Arrows selectedArrow;
     
     private GameObject playerObj;
     private PlayerInventory playerInventory;
@@ -112,6 +112,7 @@ public class Arrow : MonoBehaviour
             gravity = 0;
             hasLanded = true;
         }
+        //If the arrow has hit the environment, and the player walks over it, 50% chance to pick it up, destroy gameobject. 
         if (other.gameObject.tag == "PlayerPickUp" && hasLanded)
         {
             if (canBePickedUp == 1)

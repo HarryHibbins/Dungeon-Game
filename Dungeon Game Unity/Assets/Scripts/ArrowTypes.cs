@@ -14,7 +14,13 @@ public class ArrowTypes : MonoBehaviour
         Speed,
     }
 
-
+    public enum Effects
+    {
+        NONE,
+        Bleed,
+        Burn,
+        Slow,
+    }
 
 
 }

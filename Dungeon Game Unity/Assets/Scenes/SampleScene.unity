@@ -1374,6 +1374,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  effect: 0
+  bleedDamage: 2
+  burnDamage: 5
+  bleedTime: 5
+  burnTime: 5
+  slowTime: 5
+  enemySpeed: 50
+  currentSpeed: 0
 --- !u!65 &1629982778
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -16,7 +16,6 @@ public class PlayerController: MonoBehaviour
     private Camera cam;
 
     private PlayerInventory playerInventory;
-  
     
 
     void Start()
