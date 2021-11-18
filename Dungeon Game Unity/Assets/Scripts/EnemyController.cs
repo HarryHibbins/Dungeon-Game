@@ -50,8 +50,7 @@ public class EnemyController : MonoBehaviour
             DamageDealt = Mathf.Round(arrow.actualDamage);
             
             //Stop the arrow 
-            arrow.actualspeed = 0;
-            arrow.gravity = 0;
+            arrow.move = false;
             arrow.GetComponent<Transform>().parent = transform;
 
             //Apply Effect

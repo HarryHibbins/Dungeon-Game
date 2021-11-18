@@ -16,7 +16,8 @@ public class PlayerController: MonoBehaviour
     private Camera cam;
 
     private PlayerInventory playerInventory;
-    
+    private GameObject bowObj;
+    private Bow bow;
 
     void Start()
     {
@@ -25,8 +26,11 @@ public class PlayerController: MonoBehaviour
         cam = camObj.GetComponent<Camera>();
 
         currentMoveSpeed = normalMoveSpeed;
-        
         playerInventory = GetComponent<PlayerInventory>();
+
+        bowObj = GameObject.FindWithTag("Bow");
+        bow = bowObj.GetComponent<Bow>();
+
 
 
     }
@@ -52,7 +56,7 @@ public class PlayerController: MonoBehaviour
             transform.LookAt(new Vector3(pointToLook.x,transform.position.y,pointToLook.z));
         }
 
-        if (Input.GetButtonDown("Change Ammo"))
+        if (Input.GetButtonDown("Change Ammo") && !bow.draw)
         {
             changeAmmo();
         }

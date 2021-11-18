@@ -6,7 +6,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
 
-    private float drawBackMultiplier; 
+    public float drawBackMultiplier; 
     
     [SerializeField] float baseSpeed;
     public float actualspeed;
@@ -27,22 +27,24 @@ public class Arrow : MonoBehaviour
     
     private GameObject playerObj;
     private PlayerInventory playerInventory;
-  
+
+    public bool move;
 
     private void Awake()
     {
+        move = false;
         canBePickedUp = UnityEngine.Random.Range(0, 2);
         Debug.Log(canBePickedUp);
 
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
-        drawBackMultiplier = bow.drawBack;
         
         playerObj = GameObject.FindWithTag("Player");
         playerInventory = playerObj.GetComponent<PlayerInventory>();
         
         //The selected arrow is determined through the player inventory
         selectedArrow = playerInventory.equippedArrow;
+        
 
         switch (selectedArrow)
         {
@@ -81,26 +83,44 @@ public class Arrow : MonoBehaviour
             }
         }
         
+   
+
+
+    }
+
+    public void ApplyDrawBackMultiplier()
+    {
         //Modifiers applied depending on arrow type
+        drawBackMultiplier = bow.drawBack;
+
         actualDamage = (baseDamage * drawBackMultiplier) + arrowTypeDamageBonus;
         actualspeed = (baseSpeed * drawBackMultiplier) + arrowTypeSpeedBonus;
-
 
     }
 
     void Update()
     {
-        //Apply Forward Translation
-        transform.Translate((Vector3.forward * actualspeed) * Time.deltaTime);
-        //Apply Downward Translation for gravity
-        transform.Translate((Vector3.down * gravity) * Time.deltaTime);
-        arrowDespawnTimer -= Time.deltaTime;
 
+        if (move)
+        {
+            
+            //Apply Forward Translation
+            transform.Translate((Vector3.forward * actualspeed) * Time.deltaTime);
+            //Apply Downward Translation for gravity
+            transform.Translate((Vector3.down * gravity) * Time.deltaTime);
+  
+        }
+        
+        arrowDespawnTimer -= Time.deltaTime;
         if(arrowDespawnTimer <= 0)
         {
             Destroy(gameObject);
         }
     }
+
+
+
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -108,8 +128,7 @@ public class Arrow : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Environment"))
         {
             Debug.Log("HIT Environment");
-            actualspeed = 0;
-            gravity = 0;
+            move = false;
             hasLanded = true;
         }
         //If the arrow has hit the environment, and the player walks over it, 50% chance to pick it up, destroy gameobject. 

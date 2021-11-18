@@ -8,7 +8,7 @@ public class Bow : MonoBehaviour
     private PlayerController playerController;
     private PlayerInventory playerInventory;
     
-    private bool draw;
+    public bool draw;
     private bool fire;
     
     private GameObject firePointObj;
@@ -19,11 +19,7 @@ public class Bow : MonoBehaviour
     public float drawBack;
     [SerializeField] private float maxDrawBack;
 
-    //Controls the type of arrow that the bow will fire
-    //This gets updated by playerInvetory when the bow is drawn
-    
-    
-    private bool arrowSelected = false;
+   
     private int ammoCheck;
 
     void Start()
@@ -47,6 +43,9 @@ public class Bow : MonoBehaviour
             if (playerInventory.getSelectedArrowAmmo() >= 1)
             {
                 draw = true;
+                //Create arrow
+                Arrow newArrow = Instantiate(arrow, firePoint.position, firePoint.rotation) ;
+                newArrow.transform.parent = firePoint;
                 Debug.Log("Drawing " + playerInventory.equippedArrow + " arrow "+  playerInventory.getSelectedArrowAmmo() + " In Quiver");
 
             }
@@ -66,9 +65,16 @@ public class Bow : MonoBehaviour
 
         if (fire)
         {
-            //Create arrow
-            Arrow newArrow = Instantiate(arrow, firePoint.position, firePoint.rotation) ;
-            
+            foreach(Transform child in firePoint)
+            {
+                if (child.gameObject.tag == "Arrow")
+                {
+                    child.GetComponent<Arrow>().move = true;
+                    child.GetComponent<Arrow>().ApplyDrawBackMultiplier();
+                    child.transform.parent = null;
+
+                }
+            }
             //Reset Values ready for next shot
             fire = false;
             drawBack = 1;
@@ -106,7 +112,6 @@ public class Bow : MonoBehaviour
             
             
             
-            arrowSelected = false;
 
         }
     }
