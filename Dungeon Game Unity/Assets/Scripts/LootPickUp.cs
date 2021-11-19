@@ -7,6 +7,8 @@ public class LootPickUp : MonoBehaviour
     private GameObject playerObj;
     private PlayerInventory playerInventory;
     private PlayerController playerController;
+    private GameObject gameManager;
+    private PlayerStats playerStats;
 
     [SerializeField]
     private LootItems.Loot loot_type;
@@ -16,6 +18,8 @@ public class LootPickUp : MonoBehaviour
         playerObj = GameObject.FindWithTag("Player");
         playerInventory = playerObj.GetComponent<PlayerInventory>();
         playerController = playerObj.GetComponent<PlayerController>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        playerStats = gameManager.GetComponent<PlayerStats>();
     }
 
     void Update()
@@ -31,43 +35,43 @@ public class LootPickUp : MonoBehaviour
             {
                 case LootItems.Loot.QuiverNormal:
                     {
-                        playerInventory.normalArrowCount = playerInventory.maxNormalArrows;
+                        playerInventory.normalArrowCount = playerStats.playerinventory_maxNormalArrows;
                         break;
                     }
                 case LootItems.Loot.QuiverFire:
                     {
-                        playerInventory.fireArrowCount = playerInventory.maxFireArrows;
+                        playerInventory.fireArrowCount = playerStats.playerinventory_maxFireArrows;
                         break;
                     }
                 case LootItems.Loot.QuiverIce:
                     {
-                        playerInventory.iceArrowCount = playerInventory.maxIceArrows;
+                        playerInventory.iceArrowCount = playerStats.playerinventory_maxIceArrows;
                         break;
                     }
                 case LootItems.Loot.QuiverExplosive:
                     {
-                        playerInventory.explosiveArrowCount = playerInventory.maxExplosiveArrows;
+                        playerInventory.explosiveArrowCount = playerStats.playerinventory_maxExplosiveArrows;
                         break;
                     }
                 case LootItems.Loot.QuiverSpeed:
                     {
-                        playerInventory.speedArrowCount = playerInventory.maxSpeedArrows;
+                        playerInventory.speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
                         break;
                     }
                 case LootItems.Loot.PlayerBaseSpeedRelic:
                     {
-                        playerController.normalMoveSpeed += 2;
+                        playerStats.playermovement_BaseSpeed += 2;
                         break;
                     }
                 case LootItems.Loot.PlayerDrawSpeedRelic:
                     {
-                        playerController.drawBowMoveSpeed += 2;
+                        playerStats.playermovement_DrawSpeed += 2;
                         break;
                     }
                 case LootItems.Loot.NoMovementPenaltyRelic:
                     {
                         // Might need to do this in PlayerController so it updates if speed ever gets increased again.
-                        playerController.drawBowMoveSpeed = playerController.normalMoveSpeed;
+                        playerStats.playermovement_DrawSpeed = playerStats.playermovement_BaseSpeed;
                         break;
                     }
             }

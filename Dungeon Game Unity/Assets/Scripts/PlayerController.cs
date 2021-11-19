@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerController: MonoBehaviour
 {
     public float currentMoveSpeed;
-    public float drawBowMoveSpeed;
-    public float normalMoveSpeed;
 
     private Rigidbody rb;
     private Vector3 moveInput;
@@ -19,20 +17,24 @@ public class PlayerController: MonoBehaviour
     private GameObject bowObj;
     private Bow bow;
 
+    private GameObject gameManager;
+    private PlayerStats playerStats;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         camObj = GameObject.FindWithTag("MainCamera");
         cam = camObj.GetComponent<Camera>();
 
-        currentMoveSpeed = normalMoveSpeed;
         playerInventory = GetComponent<PlayerInventory>();
 
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
 
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        playerStats = gameManager.GetComponent<PlayerStats>();
 
-
+        currentMoveSpeed = playerStats.playermovement_BaseSpeed;
     }
     
     void Update()
@@ -72,12 +74,10 @@ public class PlayerController: MonoBehaviour
         if (playerInventory.equippedArrow != ArrowTypes.Arrows.Speed)
         {
             playerInventory.equippedArrow += 1;
-
         }
         else
         {
             playerInventory.equippedArrow = 0;
-
         }
       
     }

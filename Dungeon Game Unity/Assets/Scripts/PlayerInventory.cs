@@ -4,36 +4,29 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+    private GameObject gameManager;
+    private PlayerStats playerStats;
 
     public ArrowTypes.Arrows equippedArrow;
 
-    public int maxNormalArrows;
     public int normalArrowCount;
-    
-    public int maxFireArrows;
     public int fireArrowCount;
-    
-    public int maxIceArrows;
     public  int iceArrowCount;
-
-    public int maxExplosiveArrows;
     public  int explosiveArrowCount;
-
-    public int maxSpeedArrows;
     public int speedArrowCount;
-
 
     int arrowCheck;
     int maxArrowCheck;
     void Start()
     {
-        normalArrowCount = 20;
-        fireArrowCount = 5;
-        iceArrowCount = 5;
-        explosiveArrowCount = 5;
-        speedArrowCount = 10;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        playerStats = gameManager.GetComponent<PlayerStats>();
 
-
+        normalArrowCount = playerStats.playerinventory_maxNormalArrows;
+        fireArrowCount = playerStats.playerinventory_maxFireArrows;
+        iceArrowCount = playerStats.playerinventory_maxIceArrows;
+        explosiveArrowCount = playerStats.playerinventory_maxExplosiveArrows;
+        speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
     }
 
     //Checks to see if there is ammo left of the selected type
@@ -76,23 +69,23 @@ public class PlayerInventory : MonoBehaviour
         {
             case ArrowTypes.Arrows.Normal:
             {
-                return maxArrowCheck = maxNormalArrows;
+                return maxArrowCheck = playerStats.playerinventory_maxNormalArrows;
             }
             case ArrowTypes.Arrows.Fire:
             {
-                return maxArrowCheck = maxFireArrows;
+                return maxArrowCheck = playerStats.playerinventory_maxFireArrows;
             }
             case ArrowTypes.Arrows.Ice:
             {
-                return maxArrowCheck = maxIceArrows;
+                return maxArrowCheck = playerStats.playerinventory_maxIceArrows;
             }
             case ArrowTypes.Arrows.Explosive:
             {
-                return maxArrowCheck = maxExplosiveArrows;
+                return maxArrowCheck = playerStats.playerinventory_maxExplosiveArrows;
             }
             case ArrowTypes.Arrows.Speed:
             {
-                return maxArrowCheck = maxSpeedArrows;
+                return maxArrowCheck = playerStats.playerinventory_maxSpeedArrows;
             }
         }
 

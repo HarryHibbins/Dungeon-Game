@@ -7,7 +7,9 @@ public class Bow : MonoBehaviour
     private GameObject playerObj;
     private PlayerController playerController;
     private PlayerInventory playerInventory;
-    
+    private GameObject gameManager;
+    private PlayerStats playerStats;
+
     public bool draw;
     private bool fire;
     
@@ -29,7 +31,8 @@ public class Bow : MonoBehaviour
         playerInventory = playerObj.GetComponent<PlayerInventory>();
         firePointObj = GameObject.FindWithTag("Fire Point");
         firePoint = firePointObj.transform;
-        
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        playerStats = gameManager.GetComponent<PlayerStats>();
 
         //Minimum drawback value so it doesnt slow down the arrow
         drawBack = 1;
@@ -60,7 +63,7 @@ public class Bow : MonoBehaviour
         if (draw && drawBack < maxDrawBack)
         {
             drawBack += Time.deltaTime;
-            playerController.currentMoveSpeed = playerController.drawBowMoveSpeed;
+            playerController.currentMoveSpeed = playerStats.playermovement_DrawSpeed;
         }
 
         if (fire)
@@ -78,7 +81,7 @@ public class Bow : MonoBehaviour
             //Reset Values ready for next shot
             fire = false;
             drawBack = 1;
-            playerController.currentMoveSpeed = playerController.normalMoveSpeed;
+            playerController.currentMoveSpeed = playerStats.playermovement_BaseSpeed;
 
             //Minus the correct ammo count
             switch (playerInventory.equippedArrow)

@@ -254,8 +254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMoveSpeed: 0
-  drawBowMoveSpeed: 3
-  normalMoveSpeed: 5
 --- !u!114 &17653784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,15 +267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equippedArrow: 0
-  maxNormalArrows: 20
   normalArrowCount: 0
-  maxFireArrows: 10
   fireArrowCount: 0
-  maxIceArrows: 10
   iceArrowCount: 0
-  maxExplosiveArrows: 5
   explosiveArrowCount: 0
-  maxSpeedArrows: 15
   speedArrowCount: 0
 --- !u!1 &18865533
 GameObject:
@@ -932,6 +925,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 18865534}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &932448654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932448656}
+  - component: {fileID: 932448655}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &932448655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932448654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce8fb4bfee3deb46b1750874c5f1dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playermovement_BaseSpeed: 5
+  playermovement_DrawSpeed: 2
+  playerinventory_BaseArrowCount: 0
+  playerinventory_maxNormalArrows: 20
+  playerinventory_maxFireArrows: 5
+  playerinventory_maxIceArrows: 5
+  playerinventory_maxExplosiveArrows: 5
+  playerinventory_maxSpeedArrows: 10
+--- !u!4 &932448656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932448654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.4167886, y: 14.706979, z: -17.750021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:

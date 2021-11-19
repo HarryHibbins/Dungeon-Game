@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ArrowTypes : MonoBehaviour
 {
-    
     public enum Arrows
     {
         Normal,
