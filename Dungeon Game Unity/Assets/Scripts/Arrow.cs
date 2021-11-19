@@ -8,9 +8,7 @@ public class Arrow : MonoBehaviour
 
     public float drawBackMultiplier; 
     
-    [SerializeField] float baseSpeed;
     public float actualspeed;
-    [SerializeField] private float baseDamage;
     public float actualDamage;
     private float arrowTypeDamageBonus;
     private float arrowTypeSpeedBonus;
@@ -97,8 +95,8 @@ public class Arrow : MonoBehaviour
         //Modifiers applied depending on arrow type
         drawBackMultiplier = bow.drawBack;
 
-        actualDamage = (baseDamage * drawBackMultiplier) + arrowTypeDamageBonus;
-        actualspeed = (baseSpeed * drawBackMultiplier) + arrowTypeSpeedBonus;
+        actualDamage = (playerStats.arrowdamage_base * drawBackMultiplier) + arrowTypeDamageBonus;
+        actualspeed = (playerStats.arrowspeed_base * drawBackMultiplier) + arrowTypeSpeedBonus;
 
     }
 

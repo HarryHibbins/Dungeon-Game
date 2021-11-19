@@ -22,60 +22,61 @@ public class LootPickUp : MonoBehaviour
         playerStats = gameManager.GetComponent<PlayerStats>();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "PlayerPickUp")
         {
-            switch (loot_type)
-            {
-                case LootItems.Loot.QuiverNormal:
-                    {
-                        playerInventory.normalArrowCount = playerStats.playerinventory_maxNormalArrows;
-                        break;
-                    }
-                case LootItems.Loot.QuiverFire:
-                    {
-                        playerInventory.fireArrowCount = playerStats.playerinventory_maxFireArrows;
-                        break;
-                    }
-                case LootItems.Loot.QuiverIce:
-                    {
-                        playerInventory.iceArrowCount = playerStats.playerinventory_maxIceArrows;
-                        break;
-                    }
-                case LootItems.Loot.QuiverExplosive:
-                    {
-                        playerInventory.explosiveArrowCount = playerStats.playerinventory_maxExplosiveArrows;
-                        break;
-                    }
-                case LootItems.Loot.QuiverSpeed:
-                    {
-                        playerInventory.speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
-                        break;
-                    }
-                case LootItems.Loot.PlayerBaseSpeedRelic:
-                    {
-                        playerStats.playermovement_BaseSpeed += 2;
-                        break;
-                    }
-                case LootItems.Loot.PlayerDrawSpeedRelic:
-                    {
-                        playerStats.playermovement_DrawSpeed += 2;
-                        break;
-                    }
-                case LootItems.Loot.NoMovementPenaltyRelic:
-                    {
-                        // Might need to do this in PlayerController so it updates if speed ever gets increased again.
-                        playerStats.playermovement_DrawSpeed = playerStats.playermovement_BaseSpeed;
-                        break;
-                    }
-            }
+            StartCoroutine(LootEffect(loot_type));
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+    }
+
+    private IEnumerator LootEffect(LootItems.Loot loot)
+    {
+        switch (loot)
+        {
+            case LootItems.Loot.QuiverNormal:
+                {
+                    playerInventory.normalArrowCount = playerStats.playerinventory_maxNormalArrows;
+                    break;
+                }
+            case LootItems.Loot.QuiverFire:
+                {
+                    playerInventory.fireArrowCount = playerStats.playerinventory_maxFireArrows;
+                    break;
+                }
+            case LootItems.Loot.QuiverIce:
+                {
+                    playerInventory.iceArrowCount = playerStats.playerinventory_maxIceArrows;
+                    break;
+                }
+            case LootItems.Loot.QuiverExplosive:
+                {
+                    playerInventory.explosiveArrowCount = playerStats.playerinventory_maxExplosiveArrows;
+                    break;
+                }
+            case LootItems.Loot.QuiverSpeed:
+                {
+                    playerInventory.speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
+                    break;
+                }
+            case LootItems.Loot.PlayerBaseSpeedRelic:
+                {
+                    playerStats.playermovement_BaseSpeed += 2;
+                    break;
+                }
+            case LootItems.Loot.PlayerDrawSpeedRelic:
+                {
+                    playerStats.playermovement_DrawSpeed += 2;
+                    break;
+                }
+            case LootItems.Loot.NoMovementPenaltyRelic:
+                {
+                    // Might need to do this in PlayerController so it updates if speed ever gets increased again.
+                    playerStats.playermovement_DrawSpeed = playerStats.playermovement_BaseSpeed;
+                    break;
+                }
+        }
+        yield return null;
     }
 }
