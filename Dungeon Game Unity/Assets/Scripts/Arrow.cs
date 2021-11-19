@@ -28,6 +28,9 @@ public class Arrow : MonoBehaviour
     private GameObject playerObj;
     private PlayerInventory playerInventory;
 
+    private GameObject gameManager;
+    private PlayerStats playerStats;
+
     public bool move;
 
     private void Awake()
@@ -41,6 +44,9 @@ public class Arrow : MonoBehaviour
         
         playerObj = GameObject.FindWithTag("Player");
         playerInventory = playerObj.GetComponent<PlayerInventory>();
+
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        playerStats = gameManager.GetComponent<PlayerStats>();
         
         //The selected arrow is determined through the player inventory
         selectedArrow = playerInventory.equippedArrow;
@@ -50,35 +56,33 @@ public class Arrow : MonoBehaviour
         {
             case ArrowTypes.Arrows.Normal:
             {
-                arrowTypeDamageBonus = 0;
+                arrowTypeDamageBonus = playerStats.arrowdamage_normal;
+                arrowTypeSpeedBonus = playerStats.arrowspeed_normal;
                 break;
             }
             case ArrowTypes.Arrows.Fire:
             {
-                arrowTypeDamageBonus = 5;
-
+                arrowTypeDamageBonus = playerStats.arrowdamage_fire;
+                arrowTypeSpeedBonus = playerStats.arrowspeed_fire;
                 break;
             }
             case ArrowTypes.Arrows.Ice:
             {
-                arrowTypeDamageBonus = 5;
-
+                arrowTypeDamageBonus = playerStats.arrowdamage_ice;
+                arrowTypeSpeedBonus = playerStats.arrowspeed_ice;
                 break;
             }
             case ArrowTypes.Arrows.Explosive:
             {
-                arrowTypeDamageBonus = 5;
+                arrowTypeDamageBonus = playerStats.arrowdamage_explosive;
                 //Maybe go slower?
-                arrowTypeSpeedBonus = -5;
-
-
+                arrowTypeSpeedBonus = playerStats.arrowspeed_explosive;
                 break;
             }
             case ArrowTypes.Arrows.Speed:
             {
-                arrowTypeDamageBonus = 0;
-                arrowTypeSpeedBonus = 10;
-
+                arrowTypeDamageBonus = playerStats.arrowdamage_speed;
+                arrowTypeSpeedBonus = playerStats.arrowspeed_speed;
                 break;
             }
         }

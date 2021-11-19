@@ -963,6 +963,16 @@ MonoBehaviour:
   playerinventory_maxIceArrows: 5
   playerinventory_maxExplosiveArrows: 5
   playerinventory_maxSpeedArrows: 10
+  arrowdamage_normal: 0
+  arrowdamage_fire: 5
+  arrowdamage_ice: 5
+  arrowdamage_explosive: 10
+  arrowdamage_speed: 5
+  arrowspeed_normal: 0
+  arrowspeed_fire: 0
+  arrowspeed_ice: 0
+  arrowspeed_explosive: -5
+  arrowspeed_speed: 10
 --- !u!4 &932448656
 Transform:
   m_ObjectHideFlags: 0
