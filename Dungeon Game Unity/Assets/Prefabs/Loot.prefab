@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8776668696959880214}
   - component: {fileID: 9043569242950713482}
   m_Layer: 0
-  m_Name: Quiver
+  m_Name: Loot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class GameLoot : MonoBehaviour
 {
@@ -40,10 +41,6 @@ public class GameLoot : MonoBehaviour
         NoMovementPenaltyRelic = new LootItems(LootItems.Loot.NoMovementPenaltyRelic, NMPR_Sprite, LootItems.LootType.Relic, LootItems.LootRarity.Epic);
 
         lootList = new List<LootItems>(LootItems.lootList);
-        /*foreach (LootItems item in lootList)
-        {
-            Debug.Log(item.loot_name + "\n");
-        }*/
     }
 
     LootItems getLootByRarity(LootItems.LootRarity rarity)
@@ -59,7 +56,6 @@ public class GameLoot : MonoBehaviour
 
         int rand = UnityEngine.Random.Range(0, tempList.Count);
         return tempList[rand];
-        //Remove from lootlist if we don't want to get the same loot/relic more than once
     }
 
     LootItems getLootByType(LootItems.LootType type)
@@ -75,7 +71,6 @@ public class GameLoot : MonoBehaviour
 
         int rand = UnityEngine.Random.Range(0, tempList.Count);
         return tempList[rand];
-        //Remove from lootlist if we don't want to get the same loot/relic more than once
     }
 
     void SpawnLoot(Vector3 position, LootItems.Loot name)
@@ -85,54 +80,55 @@ public class GameLoot : MonoBehaviour
         script.loot_type = name;
     }
 
+    void RemoveFromPool(LootItems.Loot name)
+    {
+        List<LootItems> tempList = new List<LootItems>(lootList);
+        for (int i = 0; i < lootList.Count; i++)
+        {
+            if (lootList[i].loot_name == name && lootList[i].loot_type == LootItems.LootType.Relic)
+            {
+                lootList.RemoveAt(i);
+            }
+        }
+    }
 
     // Using a Coroutine incase we want an effect that is time limited - Use 'yield return new WaitForSeconds()"
     public IEnumerator LootEffect(LootItems.Loot loot)
     {
-        switch (loot)
+        RemoveFromPool(loot);
+        if (loot == LootItems.Loot.QuiverNormal)
         {
-            case LootItems.Loot.QuiverNormal:
-                {
-                    playerInventory.normalArrowCount = playerStats.playerinventory_maxNormalArrows;
-                    break;
-                }
-            case LootItems.Loot.QuiverFire:
-                {
-                    playerInventory.fireArrowCount = playerStats.playerinventory_maxFireArrows;
-                    break;
-                }
-            case LootItems.Loot.QuiverIce:
-                {
-                    playerInventory.iceArrowCount = playerStats.playerinventory_maxIceArrows;
-                    break;
-                }
-            case LootItems.Loot.QuiverExplosive:
-                {
-                    playerInventory.explosiveArrowCount = playerStats.playerinventory_maxExplosiveArrows;
-                    break;
-                }
-            case LootItems.Loot.QuiverSpeed:
-                {
-                    playerInventory.speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
-                    break;
-                }
-            case LootItems.Loot.PlayerBaseSpeedRelic:
-                {
-                    playerStats.playermovement_BaseSpeed += 2;
-                    break;
-                }
-            case LootItems.Loot.PlayerDrawSpeedRelic:
-                {
-                    playerStats.playermovement_DrawSpeed += 2;
-                    break;
-                }
-            case LootItems.Loot.NoMovementPenaltyRelic:
-                {
-                    // Might need to do this in PlayerController so it updates if speed ever gets increased again.
-                    playerStats.playermovement_DrawSpeed = playerStats.playermovement_BaseSpeed;
-                    break;
-                }
+            playerInventory.normalArrowCount = playerStats.playerinventory_maxNormalArrows;
         }
-        yield return null;
+        else if (loot == LootItems.Loot.QuiverFire)
+        {
+            playerInventory.fireArrowCount = playerStats.playerinventory_maxFireArrows;
+        }
+        else if (loot == LootItems.Loot.QuiverIce)
+        {
+            playerInventory.iceArrowCount = playerStats.playerinventory_maxIceArrows;
+        }
+        else if (loot == LootItems.Loot.QuiverExplosive)
+        {
+            playerInventory.explosiveArrowCount = playerStats.playerinventory_maxExplosiveArrows;
+        }
+        else if (loot == LootItems.Loot.QuiverSpeed)
+        {
+            playerInventory.speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
+        }
+        else if (loot == LootItems.Loot.PlayerBaseSpeedRelic)
+        {
+            playerStats.playermovement_BaseSpeed += 2;
+        }
+        else if (loot == LootItems.Loot.PlayerDrawSpeedRelic)
+        {
+            playerStats.playermovement_DrawSpeed += 2;
+        }
+        else if (loot == LootItems.Loot.NoMovementPenaltyRelic)
+        {
+            // Might need to do this in PlayerController so it updates if speed ever gets increased again.
+            playerStats.playermovement_DrawSpeed = playerStats.playermovement_BaseSpeed;
+        }
+        yield break;
     }
 }

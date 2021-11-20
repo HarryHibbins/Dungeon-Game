@@ -27,7 +27,7 @@ public class LootPickUp : MonoBehaviour
     {
         if(other.gameObject.tag == "PlayerPickUp")
         {
-            StartCoroutine(lootScript.LootEffect(loot_type));
+            lootScript.StartCoroutine(lootScript.LootEffect(loot_type));
             Destroy(this.gameObject);
         }
     }
