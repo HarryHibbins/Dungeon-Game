@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController: MonoBehaviour
 {
+     
     public float currentMoveSpeed;
 
     private Rigidbody rb;
@@ -13,6 +14,7 @@ public class PlayerController: MonoBehaviour
     private GameObject camObj;
     private Camera cam;
 
+   
     private PlayerInventory playerInventory;
     private GameObject bowObj;
     private Bow bow;
@@ -26,7 +28,10 @@ public class PlayerController: MonoBehaviour
         camObj = GameObject.FindWithTag("MainCamera");
         cam = camObj.GetComponent<Camera>();
 
+        currentMoveSpeed = normalMoveSpeed;
+        
         playerInventory = GetComponent<PlayerInventory>();
+        
 
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
@@ -42,6 +47,10 @@ public class PlayerController: MonoBehaviour
         //Set movement values
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * currentMoveSpeed;
+
+        
+       
+        
         
         //Create raycast for players aim
         Ray cameraRay = cam.ScreenPointToRay(Input.mousePosition);
