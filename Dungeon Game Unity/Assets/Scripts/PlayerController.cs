@@ -28,7 +28,7 @@ public class PlayerController: MonoBehaviour
         camObj = GameObject.FindWithTag("MainCamera");
         cam = camObj.GetComponent<Camera>();
 
-        currentMoveSpeed = normalMoveSpeed;
+        
         
         playerInventory = GetComponent<PlayerInventory>();
         
