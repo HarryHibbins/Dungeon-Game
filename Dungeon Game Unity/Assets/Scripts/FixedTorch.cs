@@ -25,8 +25,9 @@ public class FixedTorch : MonoBehaviour
             Debug.Log("Pick up torch");
           
             transform.position = playerTorchHolder.transform.position;
+            
             transform.parent = playerTorchHolder;
-                
+          //  transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         }
 
 
