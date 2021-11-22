@@ -27,11 +27,11 @@ public class PlayerInventory : MonoBehaviour
 
     public void MaxAmmo()
     {
-        normalArrowCount = playerStats.playerinventory_maxNormalArrows;
-        fireArrowCount = playerStats.playerinventory_maxFireArrows;
-        iceArrowCount = playerStats.playerinventory_maxIceArrows;
-        explosiveArrowCount = playerStats.playerinventory_maxExplosiveArrows;
-        speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
+        normalArrowCount = playerStats.PI_MaxNormalArrows;
+        fireArrowCount = playerStats.PI_MaxFireArrows;
+        iceArrowCount = playerStats.PI_MaxIceArrows;
+        explosiveArrowCount = playerStats.PI_MaxExplosiveArrows;
+        speedArrowCount = playerStats.PI_MaxSpeedArrows;
     }
 
     //Checks to see if there is ammo left of the selected type
@@ -74,23 +74,23 @@ public class PlayerInventory : MonoBehaviour
         {
             case ArrowTypes.Arrows.Normal:
             {
-                return maxArrowCheck = playerStats.playerinventory_maxNormalArrows;
+                return maxArrowCheck = playerStats.PI_MaxNormalArrows;
             }
             case ArrowTypes.Arrows.Fire:
             {
-                return maxArrowCheck = playerStats.playerinventory_maxFireArrows;
+                return maxArrowCheck = playerStats.PI_MaxFireArrows;
             }
             case ArrowTypes.Arrows.Ice:
             {
-                return maxArrowCheck = playerStats.playerinventory_maxIceArrows;
+                return maxArrowCheck = playerStats.PI_MaxIceArrows;
             }
             case ArrowTypes.Arrows.Explosive:
             {
-                return maxArrowCheck = playerStats.playerinventory_maxExplosiveArrows;
+                return maxArrowCheck = playerStats.PI_MaxExplosiveArrows;
             }
             case ArrowTypes.Arrows.Speed:
             {
-                return maxArrowCheck = playerStats.playerinventory_maxSpeedArrows;
+                return maxArrowCheck = playerStats.PI_MaxSpeedArrows;
             }
         }
 

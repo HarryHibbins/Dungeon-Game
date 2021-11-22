@@ -54,33 +54,33 @@ public class Arrow : MonoBehaviour
         {
             case ArrowTypes.Arrows.Normal:
             {
-                arrowTypeDamageBonus = playerStats.arrowdamage_normal;
-                arrowTypeSpeedBonus = playerStats.arrowspeed_normal;
+                arrowTypeDamageBonus = playerStats.ArrowDamage_Normal;
+                arrowTypeSpeedBonus = playerStats.ArrowSpeed_Normal;
                 break;
             }
             case ArrowTypes.Arrows.Fire:
             {
-                arrowTypeDamageBonus = playerStats.arrowdamage_fire;
-                arrowTypeSpeedBonus = playerStats.arrowspeed_fire;
+                arrowTypeDamageBonus = playerStats.ArrowDamage_Fire;
+                arrowTypeSpeedBonus = playerStats.ArrowSpeed_Fire;
                 break;
             }
             case ArrowTypes.Arrows.Ice:
             {
-                arrowTypeDamageBonus = playerStats.arrowdamage_ice;
-                arrowTypeSpeedBonus = playerStats.arrowspeed_ice;
+                arrowTypeDamageBonus = playerStats.ArrowDamage_Ice;
+                arrowTypeSpeedBonus = playerStats.ArrowSpeed_Ice;
                 break;
             }
             case ArrowTypes.Arrows.Explosive:
             {
-                arrowTypeDamageBonus = playerStats.arrowdamage_explosive;
+                arrowTypeDamageBonus = playerStats.ArrowDamage_Explosive;
                 //Maybe go slower?
-                arrowTypeSpeedBonus = playerStats.arrowspeed_explosive;
+                arrowTypeSpeedBonus = playerStats.ArrowSpeed_Explosive;
                 break;
             }
             case ArrowTypes.Arrows.Speed:
             {
-                arrowTypeDamageBonus = playerStats.arrowdamage_speed;
-                arrowTypeSpeedBonus = playerStats.arrowspeed_speed;
+                arrowTypeDamageBonus = playerStats.ArrowDamage_Speed;
+                arrowTypeSpeedBonus = playerStats.ArrowSpeed_Speed;
                 break;
             }
         }
@@ -95,8 +95,8 @@ public class Arrow : MonoBehaviour
         //Modifiers applied depending on arrow type
         drawBackMultiplier = bow.drawBack;
 
-        actualDamage = (playerStats.arrowdamage_base * drawBackMultiplier) + arrowTypeDamageBonus;
-        actualspeed = (playerStats.arrowspeed_base * drawBackMultiplier) + arrowTypeSpeedBonus;
+        actualDamage = (playerStats.ArrowDamage_Base * drawBackMultiplier) + arrowTypeDamageBonus;
+        actualspeed = (playerStats.ArrowSpeed_Base * drawBackMultiplier) + arrowTypeSpeedBonus;
 
     }
 

@@ -39,7 +39,7 @@ public class PlayerController: MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         playerStats = gameManager.GetComponent<PlayerStats>();
 
-        currentMoveSpeed = playerStats.playermovement_BaseSpeed;
+        currentMoveSpeed = playerStats.PM_BaseSpeed;
     }
     
     void Update()

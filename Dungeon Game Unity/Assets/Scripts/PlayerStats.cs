@@ -4,38 +4,41 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    [Header("Health Stats")]
+    public float playerHealth;
+
     [Header("Movement Stats")]
-    public float playermovement_BaseSpeed;
-    public float playermovement_DrawSpeed;
+    public float PM_BaseSpeed;
+    public float PM_DrawSpeed;
 
     [Header("Arrow Stats")]
-    public int playerinventory_BaseArrowCount;
-    public int playerinventory_maxNormalArrows;
-    public int playerinventory_maxFireArrows;
-    public int playerinventory_maxIceArrows;
-    public int playerinventory_maxExplosiveArrows;
-    public int playerinventory_maxSpeedArrows;
+    public int PI_BaseArrowCount;
+    public int PI_MaxNormalArrows;
+    public int PI_MaxFireArrows; 
+    public int PI_MaxIceArrows; 
+    public int PI_MaxExplosiveArrows; 
+    public int PI_MaxSpeedArrows;
     [Space(5)]
-    public int arrowdamage_base;
-    public int arrowdamage_normal;
-    public int arrowdamage_fire;
-    public int arrowdamage_ice;
-    public int arrowdamage_explosive;
-    public int arrowdamage_speed;
+    public int ArrowDamage_Base; 
+    public int ArrowDamage_Normal; 
+    public int ArrowDamage_Fire; 
+    public int ArrowDamage_Ice; 
+    public int ArrowDamage_Explosive; 
+    public int ArrowDamage_Speed; 
     [Space(5)]
-    public int arrowspeed_base;
-    public int arrowspeed_normal;
-    public int arrowspeed_fire;
-    public int arrowspeed_ice;
-    public int arrowspeed_explosive;
-    public int arrowspeed_speed;
+    public int ArrowSpeed_Base; 
+    public int ArrowSpeed_Normal; 
+    public int ArrowSpeed_Fire; 
+    public int ArrowSpeed_Ice; 
+    public int ArrowSpeed_Explosive; 
+    public int ArrowSpeed_Speed; 
 
     private void Start()
     {
-        playerinventory_maxNormalArrows += playerinventory_BaseArrowCount;
-        playerinventory_maxFireArrows += playerinventory_BaseArrowCount;
-        playerinventory_maxIceArrows += playerinventory_BaseArrowCount;
-        playerinventory_maxExplosiveArrows += playerinventory_BaseArrowCount;
-        playerinventory_maxSpeedArrows += playerinventory_BaseArrowCount;
+        PI_MaxNormalArrows += PI_BaseArrowCount;
+        PI_MaxFireArrows += PI_BaseArrowCount;
+        PI_MaxIceArrows += PI_BaseArrowCount;
+        PI_MaxExplosiveArrows += PI_BaseArrowCount;
+        PI_MaxSpeedArrows += PI_BaseArrowCount;
     }
 }

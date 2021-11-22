@@ -11,20 +11,13 @@ public class GameLoot : MonoBehaviour
     private GameObject player;
     private PlayerInventory playerInventory;
 
-    public Sprite PBSR_Sprite;
-    public Sprite PDSR_Sprite;
-    public Sprite NMPR_Sprite;
-
     public List<LootItems> lootList;
-    public List<LootItems> lootList2;
     [Space(3)]
     [Header("NEW LOOT OBJECT")]
     public LootItems.Loot lootname;
     public Sprite lootsprite;
     public LootItems.LootType loottype;
     public LootItems.LootRarity lootrarity;
-
-    private bool NoMovementPenaltyRelic = false;
     
 
     private void Start()
@@ -37,12 +30,26 @@ public class GameLoot : MonoBehaviour
     private void Update()
     {
         UpdateRelics();
+
     }
 
     public void NewLootItem(LootItems.Loot lootname, Sprite lootsprite, LootItems.LootType loottype, LootItems.LootRarity lootrarity)
     {
         LootItems temp = new LootItems(lootname, lootsprite, loottype, lootrarity);
         lootList.Add(temp);
+    }
+
+    LootItems getLootByName (LootItems.Loot lootname)
+    {
+        List<LootItems> tempList = new List<LootItems>();
+        foreach (LootItems item in lootList)
+        {
+            if (item.loot_name == lootname)
+            {
+                tempList.Add(item);
+            }
+        }
+        return tempList[0];
     }
 
     LootItems getLootByRarity(LootItems.LootRarity rarity)
@@ -99,39 +106,43 @@ public class GameLoot : MonoBehaviour
 
     void RemoveFromPool(LootItems.Loot name)
     {
-        List<LootItems> tempList = new List<LootItems>(lootList);
-        for (int i = 0; i < lootList.Count; i++)
+        if (getLootByName(name).loot_type == LootItems.LootType.Relic)
         {
-            if (lootList[i].loot_name == name && lootList[i].loot_type == LootItems.LootType.Relic)
+            List<LootItems> tempList = new List<LootItems>(lootList);
+            for (int i = 0; i < lootList.Count; i++)
             {
-                lootList.RemoveAt(i);
+                if (lootList[i].loot_name == name)
+                {
+                    lootList.RemoveAt(i);
+                }
             }
         }
     }
 
     // Using a Coroutine incase we want an effect that is time limited - Use 'yield return new WaitForSeconds()"
+    // Using if ststements instead of Switch due to yield/break issues.
     public IEnumerator LootEffect(LootItems.Loot loot)
     {
         RemoveFromPool(loot);
         if (loot == LootItems.Loot.QuiverNormal)
         {
-            playerInventory.normalArrowCount = playerStats.playerinventory_maxNormalArrows;
+            playerInventory.normalArrowCount = playerStats.PI_MaxNormalArrows;
         }
         else if (loot == LootItems.Loot.QuiverFire)
         {
-            playerInventory.fireArrowCount = playerStats.playerinventory_maxFireArrows;
+            playerInventory.fireArrowCount = playerStats.PI_MaxFireArrows;
         }
         else if (loot == LootItems.Loot.QuiverIce)
         {
-            playerInventory.iceArrowCount = playerStats.playerinventory_maxIceArrows;
+            playerInventory.iceArrowCount = playerStats.PI_MaxIceArrows;
         }
         else if (loot == LootItems.Loot.QuiverExplosive)
         {
-            playerInventory.explosiveArrowCount = playerStats.playerinventory_maxExplosiveArrows;
+            playerInventory.explosiveArrowCount = playerStats.PI_MaxExplosiveArrows;
         }
         else if (loot == LootItems.Loot.QuiverSpeed)
         {
-            playerInventory.speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
+            playerInventory.speedArrowCount = playerStats.PI_MaxSpeedArrows;
         }
         else if(loot == LootItems.Loot.MaxAmmo)
         {
@@ -139,24 +150,36 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.PlayerBaseSpeedRelic)
         {
-            playerStats.playermovement_BaseSpeed += 2;
+            playerStats.PM_BaseSpeed += 2;
         }
         else if (loot == LootItems.Loot.PlayerDrawSpeedRelic)
         {
-            playerStats.playermovement_DrawSpeed += 2;
+            playerStats.PM_DrawSpeed += 2;
         }
         else if (loot == LootItems.Loot.NoMovementPenaltyRelic)
         {
-            NoMovementPenaltyRelic = true;
+            getLootByName(LootItems.Loot.NoMovementPenaltyRelic).isActive = true;
+        }
+        else if (loot == LootItems.Loot.TankRelic)
+        {
+            playerStats.playerHealth *= 2;
+            playerStats.PM_BaseSpeed /= 2;
+            playerStats.PM_DrawSpeed /= 2;
+        }
+        else if (loot == LootItems.Loot.ScoutRelic)
+        {
+            playerStats.playerHealth /= 2;
+            playerStats.PM_BaseSpeed *= 2;
+            playerStats.PM_DrawSpeed *= 2;
         }
         yield break;
     }
 
     public void UpdateRelics()
     {
-        if (NoMovementPenaltyRelic)
+        if (getLootByName(LootItems.Loot.NoMovementPenaltyRelic).isActive)
         {
-            playerStats.playermovement_DrawSpeed = playerStats.playermovement_BaseSpeed;
+            playerStats.PM_DrawSpeed = playerStats.PM_BaseSpeed;
         }
     }
 }

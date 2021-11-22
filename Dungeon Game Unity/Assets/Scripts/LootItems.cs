@@ -40,6 +40,8 @@ public class LootItems
         PlayerBaseSpeedRelic,       // Adds 2 to base player movement speed
         PlayerDrawSpeedRelic,       // Adds 2 to bow draw movement speed
         NoMovementPenaltyRelic,     // Removes speed penalty for drawing bow
+        TankRelic,                  // Double Health, Half Speed
+        ScoutRelic,                 // Half Health, Double Speed
     }
 
     public LootItems(Loot lootname, Sprite lootsprite, LootType loottype ,LootRarity lootrarity)
