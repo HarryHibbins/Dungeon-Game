@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LootItems : MonoBehaviour
+[System.Serializable]
+public class LootItems
 {
-    public static List<LootItems> lootList = new List<LootItems>();
+    [HideInInspector]
+    public string element_name;
 
     public Loot loot_name;
     public Sprite loot_sprite;
@@ -34,6 +36,7 @@ public class LootItems : MonoBehaviour
         QuiverIce,                  // Refills Ice Ammo
         QuiverExplosive,            // Refills Explosive Ammo
         QuiverSpeed,                // Refills Speed Ammo
+        MaxAmmo,                    // Refills all Ammo
         PlayerBaseSpeedRelic,       // Adds 2 to base player movement speed
         PlayerDrawSpeedRelic,       // Adds 2 to bow draw movement speed
         NoMovementPenaltyRelic,     // Removes speed penalty for drawing bow
@@ -41,21 +44,19 @@ public class LootItems : MonoBehaviour
 
     public LootItems(Loot lootname, Sprite lootsprite, LootType loottype ,LootRarity lootrarity)
     {
+        element_name = lootname.ToString();
         loot_name = lootname;
         loot_sprite = lootsprite;
         loot_rarity = lootrarity;
         loot_type = loottype;
-
-        lootList.Add(this);
     }
 
     public LootItems(Loot lootname, LootType loottype, LootRarity lootrarity)
     {
+        element_name = lootname.ToString();
         loot_name = lootname;
         loot_rarity = lootrarity;
         loot_type = loottype;
-
-        lootList.Add(this);
     }
 
 }

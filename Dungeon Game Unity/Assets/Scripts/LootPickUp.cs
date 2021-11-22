@@ -4,30 +4,19 @@ using UnityEngine;
 
 public class LootPickUp : MonoBehaviour
 {
-    private GameObject playerObj;
-    private PlayerInventory playerInventory;
-    private PlayerController playerController;
-    private GameObject gameManager;
-    private PlayerStats playerStats;
-    private GameLoot lootScript;
-
-    public LootItems.Loot loot_type;
+    private GameLoot gl_script;
+    public LootItems.Loot LootName;
 
     void Start()
     {
-        playerObj = GameObject.FindWithTag("Player");
-        playerInventory = playerObj.GetComponent<PlayerInventory>();
-        playerController = playerObj.GetComponent<PlayerController>();
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        playerStats = gameManager.GetComponent<PlayerStats>();
-        lootScript = gameManager.GetComponent<GameLoot>();
+        gl_script = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "PlayerPickUp")
         {
-            lootScript.StartCoroutine(lootScript.LootEffect(loot_type));
+            gl_script.StartCoroutine(gl_script.LootEffect(LootName));
             Destroy(this.gameObject);
         }
     }

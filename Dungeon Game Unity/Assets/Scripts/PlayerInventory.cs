@@ -22,6 +22,11 @@ public class PlayerInventory : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         playerStats = gameManager.GetComponent<PlayerStats>();
 
+        MaxAmmo();
+    }
+
+    public void MaxAmmo()
+    {
         normalArrowCount = playerStats.playerinventory_maxNormalArrows;
         fireArrowCount = playerStats.playerinventory_maxFireArrows;
         iceArrowCount = playerStats.playerinventory_maxIceArrows;

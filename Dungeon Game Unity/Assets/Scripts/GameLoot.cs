@@ -6,7 +6,6 @@ using UnityEditor;
 public class GameLoot : MonoBehaviour
 {
     public GameObject lootPrefab;
-    public List<LootItems> lootList;
 
     private PlayerStats playerStats;
     private GameObject player;
@@ -16,31 +15,34 @@ public class GameLoot : MonoBehaviour
     public Sprite PDSR_Sprite;
     public Sprite NMPR_Sprite;
 
-    private LootItems QuiverNormal;
-    private LootItems QuiverFire;
-    private LootItems QuiverIce;
-    private LootItems QuiverExplosive;
-    private LootItems QuiverSpeed;
-    private LootItems PlayerBaseSpeedRelic;
-    private LootItems PlayerDrawSpeedRelic;
-    private LootItems NoMovementPenaltyRelic;
+    public List<LootItems> lootList;
+    public List<LootItems> lootList2;
+    [Space(3)]
+    [Header("NEW LOOT OBJECT")]
+    public LootItems.Loot lootname;
+    public Sprite lootsprite;
+    public LootItems.LootType loottype;
+    public LootItems.LootRarity lootrarity;
+
+    private bool NoMovementPenaltyRelic = false;
+    
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerInventory = player.GetComponent<PlayerInventory>();
         playerStats = GetComponent<PlayerStats>();
+    }
 
-        QuiverNormal = new LootItems(LootItems.Loot.QuiverNormal, LootItems.LootType.Consumable, LootItems.LootRarity.Common);
-        QuiverFire = new LootItems(LootItems.Loot.QuiverFire, LootItems.LootType.Consumable, LootItems.LootRarity.Common);
-        QuiverIce = new LootItems(LootItems.Loot.QuiverIce, LootItems.LootType.Consumable, LootItems.LootRarity.Common);
-        QuiverExplosive = new LootItems(LootItems.Loot.QuiverExplosive, LootItems.LootType.Consumable, LootItems.LootRarity.Common);
-        QuiverSpeed = new LootItems(LootItems.Loot.QuiverSpeed, LootItems.LootType.Consumable, LootItems.LootRarity.Common);
-        PlayerBaseSpeedRelic = new LootItems(LootItems.Loot.PlayerBaseSpeedRelic, PBSR_Sprite, LootItems.LootType.Relic, LootItems.LootRarity.Uncommon);
-        PlayerDrawSpeedRelic = new LootItems(LootItems.Loot.PlayerDrawSpeedRelic, PDSR_Sprite, LootItems.LootType.Relic, LootItems.LootRarity.Uncommon);
-        NoMovementPenaltyRelic = new LootItems(LootItems.Loot.NoMovementPenaltyRelic, NMPR_Sprite, LootItems.LootType.Relic, LootItems.LootRarity.Epic);
+    private void Update()
+    {
+        UpdateRelics();
+    }
 
-        lootList = new List<LootItems>(LootItems.lootList);
+    public void NewLootItem(LootItems.Loot lootname, Sprite lootsprite, LootItems.LootType loottype, LootItems.LootRarity lootrarity)
+    {
+        LootItems temp = new LootItems(lootname, lootsprite, loottype, lootrarity);
+        lootList.Add(temp);
     }
 
     LootItems getLootByRarity(LootItems.LootRarity rarity)
@@ -73,11 +75,26 @@ public class GameLoot : MonoBehaviour
         return tempList[rand];
     }
 
-    void SpawnLoot(Vector3 position, LootItems.Loot name)
+    LootItems getLootByTypeAndRarity(LootItems.LootType type, LootItems.LootRarity rarity)
+    {
+        List<LootItems> tempList = new List<LootItems>();
+        foreach (LootItems item in lootList)
+        {
+            if (item.loot_type == type && item.loot_rarity == rarity)
+            {
+                tempList.Add(item);
+            }
+        }
+
+        int rand = UnityEngine.Random.Range(0, tempList.Count);
+        return tempList[rand];
+    }
+
+    void SpawnLoot(Vector3 position, LootItems name)
     {
         GameObject loot = Instantiate(lootPrefab, position, Quaternion.identity);
         LootPickUp script = loot.GetComponent<LootPickUp>();
-        script.loot_type = name;
+        script.LootName = name.loot_name;
     }
 
     void RemoveFromPool(LootItems.Loot name)
@@ -116,6 +133,10 @@ public class GameLoot : MonoBehaviour
         {
             playerInventory.speedArrowCount = playerStats.playerinventory_maxSpeedArrows;
         }
+        else if(loot == LootItems.Loot.MaxAmmo)
+        {
+            playerInventory.MaxAmmo();
+        }
         else if (loot == LootItems.Loot.PlayerBaseSpeedRelic)
         {
             playerStats.playermovement_BaseSpeed += 2;
@@ -126,9 +147,16 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.NoMovementPenaltyRelic)
         {
-            // Might need to do this in PlayerController so it updates if speed ever gets increased again.
-            playerStats.playermovement_DrawSpeed = playerStats.playermovement_BaseSpeed;
+            NoMovementPenaltyRelic = true;
         }
         yield break;
+    }
+
+    public void UpdateRelics()
+    {
+        if (NoMovementPenaltyRelic)
+        {
+            playerStats.playermovement_DrawSpeed = playerStats.playermovement_BaseSpeed;
+        }
     }
 }
