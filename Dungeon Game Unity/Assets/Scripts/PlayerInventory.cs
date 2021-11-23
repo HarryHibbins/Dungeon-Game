@@ -15,6 +15,8 @@ public class PlayerInventory : MonoBehaviour
     public  int explosiveArrowCount;
     public int speedArrowCount;
 
+    public bool holdingTorch = false;
+
     int arrowCheck;
     int maxArrowCheck;
     void Start()

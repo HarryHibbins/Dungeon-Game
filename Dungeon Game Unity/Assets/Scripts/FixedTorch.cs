@@ -13,8 +13,10 @@ public class FixedTorch : MonoBehaviour
     public bool hasTorch;
     public float torchTimer = 30;
     public GameObject flame;
+    public Vector3 originalPos;
     void Start()
     {
+        originalPos = this.transform.position;
         playerObj = GameObject.FindWithTag("Player");
         player = playerObj.GetComponent<PlayerController>();
         playerTorchHolderObj = GameObject.FindWithTag("Flame Holder");
@@ -24,12 +26,21 @@ public class FixedTorch : MonoBehaviour
 
     void Update()
     {
-        if (canPickUpTorch && Input.GetButtonDown("Interact") && !hasTorch)
+        if (canPickUpTorch && Input.GetButtonDown("Interact"))
         {
+            
+            //if (playerTorchHolder.Find("CurrentTorch").gameObject.GetComponent<FixedTorch>().hasTorch) 
+            if(player.GetComponent<PlayerInventory>().holdingTorch)
+            {
+                Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);            
+            }
+
+            this.name = "CurrentTorch";
             flame = this.gameObject.transform.Find("Torch (1)").gameObject;
             Debug.Log("Pick up torch");
 
             hasTorch = true;
+            player.GetComponent<PlayerInventory>().holdingTorch = true;
             torchTimer = 30;
           
             transform.position = playerTorchHolder.transform.position;
@@ -42,6 +53,13 @@ public class FixedTorch : MonoBehaviour
         {
             torchTimer -= Time.deltaTime;
             flame.GetComponent<Light>().range = (torchTimer / 30) * 10;
+
+            if (torchTimer < 0) 
+            {
+                Destroy(this.gameObject);
+                hasTorch = false;
+                player.GetComponent<PlayerInventory>().holdingTorch = false;
+            }
                     
         }
 
