@@ -13,6 +13,8 @@ TagManager:
   - Arrow
   - PlayerPickUp
   - GameManager
+  - SpawnPoint
+  - Rooms
   layers:
   - Default
   - TransparentFX
