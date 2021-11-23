@@ -8515,6 +8515,34 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1943614776956095471, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: templates
+      value: 
+      objectReference: {fileID: 875906442}
+    - target: {fileID: 3481291903787274458, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_TagString
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634426262452669708, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: templates
+      value: 
+      objectReference: {fileID: 875906442}
+    - target: {fileID: 4558864512340455720, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_TagString
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190717974671419811, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_TagString
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416337753820999431, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: templates
+      value: 
+      objectReference: {fileID: 875906442}
+    - target: {fileID: 7589060856113564176, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_TagString
+      value: SpawnPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 7656199271236479585, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8523,6 +8551,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 8584617666069821003, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: templates
+      value: 
+      objectReference: {fileID: 875906442}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -8533,7 +8565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 8.84
       objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12064,6 +12096,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
   m_PrefabInstance: {fileID: 470619395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &847454713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4558864512340455720, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+  m_PrefabInstance: {fileID: 619344319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &847454718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847454713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dc8f32e7daa6841b26328934224581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openingDirection: 0
+  spawned: 0
+  waitTime: 4
 --- !u!1 &848218612
 GameObject:
   m_ObjectHideFlags: 0
@@ -12337,7 +12389,7 @@ MonoBehaviour:
   closedRoom: {fileID: 4859978853126234431, guid: a83bbf259e82c06429eb84b18a4ff687, type: 3}
   rooms: []
   startWaitTime: 0
-  waitTime: 0
+  waitTime: 2
   boss: {fileID: 1143621168283638223, guid: be0fcc96ec1854846a0c1ee557ce3bfe, type: 3}
 --- !u!4 &875906443
 Transform:
