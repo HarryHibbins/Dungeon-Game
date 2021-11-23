@@ -7,6 +7,8 @@ public class Bow : MonoBehaviour
     private GameObject playerObj;
     private PlayerController playerController;
     private PlayerInventory playerInventory;
+    [SerializeField]
+    private Animator playerAnimator;
     private GameObject gameManager;
     private PlayerStats playerStats;
 
@@ -28,10 +30,11 @@ public class Bow : MonoBehaviour
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+        playerObj = GameObject.FindGameObjectWithTag("Player");
         firePointObj = GameObject.FindWithTag("Fire Point");
         firePoint = firePointObj.transform;
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
-
+        playerAnimator = playerObj.GetComponent<Animator>();
         //Minimum drawback value so it doesnt slow down the arrow
         drawBack = 1;
     }
@@ -62,6 +65,7 @@ public class Bow : MonoBehaviour
         {
             drawBack += Time.deltaTime;
             playerController.currentMoveSpeed = playerStats.PM_DrawSpeed;
+            playerAnimator.SetBool("Aiming", true);
         }
 
         if (fire)
@@ -80,6 +84,7 @@ public class Bow : MonoBehaviour
             fire = false;
             drawBack = 1;
             playerController.currentMoveSpeed = playerStats.PM_BaseSpeed;
+            playerAnimator.SetBool("Aiming", false);
 
             //Minus the correct ammo count
             switch (playerInventory.equippedArrow)

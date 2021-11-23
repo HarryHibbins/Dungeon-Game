@@ -7,6 +7,7 @@ public class FixedTorch : MonoBehaviour
 {
     private GameObject playerObj;
     private PlayerController player;
+    private Animator anim;
     private GameObject playerTorchHolderObj;
     private Transform playerTorchHolder;
     public bool canPickUpTorch;
@@ -17,6 +18,7 @@ public class FixedTorch : MonoBehaviour
     {
         playerObj = GameObject.FindWithTag("Player");
         player = playerObj.GetComponent<PlayerController>();
+        anim = playerObj.GetComponent<Animator>();
         playerTorchHolderObj = GameObject.FindWithTag("Flame Holder");
         playerTorchHolder = playerTorchHolderObj.transform;
         flame = this.gameObject.transform.Find("Torch (1)").gameObject;
@@ -30,6 +32,7 @@ public class FixedTorch : MonoBehaviour
             Debug.Log("Pick up torch");
 
             hasTorch = true;
+            anim.SetBool("Torch", true);
             torchTimer = 30;
           
             transform.position = playerTorchHolder.transform.position;
@@ -37,7 +40,7 @@ public class FixedTorch : MonoBehaviour
             transform.parent = playerTorchHolder;
           //  transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         }
-
+        
         if (hasTorch) 
         {
             torchTimer -= Time.deltaTime;

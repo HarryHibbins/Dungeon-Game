@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class PlayerController: MonoBehaviour
 {
-     
+    [SerializeField]
+    private Animator anim;
     public float currentMoveSpeed;
 
     private Rigidbody rb;
@@ -14,7 +16,6 @@ public class PlayerController: MonoBehaviour
     private GameObject camObj;
     private Camera cam;
 
-   
     private PlayerInventory playerInventory;
     private GameObject bowObj;
     private Bow bow;
@@ -25,20 +26,19 @@ public class PlayerController: MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
         camObj = GameObject.FindWithTag("MainCamera");
         cam = camObj.GetComponent<Camera>();
-
-        
         
         playerInventory = GetComponent<PlayerInventory>();
         
-
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
 
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         playerStats = gameManager.GetComponent<PlayerStats>();
 
+        
         currentMoveSpeed = playerStats.PM_BaseSpeed;
     }
     
@@ -48,7 +48,15 @@ public class PlayerController: MonoBehaviour
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * currentMoveSpeed;
 
-        
+        if (moveInput.x != 0 || moveInput.z != 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
        
         
         
