@@ -50,7 +50,6 @@ public class Bow : MonoBehaviour
                 //Create arrow
                 Arrow newArrow = Instantiate(arrow, firePoint.position, firePoint.rotation) ;
                 newArrow.transform.parent = firePoint;
-                Debug.Log("Drawing " + playerInventory.equippedArrow + " arrow "+  playerInventory.getSelectedArrowAmmo() + " In Quiver");
 
             }
         }

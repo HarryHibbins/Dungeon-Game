@@ -15,6 +15,7 @@ TagManager:
   - GameManager
   - SpawnPoint
   - Rooms
+  - Camera Position
   layers:
   - Default
   - TransparentFX

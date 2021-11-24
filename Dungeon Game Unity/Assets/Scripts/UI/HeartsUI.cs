@@ -29,15 +29,14 @@ public class HeartsUI : MonoBehaviour
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
         playerHealth = playerObj.GetComponent<PlayerHealth>();
-        setPlayerHearts(playerHealth);
+        setPlayerHearts();
         
         
 
     }
 
-    public void setPlayerHearts(PlayerHealth playerHealth)
+    public void setPlayerHearts( )
     {
-        this.playerHealth = playerHealth;
 
         List<PlayerHealth.Heart> heartList = playerHealth.getHeartList();
         Vector2 heartAnchorPos = new Vector2(0, 0);
