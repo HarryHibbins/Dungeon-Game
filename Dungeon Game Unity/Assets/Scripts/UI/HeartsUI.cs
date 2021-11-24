@@ -28,6 +28,7 @@ public class HeartsUI : MonoBehaviour
         PlayerHealth playerHealth = new PlayerHealth(3); //amount of hearts
         setPlayerHearts(playerHealth);
         
+        
 
     }
 
@@ -41,18 +42,35 @@ public class HeartsUI : MonoBehaviour
         {
             PlayerHealth.Heart heart = heartList[i];
             CreateHeart(heartAnchorPos).setHeartFragments(heart.getFragments());
-            heartAnchorPos += new Vector2(50, 0);
+            heartAnchorPos += new Vector2(75, 0);
 
         }
 
-        playerHealth.onDamaged += playerHeath_onDamaged;
+        playerHealth.onDamaged += playerHealth_onDamaged;
+        playerHealth.onHeal  += playerHealth_onHeal;
+        playerHealth.onDead += playerHealth_onDead;
 
 
     }
 
-    private void playerHeath_onDamaged(object sender, System.EventArgs e)
+    private void playerHealth_onDamaged(object sender, System.EventArgs e)
     {
 
+        refreshAllHearts();
+    }
+
+    private void playerHealth_onHeal(object sender, System.EventArgs e)
+    {
+        refreshAllHearts();
+    }
+    
+    private void playerHealth_onDead(object sender, System.EventArgs e)
+    {
+        Debug.Log("Dead");
+    }
+
+    private void refreshAllHearts()
+    {
         List<PlayerHealth.Heart> heartList = playerHealth.getHeartList();
         
         for (int i = 0; i < heartImageList.Count; i++)
@@ -63,6 +81,9 @@ public class HeartsUI : MonoBehaviour
             heartImage.setHeartFragments(heart.getFragments());
         }
     }
+
+   
+
     
     private HeartImage CreateHeart(Vector2 anchorPos)
     {
@@ -96,6 +117,8 @@ public class HeartsUI : MonoBehaviour
         {
             this.heartsUI = heartsUI;
             this.heartImage = heartImage;
+//            this.heartImage.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+
         }
 
         public void setHeartFragments(int fragments)
@@ -132,7 +155,10 @@ public class HeartsUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             playerHealth.Damage(1);
-            Debug.Log("Damage player");
+        }
+        else if (Input.GetKeyDown(KeyCode.O))
+        {
+            playerHealth.Heal(3);
         }
     }
     

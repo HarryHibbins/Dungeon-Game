@@ -12831,7 +12831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42059c954a1baf94caf78905e75ccdd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 782939941}
   player: {fileID: 0}
   flame: {fileID: 1122018619}
 --- !u!1 &963194225
@@ -32981,9 +32980,9 @@ RectTransform:
   m_Father: {fileID: 695015336}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 60, y: -60}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054306655
@@ -32998,10 +32997,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec50a8f7774fd8408551880f7aab3c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart4Sprite: {fileID: 21300000, guid: a558c6db357ca864c949e6be057349d2, type: 3}
-  heart3Sprite: {fileID: 21300000, guid: 4e78dc24ced23d342b8558f13878552b, type: 3}
+  heart4Sprite: {fileID: 21300000, guid: fd3dd48d7b578d54f81e1723e4ca070e, type: 3}
+  heart3Sprite: {fileID: 21300000, guid: 5b689a7bdcd3a3048b9f5e0d14333bd1, type: 3}
   heart2Sprite: {fileID: 21300000, guid: 3dddd179d32c9264788ff0acda0d4c2e, type: 3}
-  heart1Sprite: {fileID: 21300000, guid: fd3dd48d7b578d54f81e1723e4ca070e, type: 3}
+  heart1Sprite: {fileID: 21300000, guid: b69f5b0c7e51eb541b3581c6db9ddb38, type: 3}
   heart0Sprite: {fileID: 21300000, guid: fbfab76c2a3ad104d9b42c6b4166fbb2, type: 3}
 --- !u!1001 &2057272514
 PrefabInstance:

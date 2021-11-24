@@ -7,7 +7,10 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     
+    public const int maxFragmentAmount = 4;
     public event EventHandler onDamaged;
+    public event EventHandler onHeal;
+    public event EventHandler onDead;
     private List<Heart> heartList;
     
     public PlayerHealth(int heartAmount)
@@ -24,24 +27,61 @@ public class PlayerHealth : MonoBehaviour
 
     public void Damage(int damageAmount)
     {
-        for (int i = heartList.Count-1; i < 0; i--)
+        for (int i = heartList.Count-1; i >= 0; i--)
         {
             Heart heart = heartList[i];//Current Heart
+
             if (damageAmount > heart.getFragments())//If the incoming damage is higher than fragments in current heart
             {
                 //Damage heart and go to next one
                 damageAmount -= heart.getFragments();
                 heart.Damage(heart.getFragments());
             }
+
             else
             {
                 //Just damage this heart
                 heart.Damage(damageAmount);
                 break;
             }
+
+       
+
         }
         
         if (onDamaged != null) onDamaged(this, EventArgs.Empty);
+
+        if (isDead())
+        {
+            if (onDead != null) onDead(this, EventArgs.Empty);
+
+        }
+    }
+
+    public void Heal(int healAmount)
+    {
+        for (int i = 0; i < heartList.Count; i++)
+        {
+            Heart heart = heartList[i];
+            int missingFragments = maxFragmentAmount - heart.getFragments();
+            if (healAmount > missingFragments)
+            {
+                healAmount -= missingFragments;
+                heart.Heal(missingFragments);
+            }
+            else
+            {
+                heart.Heal(healAmount);
+                break;
+            }
+        }
+        if (onHeal != null) onHeal(this, EventArgs.Empty);
+
+    }
+
+    public bool isDead()
+    {
+        return heartList[0].getFragments() == 0;
     }
     
     
@@ -79,6 +119,18 @@ public class PlayerHealth : MonoBehaviour
             else
             {
                 fragments -= damageAmount;
+            }
+        }
+
+        public void Heal(int healAmount)
+        {
+            if (fragments + healAmount > maxFragmentAmount)
+            {
+                fragments = maxFragmentAmount;
+            }
+            else
+            {
+                fragments += healAmount;
             }
         }
     }
