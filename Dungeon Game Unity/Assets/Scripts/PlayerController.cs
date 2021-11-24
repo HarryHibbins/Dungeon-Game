@@ -22,16 +22,16 @@ public class PlayerController: MonoBehaviour
     private GameObject gameManager;
     private PlayerStats playerStats;
 
+    private PlayerHealth playerHealth;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         camObj = GameObject.FindWithTag("MainCamera");
         cam = camObj.GetComponent<Camera>();
 
-        
-        
         playerInventory = GetComponent<PlayerInventory>();
-        
+        playerHealth = GetComponent<PlayerHealth>();
 
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
@@ -59,7 +59,7 @@ public class PlayerController: MonoBehaviour
         float rayLength;
 
         
-        if (groundPlane.Raycast(cameraRay, out rayLength))
+        if (groundPlane.Raycast(cameraRay, out rayLength) && !playerHealth.dead)
         {
             Vector3 pointToLook = cameraRay.GetPoint(rayLength);
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.green);
@@ -67,27 +67,34 @@ public class PlayerController: MonoBehaviour
             transform.LookAt(new Vector3(pointToLook.x,transform.position.y,pointToLook.z));
         }
 
-        if (Input.GetButtonDown("Change Ammo") && !bow.draw)
+        if (Input.GetButtonDown("Change Ammo") && !bow.draw && !playerHealth.dead)
         {
             changeAmmo();
         }
     }
     private void FixedUpdate()
     {
-        rb.velocity = moveVelocity;
+        if (!playerHealth.dead)
+        {
+            rb.velocity = moveVelocity;
+        }
     }
 
     //Cycle through ammo types
     private void changeAmmo()
     {
-        if (playerInventory.equippedArrow != ArrowTypes.Arrows.Speed)
+        if (!playerHealth.dead)
         {
-            playerInventory.equippedArrow += 1;
+            if (playerInventory.equippedArrow != ArrowTypes.Arrows.Speed)
+            {
+                playerInventory.equippedArrow += 1;
+            }
+            else
+            {
+                playerInventory.equippedArrow = 0;
+            }
         }
-        else
-        {
-            playerInventory.equippedArrow = 0;
-        }
+        
       
     }
 }

@@ -14,7 +14,9 @@ public class HeartsUI : MonoBehaviour
 
     
     private List<HeartImage> heartImageList;
+    private GameObject playerObj;
     private PlayerHealth playerHealth;
+    
     
 
     private void Awake()
@@ -25,7 +27,8 @@ public class HeartsUI : MonoBehaviour
 
     void Start()
     {
-        PlayerHealth playerHealth = new PlayerHealth(3); //amount of hearts
+        playerObj = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = playerObj.GetComponent<PlayerHealth>();
         setPlayerHearts(playerHealth);
         
         
@@ -42,7 +45,8 @@ public class HeartsUI : MonoBehaviour
         {
             PlayerHealth.Heart heart = heartList[i];
             CreateHeart(heartAnchorPos).setHeartFragments(heart.getFragments());
-            heartAnchorPos += new Vector2(75, 0);
+            //heartAnchorPos += new Vector2(75, 0);
+            heartAnchorPos += new Vector2(40, 0);
 
         }
 
@@ -66,7 +70,6 @@ public class HeartsUI : MonoBehaviour
     
     private void playerHealth_onDead(object sender, System.EventArgs e)
     {
-        Debug.Log("Dead");
     }
 
     private void refreshAllHearts()
@@ -94,7 +97,8 @@ public class HeartsUI : MonoBehaviour
 
         //Location and size
         heartObject.GetComponent<RectTransform>().anchoredPosition = anchorPos;
-        heartObject.GetComponent<RectTransform>().sizeDelta = new Vector2(52, 46);
+        //heartObject.GetComponent<RectTransform>().sizeDelta = new Vector2(52, 46);
+        heartObject.GetComponent<RectTransform>().sizeDelta = new Vector2(33, 30);
         
         //set Sprite
         Image heartImageUI = heartObject.GetComponent<Image>();
@@ -150,17 +154,7 @@ public class HeartsUI : MonoBehaviour
     }
     
     
-    private void Update()
-    { 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            playerHealth.Damage(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            playerHealth.Heal(3);
-        }
-    }
+
     
 
 

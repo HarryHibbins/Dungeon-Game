@@ -11,18 +11,21 @@ public class PlayerHealth : MonoBehaviour
     public event EventHandler onDamaged;
     public event EventHandler onHeal;
     public event EventHandler onDead;
+
+    public bool dead;
     private List<Heart> heartList;
-    
-    public PlayerHealth(int heartAmount)
+
+    [SerializeField] private int startHeartAmount;
+
+    private void Start()
     {
         heartList = new List<Heart>();
         
-        for (int i = 0; i < heartAmount; i++)
+        for (int i = 0; i < startHeartAmount; i++)
         {
             Heart newHeart = new Heart(4);
             heartList.Add(newHeart);
         }
-
     }
 
     public void Damage(int damageAmount)
@@ -54,6 +57,8 @@ public class PlayerHealth : MonoBehaviour
         if (isDead())
         {
             if (onDead != null) onDead(this, EventArgs.Empty);
+            Debug.Log("Dead");
+            dead = true;
 
         }
     }
@@ -132,6 +137,19 @@ public class PlayerHealth : MonoBehaviour
             {
                 fragments += healAmount;
             }
+        }
+    }
+    
+    private void Update()
+    { 
+        //Testing damage and heal
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Damage(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            Heal(1);
         }
     }
 
