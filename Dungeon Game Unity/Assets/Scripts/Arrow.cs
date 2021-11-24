@@ -28,6 +28,7 @@ public class Arrow : MonoBehaviour
 
     private GameObject gameManager;
     private PlayerStats playerStats;
+    private bool hasBeanFried;
 
     public bool move;
 
@@ -110,7 +111,8 @@ public class Arrow : MonoBehaviour
             transform.Translate((Vector3.forward * actualspeed) * Time.deltaTime);
             //Apply Downward Translation for gravity
             transform.Translate((Vector3.down * gravity) * Time.deltaTime);
-  
+            hasBeanFried = true;
+
         }
         
         arrowDespawnTimer -= Time.deltaTime;
@@ -127,14 +129,14 @@ public class Arrow : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //If enemy is hit by the arrow round the damage value from the arrow worked out with the multiplier 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Environment"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Environment") && hasBeanFried)
         {
             Debug.Log("HIT Environment");
             move = false;
             hasLanded = true;
         }
         //If the arrow has hit the environment, and the player walks over it, 50% chance to pick it up, destroy gameobject. 
-        if (other.gameObject.tag == "PlayerPickUp" && hasLanded)
+        if (other.gameObject.tag == "PlayerPickUp" && hasLanded )
         {
             if (canBePickedUp == 1)
             {
