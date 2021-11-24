@@ -21,7 +21,7 @@ public class FixedTorch : MonoBehaviour
         player = playerObj.GetComponent<PlayerController>();
         playerTorchHolderObj = GameObject.FindWithTag("Flame Holder");
         playerTorchHolder = playerTorchHolderObj.transform;
-        flame = this.gameObject.transform.Find("Torch (1)").gameObject;
+//        flame = this.gameObject.transform.Find("Torch (1)").gameObject;
     }
 
     void Update()
