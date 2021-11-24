@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 7309720774552966913}
   - component: {fileID: 7991911166333953895}
   - component: {fileID: 1048301693294457818}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 6605532235888539486}
   - component: {fileID: 5473149745638128334}
   - component: {fileID: 1220360825567674160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 7012881428021063834}
   - component: {fileID: 1584703102700433893}
   - component: {fileID: 1286544580857560635}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RoomDetails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,6 +1002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &561828966629776964 stripped
@@ -1063,6 +1067,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -1126,6 +1134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &479719164610392982 stripped
@@ -1187,6 +1199,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -1250,6 +1266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
 --- !u!4 &382219420070598862 stripped
@@ -1311,6 +1331,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -1374,6 +1398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &320551646945387220 stripped
@@ -1435,6 +1463,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -1498,6 +1530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &189618812861923376 stripped
@@ -1559,6 +1595,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -1622,6 +1662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &138245656730527260 stripped
@@ -1683,6 +1727,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -1746,6 +1794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
 --- !u!4 &1064416178652711730 stripped
@@ -1807,6 +1859,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -1870,6 +1926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1072894491346245916 stripped
@@ -1931,6 +1991,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -1994,6 +2058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1034352898828611072 stripped
@@ -2055,6 +2123,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -2118,6 +2190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &907365680141576353 stripped
@@ -2179,6 +2255,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -2242,6 +2322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &690061035899642881 stripped
@@ -2303,6 +2387,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -2366,6 +2454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &653207357789127829 stripped
@@ -2427,6 +2519,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -2490,6 +2586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1692963387118537852 stripped
@@ -2551,6 +2651,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -2614,6 +2718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1614260449364371282 stripped
@@ -2675,6 +2783,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -2738,6 +2850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1475049713088583372 stripped
@@ -2799,6 +2915,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -2862,6 +2982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1269439882199441277 stripped
@@ -2923,6 +3047,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -2986,6 +3114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1178439845137957245 stripped
@@ -3047,6 +3179,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -3110,6 +3246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2222955335118326394 stripped
@@ -3171,6 +3311,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -3234,6 +3378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2120270126282713028 stripped
@@ -3295,6 +3443,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -3358,6 +3510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
 --- !u!4 &1995146824283179533 stripped
@@ -3419,6 +3575,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -3482,6 +3642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1878484443559038032 stripped
@@ -3543,6 +3707,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -3606,6 +3774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &1844659510474937186 stripped
@@ -3667,6 +3839,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -3730,6 +3906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2870296310632715231 stripped
@@ -3791,6 +3971,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -3854,6 +4038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2742405828563723761 stripped
@@ -3915,6 +4103,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -3978,6 +4170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2731522603894315404 stripped
@@ -4039,6 +4235,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -4102,6 +4302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2609977139845085830 stripped
@@ -4163,6 +4367,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -4226,6 +4434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2511612585380269183 stripped
@@ -4287,6 +4499,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -4350,6 +4566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2463304533086004970 stripped
@@ -4411,6 +4631,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -4474,6 +4698,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3433387058019728742 stripped
@@ -4535,6 +4763,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
       propertyPath: m_Name
       value: wallCorner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
@@ -4598,6 +4830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_door
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f24540b700a09147ad108b4f0792c25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f24540b700a09147ad108b4f0792c25, type: 3}
 --- !u!4 &3343932987112922905 stripped
@@ -4659,6 +4895,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -4722,6 +4962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3188460727828734085 stripped
@@ -4783,6 +5027,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -4846,6 +5094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3110127921949463115 stripped
@@ -4907,6 +5159,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -4970,6 +5226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3068207990962663059 stripped
@@ -5031,6 +5291,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -5094,6 +5358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3081281817348505111 stripped
@@ -5155,6 +5423,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -5218,6 +5490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &2955370947477679498 stripped
@@ -5279,6 +5555,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -5342,6 +5622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3821045619497284572 stripped
@@ -5403,6 +5687,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -5466,6 +5754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3815231556573890031 stripped
@@ -5527,6 +5819,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -5590,6 +5886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3687343255750124899 stripped
@@ -5651,6 +5951,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -5714,6 +6018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3708801184635638182 stripped
@@ -5775,6 +6083,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -5838,6 +6150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &3475447944110686709 stripped
@@ -5899,6 +6215,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -5962,6 +6282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4572836664259411471 stripped
@@ -6023,6 +6347,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -6086,6 +6414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4504489659329460128 stripped
@@ -6147,6 +6479,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -6210,6 +6546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4477566819746503239 stripped
@@ -6271,6 +6611,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -6334,6 +6678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wallCorner
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
 --- !u!4 &4263605373089297021 stripped
@@ -6395,6 +6743,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -6458,6 +6810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4218605071997087902 stripped
@@ -6519,6 +6875,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -6582,6 +6942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
 --- !u!4 &4190755430110846859 stripped
@@ -6643,6 +7007,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -6706,6 +7074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4078213329042513617 stripped
@@ -6767,6 +7139,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -6830,6 +7206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
 --- !u!4 &4099810227927136013 stripped
@@ -6891,6 +7271,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -6954,6 +7338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5026218604117707151 stripped
@@ -7015,6 +7403,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -7078,6 +7470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4917386258977058939 stripped
@@ -7139,6 +7535,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -7202,6 +7602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4876170387861203403 stripped
@@ -7263,6 +7667,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -7326,6 +7734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4815434298687988558 stripped
@@ -7333,6 +7745,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
   m_PrefabInstance: {fileID: 4997133590320563365}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5303001032307505652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+  m_PrefabInstance: {fileID: 4997133590320563365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3354914459983010785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5303001032307505652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 26, y: 1, z: 26}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &5008300540710675832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7387,6 +7817,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -7450,6 +7884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4769184658255751494 stripped
@@ -7511,6 +7949,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -7574,6 +8016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &4633115956215940765 stripped
@@ -7635,6 +8081,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -7698,6 +8148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5763966853270523756 stripped
@@ -7759,6 +8213,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -7822,6 +8280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5659045459499166321 stripped
@@ -7883,6 +8345,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -7946,6 +8412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5690301037869336360 stripped
@@ -8007,6 +8477,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -8070,6 +8544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5599602025038398330 stripped
@@ -8131,6 +8609,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -8194,6 +8676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5485477364771351396 stripped
@@ -8255,6 +8741,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -8318,6 +8808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5385395444093289520 stripped
@@ -8379,6 +8873,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -8442,6 +8940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5313249607639584345 stripped
@@ -8503,6 +9005,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -8566,6 +9072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5209858041340371613 stripped
@@ -8627,6 +9137,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -8690,6 +9204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6323613747012489400 stripped
@@ -8751,6 +9269,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -8814,6 +9336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6297978505162702776 stripped
@@ -8875,6 +9401,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -8938,6 +9468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6199405943887790012 stripped
@@ -8999,6 +9533,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -9062,6 +9600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6225097073343947704 stripped
@@ -9123,6 +9665,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -9186,6 +9732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6147014206048745003 stripped
@@ -9247,6 +9797,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -9310,6 +9864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6076055965239173095 stripped
@@ -9371,6 +9929,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -9434,6 +9996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &5862392134674062637 stripped
@@ -9495,6 +10061,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -9558,6 +10128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
 --- !u!4 &5777140421784328370 stripped
@@ -9619,6 +10193,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -9682,6 +10260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
 --- !u!4 &6777928052718636848 stripped
@@ -9743,6 +10325,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -9806,6 +10392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6800616198057856183 stripped
@@ -9867,6 +10457,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -9930,6 +10524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6521736969299095450 stripped
@@ -9991,6 +10589,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -10054,6 +10656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6505507814565726426 stripped
@@ -10115,6 +10721,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -10178,6 +10788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6447026148276130034 stripped
@@ -10239,6 +10853,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -10302,6 +10920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7465805090707715540 stripped
@@ -10363,6 +10985,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -10426,6 +11052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7456931447070922047 stripped
@@ -10487,6 +11117,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -10550,6 +11184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7414062952333225518 stripped
@@ -10611,6 +11249,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -10674,6 +11316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7283987482699634336 stripped
@@ -10735,6 +11381,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -10798,6 +11448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7306507774148416884 stripped
@@ -10859,6 +11513,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -10922,6 +11580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7200456722187023068 stripped
@@ -10983,6 +11645,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -11046,6 +11712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7021218708407021861 stripped
@@ -11107,6 +11777,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -11170,6 +11844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &6983048904612086478 stripped
@@ -11231,6 +11909,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -11294,6 +11976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &8047862394052750335 stripped
@@ -11355,6 +12041,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d404a757be2e7dd4097276ee2e47ef24, type: 3}
@@ -11418,6 +12108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7996782666816633577 stripped
@@ -11479,6 +12173,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -11542,6 +12240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7886160842576030629 stripped
@@ -11603,6 +12305,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
       propertyPath: m_Name
       value: wallCorner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
@@ -11666,6 +12372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7844036919319963380 stripped
@@ -11727,6 +12437,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -11790,6 +12504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7804978935215740991 stripped
@@ -11851,6 +12569,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
       propertyPath: m_Name
       value: wallCorner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a1726789b2292042b12027b5010bcee, type: 3}
@@ -11914,6 +12636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7776160515038233323 stripped
@@ -11975,6 +12701,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -12038,6 +12768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &7644232126549778530 stripped
@@ -12099,6 +12833,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -12162,6 +12900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &8617133815625015486 stripped
@@ -12223,6 +12965,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -12286,6 +13032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &8374415751137576565 stripped
@@ -12347,6 +13097,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -12410,6 +13164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &8223765806231313792 stripped
@@ -12471,6 +13229,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -12534,6 +13296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &8138065582408144950 stripped
@@ -12595,6 +13361,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
@@ -12658,6 +13428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &9130996850247360971 stripped
@@ -12719,6 +13493,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2f24540b700a09147ad108b4f0792c25, type: 3}
       propertyPath: m_Name
       value: wall_door
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f24540b700a09147ad108b4f0792c25, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f24540b700a09147ad108b4f0792c25, type: 3}
@@ -12782,6 +13560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &9078898266232710926 stripped
@@ -12844,6 +13626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tileBrickB_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
 --- !u!4 &8949241781186278413 stripped
@@ -12905,6 +13691,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
       propertyPath: m_Name
       value: tileBrickB_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
