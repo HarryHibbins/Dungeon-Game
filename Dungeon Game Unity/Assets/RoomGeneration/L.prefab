@@ -847,11 +847,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8302513321495268172}
   m_LocalRotation: {x: 0.457966, y: -0, z: -0, w: 0.8889697}
-  m_LocalPosition: {x: 0, y: 13.729413, z: -12.610001}
+  m_LocalPosition: {x: 0, y: 15.27, z: -12.610001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8105894494051346806}
-  m_RootOrder: 0
+  m_Father: {fileID: 4295870192330705411}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 54.512, y: 0, z: 0}
 --- !u!1 &8523407778841968251
 GameObject:
@@ -881,8 +881,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5405874, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 349848334078880488}
+  m_Children: []
   m_Father: {fileID: 4295870192330705411}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -898,9 +897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f2122d43f15884cb66a317b264984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newCameraPoint: {fileID: 0}
   moveCamera: 0
   CurrentRoomCollidersEnabled: 0
-  lerpValue: 0.4
 --- !u!65 &2054165594059877260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -946,6 +945,7 @@ Transform:
   - {fileID: 5259045565014626654}
   - {fileID: 1715330197036414404}
   - {fileID: 8105894494051346806}
+  - {fileID: 349848334078880488}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
