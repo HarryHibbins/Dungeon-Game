@@ -54,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -99,11 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawBackMultiplier: 2
-  baseSpeed: 20
   actualspeed: 0
-  baseDamage: 20
   actualDamage: 0
-  gravity: 2
+  gravity: 1.5
   arrowDespawnTimer: 30
   selectedArrow: 0
   move: 0

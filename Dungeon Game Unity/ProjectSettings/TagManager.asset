@@ -19,6 +19,7 @@ TagManager:
   - Heart
   - HeartsUI
   - RoomPrefab
+  - Draw Point
   layers:
   - Default
   - TransparentFX

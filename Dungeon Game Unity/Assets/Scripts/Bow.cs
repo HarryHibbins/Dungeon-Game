@@ -16,9 +16,12 @@ public class Bow : MonoBehaviour
     public bool draw;
     private bool fire;
     
+    private GameObject drawPointObj;
+    private Transform drawPoint;
+    
     private GameObject firePointObj;
-    private Transform firePoint;
-
+    private Transform firePoint;      
+    
     public Arrow arrow;
 
     public float drawBack;
@@ -32,8 +35,13 @@ public class Bow : MonoBehaviour
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
         playerObj = GameObject.FindGameObjectWithTag("Player");
+        
+        drawPointObj = GameObject.FindWithTag("Draw Point");
+        drawPoint = drawPointObj.transform;
+        
         firePointObj = GameObject.FindWithTag("Fire Point");
         firePoint = firePointObj.transform;
+
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         playerAnimator = playerObj.GetComponent<Animator>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
@@ -51,8 +59,8 @@ public class Bow : MonoBehaviour
             {
                 draw = true;
                 //Create arrow
-                Arrow newArrow = Instantiate(arrow, firePoint.position, firePoint.rotation) ;
-                newArrow.transform.parent = firePoint;
+                Arrow newArrow = Instantiate(arrow, drawPoint.position, drawPoint.rotation) ;
+                newArrow.transform.parent = drawPoint;
 
             }
         }
@@ -72,10 +80,12 @@ public class Bow : MonoBehaviour
 
         if (fire)
         {
-            foreach(Transform child in firePoint)
+            foreach(Transform child in drawPoint)
             {
                 if (child.gameObject.tag == "Arrow")
                 {
+                    child.position = firePoint.position;
+                    child.rotation = firePoint.rotation;
                     child.GetComponent<Arrow>().move = true;
                     child.GetComponent<Arrow>().ApplyDrawBackMultiplier();
                     child.transform.parent = null;

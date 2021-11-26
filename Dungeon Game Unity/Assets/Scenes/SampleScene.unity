@@ -15795,7 +15795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 15.400024, y: 47.799927}
+  m_AnchoredPosition: {x: 15.399902, y: 47.799927}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782939941
@@ -18493,8 +18493,8 @@ GameObject:
   m_Component:
   - component: {fileID: 998848234}
   m_Layer: 0
-  m_Name: Fire Point
-  m_TagString: Fire Point
+  m_Name: Draw Point
+  m_TagString: Draw Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22072,6 +22072,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
   m_PrefabInstance: {fileID: 1530759079}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1176845904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176845905}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Fire Point
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1176845905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176845904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.374, y: 0.498, z: 0.319}
+  m_LocalScale: {x: 0.09634256, y: 0.102571584, z: 0.483818}
+  m_Children: []
+  m_Father: {fileID: 3322781763399946296}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1176847934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26380,7 +26410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -107.891754, y: 109.95001}
+  m_AnchoredPosition: {x: -107.891846, y: 109.94995}
   m_SizeDelta: {x: 215.7835, y: 57.3222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404055363
@@ -45457,6 +45487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1745083128216954408}
+  - {fileID: 1176845905}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
