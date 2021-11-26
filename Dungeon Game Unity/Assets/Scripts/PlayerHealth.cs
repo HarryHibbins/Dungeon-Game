@@ -13,13 +13,13 @@ public class PlayerHealth : MonoBehaviour
     public event EventHandler onDead;
 
     public bool dead;
-    private List<Heart> heartList;
+    private List<Heart> heartList = new List<Heart>();
 
     [SerializeField] private int startHeartAmount;
 
     private void Start()
     {
-        heartList = new List<Heart>();
+        //heartList = new List<Heart>();
         
         for (int i = 0; i < startHeartAmount; i++)
         {

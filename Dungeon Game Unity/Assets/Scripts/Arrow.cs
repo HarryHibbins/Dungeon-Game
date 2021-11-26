@@ -36,7 +36,6 @@ public class Arrow : MonoBehaviour
     {
         move = false;
         canBePickedUp = UnityEngine.Random.Range(0, 2);
-        Debug.Log(canBePickedUp);
 
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
