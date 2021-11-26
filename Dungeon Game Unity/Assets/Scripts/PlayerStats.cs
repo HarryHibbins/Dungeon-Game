@@ -12,7 +12,6 @@ public class PlayerStats : MonoBehaviour
     public float PM_DrawSpeed;
 
     [Header("Arrow Stats")]
-    public int PI_BaseArrowCount;
     public int PI_MaxNormalArrows;
     public int PI_MaxFireArrows; 
     public int PI_MaxIceArrows; 
@@ -31,14 +30,22 @@ public class PlayerStats : MonoBehaviour
     public int ArrowSpeed_Fire; 
     public int ArrowSpeed_Ice; 
     public int ArrowSpeed_Explosive; 
-    public int ArrowSpeed_Speed; 
+    public int ArrowSpeed_Speed;
 
-    private void Start()
+    [Header("Arrow Effects")]   
+    public int ArrowEffects_BleedChance;        // 2 = 50%, 3 = 33% etc
+    public float ArrowEffects_BleedDamage;
+    public float ArrowEffects_BurnDamage;
+    public int ArrowEffects_BleedTime;
+    public int ArrowEffects_BurnTime;
+    public int ArrowEffects_SlowTime;
+
+    public void updateAllMaxArrows(int amount)
     {
-        PI_MaxNormalArrows += PI_BaseArrowCount;
-        PI_MaxFireArrows += PI_BaseArrowCount;
-        PI_MaxIceArrows += PI_BaseArrowCount;
-        PI_MaxExplosiveArrows += PI_BaseArrowCount;
-        PI_MaxSpeedArrows += PI_BaseArrowCount;
-    }
+        PI_MaxNormalArrows += amount;
+        PI_MaxFireArrows += amount;
+        PI_MaxIceArrows += amount;
+        PI_MaxExplosiveArrows += amount;
+        PI_MaxSpeedArrows += amount;
+}
 }

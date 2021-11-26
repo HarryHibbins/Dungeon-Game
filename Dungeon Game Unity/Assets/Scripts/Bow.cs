@@ -11,6 +11,7 @@ public class Bow : MonoBehaviour
     private Animator playerAnimator;
     private GameObject gameManager;
     private PlayerStats playerStats;
+    private GameLoot gameLoot;
 
     public bool draw;
     private bool fire;
@@ -35,10 +36,12 @@ public class Bow : MonoBehaviour
         firePoint = firePointObj.transform;
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         playerAnimator = playerObj.GetComponent<Animator>();
+        gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         //Minimum drawback value so it doesnt slow down the arrow
         drawBack = 1;
     }
 
+    [System.Obsolete]
     void Update()
     {
         //Hold left click to draw bow
@@ -84,36 +87,42 @@ public class Bow : MonoBehaviour
             drawBack = 1;
             playerController.currentMoveSpeed = playerStats.PM_BaseSpeed;
             playerAnimator.SetBool("Aiming", false);
+            int rand = UnityEngine.Random.Range(0, 6);
 
-            //Minus the correct ammo count
-            switch (playerInventory.equippedArrow)
+            if ((!gameLoot.getLootByName(LootItems.Loot.InfinityRelic).isActive) ||
+                (gameLoot.getLootByName(LootItems.Loot.InfinityRelic).isActive && rand == 0))
             {
-                case ArrowTypes.Arrows.Normal:
+                //Minus the correct ammo count
+                switch (playerInventory.equippedArrow)
                 {
-                    playerInventory.normalArrowCount--;
-                    break;
-                }
-                case ArrowTypes.Arrows.Fire:
-                {
-                    playerInventory.fireArrowCount--;
-                    break;
-                }
-                case ArrowTypes.Arrows.Ice:
-                {
-                    playerInventory.iceArrowCount--;
-                    break;
-                }
-                case ArrowTypes.Arrows.Explosive:
-                {
-                    playerInventory.explosiveArrowCount--;
-                    break;
-                }
-                case ArrowTypes.Arrows.Speed:
-                {
-                    playerInventory.speedArrowCount--;
-                    break;
+                    case ArrowTypes.Arrows.Normal:
+                        {
+                            playerInventory.normalArrowCount--;
+                            break;
+                        }
+                    case ArrowTypes.Arrows.Fire:
+                        {
+                            playerInventory.fireArrowCount--;
+                            break;
+                        }
+                    case ArrowTypes.Arrows.Ice:
+                        {
+                            playerInventory.iceArrowCount--;
+                            break;
+                        }
+                    case ArrowTypes.Arrows.Explosive:
+                        {
+                            playerInventory.explosiveArrowCount--;
+                            break;
+                        }
+                    case ArrowTypes.Arrows.Speed:
+                        {
+                            playerInventory.speedArrowCount--;
+                            break;
+                        }
                 }
             }
+            
             
             
             

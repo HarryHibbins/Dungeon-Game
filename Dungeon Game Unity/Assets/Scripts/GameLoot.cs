@@ -15,6 +15,8 @@ public class GameLoot : MonoBehaviour
     [Space(3)]
     [Header("NEW LOOT OBJECT")]
     public LootItems.Loot lootname;
+    [Multiline]
+    public string lootdesc;
     public Sprite lootsprite;
     public LootItems.LootType loottype;
     public LootItems.LootRarity lootrarity;
@@ -33,13 +35,13 @@ public class GameLoot : MonoBehaviour
 
     }
 
-    public void NewLootItem(LootItems.Loot lootname, Sprite lootsprite, LootItems.LootType loottype, LootItems.LootRarity lootrarity)
+    public void NewLootItem(LootItems.Loot lootname, string lootdesc, Sprite lootsprite, LootItems.LootType loottype, LootItems.LootRarity lootrarity)
     {
-        LootItems temp = new LootItems(lootname, lootsprite, loottype, lootrarity);
+        LootItems temp = new LootItems(lootname, lootdesc, lootsprite, loottype, lootrarity);
         lootList.Add(temp);
     }
 
-    LootItems getLootByName (LootItems.Loot lootname)
+    public LootItems getLootByName (LootItems.Loot lootname)
     {
         List<LootItems> tempList = new List<LootItems>();
         foreach (LootItems item in lootList)
@@ -52,7 +54,7 @@ public class GameLoot : MonoBehaviour
         return tempList[0];
     }
 
-    LootItems getLootByRarity(LootItems.LootRarity rarity)
+    public LootItems getLootByRarity(LootItems.LootRarity rarity)
     {
         List<LootItems> tempList = new List<LootItems>();
         foreach (LootItems item in lootList)
@@ -67,7 +69,7 @@ public class GameLoot : MonoBehaviour
         return tempList[rand];
     }
 
-    LootItems getLootByType(LootItems.LootType type)
+    public LootItems getLootByType(LootItems.LootType type)
     {
         List<LootItems> tempList = new List<LootItems>();
         foreach (LootItems item in lootList)
@@ -82,7 +84,7 @@ public class GameLoot : MonoBehaviour
         return tempList[rand];
     }
 
-    LootItems getLootByTypeAndRarity(LootItems.LootType type, LootItems.LootRarity rarity)
+    public LootItems getLootByTypeAndRarity(LootItems.LootType type, LootItems.LootRarity rarity)
     {
         List<LootItems> tempList = new List<LootItems>();
         foreach (LootItems item in lootList)
@@ -97,14 +99,14 @@ public class GameLoot : MonoBehaviour
         return tempList[rand];
     }
 
-    void SpawnLoot(Vector3 position, LootItems name)
+    public void SpawnLoot(Vector3 position, LootItems name)
     {
         GameObject loot = Instantiate(lootPrefab, position, Quaternion.identity);
         LootPickUp script = loot.GetComponent<LootPickUp>();
         script.LootName = name.loot_name;
     }
 
-    void RemoveFromPool(LootItems.Loot name)
+    public void RemoveFromPool(LootItems.Loot name)
     {
         if (getLootByName(name).loot_type == LootItems.LootType.Relic)
         {
@@ -172,6 +174,74 @@ public class GameLoot : MonoBehaviour
             playerStats.PM_BaseSpeed *= 2;
             playerStats.PM_DrawSpeed *= 2;
         }
+        else if (loot == LootItems.Loot.ThornsRelic)
+        {
+            getLootByName(LootItems.Loot.ThornsRelic).isActive = true;
+        }
+        else if (loot == LootItems.Loot.InfinityRelic)
+        {
+            getLootByName(LootItems.Loot.InfinityRelic).isActive = true;
+        }
+        else if (loot == LootItems.Loot.BiggerBagNormal)
+        {
+            playerStats.PI_MaxNormalArrows += 10;
+        }
+        else if (loot == LootItems.Loot.BiggerBagFire)
+        {
+            playerStats.PI_MaxFireArrows += 10;
+        }
+        else if (loot == LootItems.Loot.BiggerBagIce)
+        {
+            playerStats.PI_MaxIceArrows += 10;
+        }
+        else if (loot == LootItems.Loot.BiggerBagExplosive)
+        {
+            playerStats.PI_MaxExplosiveArrows += 10;
+        }
+        else if (loot == LootItems.Loot.BiggerBagSpeed)
+        {
+            playerStats.PI_MaxSpeedArrows += 10;
+        }
+        else if (loot == LootItems.Loot.BiggerBagAll)
+        {
+            playerStats.updateAllMaxArrows(10);
+        }
+        else if (loot == LootItems.Loot.CauterizeRelic)
+        {
+            playerStats.ArrowEffects_BurnDamage += 5;
+        }
+        else if (loot == LootItems.Loot.PyromaniacRelic)
+        {
+            playerStats.ArrowEffects_BurnTime += 5;
+        }
+        else if (loot == LootItems.Loot.BarbedTipRelic)
+        {
+            playerStats.ArrowEffects_BleedDamage += 5;
+        }
+        else if (loot == LootItems.Loot.DeepCutsRelic)
+        {
+            playerStats.ArrowEffects_BleedTime += 5;
+        }
+        else if (loot == LootItems.Loot.SubZeroRelic)
+        {
+            playerStats.ArrowEffects_SlowTime += 5;
+        }
+        else if (loot == LootItems.Loot.SharperTipsRelic)
+        {
+            playerStats.ArrowEffects_BleedChance -= 1;
+        }
+        else if (loot == LootItems.Loot.HealthPotion)
+        {
+            //Restore full health
+        }
+        else if (loot == LootItems.Loot.DungeonFood)
+        {
+            //Restore one heart
+        }
+        else if (loot == LootItems.Loot.AncientHelm)
+        {
+            //Apply chance to ignore damage
+        }
         yield break;
     }
 
@@ -180,6 +250,10 @@ public class GameLoot : MonoBehaviour
         if (getLootByName(LootItems.Loot.NoMovementPenaltyRelic).isActive)
         {
             playerStats.PM_DrawSpeed = playerStats.PM_BaseSpeed;
+        }
+        if (getLootByName(LootItems.Loot.ThornsRelic).isActive)
+        {
+            //Do thorns damage once enemies are setup.
         }
     }
 }

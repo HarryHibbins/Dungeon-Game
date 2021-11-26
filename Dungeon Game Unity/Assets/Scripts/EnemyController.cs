@@ -10,18 +10,15 @@ public class EnemyController : MonoBehaviour
     private float DamageDealt;
     [SerializeField] ArrowTypes.Effects effect;
 
-    public float bleedDamage = 2;
-    public float burnDamage = 5;
-    public int bleedTime = 5;
-    public int burnTime = 5;
-    public int slowTime = 5;
-
     public float enemySpeed;
     public float currentSpeed;
     private float halfSpeed;
 
+    private PlayerStats playerStats;
+
     void Start()
     {
+        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         currentSpeed = enemySpeed;
         halfSpeed = enemySpeed / 2;
     }
@@ -46,12 +43,12 @@ public class EnemyController : MonoBehaviour
         {
             //Get the arrow that hit the enemy
             Arrow arrow = other.GetComponent<Arrow>();
-            hit = true;
             DamageDealt = Mathf.Round(arrow.actualDamage);
             
             //Stop the arrow 
             arrow.move = false;
             arrow.GetComponent<Transform>().parent = transform;
+            int rand = UnityEngine.Random.Range(0, (playerStats.ArrowEffects_BleedChance + 1));
 
             //Apply Effect
             switch (arrow.selectedArrow)
@@ -80,6 +77,11 @@ public class EnemyController : MonoBehaviour
                         break;
                     }
             }
+            if (rand == 0)
+            {
+                effect = ArrowTypes.Effects.Bleed;
+            }
+            hit = true;
         }
     }
 
@@ -96,17 +98,17 @@ public class EnemyController : MonoBehaviour
                 }
             case ArrowTypes.Effects.Bleed:
                 {
-                    time = bleedTime;
+                    time = playerStats.ArrowEffects_BleedTime;
                     break;
                 }
             case ArrowTypes.Effects.Burn:
                 {
-                    time = burnTime;
+                    time = playerStats.ArrowEffects_BurnTime;
                     break;
                 }
             case ArrowTypes.Effects.Slow:
                 {
-                    time = slowTime;
+                    time = playerStats.ArrowEffects_SlowTime;
                     break;
                 }
         }
@@ -116,12 +118,12 @@ public class EnemyController : MonoBehaviour
             {
                 case ArrowTypes.Effects.Bleed:
                     {
-                        health -= bleedDamage;
+                        health -= playerStats.ArrowEffects_BleedDamage;
                         break;
                     }
                 case ArrowTypes.Effects.Burn:
                     {
-                        health -= burnDamage;
+                        health -= playerStats.ArrowEffects_BurnDamage;
                         break;
                     }
                 case ArrowTypes.Effects.Slow:

@@ -13,7 +13,7 @@ public class AddNewLoot : Editor
         if (GUILayout.Button("Create Loot"))
         {
             //gameloot.AddLootItemToList();
-            gameloot.NewLootItem(gameloot.lootname, gameloot.lootsprite, gameloot.loottype, gameloot.lootrarity);
+            gameloot.NewLootItem(gameloot.lootname, gameloot.lootdesc, gameloot.lootsprite, gameloot.loottype, gameloot.lootrarity);
         }
         
     }

@@ -17763,7 +17763,6 @@ MonoBehaviour:
   playerHealth: 100
   PM_BaseSpeed: 5
   PM_DrawSpeed: 3
-  PI_BaseArrowCount: 0
   PI_MaxNormalArrows: 20
   PI_MaxFireArrows: 5
   PI_MaxIceArrows: 5
@@ -17781,6 +17780,12 @@ MonoBehaviour:
   ArrowSpeed_Ice: 0
   ArrowSpeed_Explosive: -5
   ArrowSpeed_Speed: 10
+  ArrowEffects_BleedChance: 5
+  ArrowEffects_BleedDamage: 2
+  ArrowEffects_BurnDamage: 5
+  ArrowEffects_BleedTime: 5
+  ArrowEffects_BurnTime: 5
+  ArrowEffects_SlowTime: 5
 --- !u!4 &932448656
 Transform:
   m_ObjectHideFlags: 0
@@ -17814,71 +17819,202 @@ MonoBehaviour:
     loot_sprite: {fileID: 0}
     loot_rarity: 0
     loot_type: 0
+    loot_description: Refills normal arrows.
     isActive: 0
   - element_name: QuiverFire
     loot_name: 1
     loot_sprite: {fileID: 0}
     loot_rarity: 0
     loot_type: 0
+    loot_description: Refills fire arrows.
     isActive: 0
   - element_name: QuiverIce
     loot_name: 2
     loot_sprite: {fileID: 0}
     loot_rarity: 0
     loot_type: 0
+    loot_description: Refills ice arrows.
     isActive: 0
   - element_name: QuiverExplosive
     loot_name: 3
     loot_sprite: {fileID: 0}
     loot_rarity: 0
     loot_type: 0
+    loot_description: Refills explosive arrows.
     isActive: 0
   - element_name: QuiverSpeed
     loot_name: 4
     loot_sprite: {fileID: 0}
     loot_rarity: 0
     loot_type: 0
+    loot_description: Refills speed arrows.
     isActive: 0
   - element_name: MaxAmmo
     loot_name: 5
     loot_sprite: {fileID: 0}
     loot_rarity: 2
     loot_type: 0
+    loot_description: Refills all arrow ammo.
     isActive: 0
   - element_name: PlayerBaseSpeedRelic
     loot_name: 6
     loot_sprite: {fileID: 0}
     loot_rarity: 2
     loot_type: 1
+    loot_description: Increases the Player's walking speed.
     isActive: 0
   - element_name: PlayerDrawSpeedRelic
     loot_name: 7
     loot_sprite: {fileID: 0}
     loot_rarity: 2
     loot_type: 1
+    loot_description: Increases the Player's movement speed whilst drawing the bow.
     isActive: 0
   - element_name: NoMovementPenaltyRelic
     loot_name: 8
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
+    loot_description: The Player no longer slows down when drawing the bow.
     isActive: 0
   - element_name: TankRelic
     loot_name: 9
     loot_sprite: {fileID: 0}
-    loot_rarity: 3
+    loot_rarity: 5
     loot_type: 1
+    loot_description: Player's health is doubled, but speed is halved.
     isActive: 0
   - element_name: ScoutRelic
     loot_name: 10
     loot_sprite: {fileID: 0}
+    loot_rarity: 5
+    loot_type: 1
+    loot_description: Player's speed is doubled, but health is halved.
+    isActive: 0
+  - element_name: ThornsRelic
+    loot_name: 11
+    loot_sprite: {fileID: 0}
+    loot_rarity: 4
+    loot_type: 1
+    loot_description: Deal 10% damage back to enemies that hit you.
+    isActive: 0
+  - element_name: InfinityRelic
+    loot_name: 12
+    loot_sprite: {fileID: 0}
+    loot_rarity: 4
+    loot_type: 1
+    loot_description: Chance to not consume ammo when firing the bow.
+    isActive: 0
+  - element_name: BiggerBagNormal
+    loot_name: 13
+    loot_sprite: {fileID: 0}
+    loot_rarity: 1
+    loot_type: 1
+    loot_description: Increase Normal ammo capacity by 10.
+    isActive: 0
+  - element_name: BiggerBagFire
+    loot_name: 14
+    loot_sprite: {fileID: 0}
+    loot_rarity: 1
+    loot_type: 1
+    loot_description: Increase Fire ammo capacity by 10.
+    isActive: 0
+  - element_name: BiggerBagIce
+    loot_name: 15
+    loot_sprite: {fileID: 0}
+    loot_rarity: 1
+    loot_type: 1
+    loot_description: Increase Ice ammo capacity by 10.
+    isActive: 0
+  - element_name: BiggerBagExplosive
+    loot_name: 16
+    loot_sprite: {fileID: 0}
+    loot_rarity: 1
+    loot_type: 1
+    loot_description: Increase Explosive ammo capacity by 10.
+    isActive: 0
+  - element_name: BiggerBagSpeed
+    loot_name: 17
+    loot_sprite: {fileID: 0}
+    loot_rarity: 1
+    loot_type: 1
+    loot_description: Increase Speed ammo capacity by 10.
+    isActive: 0
+  - element_name: BiggerBagAll
+    loot_name: 18
+    loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
+    loot_description: Increase ammo capacity for all arrow types by 10.
     isActive: 0
-  lootname: 10
+  - element_name: CauterizeRelic
+    loot_name: 19
+    loot_sprite: {fileID: 0}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Increase burn damage from Fire arrows.
+    isActive: 0
+  - element_name: PyromaniacRelic
+    loot_name: 20
+    loot_sprite: {fileID: 0}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Increase burn time from Fire arrows.
+    isActive: 0
+  - element_name: BarbedTipRelic
+    loot_name: 21
+    loot_sprite: {fileID: 0}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Increase bleed damage.
+    isActive: 0
+  - element_name: DeepCutsRelic
+    loot_name: 22
+    loot_sprite: {fileID: 0}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Increase bleed time.
+    isActive: 0
+  - element_name: SubZeroRelic
+    loot_name: 23
+    loot_sprite: {fileID: 0}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Increase slow time from Ice arrows.
+    isActive: 0
+  - element_name: SharperTipsRelic
+    loot_name: 24
+    loot_sprite: {fileID: 0}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Increase chance to apply bleed.
+    isActive: 0
+  - element_name: HealthPotion
+    loot_name: 25
+    loot_sprite: {fileID: 0}
+    loot_rarity: 1
+    loot_type: 0
+    loot_description: Restore health to full
+    isActive: 0
+  - element_name: DungeonFood
+    loot_name: 26
+    loot_sprite: {fileID: 0}
+    loot_rarity: 0
+    loot_type: 0
+    loot_description: Restore a full heart.
+    isActive: 0
+  - element_name: AncientHelm
+    loot_name: 27
+    loot_sprite: {fileID: 0}
+    loot_rarity: 4
+    loot_type: 1
+    loot_description: Gain a chance to ingore incoming damage.
+    isActive: 0
+  lootname: 27
+  lootdesc: Gain a chance to ingore incoming damage.
   lootsprite: {fileID: 0}
   loottype: 1
-  lootrarity: 3
+  lootrarity: 4
 --- !u!114 &932448658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31895,11 +32031,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   effect: 0
-  bleedDamage: 2
-  burnDamage: 5
-  bleedTime: 5
-  burnTime: 5
-  slowTime: 5
   enemySpeed: 0
   currentSpeed: 0
 --- !u!65 &1629982778
@@ -45345,7 +45476,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3152309824223548894}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

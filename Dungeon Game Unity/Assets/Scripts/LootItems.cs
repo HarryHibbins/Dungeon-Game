@@ -12,6 +12,7 @@ public class LootItems
     public Sprite loot_sprite;
     public LootRarity loot_rarity;
     public LootType loot_type;
+    public string loot_description;
     public bool isActive;
 
     public enum LootRarity
@@ -21,6 +22,7 @@ public class LootItems
         Rare,
         Epic,
         Legendary,
+        Boss,
     }
 
     public enum LootType
@@ -42,20 +44,39 @@ public class LootItems
         NoMovementPenaltyRelic,     // Removes speed penalty for drawing bow
         TankRelic,                  // Double Health, Half Speed
         ScoutRelic,                 // Half Health, Double Speed
+        ThornsRelic,                // Deals 10% damage to enemy when hit. 
+        InfinityRelic,              // Chance to not consume ammo when firing.
+        BiggerBagNormal,            // Increase max normal arrows
+        BiggerBagFire,              // Increase max fire arrows
+        BiggerBagIce,               // Increase max ice arrows
+        BiggerBagExplosive,         // Increase max explosive arrows
+        BiggerBagSpeed,             // Increase max speed arrows
+        BiggerBagAll,               // Increase max arrows for all types
+        CauterizeRelic,             // Increase damage dealt by burn
+        PyromaniacRelic,            // Increase burn time
+        BarbedTipRelic,             // Increase damage dealt by bleed
+        DeepCutsRelic,              // Increase bleed time
+        SubZeroRelic,               // Increase slow time
+        SharperTipsRelic,           // Increase chance of applying bleed
+        HealthPotion,               // Restore health to full
+        DungeonFood,                // Restore a full heart
+        AncientHelm,                // Chance to ignore damage
     }
 
-    public LootItems(Loot lootname, Sprite lootsprite, LootType loottype ,LootRarity lootrarity)
+    public LootItems(Loot lootname, string lootdesc, Sprite lootsprite, LootType loottype ,LootRarity lootrarity)
     {
         element_name = lootname.ToString();
+        loot_description = lootdesc;
         loot_name = lootname;
         loot_sprite = lootsprite;
         loot_rarity = lootrarity;
         loot_type = loottype;
     }
 
-    public LootItems(Loot lootname, LootType loottype, LootRarity lootrarity)
+    public LootItems(Loot lootname, string lootdesc, LootType loottype, LootRarity lootrarity)
     {
         element_name = lootname.ToString();
+        loot_description = lootdesc;
         loot_name = lootname;
         loot_rarity = lootrarity;
         loot_type = loottype;
