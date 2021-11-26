@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: -8157969185627078398}
   m_Layer: 0
   m_Name: TB
-  m_TagString: Untagged
+  m_TagString: RoomPrefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -990,9 +990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f2122d43f15884cb66a317b264984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCameraPoint: {fileID: 0}
-  moveCamera: 0
-  CurrentRoomCollidersEnabled: 0
 --- !u!65 &4826511059058460359
 BoxCollider:
   m_ObjectHideFlags: 0

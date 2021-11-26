@@ -1593,7 +1593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9043569242950713482, guid: a8855ebce5c2f3d4e93270589c101f31, type: 3}
       propertyPath: LootName
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9043569242950713482, guid: a8855ebce5c2f3d4e93270589c101f31, type: 3}
       propertyPath: loot_type
@@ -17760,7 +17760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce8fb4bfee3deb46b1750874c5f1dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 100
+  playerHearts: 3
   PM_BaseSpeed: 5
   PM_DrawSpeed: 3
   PI_MaxNormalArrows: 20
@@ -43550,7 +43550,7 @@ GameObject:
   - component: {fileID: 2054306655}
   m_Layer: 5
   m_Name: Hearts
-  m_TagString: Untagged
+  m_TagString: HeartsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45352,7 +45352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dead: 0
-  startHeartAmount: 3
 --- !u!4 &2765520829549977795
 Transform:
   m_ObjectHideFlags: 0

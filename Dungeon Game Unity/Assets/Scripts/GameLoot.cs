@@ -10,6 +10,8 @@ public class GameLoot : MonoBehaviour
     private PlayerStats playerStats;
     private GameObject player;
     private PlayerInventory playerInventory;
+    private HeartsUI heartsUI;
+    private PlayerHealth playerHealth;
 
     public List<LootItems> lootList;
     [Space(3)]
@@ -27,6 +29,8 @@ public class GameLoot : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         playerInventory = player.GetComponent<PlayerInventory>();
         playerStats = GetComponent<PlayerStats>();
+        heartsUI = GameObject.FindGameObjectWithTag("HeartsUI").GetComponent<HeartsUI>();
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     private void Update()
@@ -164,13 +168,13 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.TankRelic)
         {
-            playerStats.playerHealth *= 2;
+            heartsUI.UpdateHearts(playerStats.playerHearts);
             playerStats.PM_BaseSpeed /= 2;
             playerStats.PM_DrawSpeed /= 2;
         }
         else if (loot == LootItems.Loot.ScoutRelic)
         {
-            playerStats.playerHealth /= 2;
+            heartsUI.UpdateHearts(-(playerStats.playerHearts / 2));
             playerStats.PM_BaseSpeed *= 2;
             playerStats.PM_DrawSpeed *= 2;
         }
@@ -232,11 +236,11 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.HealthPotion)
         {
-            //Restore full health
+            playerHealth.Heal(playerHealth.GetMaxHealth());
         }
         else if (loot == LootItems.Loot.DungeonFood)
         {
-            //Restore one heart
+            playerHealth.Heal(4);
         }
         else if (loot == LootItems.Loot.AncientHelm)
         {

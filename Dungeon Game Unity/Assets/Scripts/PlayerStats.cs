@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [Header("Health Stats")]
-    public float playerHealth;
+    public int playerHearts;
 
     [Header("Movement Stats")]
     public float PM_BaseSpeed;

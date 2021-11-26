@@ -30,14 +30,22 @@ public class HeartsUI : MonoBehaviour
         playerObj = GameObject.FindGameObjectWithTag("Player");
         playerHealth = playerObj.GetComponent<PlayerHealth>();
         setPlayerHearts();
-        
-        
-
     }
+
+    public void UpdateHearts (int amount)
+    {
+        playerHealth.UpdateHearts(amount);
+
+        GameObject[] hearts = GameObject.FindGameObjectsWithTag("Heart");
+        foreach (GameObject heart in hearts)
+        {
+            Destroy(heart.gameObject);
+        }
+        setPlayerHearts();
+    }    
 
     public void setPlayerHearts( )
     {
-
         List<PlayerHealth.Heart> heartList = playerHealth.getHeartList();
         Vector2 heartAnchorPos = new Vector2(0, 0);
         for (int i = 0; i < heartList.Count; i++)
@@ -58,7 +66,6 @@ public class HeartsUI : MonoBehaviour
 
     private void playerHealth_onDamaged(object sender, System.EventArgs e)
     {
-
         refreshAllHearts();
     }
 
@@ -93,6 +100,7 @@ public class HeartsUI : MonoBehaviour
         
         heartObject.transform.parent = transform;
         heartObject.transform.localPosition = Vector3.zero;
+        heartObject.tag = "Heart";
 
         //Location and size
         heartObject.GetComponent<RectTransform>().anchoredPosition = anchorPos;

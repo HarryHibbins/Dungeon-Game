@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    
+    private PlayerStats playerStats;
+
     public const int maxFragmentAmount = 4;
     public event EventHandler onDamaged;
     public event EventHandler onHeal;
@@ -15,17 +16,41 @@ public class PlayerHealth : MonoBehaviour
     public bool dead;
     private List<Heart> heartList = new List<Heart>();
 
-    [SerializeField] private int startHeartAmount;
+    //[SerializeField] private int startHeartAmount;
 
     private void Start()
     {
+        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         //heartList = new List<Heart>();
-        
-        for (int i = 0; i < startHeartAmount; i++)
+
+        for (int i = 0; i < playerStats.playerHearts; i++)
         {
             Heart newHeart = new Heart(4);
             heartList.Add(newHeart);
         }
+        Debug.Log(GetMaxHealth());
+    }
+
+    public void UpdateHearts (int amount)
+    {
+        if (amount > 0)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                Heart newHeart = new Heart(4);
+                heartList.Add(newHeart);
+            }
+        }
+        else if (amount < 0)
+        {
+            int temp = amount * -1;
+            for (int i = 0; i < temp; i++)
+            {
+                Heart newHeart = new Heart(4);
+                heartList.RemoveAt(0);
+            }
+        }
+        playerStats.playerHearts += amount;
     }
 
     public void Damage(int damageAmount)
@@ -47,9 +72,6 @@ public class PlayerHealth : MonoBehaviour
                 heart.Damage(damageAmount);
                 break;
             }
-
-       
-
         }
         
         if (onDamaged != null) onDamaged(this, EventArgs.Empty);
@@ -61,6 +83,11 @@ public class PlayerHealth : MonoBehaviour
             dead = true;
 
         }
+    }
+
+    public int GetMaxHealth()
+    {
+        return heartList.Count * 4;
     }
 
     public void Heal(int healAmount)
@@ -151,6 +178,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Heal(1);
         }
+        
     }
 
   
