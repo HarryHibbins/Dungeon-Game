@@ -40,6 +40,10 @@ public class PlayerStats : MonoBehaviour
     public int ArrowEffects_BurnTime;
     public int ArrowEffects_SlowTime;
 
+    [Header("Floor Stats")]
+    public int GameFloors;
+    public int GameRooms;
+
     public void updateAllMaxArrows(int amount)
     {
         PI_MaxNormalArrows += amount;
