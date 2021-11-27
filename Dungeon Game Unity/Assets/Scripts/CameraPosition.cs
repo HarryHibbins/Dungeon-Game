@@ -11,12 +11,12 @@ public class CameraPosition : MonoBehaviour
     Transform newCameraPoint;
     private Transform room;
 
-     bool moveCamera;
-     bool inRoom;
-     private float lerpValue = 3;
+    bool moveCamera;
+    bool inRoom;
+    private float lerpValue = 3;
 
-
-
+    public GameObject fogobj;
+    public ParticleSystem fog;
 
     void Start()
     {
@@ -37,6 +37,8 @@ public class CameraPosition : MonoBehaviour
                 newCameraPoint = child;
             }
         }
+
+        fog = room.GetComponentInChildren<ParticleSystem>();
     }
     
     
@@ -61,6 +63,10 @@ public class CameraPosition : MonoBehaviour
                 moveCamera= true;
                 inRoom = true;
                 Debug.Log("Enter room");
+                var main = fog.main;
+                var sz = fog.sizeOverLifetime;
+                sz.enabled = true;
+                fog.Stop();
             }
             else
             {
