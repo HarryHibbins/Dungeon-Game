@@ -5,7 +5,7 @@ using UnityEditor;
 
 public class GameLoot : MonoBehaviour
 {
-    public GameObject lootPrefab;
+    //public GameObject lootPrefab;
 
     private PlayerStats playerStats;
     private GameObject player;
@@ -19,6 +19,7 @@ public class GameLoot : MonoBehaviour
     public LootItems.Loot lootname;
     [Multiline]
     public string lootdesc;
+    public GameObject lootprefab;
     public Sprite lootsprite;
     public LootItems.LootType loottype;
     public LootItems.LootRarity lootrarity;
@@ -37,11 +38,16 @@ public class GameLoot : MonoBehaviour
     {
         UpdateRelics();
 
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SpawnLoot(new Vector3(0, 1, 0), getLootByName(LootItems.Loot.QuiverExplosive));
+            SpawnLoot(new Vector3(2, 1, 0), getLootByName(LootItems.Loot.MaxAmmo));
+        }
     }
 
-    public void NewLootItem(LootItems.Loot lootname, string lootdesc, Sprite lootsprite, LootItems.LootType loottype, LootItems.LootRarity lootrarity)
+    public void NewLootItem(LootItems.Loot lootname, string lootdesc, GameObject lootprefab, Sprite lootsprite, LootItems.LootType loottype, LootItems.LootRarity lootrarity)
     {
-        LootItems temp = new LootItems(lootname, lootdesc, lootsprite, loottype, lootrarity);
+        LootItems temp = new LootItems(lootname, lootdesc, lootprefab, lootsprite, loottype, lootrarity);
         lootList.Add(temp);
     }
 
@@ -105,7 +111,12 @@ public class GameLoot : MonoBehaviour
 
     public void SpawnLoot(Vector3 position, LootItems name)
     {
-        GameObject loot = Instantiate(lootPrefab, position, Quaternion.identity);
+        lootprefab = name.loot_prefab;
+        lootprefab.transform.localScale = new Vector3(1, 1, 1);
+        GameObject loot = Instantiate(lootprefab, position, Quaternion.identity);
+        loot.AddComponent<LootPickUp>();
+        loot.AddComponent<LootRotator>();
+        loot.AddComponent<BoxCollider>().isTrigger = true;
         LootPickUp script = loot.GetComponent<LootPickUp>();
         script.LootName = name.loot_name;
     }
