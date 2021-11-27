@@ -10,13 +10,17 @@ public class CameraPosition : MonoBehaviour
     
     Transform newCameraPoint;
     private Transform room;
+    private GameObject roomobj;
 
     bool moveCamera;
-    bool inRoom;
+    public bool inRoom;
     private float lerpValue = 3;
 
-    public GameObject fogobj;
-    public ParticleSystem fog;
+    public GameObject FOW_Ceiling;
+    private bool fadeout = false;
+
+    //public GameObject fogobj;
+    //public ParticleSystem fog;
 
     void Start()
     {
@@ -24,6 +28,7 @@ public class CameraPosition : MonoBehaviour
         cameraTransform = cameraObj.GetComponent<Transform>();
         
         room = transform.parent.transform;
+        roomobj = transform.parent.gameObject;
 
         if (room.name == "Entry Room")
         {
@@ -38,7 +43,15 @@ public class CameraPosition : MonoBehaviour
             }
         }
 
-        fog = room.GetComponentInChildren<ParticleSystem>();
+        foreach (Transform child in room)
+        {
+            if (child.tag == "Fog")
+            {
+                FOW_Ceiling = child.gameObject;
+            }
+        }
+
+        //fog = room.GetComponentInChildren<ParticleSystem>();
     }
     
     
@@ -48,6 +61,20 @@ public class CameraPosition : MonoBehaviour
         {
             cameraTransform.position = Vector3.Lerp(cameraTransform.position , newCameraPoint.position, lerpValue * Time.deltaTime);
       
+        }
+        if (fadeout)
+        {
+            Color col = FOW_Ceiling.GetComponent<Renderer>().material.color;
+            float fadeamount = col.a - (3 * Time.deltaTime);
+
+            col = new Color(col.r, col.g, col.b, fadeamount);
+            FOW_Ceiling.GetComponent<Renderer>().material.color = col;
+
+            if (col.a < 0)
+            {
+                FOW_Ceiling.SetActive(false);
+                fadeout = false;
+            }
         }
     }
 
@@ -63,10 +90,15 @@ public class CameraPosition : MonoBehaviour
                 moveCamera= true;
                 inRoom = true;
                 Debug.Log("Enter room");
-                var main = fog.main;
+                /*var main = fog.main;
                 var sz = fog.sizeOverLifetime;
                 sz.enabled = true;
-                fog.Stop();
+                fog.Stop();*/
+                if (room.name != "Entry Room")
+                {
+                    fadeout = true;
+                }
+                
             }
             else
             {
