@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CameraPosition : MonoBehaviour
 {
+    private PlayerStats playerStats;
+
     private GameObject cameraObj;
     private Transform cameraTransform;
     
@@ -18,12 +20,15 @@ public class CameraPosition : MonoBehaviour
 
     public GameObject FOW_Ceiling;
     private bool fadeout = false;
+    public bool hasVisited = false;
 
     //public GameObject fogobj;
     //public ParticleSystem fog;
 
     void Start()
     {
+        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
+
         cameraObj = GameObject.FindGameObjectWithTag("MainCamera");
         cameraTransform = cameraObj.GetComponent<Transform>();
         
@@ -98,7 +103,11 @@ public class CameraPosition : MonoBehaviour
                 {
                     fadeout = true;
                 }
-                
+                if (!hasVisited && room.name != "Entry Room")
+                {
+                    playerStats.GameRooms++;
+                    hasVisited = true;
+                }
             }
             else
             {
