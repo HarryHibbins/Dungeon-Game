@@ -1515,7 +1515,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3390289742896608980, guid: a8855ebce5c2f3d4e93270589c101f31, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3390289742896608980, guid: a8855ebce5c2f3d4e93270589c101f31, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7894,7 +7894,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cd9e749f13abbbd4594f0d8a37f37193, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd9e749f13abbbd4594f0d8a37f37193, type: 3}
       propertyPath: m_LocalScale.x
@@ -8658,7 +8658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10429,7 +10429,7 @@ RectTransform:
   - {fileID: 2054306654}
   - {fileID: 855862579}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17744,7 +17744,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &878695463
 PrefabInstance:
@@ -18101,7 +18101,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &932448657
 MonoBehaviour:
@@ -18115,52 +18115,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a2ed845fbb272418ddadbe627c974e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootPrefab: {fileID: 9043569242950713485, guid: a8855ebce5c2f3d4e93270589c101f31, type: 3}
   lootList:
   - element_name: QuiverNormal
     loot_name: 0
-    loot_sprite: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+    loot_sprite: {fileID: 21300000, guid: d5f43551c6b5f9a4b9b88904d13a3e96, type: 3}
     loot_rarity: 0
     loot_type: 0
     loot_description: Refills normal arrows.
     isActive: 0
   - element_name: QuiverFire
     loot_name: 1
-    loot_sprite: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: af2ac979001c1844191a34a180c42873, type: 3}
+    loot_sprite: {fileID: 21300000, guid: a33f7d3abce356045b3f4564a32b58c8, type: 3}
     loot_rarity: 0
     loot_type: 0
     loot_description: Refills fire arrows.
     isActive: 0
   - element_name: QuiverIce
     loot_name: 2
-    loot_sprite: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: cb8ea81026c768144bd0bbcf82279c8d, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 7385a14643ee5a942b82d8ff9a800455, type: 3}
     loot_rarity: 0
     loot_type: 0
     loot_description: Refills ice arrows.
     isActive: 0
   - element_name: QuiverExplosive
     loot_name: 3
-    loot_sprite: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: 547d8246fe706b644b1c22071a73c318, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 21e8f30763526e34d996fb7ff578b991, type: 3}
     loot_rarity: 0
     loot_type: 0
     loot_description: Refills explosive arrows.
     isActive: 0
   - element_name: QuiverSpeed
     loot_name: 4
-    loot_sprite: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: 62ad43c15e0cf2246bc743b105f0067a, type: 3}
+    loot_sprite: {fileID: 21300000, guid: a77e14321d287c14d8cab095177236d1, type: 3}
     loot_rarity: 0
     loot_type: 0
     loot_description: Refills speed arrows.
     isActive: 0
   - element_name: MaxAmmo
     loot_name: 5
-    loot_sprite: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: 2e64b265d6ea05b4083018a7634438dd, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 8b281b2123715b44695acb70e9327efc, type: 3}
     loot_rarity: 2
     loot_type: 0
     loot_description: Refills all arrow ammo.
     isActive: 0
   - element_name: PlayerBaseSpeedRelic
     loot_name: 6
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 2
     loot_type: 1
@@ -18168,6 +18174,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: PlayerDrawSpeedRelic
     loot_name: 7
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 2
     loot_type: 1
@@ -18175,6 +18182,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: NoMovementPenaltyRelic
     loot_name: 8
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
@@ -18182,6 +18190,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: TankRelic
     loot_name: 9
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 5
     loot_type: 1
@@ -18189,6 +18198,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: ScoutRelic
     loot_name: 10
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 5
     loot_type: 1
@@ -18196,6 +18206,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: ThornsRelic
     loot_name: 11
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 4
     loot_type: 1
@@ -18203,6 +18214,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: InfinityRelic
     loot_name: 12
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 4
     loot_type: 1
@@ -18210,6 +18222,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: BiggerBagNormal
     loot_name: 13
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 1
     loot_type: 1
@@ -18217,6 +18230,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: BiggerBagFire
     loot_name: 14
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 1
     loot_type: 1
@@ -18224,6 +18238,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: BiggerBagIce
     loot_name: 15
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 1
     loot_type: 1
@@ -18231,6 +18246,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: BiggerBagExplosive
     loot_name: 16
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 1
     loot_type: 1
@@ -18238,6 +18254,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: BiggerBagSpeed
     loot_name: 17
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 1
     loot_type: 1
@@ -18245,6 +18262,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: BiggerBagAll
     loot_name: 18
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
@@ -18252,6 +18270,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: CauterizeRelic
     loot_name: 19
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
@@ -18259,6 +18278,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: PyromaniacRelic
     loot_name: 20
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
@@ -18266,6 +18286,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: BarbedTipRelic
     loot_name: 21
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
@@ -18273,6 +18294,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: DeepCutsRelic
     loot_name: 22
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
@@ -18280,6 +18302,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: SubZeroRelic
     loot_name: 23
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
@@ -18287,6 +18310,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: SharperTipsRelic
     loot_name: 24
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 3
     loot_type: 1
@@ -18294,6 +18318,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: HealthPotion
     loot_name: 25
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 1
     loot_type: 0
@@ -18301,6 +18326,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: DungeonFood
     loot_name: 26
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 0
     loot_type: 0
@@ -18308,6 +18334,7 @@ MonoBehaviour:
     isActive: 0
   - element_name: AncientHelm
     loot_name: 27
+    loot_prefab: {fileID: 0}
     loot_sprite: {fileID: 0}
     loot_rarity: 4
     loot_type: 1
@@ -18315,6 +18342,7 @@ MonoBehaviour:
     isActive: 0
   lootname: 27
   lootdesc: Gain a chance to ingore incoming damage.
+  lootprefab: {fileID: 0}
   lootsprite: {fileID: 0}
   loottype: 1
   lootrarity: 4
@@ -18413,7 +18441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 54.512, y: 0, z: 0}
 --- !u!1001 &976039821
 PrefabInstance:
@@ -19680,7 +19708,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1049343700 stripped
 Transform:
@@ -25143,7 +25171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1324479979
 Grid:
   m_ObjectHideFlags: 0
@@ -25171,7 +25199,7 @@ Transform:
   - {fileID: 821419517}
   - {fileID: 1752289467}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1324683438
 PrefabInstance:
@@ -29705,7 +29733,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1546670442 stripped
 Transform:
@@ -32268,7 +32296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3.2081, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1629982777
 MonoBehaviour:
@@ -32971,7 +32999,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1678766527
 GameObject:
@@ -33037,7 +33065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1683142453 stripped
 Transform:
@@ -33528,7 +33556,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1721391972
 PrefabInstance:
@@ -42684,6 +42712,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
   m_PrefabInstance: {fileID: 1557309148}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1965640109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.708
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_Name
+      value: Quiver
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
 --- !u!4 &1967258154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fca2319180b09d24ca41b525c907df48, type: 3}
@@ -44814,6 +44915,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
   m_PrefabInstance: {fileID: 1607726963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2107422689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 737d5976c050bd94dabd9edc947ccfb2, type: 3}
+  m_PrefabInstance: {fileID: 1965640109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107422693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107422689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9e74d32c31040438cc3d50634253ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2112324101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44889,7 +45007,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3497084251605208507, guid: 0e26f4db172b6824a88de2bd4e9d9e55, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3497084251605208507, guid: 0e26f4db172b6824a88de2bd4e9d9e55, type: 3}
       propertyPath: m_LocalScale.x
@@ -45697,7 +45815,7 @@ Transform:
   - {fileID: 1745083128216954408}
   - {fileID: 1176845905}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3508215439915224712
 MeshFilter:
@@ -46233,7 +46351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907467085391047987, guid: e8478de415d49734eaec9f268ff713f2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8907467085391047987, guid: e8478de415d49734eaec9f268ff713f2, type: 3}
       propertyPath: m_LocalPosition.x
