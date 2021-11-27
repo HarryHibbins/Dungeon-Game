@@ -5037,16 +5037,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432864701}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7.476635, y: 10, z: 5}
   m_Children: []
-  m_Father: {fileID: 695015336}
-  m_RootOrder: 6
+  m_Father: {fileID: 855862579}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -913, y: 460}
+  m_AnchoredPosition: {x: -608.5974, y: -59.5365}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432864703
@@ -5602,16 +5602,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474619212}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7.476635, y: 10, z: 5}
   m_Children: []
-  m_Father: {fileID: 695015336}
-  m_RootOrder: 9
+  m_Father: {fileID: 855862579}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -739.5893, y: 488.4}
+  m_AnchoredPosition: {x: 687.9317, y: 224.46454}
   m_SizeDelta: {x: 56.6551, y: 30.4891}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474619214
@@ -5647,7 +5647,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: '-'
 --- !u!222 &474619215
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10097,16 +10097,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686859391}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7.476635, y: 10, z: 5}
   m_Children: []
-  m_Father: {fileID: 695015336}
-  m_RootOrder: 8
+  m_Father: {fileID: 855862579}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -795.4001, y: 467}
+  m_AnchoredPosition: {x: 270.65424, y: 10.464508}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686859393
@@ -10428,10 +10428,6 @@ RectTransform:
   - {fileID: 1672678940}
   - {fileID: 2054306654}
   - {fileID: 855862579}
-  - {fileID: 432864702}
-  - {fileID: 752126470}
-  - {fileID: 686859392}
-  - {fileID: 474619213}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15429,16 +15425,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752126469}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7.476635, y: 10, z: 5}
   m_Children: []
-  m_Father: {fileID: 695015336}
-  m_RootOrder: 7
+  m_Father: {fileID: 855862579}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -875.2422, y: 488.4}
+  m_AnchoredPosition: {x: -326.2964, y: 224.46454}
   m_SizeDelta: {x: 52.5493, y: 30.4891}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752126471
@@ -15474,7 +15470,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: '-'
 --- !u!222 &752126472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17396,8 +17392,9 @@ GameObject:
   - component: {fileID: 855862579}
   - component: {fileID: 855862581}
   - component: {fileID: 855862580}
+  - component: {fileID: 855862582}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Floors/Rooms UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17413,7 +17410,11 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.13375, y: 0.1, z: 0.2}
-  m_Children: []
+  m_Children:
+  - {fileID: 432864702}
+  - {fileID: 752126470}
+  - {fileID: 686859392}
+  - {fileID: 474619213}
   m_Father: {fileID: 695015336}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17460,6 +17461,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855862578}
   m_CullTransparentMesh: 1
+--- !u!114 &855862582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855862578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da87a379687c8544ab197339760f2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FloorText: {fileID: 752126471}
+  RoomsText: {fileID: 474619214}
 --- !u!1001 &856697343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18072,6 +18087,8 @@ MonoBehaviour:
   ArrowEffects_BleedTime: 5
   ArrowEffects_BurnTime: 5
   ArrowEffects_SlowTime: 5
+  GameFloors: 0
+  GameRooms: 0
 --- !u!4 &932448656
 Transform:
   m_ObjectHideFlags: 0
