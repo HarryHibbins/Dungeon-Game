@@ -9,11 +9,13 @@ public class LootItems
     public string element_name;
 
     public Loot loot_name;
+    public GameObject loot_prefab;
     public Sprite loot_sprite;
     public LootRarity loot_rarity;
     public LootType loot_type;
     public string loot_description;
     public bool isActive;
+    public bool isCollected;
 
     public enum LootRarity
     {
@@ -63,7 +65,7 @@ public class LootItems
         AncientHelm,                // Chance to ignore damage
     }
 
-    public LootItems(Loot lootname, string lootdesc, Sprite lootsprite, LootType loottype ,LootRarity lootrarity)
+    public LootItems(Loot lootname, string lootdesc, GameObject loot_prefab, Sprite lootsprite, LootType loottype , LootRarity lootrarity)
     {
         element_name = lootname.ToString();
         loot_description = lootdesc;

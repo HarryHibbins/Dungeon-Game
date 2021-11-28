@@ -16,6 +16,11 @@ TagManager:
   - SpawnPoint
   - Rooms
   - Camera Position
+  - Heart
+  - HeartsUI
+  - RoomPrefab
+  - Draw Point
+  - Fog
   layers:
   - Default
   - TransparentFX

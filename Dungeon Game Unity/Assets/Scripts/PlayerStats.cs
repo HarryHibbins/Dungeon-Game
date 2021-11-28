@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [Header("Health Stats")]
-    public float playerHealth;
+    public int playerHearts;
 
     [Header("Movement Stats")]
     public float PM_BaseSpeed;
@@ -39,6 +39,10 @@ public class PlayerStats : MonoBehaviour
     public int ArrowEffects_BleedTime;
     public int ArrowEffects_BurnTime;
     public int ArrowEffects_SlowTime;
+
+    [Header("Floor Stats")]
+    public int GameFloors;
+    public int GameRooms;
 
     public void updateAllMaxArrows(int amount)
     {

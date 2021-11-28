@@ -40,6 +40,9 @@ public class Arrow : MonoBehaviour
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
         
+              
+  
+        
         playerObj = GameObject.FindWithTag("Player");
         playerInventory = playerObj.GetComponent<PlayerInventory>();
 
