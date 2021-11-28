@@ -15,6 +15,7 @@ public class LootItems
     public LootType loot_type;
     public string loot_description;
     public bool isActive;
+    public bool isCollected;
 
     public enum LootRarity
     {

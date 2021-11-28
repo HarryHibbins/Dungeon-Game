@@ -40,8 +40,9 @@ public class GameLoot : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.M))
         {
-            SpawnLoot(new Vector3(0, 1, 0), getLootByName(LootItems.Loot.QuiverExplosive));
-            SpawnLoot(new Vector3(2, 1, 0), getLootByName(LootItems.Loot.MaxAmmo));
+            //SpawnLoot(new Vector3(0, 1, 0), getLootByRarity(LootItems.LootRarity.Rare));
+            //SpawnLoot(new Vector3(2, 1, 0), getLootByRarity(LootItems.LootRarity.Epic));
+            SpawnLoot(new Vector3(0, 1, 0), getLootByNameToSpawn(LootItems.Loot.NoMovementPenaltyRelic));
         }
     }
 
@@ -61,7 +62,38 @@ public class GameLoot : MonoBehaviour
                 tempList.Add(item);
             }
         }
-        return tempList[0];
+        if (tempList.Count != 0)
+        {
+            return tempList[0];
+        }
+        else
+        {
+            Debug.Log("No Items called " + lootname);
+            return null;
+        }
+        
+    }
+
+    public LootItems getLootByNameToSpawn(LootItems.Loot lootname)
+    {
+        List<LootItems> tempList = new List<LootItems>();
+        foreach (LootItems item in lootList)
+        {
+            if (item.loot_name == lootname && !item.isCollected)
+            {
+                tempList.Add(item);
+            }
+        }
+        if (tempList.Count != 0)
+        {
+            return tempList[0];
+        }
+        else
+        {
+            Debug.Log("No Items called " + lootname);
+            return null;
+        }
+
     }
 
     public LootItems getLootByRarity(LootItems.LootRarity rarity)
@@ -74,9 +106,42 @@ public class GameLoot : MonoBehaviour
                 tempList.Add(item);
             }
         }
-
         int rand = UnityEngine.Random.Range(0, tempList.Count);
-        return tempList[rand];
+
+        if (tempList.Count != 0)
+        {
+            return tempList[rand];
+        }
+        else
+        {
+            Debug.Log("No Items with rarity " + rarity);
+            return null;
+        }
+        
+    }
+
+    public LootItems getLootByRarityToSpawn(LootItems.LootRarity rarity)
+    {
+        List<LootItems> tempList = new List<LootItems>();
+        foreach (LootItems item in lootList)
+        {
+            if (item.loot_rarity == rarity && !item.isCollected)
+            {
+                tempList.Add(item);
+            }
+        }
+        int rand = UnityEngine.Random.Range(0, tempList.Count);
+
+        if (tempList.Count != 0)
+        {
+            return tempList[rand];
+        }
+        else
+        {
+            Debug.Log("No Items with rarity " + rarity);
+            return null;
+        }
+
     }
 
     public LootItems getLootByType(LootItems.LootType type)
@@ -89,9 +154,40 @@ public class GameLoot : MonoBehaviour
                 tempList.Add(item);
             }
         }
-
         int rand = UnityEngine.Random.Range(0, tempList.Count);
-        return tempList[rand];
+
+        if (tempList.Count != 0)
+        {
+            return tempList[rand];
+        }
+        else
+        {
+            Debug.Log("No Items by type " + type);
+            return null;
+        }
+    }
+
+    public LootItems getLootByTypeToSpawn(LootItems.LootType type)
+    {
+        List<LootItems> tempList = new List<LootItems>();
+        foreach (LootItems item in lootList)
+        {
+            if (item.loot_type == type && !item.isCollected)
+            {
+                tempList.Add(item);
+            }
+        }
+        int rand = UnityEngine.Random.Range(0, tempList.Count);
+
+        if (tempList.Count != 0)
+        {
+            return tempList[rand];
+        }
+        else
+        {
+            Debug.Log("No Items by type " + type);
+            return null;
+        }
     }
 
     public LootItems getLootByTypeAndRarity(LootItems.LootType type, LootItems.LootRarity rarity)
@@ -106,41 +202,98 @@ public class GameLoot : MonoBehaviour
         }
 
         int rand = UnityEngine.Random.Range(0, tempList.Count);
-        return tempList[rand];
+
+        if (tempList.Count != 0)
+        {
+            return tempList[rand];
+        }
+        else
+        {
+            Debug.Log("No Items with type " + type + " and rarity " + rarity);
+            return null;
+        }
     }
+
+    public LootItems getLootByTypeAndRarityToSpawn(LootItems.LootType type, LootItems.LootRarity rarity)
+    {
+        List<LootItems> tempList = new List<LootItems>();
+        foreach (LootItems item in lootList)
+        {
+            if (item.loot_type == type && item.loot_rarity == rarity && !item.isCollected)
+            {
+                tempList.Add(item);
+            }
+        }
+
+        int rand = UnityEngine.Random.Range(0, tempList.Count);
+
+        if (tempList.Count != 0)
+        {
+            return tempList[rand];
+        }
+        else
+        {
+            Debug.Log("No Items with type " + type + " and rarity " + rarity);
+            return null;
+        }
+    }
+
 
     public void SpawnLoot(Vector3 position, LootItems name)
     {
         lootprefab = name.loot_prefab;
-        lootprefab.transform.localScale = new Vector3(1, 1, 1);
+        if (name.loot_name == LootItems.Loot.AncientHelm)
+        {
+            lootprefab.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        }
+        else
+        {
+            lootprefab.transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        
         GameObject loot = Instantiate(lootprefab, position, Quaternion.identity);
         loot.AddComponent<LootPickUp>();
         loot.AddComponent<LootRotator>();
         loot.AddComponent<BoxCollider>().isTrigger = true;
+
+        switch (name.loot_rarity)
+        {
+            case LootItems.LootRarity.Common:
+                {
+                    loot.AddComponent<Light>().color = Color.white;
+                    break;
+                }
+            case LootItems.LootRarity.Uncommon:
+                {
+                    loot.AddComponent<Light>().color = Color.green;
+                    break;
+                }
+            case LootItems.LootRarity.Rare:
+                {
+                    loot.AddComponent<Light>().color = Color.blue;
+                    break;
+                }
+            case LootItems.LootRarity.Epic:
+                {
+                    loot.AddComponent<Light>().color = Color.magenta;
+                    break;
+                }
+            case LootItems.LootRarity.Legendary:
+                {
+                    loot.AddComponent<Light>().color = Color.yellow;
+                    break;
+                }
+        }
+
         LootPickUp script = loot.GetComponent<LootPickUp>();
         script.LootName = name.loot_name;
-    }
-
-    public void RemoveFromPool(LootItems.Loot name)
-    {
-        if (getLootByName(name).loot_type == LootItems.LootType.Relic)
-        {
-            List<LootItems> tempList = new List<LootItems>(lootList);
-            for (int i = 0; i < lootList.Count; i++)
-            {
-                if (lootList[i].loot_name == name)
-                {
-                    lootList.RemoveAt(i);
-                }
-            }
-        }
     }
 
     // Using a Coroutine incase we want an effect that is time limited - Use 'yield return new WaitForSeconds()"
     // Using if ststements instead of Switch due to yield/break issues.
     public IEnumerator LootEffect(LootItems.Loot loot)
     {
-        RemoveFromPool(loot);
         if (loot == LootItems.Loot.QuiverNormal)
         {
             playerInventory.normalArrowCount = playerStats.PI_MaxNormalArrows;
