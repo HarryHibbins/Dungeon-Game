@@ -54,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -109,13 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a7964cb24ac72498e362e44090a0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 20
+  drawBackMultiplier: 0
   actualspeed: 0
-  baseDamage: 20
   actualDamage: 0
   gravity: 2
   arrowDespawnTimer: 30
   selectedArrow: 0
+  move: 0
 --- !u!54 &3916665776574876023
 Rigidbody:
   m_ObjectHideFlags: 0
