@@ -15,8 +15,6 @@ public class FixedTorch : MonoBehaviour
     public float torchTimer = 30;
     public GameObject flame;
     public Vector3 originalPos;
-    private AudioSource audioSrc;
-
     void Start()
     {
         originalPos = this.transform.position;
@@ -25,8 +23,7 @@ public class FixedTorch : MonoBehaviour
         anim = playerObj.GetComponent<Animator>();
         playerTorchHolderObj = GameObject.FindWithTag("Flame Holder");
         playerTorchHolder = playerTorchHolderObj.transform;
-        //        flame = this.gameObject.transform.Find("Torch (1)").gameObject;
-        audioSrc = GetComponent<AudioSource>();
+//        flame = this.gameObject.transform.Find("Torch (1)").gameObject;
     }
 
     void Update()
@@ -37,7 +34,7 @@ public class FixedTorch : MonoBehaviour
             //if (playerTorchHolder.Find("CurrentTorch").gameObject.GetComponent<FixedTorch>().hasTorch) 
             if(player.GetComponent<PlayerInventory>().holdingTorch)
             {
-                Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);
+                Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);            
             }
 
             this.name = "CurrentTorch";
