@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inRoom: 0
-  FOW_Ceiling: {fileID: 0}
+  FOW_Ceiling: {fileID: 7496246659894695076}
   hasVisited: 0
 --- !u!65 &4450132974276137122
 BoxCollider:
@@ -893,7 +893,7 @@ MeshCollider:
   m_GameObject: {fileID: 7496246659894695076}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

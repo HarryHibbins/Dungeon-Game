@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inRoom: 0
-  FOW_Ceiling: {fileID: 0}
+  FOW_Ceiling: {fileID: 2081327937661195357}
   hasVisited: 0
 --- !u!65 &10263515781101587
 BoxCollider:
@@ -182,7 +182,7 @@ MeshCollider:
   m_GameObject: {fileID: 2081327937661195357}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -3937,7 +3937,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1001 &1709447059239681292
@@ -4573,7 +4573,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1001 &1835466528978584443
@@ -6356,7 +6356,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1950485812031865852, guid: 824f683e960600d468e9e9a1fd826214, type: 3}
 --- !u!1001 &2648658638669616263
@@ -8022,6 +8022,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
       propertyPath: m_Name
       value: door_gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
+      propertyPath: m_Convex
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
@@ -13021,7 +13025,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3820499384955507289, guid: 4501fd0ddb0549d4996ff36815b5eec0, type: 3}
 --- !u!1001 &5808684319330688999
@@ -17319,7 +17323,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1001 &8300182174737539872
@@ -18149,7 +18153,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8415063411457389451, guid: bf216b901a52f0244901ee91a19c6055, type: 3}
 --- !u!1001 &8588342459865926294

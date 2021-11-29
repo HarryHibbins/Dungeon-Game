@@ -12,6 +12,7 @@ public class Bow : MonoBehaviour
     private GameObject gameManager;
     private PlayerStats playerStats;
     private GameLoot gameLoot;
+    private PauseMenu pauseMenu;
 
     public bool draw;
     private bool fire;
@@ -45,6 +46,7 @@ public class Bow : MonoBehaviour
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         playerAnimator = playerObj.GetComponent<Animator>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
+        pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
         //Minimum drawback value so it doesnt slow down the arrow
         drawBack = 1;
     }
@@ -53,7 +55,7 @@ public class Bow : MonoBehaviour
     void Update()
     {
         //Hold left click to draw bow
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !pauseMenu.inPauseMenu)
         {
             if (playerInventory.getSelectedArrowAmmo() >= 1)
             {

@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
             Heart newHeart = new Heart(4);
             heartList.Add(newHeart);
         }
-        Debug.Log(GetMaxHealth());
+        
     }
 
     public void UpdateHearts (int amount)
