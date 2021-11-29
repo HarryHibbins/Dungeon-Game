@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inRoom: 0
-  FOW_Ceiling: {fileID: 0}
+  FOW_Ceiling: {fileID: 5849458829177708945}
   hasVisited: 0
 --- !u!65 &2054165594059877260
 BoxCollider:

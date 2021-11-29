@@ -99,7 +99,7 @@ public class CameraPosition : MonoBehaviour
                 var sz = fog.sizeOverLifetime;
                 sz.enabled = true;
                 fog.Stop();*/
-                if (room.name != "Entry Room")
+                if (!room.name.Contains("Entry Room"))
                 {
                     fadeout = true;
                 }

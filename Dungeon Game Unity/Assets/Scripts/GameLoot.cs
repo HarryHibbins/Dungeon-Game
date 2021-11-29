@@ -256,6 +256,7 @@ public class GameLoot : MonoBehaviour
         loot.AddComponent<LootPickUp>();
         loot.AddComponent<LootRotator>();
         loot.AddComponent<BoxCollider>().isTrigger = true;
+        loot.tag = "Loot";
 
         switch (name.loot_rarity)
         {

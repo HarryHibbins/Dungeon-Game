@@ -21,6 +21,8 @@ TagManager:
   - RoomPrefab
   - Draw Point
   - Fog
+  - Loot
+  - Boss
   layers:
   - Default
   - TransparentFX
