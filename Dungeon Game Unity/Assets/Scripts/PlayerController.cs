@@ -16,6 +16,9 @@ public class PlayerController: MonoBehaviour
     private GameObject camObj;
     private Camera cam;
 
+    private AudioSource audioSrc;
+    public bool isMovingForSound = false;
+
     private PlayerInventory playerInventory;
     private GameObject bowObj;
     private Bow bow;
@@ -44,6 +47,8 @@ public class PlayerController: MonoBehaviour
 
         
         currentMoveSpeed = playerStats.PM_BaseSpeed;
+
+        audioSrc = GetComponent<AudioSource>();
     }
     
     void Update()
@@ -55,12 +60,25 @@ public class PlayerController: MonoBehaviour
         if (moveInput.x != 0 || moveInput.z != 0)
         {
             anim.SetBool("isWalking", true);
+            isMovingForSound = true;
         }
 
         else
         {
             anim.SetBool("isWalking", false);
+            isMovingForSound = false;
         }
+
+        if (isMovingForSound)
+        {
+            if (!audioSrc.isPlaying)
+            {
+                audioSrc.Play();
+            }
+        }
+
+        else
+            audioSrc.Stop();
        
         
         

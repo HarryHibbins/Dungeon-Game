@@ -12,6 +12,7 @@ public class Bow : MonoBehaviour
     private GameObject gameManager;
     private PlayerStats playerStats;
     private GameLoot gameLoot;
+    private AudioSource audioSrc;
     private PauseMenu pauseMenu;
 
     public bool draw;
@@ -49,6 +50,7 @@ public class Bow : MonoBehaviour
         pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
         //Minimum drawback value so it doesnt slow down the arrow
         drawBack = 1;
+        audioSrc = GetComponent<AudioSource>();
     }
 
     [System.Obsolete]
@@ -63,7 +65,7 @@ public class Bow : MonoBehaviour
                 //Create arrow
                 Arrow newArrow = Instantiate(arrow, drawPoint.position, drawPoint.rotation) ;
                 newArrow.transform.parent = drawPoint;
-
+                audioSrc.Play();
             }
         }
         //Release left click to fire arrow
@@ -71,6 +73,7 @@ public class Bow : MonoBehaviour
         {
             draw = false;
             fire = true;
+            audioSrc.Stop();
         }
         //Cap the draw back to a value that can be changed depending on bow
         if (draw && drawBack < maxDrawBack)
