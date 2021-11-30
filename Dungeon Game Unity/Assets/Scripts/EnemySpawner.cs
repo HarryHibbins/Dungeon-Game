@@ -26,6 +26,7 @@ public class EnemySpawner : MonoBehaviour
             yPos = spawnerBox.transform.position.y;
             zPos = spawnerBox.transform.position.z;
             Instantiate(enemy, new Vector3(xPos, yPos, zPos), Quaternion.identity);
+            enemy.active = true;
             yield return new WaitForSeconds(3f);
             enemyCount += 1;
         }
