@@ -13,6 +13,7 @@ TagManager:
   - Arrow
   - PlayerPickUp
   - GameManager
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Water
   - UI
   - Environment
-  - 
-  - 
+  - PlayerLayer
+  - GroundLayer
   - 
   - 
   - 
