@@ -63,6 +63,18 @@ public class LootItems
         HealthPotion,               // Restore health to full
         DungeonFood,                // Restore a full heart
         AncientHelm,                // Chance to ignore damage
+        WarbannerRelic,             // After standing still for 3 seconds, gain 50% damage
+        RestorePotion,              // Gain health regen for 10 seconds (1 heart per 5 seconds)
+        ArmourPiercingArrows,       // Gain 20% damage against bosses
+        PreservedInsectRelic,       // Bosses start with 20% less health
+        ExplorerRelic,              // Restore 1 heart for every 10 rooms visited
+        AssassinRelic,              // Lose all burn and slow effect, gain 100% chance to bleed
+        BetterBowRelic,             // Gain 10% chance to crit (double damage)
+        LizardTailRelic,            // After taking lethal damage, heal to 50% hp (once per run)
+        LuckyDiceRelic,             // Increase drop luck
+        AncientLamp,                // Gain a small permanent light source
+        GoldenFeathers,             // All arrow types gain +5 damage
+        CartographerRelic,          // Increase chance of finding a treasure room (have to implement)
     }
 
     public LootItems(Loot lootname, string lootdesc, GameObject loot_prefab, Sprite lootsprite, LootType loottype , LootRarity lootrarity)

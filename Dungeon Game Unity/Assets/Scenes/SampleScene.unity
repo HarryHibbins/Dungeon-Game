@@ -4716,6 +4716,7 @@ MonoBehaviour:
   PI_MaxIceArrows: 5
   PI_MaxExplosiveArrows: 5
   PI_MaxSpeedArrows: 10
+  ArrowDamage_CritChance: 5
   ArrowDamage_Base: 0
   ArrowDamage_Normal: 0
   ArrowDamage_Fire: 5
@@ -5015,12 +5016,122 @@ MonoBehaviour:
     loot_description: Gain a chance to ingore incoming damage.
     isActive: 0
     isCollected: 0
-  lootname: 27
-  lootdesc: Gain a chance to ingore incoming damage.
+  - element_name: WarbannerRelic
+    loot_name: 28
+    loot_prefab: {fileID: 919132149155446097, guid: ddbac8a9132fc5343b76b063a2a17348, type: 3}
+    loot_sprite: {fileID: 21300000, guid: c21ac051fef84dc4b8830254c03a28ff, type: 3}
+    loot_rarity: 2
+    loot_type: 1
+    loot_description: Gain 50% after standing still for 3 seconds. Removed after
+      moving.
+    isActive: 0
+    isCollected: 0
+  - element_name: RestorePotion
+    loot_name: 29
+    loot_prefab: {fileID: 919132149155446097, guid: 037458cd65ef5344999a140f5865a3f0, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 83ccf9bbd4f72e34ea0f07268fac9d26, type: 3}
+    loot_rarity: 1
+    loot_type: 0
+    loot_description: 'Restore health over 10 seconds. '
+    isActive: 0
+    isCollected: 0
+  - element_name: ArmourPiercingArrows
+    loot_name: 30
+    loot_prefab: {fileID: 919132149155446097, guid: 2b0eded1c02e36a4a894604ac4a06e03, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 1206e3d8af5c18242945969cbc977494, type: 3}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Gain 20% damage against bosses.
+    isActive: 0
+    isCollected: 0
+  - element_name: PreservedInsectRelic
+    loot_name: 31
+    loot_prefab: {fileID: 919132149155446097, guid: c112d04432717224aa9821720b00facc, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 7fb8e3fa032ca2445990722dee96274d, type: 3}
+    loot_rarity: 5
+    loot_type: 1
+    loot_description: Bosses start with 20% less health.
+    isActive: 0
+    isCollected: 0
+  - element_name: ExplorerRelic
+    loot_name: 32
+    loot_prefab: {fileID: 919132149155446097, guid: 81b8c3743552e2d4c897db25a69c4891, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 01a6e4aaddf738541b91c50eb4f39d2b, type: 3}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Restore 1 heart for every 10 rooms visited.
+    isActive: 0
+    isCollected: 0
+  - element_name: AssassinRelic
+    loot_name: 33
+    loot_prefab: {fileID: 919132149155446097, guid: 35a68532e325bb04e966592d06102a7a, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 4a4102f283732874bb70e5a76c80594f, type: 3}
+    loot_rarity: 5
+    loot_type: 1
+    loot_description: Remove fire and slow damage buffs. Gain 100% chance to bleed.
+    isActive: 0
+    isCollected: 0
+  - element_name: BetterBowRelic
+    loot_name: 34
+    loot_prefab: {fileID: 919132149155446097, guid: d61e63badb328b944a5df78268622ee6, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 6ae2e974069b7ee48a7ce9086df1ae48, type: 3}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Gain 10% chance to crit (double damage).
+    isActive: 0
+    isCollected: 0
+  - element_name: LizardTailRelic
+    loot_name: 35
+    loot_prefab: {fileID: 919132149155446097, guid: 9ca55acc6e1744040847f09108e6c65f, type: 3}
+    loot_sprite: {fileID: 21300000, guid: e0fb92011a858134a8c16b28e60154f2, type: 3}
+    loot_rarity: 4
+    loot_type: 1
+    loot_description: After taking lethal damage, restore 50% health. (Once per run).
+    isActive: 0
+    isCollected: 0
+  - element_name: LuckyDiceRelic
+    loot_name: 36
+    loot_prefab: {fileID: 919132149155446097, guid: 1f193b2b9f5695849a9e4d830ba97bb6, type: 3}
+    loot_sprite: {fileID: 21300000, guid: b569881021476a64798184bbde78daf8, type: 3}
+    loot_rarity: 2
+    loot_type: 1
+    loot_description: Increase drop luck.
+    isActive: 0
+    isCollected: 0
+  - element_name: AncientLamp
+    loot_name: 37
+    loot_prefab: {fileID: 0}
+    loot_sprite: {fileID: 0}
+    loot_rarity: 5
+    loot_type: 1
+    loot_description: Gain a small, but permanent, light source.
+    isActive: 0
+    isCollected: 0
+  - element_name: GoldenFeathers
+    loot_name: 38
+    loot_prefab: {fileID: 0}
+    loot_sprite: {fileID: 0}
+    loot_rarity: 2
+    loot_type: 1
+    loot_description: All arrow types gain +5 damage.
+    isActive: 0
+    isCollected: 0
+  - element_name: CartographerRelic
+    loot_name: 39
+    loot_prefab: {fileID: 0}
+    loot_sprite: {fileID: 0}
+    loot_rarity: 3
+    loot_type: 1
+    loot_description: Increase chance of finding a treasure room.
+    isActive: 0
+    isCollected: 0
+  lootname: 39
+  lootdesc: Increase chance of finding a treasure room.
   lootprefab: {fileID: 0}
   lootsprite: {fileID: 0}
   loottype: 1
-  lootrarity: 4
+  lootrarity: 3
+  explorerRelicRooms: 0
 --- !u!114 &932448658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5085,6 +5196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inPauseMenu: 0
+  inRelicMenu: 0
   RelicUIPrefab: {fileID: 7068722884994876963, guid: a562be1c7d3a6da47ab9757730ead8f2, type: 3}
   ContentArea: {fileID: 852184550}
   pausePanel: {fileID: 837622465}

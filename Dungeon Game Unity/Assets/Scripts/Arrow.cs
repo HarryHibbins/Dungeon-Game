@@ -98,8 +98,8 @@ public class Arrow : MonoBehaviour
         //Modifiers applied depending on arrow type
         drawBackMultiplier = bow.drawBack;
 
-        actualDamage = (playerStats.ArrowDamage_Base * drawBackMultiplier) + arrowTypeDamageBonus;
-        actualspeed = (playerStats.ArrowSpeed_Base * drawBackMultiplier) + arrowTypeSpeedBonus;
+        actualDamage = (playerStats.ArrowDamage_Base + arrowTypeDamageBonus) * drawBackMultiplier ;
+        actualspeed = (playerStats.ArrowSpeed_Base + arrowTypeSpeedBonus) * drawBackMultiplier;
 
     }
 

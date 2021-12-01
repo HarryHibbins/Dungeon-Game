@@ -18,6 +18,7 @@ public class PlayerStats : MonoBehaviour
     public int PI_MaxExplosiveArrows; 
     public int PI_MaxSpeedArrows;
     [Space(5)]
+    public int ArrowDamage_CritChance;         // 20 = 5%, 10 = 10% etc
     public int ArrowDamage_Base; 
     public int ArrowDamage_Normal; 
     public int ArrowDamage_Fire; 

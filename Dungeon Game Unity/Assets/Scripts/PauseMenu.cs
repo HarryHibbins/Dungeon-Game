@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public bool inPauseMenu = false;
-    private bool inRelicMenu = false;
+    public bool inRelicMenu = false;
 
     public GameObject RelicUIPrefab;
     public GameObject ContentArea;
