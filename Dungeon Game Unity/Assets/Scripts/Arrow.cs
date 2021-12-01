@@ -32,6 +32,7 @@ public class Arrow : MonoBehaviour
 
     public bool move;
 
+   [SerializeField] private ParticleSystem ps;
     private void Awake()
     {
         move = false;
@@ -39,9 +40,6 @@ public class Arrow : MonoBehaviour
 
         bowObj = GameObject.FindWithTag("Bow");
         bow = bowObj.GetComponent<Bow>();
-        
-              
-  
         
         playerObj = GameObject.FindWithTag("Player");
         playerInventory = playerObj.GetComponent<PlayerInventory>();
@@ -51,39 +49,79 @@ public class Arrow : MonoBehaviour
         
         //The selected arrow is determined through the player inventory
         selectedArrow = playerInventory.equippedArrow;
+
+        foreach (Transform child in transform)
+        {
+            if (child.name == "Particle System")
+            {
+                ps = child.GetComponent<ParticleSystem>();
+            }
+        }
         
 
         switch (selectedArrow)
         {
+              
+                    
             case ArrowTypes.Arrows.Normal:
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Normal;
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Normal;
+                
+                
+                var col = ps.colorOverLifetime;
+                col.enabled = true;
+                col.color = new Color(255, 255, 255, 100);
+                
+                
                 break;
             }
             case ArrowTypes.Arrows.Fire:
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Fire;
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Fire;
+                
+                var col = ps.colorOverLifetime;
+                col.enabled = true;
+                col.color = new Color(255, 0, 0, 100);
+                
                 break;
             }
             case ArrowTypes.Arrows.Ice:
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Ice;
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Ice;
+                
+                var col = ps.colorOverLifetime;
+                col.enabled = true;
+                col.color = new Color(0, 255, 255, 100);
+
+
                 break;
             }
             case ArrowTypes.Arrows.Explosive:
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Explosive;
-                //Maybe go slower?
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Explosive;
+
+                var col = ps.colorOverLifetime;
+                col.enabled = true;
+                col.color = new Color(255, 255, 0, 100);
+
                 break;
             }
             case ArrowTypes.Arrows.Speed:
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Speed;
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Speed;
+                
+                
+                var col = ps.colorOverLifetime;
+                col.enabled = true;
+                col.color = new Color(0, 255, 0, 100);
+                
+                
+
                 break;
             }
         }
@@ -92,6 +130,8 @@ public class Arrow : MonoBehaviour
 
 
     }
+
+   
 
     public void ApplyDrawBackMultiplier()
     {

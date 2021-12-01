@@ -124,7 +124,5 @@ public class PlayerController: MonoBehaviour
                 playerInventory.equippedArrow = 0;
             }
         }
-        
-      
     }
 }
