@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 168045897}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 301428541}
   - component: {fileID: 301428543}
   - component: {fileID: 301428540}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Bow '
   m_TagString: Bow
   m_Icon: {fileID: 0}
@@ -904,6 +904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crossbow_common
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a4034c43cba0ae4485e6f63eabe1b90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4034c43cba0ae4485e6f63eabe1b90, type: 3}
 --- !u!1001 &348126759
@@ -960,6 +964,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3f857e7bb1ea31f4790bd19510f6f3b9, type: 3}
       propertyPath: m_Name
       value: quiver_empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3f857e7bb1ea31f4790bd19510f6f3b9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f857e7bb1ea31f4790bd19510f6f3b9, type: 3}
@@ -1240,7 +1248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490294494}
   - component: {fileID: 490294495}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PickUpArea
   m_TagString: PlayerPickUp
   m_Icon: {fileID: 0}
@@ -2097,7 +2105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848218613}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flame Holder
   m_TagString: Flame Holder
   m_Icon: {fileID: 0}
@@ -2965,7 +2973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 998848234}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Draw Point
   m_TagString: Draw Point
   m_Icon: {fileID: 0}
@@ -3087,6 +3095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: torch
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6116b8acb10323444a1a91232b88869a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6116b8acb10323444a1a91232b88869a, type: 3}
 --- !u!1 &1138089279
@@ -3173,7 +3185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1176845905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire Point
   m_TagString: Fire Point
   m_Icon: {fileID: 0}
@@ -3535,6 +3547,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307949145}
   m_CullTransparentMesh: 1
+--- !u!1 &1370539337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370539339}
+  - component: {fileID: 1370539338}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1370539338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370539337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 15b1b0dded226744d9ef2a68ec22a151, type: 2}
+--- !u!4 &1370539339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370539337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.6212397, y: -2.4282475, z: 5.820112}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1404055361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3744,6 +3816,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1969966981564108437, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: ed374f44996082847a890ded2519f540, type: 2}
+    - target: {fileID: 1969966981564108437, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LayerMask.m_Bits
+      value: 375
+      objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3791,6 +3871,10 @@ PrefabInstance:
     - target: {fileID: 9145312676768717571, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_Name
       value: Entry Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145312676768717571, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
@@ -5030,7 +5114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8494544089434418224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5216,7 +5300,7 @@ GameObject:
   - component: {fileID: 2690677319519554179}
   - component: {fileID: 2690677319519554183}
   - component: {fileID: 2690677319519554184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5465,7 +5549,7 @@ GameObject:
   - component: {fileID: 1651177367812906080}
   - component: {fileID: 8293090610004737550}
   - component: {fileID: 3834542408066982291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: character_knightHelmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5483,7 +5567,7 @@ GameObject:
   - component: {fileID: 2765520829549977795}
   - component: {fileID: 1283175285122543462}
   - component: {fileID: 3902991771748719532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: character_knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5566,7 +5650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7749715973707217734}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: armRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5629,7 +5713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6689236322804171970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: handSlotRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5647,7 +5731,7 @@ GameObject:
   - component: {fileID: 1721629460959556770}
   - component: {fileID: 6002322753701519871}
   - component: {fileID: 4370543141021606406}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: character_knightArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5707,7 +5791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6792159613254906245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5725,7 +5809,7 @@ GameObject:
   - component: {fileID: 5666626425016403641}
   - component: {fileID: 946978113650134302}
   - component: {fileID: 2777942602366379119}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: character_knightHelmetVisor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5758,7 +5842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5081760821556273741}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: armLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5810,7 +5894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5519346818492743422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: handSlotLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5827,7 +5911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1745083128216954408}
   - component: {fileID: 6209495855242355203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: KayKit Animated Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5887,7 +5971,7 @@ GameObject:
   - component: {fileID: 6389500238059630780}
   - component: {fileID: 7142776045820809515}
   - component: {fileID: 1747573281110272569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: character_knightHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5961,7 +6045,7 @@ GameObject:
   - component: {fileID: 2506962888847251158}
   - component: {fileID: 3508215439915224712}
   - component: {fileID: 913164449660619031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: character_knightArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
