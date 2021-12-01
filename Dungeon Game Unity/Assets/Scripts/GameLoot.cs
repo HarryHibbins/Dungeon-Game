@@ -23,7 +23,9 @@ public class GameLoot : MonoBehaviour
     public Sprite lootsprite;
     public LootItems.LootType loottype;
     public LootItems.LootRarity lootrarity;
-    
+
+    [HideInInspector]
+    public int explorerRelicRooms = 0;
 
     private void Start()
     {
@@ -315,7 +317,7 @@ public class GameLoot : MonoBehaviour
         {
             playerInventory.speedArrowCount = playerStats.PI_MaxSpeedArrows;
         }
-        else if(loot == LootItems.Loot.MaxAmmo)
+        else if (loot == LootItems.Loot.MaxAmmo)
         {
             playerInventory.MaxAmmo();
         }
@@ -329,7 +331,7 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.NoMovementPenaltyRelic)
         {
-            getLootByName(LootItems.Loot.NoMovementPenaltyRelic).isActive = true;
+            getLootByName(loot).isActive = true;
         }
         else if (loot == LootItems.Loot.TankRelic)
         {
@@ -345,11 +347,11 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.ThornsRelic)
         {
-            getLootByName(LootItems.Loot.ThornsRelic).isActive = true;
+            getLootByName(loot).isActive = true;
         }
         else if (loot == LootItems.Loot.InfinityRelic)
         {
-            getLootByName(LootItems.Loot.InfinityRelic).isActive = true;
+            getLootByName(loot).isActive = true;
         }
         else if (loot == LootItems.Loot.BiggerBagNormal)
         {
@@ -411,6 +413,58 @@ public class GameLoot : MonoBehaviour
         {
             //Apply chance to ignore damage
         }
+        else if (loot == LootItems.Loot.WarbannerRelic)
+        {
+            getLootByName(loot).isActive = true;
+        }
+        else if (loot == LootItems.Loot.RestorePotion)
+        {
+            StartCoroutine(RestorePotion());
+        }
+        else if (loot == LootItems.Loot.ArmourPiercingArrows)
+        {
+            getLootByName(loot).isActive = true;
+        }
+        else if (loot == LootItems.Loot.PreservedInsectRelic)
+        {
+            getLootByName(loot).isActive = true;
+        }
+        else if (loot == LootItems.Loot.ExplorerRelic)
+        {
+            getLootByName(loot).isActive = true;
+        }
+        else if (loot == LootItems.Loot.AssassinRelic)
+        {
+            playerStats.ArrowEffects_BurnDamage = 0;
+            playerStats.ArrowEffects_BurnTime = 0;
+            playerStats.ArrowEffects_SlowTime = 0;
+
+            playerStats.ArrowEffects_BleedChance = 1;
+        }
+        else if (loot == LootItems.Loot.BetterBowRelic)
+        {
+            playerStats.ArrowDamage_CritChance += 10;
+        }
+        else if (loot == LootItems.Loot.LizardTailRelic)
+        {
+            getLootByName(loot).isActive = true;
+        }
+        else if (loot == LootItems.Loot.LuckyDiceRelic)
+        {
+            //Give drop luck
+        }
+        else if (loot == LootItems.Loot.AncientLamp)
+        {
+            // Set players small light source to be active
+        }
+        else if (loot == LootItems.Loot.GoldenFeathers)
+        {
+            playerStats.ArrowDamage_Base += 5;
+        }
+        else if (loot == LootItems.Loot.CartographerRelic)
+        {
+            // Increase treasure room luck
+        }
         yield break;
     }
 
@@ -424,5 +478,30 @@ public class GameLoot : MonoBehaviour
         {
             //Do thorns damage once enemies are setup.
         }
+        if (getLootByName(LootItems.Loot.WarbannerRelic).isActive)
+        {
+            //Do warbanner thing
+        }
+        if (getLootByName(LootItems.Loot.ExplorerRelic).isActive)
+        {
+            if (explorerRelicRooms == 10)
+            {
+                playerHealth.Heal(1);
+                explorerRelicRooms = 0;
+            }
+        }
+        if (getLootByName(LootItems.Loot.LizardTailRelic).isActive)
+        {
+            //do thing
+        }
+    }
+
+    IEnumerator RestorePotion()
+    {
+        yield return new WaitForSeconds(5);
+        playerHealth.Heal(1);
+        yield return new WaitForSeconds(5);
+        playerHealth.Heal(1);
+        yield break;
     }
 }

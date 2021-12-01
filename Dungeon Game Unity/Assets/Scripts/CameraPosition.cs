@@ -6,6 +6,7 @@ using UnityEngine;
 public class CameraPosition : MonoBehaviour
 {
     private PlayerStats playerStats;
+    private GameLoot gameLoot;
 
     private GameObject cameraObj;
     private Transform cameraTransform;
@@ -28,6 +29,7 @@ public class CameraPosition : MonoBehaviour
     void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
+        gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
 
         cameraObj = GameObject.FindGameObjectWithTag("MainCamera");
         cameraTransform = cameraObj.GetComponent<Transform>();
@@ -107,6 +109,11 @@ public class CameraPosition : MonoBehaviour
                 {
                     playerStats.GameRooms++;
                     hasVisited = true;
+
+                    if (gameLoot.getLootByName(LootItems.Loot.ExplorerRelic).isActive)
+                    {
+                        gameLoot.explorerRelicRooms++;
+                    }
                 }
             }
             else

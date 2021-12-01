@@ -57,7 +57,7 @@ public class Bow : MonoBehaviour
     void Update()
     {
         //Hold left click to draw bow
-        if (Input.GetButtonDown("Fire1") && !pauseMenu.inPauseMenu)
+        if (Input.GetButtonDown("Fire1") && !pauseMenu.inPauseMenu && !pauseMenu.inRelicMenu)
         {
             if (playerInventory.getSelectedArrowAmmo() >= 1)
             {

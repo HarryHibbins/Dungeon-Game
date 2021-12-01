@@ -15,10 +15,12 @@ public class EnemyController : MonoBehaviour
     private float halfSpeed;
 
     private PlayerStats playerStats;
+    private GameLoot gameLoot;
 
     void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
+        gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         currentSpeed = enemySpeed;
         halfSpeed = enemySpeed / 2;
     }
@@ -43,12 +45,26 @@ public class EnemyController : MonoBehaviour
         {
             //Get the arrow that hit the enemy
             Arrow arrow = other.GetComponent<Arrow>();
-            DamageDealt = Mathf.Round(arrow.actualDamage);
+
+            int crit_rand = UnityEngine.Random.Range(playerStats.ArrowDamage_CritChance, 101);
+
+            if (this.tag == "Boss" && gameLoot.getLootByName(LootItems.Loot.ArmourPiercingArrows).isActive)
+            {
+                DamageDealt = Mathf.Round(arrow.actualDamage) + Mathf.Round(arrow.actualDamage / 0.2f);
+            }
+            else
+            {
+                DamageDealt = Mathf.Round(arrow.actualDamage);
+            }
+            if (crit_rand <= 100)
+            {
+                DamageDealt *= 2;
+            }
             
             //Stop the arrow 
             arrow.move = false;
             arrow.GetComponent<Transform>().parent = transform;
-            int rand = UnityEngine.Random.Range(0, (playerStats.ArrowEffects_BleedChance + 1));
+            int rand = UnityEngine.Random.Range(1, (playerStats.ArrowEffects_BleedChance + 1));
 
             //Apply Effect
             switch (arrow.selectedArrow)
@@ -77,7 +93,7 @@ public class EnemyController : MonoBehaviour
                         break;
                     }
             }
-            if (rand == 0)
+            if (rand == 1)
             {
                 effect = ArrowTypes.Effects.Bleed;
             }
