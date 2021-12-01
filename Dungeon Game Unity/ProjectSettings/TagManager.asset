@@ -23,6 +23,7 @@ TagManager:
   - Fog
   - Loot
   - Boss
+  - Enemy Spawn Point
   layers:
   - Default
   - TransparentFX
