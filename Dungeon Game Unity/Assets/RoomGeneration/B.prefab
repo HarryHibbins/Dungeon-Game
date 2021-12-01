@@ -4302,8 +4302,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &4790101826801264256
-MeshCollider:
+--- !u!65 &3556441403533333903
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4312,10 +4312,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.9545777, y: 0.8041012, z: 0.9162208}
+  m_Center: {x: 0.0023401976, y: 0.527335, z: -0.011928275}
 --- !u!1001 &1709447059239681292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4938,8 +4937,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &5805658613340768145
-MeshCollider:
+--- !u!65 &6576800083053850334
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4948,10 +4947,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.9545777, y: 0.8041012, z: 0.9162208}
+  m_Center: {x: 0.0023401976, y: 0.527335, z: -0.011928275}
 --- !u!1001 &1819478114412409652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17956,8 +17954,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8557476310969693440
-MeshCollider:
+--- !u!65 &2902679656305261055
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -17966,10 +17964,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.95457786, y: 0.793797, z: 0.916221}
+  m_Center: {x: 0.002339674, y: 0.5324867, z: -0.011928295}
 --- !u!1001 &8300182174737539872
 PrefabInstance:
   m_ObjectHideFlags: 0
