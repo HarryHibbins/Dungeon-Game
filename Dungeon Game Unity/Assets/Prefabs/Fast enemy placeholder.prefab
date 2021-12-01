@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4986150239274414554}
   - component: {fileID: 3586606472404902255}
   - component: {fileID: 6324179616579859481}
+  - component: {fileID: -7552888413663649610}
   m_Layer: 0
   m_Name: Fast enemy placeholder
   m_TagString: Untagged
@@ -97,3 +98,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-7552888413663649610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379325762623925608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8499f71a09efab442a978f303d31b4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  effect: 0
+  enemySpeed: 0
+  currentSpeed: 0

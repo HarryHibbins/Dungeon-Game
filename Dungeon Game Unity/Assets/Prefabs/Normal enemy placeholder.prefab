@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4986150239274414554}
   - component: {fileID: 3586606472404902255}
   - component: {fileID: 6324179616579859481}
-  - component: {fileID: -3341805837863299045}
+  - component: {fileID: 4815597949088542595}
   m_Layer: 0
-  m_Name: Tank enemy placeholder
+  m_Name: Normal enemy placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 698768b52d0b01d42bf6fb91c115c2b3, type: 2}
+  - {fileID: 2100000, guid: c56cc32c7e3bba245ac51e3eca70c859, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &-3341805837863299045
+--- !u!114 &4815597949088542595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
