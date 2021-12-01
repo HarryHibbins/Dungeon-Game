@@ -3418,8 +3418,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.25104, y: 16.92824, z: 31.959908}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 184351946}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4719,6 +4718,7 @@ GameObject:
   - component: {fileID: 932448659}
   - component: {fileID: 932448660}
   - component: {fileID: 932448661}
+  - component: {fileID: 932448662}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -5248,6 +5248,19 @@ MonoBehaviour:
   - {fileID: 2379325762623925608, guid: 0ce96cc58c8e62247bf6bbb883a14bcb, type: 3}
   - {fileID: 2379325762623925608, guid: c77f229262d1cc84e9addd010542f85d, type: 3}
   BossEnemy: {fileID: 0}
+--- !u!114 &932448662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932448654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162c10b7954732a4faa7dba7e269b967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flame: {fileID: 8907467085391047984, guid: e8478de415d49734eaec9f268ff713f2, type: 3}
 --- !u!1 &950777685
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ TagManager:
   - Loot
   - Boss
   - Enemy Spawn Point
+  - Torch Spawn Point
   layers:
   - Default
   - TransparentFX
