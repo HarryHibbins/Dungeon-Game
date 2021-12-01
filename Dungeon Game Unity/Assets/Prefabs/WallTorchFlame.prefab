@@ -4854,8 +4854,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUpTorch: 0
   hasTorch: 0
+  maxTimer: 30
   torchTimer: 30
   flame: {fileID: 0}
+  sparks: {fileID: 0}
   originalPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8907467085391047985
 BoxCollider:
@@ -4868,8 +4870,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.7107677, y: 3.982834, z: 11.554121}
-  m_Center: {x: -0.8639665, y: 1.0860068e-15, z: -0.56707555}
+  m_Size: {x: 5.7107677, y: 6.2905264, z: 11.554121}
+  m_Center: {x: -0.8639665, y: -0.21652427, z: -0.5670755}
 --- !u!1 &8907467085571731836
 GameObject:
   m_ObjectHideFlags: 0

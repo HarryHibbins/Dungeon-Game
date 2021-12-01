@@ -37,7 +37,7 @@ public class FixedTorch : MonoBehaviour
             //if (playerTorchHolder.Find("CurrentTorch").gameObject.GetComponent<FixedTorch>().hasTorch) 
             if(player.GetComponent<PlayerInventory>().holdingTorch)
             {
-                Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);            
+                Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);
             }
 
             this.name = "CurrentTorch";
