@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    public bool isPaused = false;
     public bool inPauseMenu = false;
     public bool inRelicMenu = false;
+    public bool inSettingsMenu = false;
 
     public GameObject RelicUIPrefab;
     public GameObject ContentArea;
     public GameObject pausePanel;
     public GameObject relicPanel;
+    public GameObject settingsPanel;
 
     private PlayerController playerController;
 
@@ -22,13 +25,15 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if (inPauseMenu || inRelicMenu)
+        if (inPauseMenu || inRelicMenu || inSettingsMenu)
         {
             playerController.enabled = false;
+            isPaused = true;
         }
         else
         {
             playerController.enabled = true;
+            isPaused = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -40,6 +45,10 @@ public class PauseMenu : MonoBehaviour
             else if (inRelicMenu)
             {
                 CloseRelicMenu();
+            }
+            else if (inSettingsMenu)
+            {
+                CloseSettingsMenu();
             }
             else
             {
@@ -76,6 +85,22 @@ public class PauseMenu : MonoBehaviour
         inPauseMenu = true;
         relicPanel.SetActive(false);
         pausePanel.SetActive(true);
+    }
+
+    public void OpenSettingsMenu()
+    {
+        inPauseMenu = false;
+        inSettingsMenu = true;
+        pausePanel.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
+
+    public void CloseSettingsMenu()
+    {
+        inPauseMenu = true;
+        inSettingsMenu = false;
+        pausePanel.SetActive(true);
+        settingsPanel.SetActive(false);
     }
 
     public void AddToRelicUI(LootItems loot)
