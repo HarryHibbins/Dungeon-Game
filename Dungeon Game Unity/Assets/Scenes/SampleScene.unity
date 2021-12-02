@@ -6506,37 +6506,37 @@ MonoBehaviour:
     isCollected: 0
   - element_name: AncientLamp
     loot_name: 37
-    loot_prefab: {fileID: 0}
-    loot_sprite: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: 57bbac7d3cc64bb4594f9ccff922e929, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 4b57b8ffd7c3c774d934b8dd11f21c55, type: 3}
     loot_rarity: 5
     loot_type: 1
     loot_description: Gain a small, but permanent, light source.
     isActive: 0
     isCollected: 0
-  - element_name: GoldenFeathers
+  - element_name: MysticFeather
     loot_name: 38
-    loot_prefab: {fileID: 0}
-    loot_sprite: {fileID: 0}
-    loot_rarity: 2
+    loot_prefab: {fileID: 919132149155446097, guid: a2ee547d5eb18874fbb9943ce676bd58, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 3253495a528f8074886135304c22f84f, type: 3}
+    loot_rarity: 4
     loot_type: 1
-    loot_description: All arrow types gain +5 damage.
+    loot_description: Increase damage of all arrow types.
     isActive: 0
     isCollected: 0
   - element_name: CartographerRelic
     loot_name: 39
-    loot_prefab: {fileID: 0}
-    loot_sprite: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: e7bf64ac1b3e76646b02a45317adf15a, type: 3}
+    loot_sprite: {fileID: 21300000, guid: 577ebf507399b9d448ef724bed251d41, type: 3}
     loot_rarity: 3
     loot_type: 1
     loot_description: Increase chance of finding a treasure room.
     isActive: 0
     isCollected: 0
-  lootname: 39
-  lootdesc: Increase chance of finding a treasure room.
+  lootname: 38
+  lootdesc: Increase damage of all arrow types.
   lootprefab: {fileID: 0}
   lootsprite: {fileID: 0}
   loottype: 1
-  lootrarity: 3
+  lootrarity: 4
   explorerRelicRooms: 0
 --- !u!114 &932448658
 MonoBehaviour:

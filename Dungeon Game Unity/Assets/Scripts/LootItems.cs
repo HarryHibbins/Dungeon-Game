@@ -73,7 +73,7 @@ public class LootItems
         LizardTailRelic,            // After taking lethal damage, heal to 50% hp (once per run)
         LuckyDiceRelic,             // Increase drop luck
         AncientLamp,                // Gain a small permanent light source
-        GoldenFeathers,             // All arrow types gain +5 damage
+        MysticFeather,              // All arrow types gain +5 damage
         CartographerRelic,          // Increase chance of finding a treasure room (have to implement)
     }
 

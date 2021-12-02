@@ -455,7 +455,7 @@ public class GameLoot : MonoBehaviour
         {
             // Set players small light source to be active
         }
-        else if (loot == LootItems.Loot.GoldenFeathers)
+        else if (loot == LootItems.Loot.MysticFeather)
         {
             playerStats.ArrowDamage_Base += 5;
         }
