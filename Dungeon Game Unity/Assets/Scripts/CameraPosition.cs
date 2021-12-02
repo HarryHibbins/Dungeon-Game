@@ -74,13 +74,11 @@ public class CameraPosition : MonoBehaviour
       
         }
         if (fadeout)
-        {
+        { 
             Color col = FOW_Ceiling.GetComponent<Renderer>().material.color;
-            float fadeamount = col.a - (3 * Time.deltaTime);
 
-            col = new Color(col.r, col.g, col.b, fadeamount);
+            col.a -= (3 * Time.deltaTime);
             FOW_Ceiling.GetComponent<Renderer>().material.color = col;
-
             if (col.a < 0)
             {
                 FOW_Ceiling.SetActive(false);

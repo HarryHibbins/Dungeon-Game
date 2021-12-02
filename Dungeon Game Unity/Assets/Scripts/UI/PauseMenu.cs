@@ -10,11 +10,14 @@ public class PauseMenu : MonoBehaviour
     public bool inRelicMenu = false;
     public bool inSettingsMenu = false;
 
+    private bool fadeStart = false;
+
     public GameObject RelicUIPrefab;
     public GameObject ContentArea;
     public GameObject pausePanel;
     public GameObject relicPanel;
     public GameObject settingsPanel;
+    public GameObject startPanel;
 
     private PlayerController playerController;
 
@@ -23,8 +26,26 @@ public class PauseMenu : MonoBehaviour
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
+    private void Start()
+    {
+        fadeStart = true;
+        startPanel.SetActive(true);
+    }
+
     private void Update()
     {
+        if (fadeStart)
+        {
+            Color panelcol = startPanel.GetComponent<Image>().color;
+            panelcol.a -= (0.2f * Time.deltaTime);
+            startPanel.GetComponent<Image>().color = panelcol;
+            if (panelcol.a < 0)
+            {
+                startPanel.SetActive(false);
+                fadeStart = false;
+            }
+        }
+
         if (inPauseMenu || inRelicMenu || inSettingsMenu)
         {
             playerController.enabled = false;
