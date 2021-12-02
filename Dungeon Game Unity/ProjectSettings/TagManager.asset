@@ -25,6 +25,8 @@ TagManager:
   - Boss
   - Enemy Spawn Point
   - Torch Spawn Point
+  - DoorTag
+  - WallTag
   layers:
   - Default
   - TransparentFX

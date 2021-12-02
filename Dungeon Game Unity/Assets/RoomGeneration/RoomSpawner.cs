@@ -68,7 +68,67 @@ public class RoomSpawner : MonoBehaviour
             {
                 newRoom.GetComponent<AddRoom>().nextToEntry = true;
             }
+            templates.SpawnNumber++;
         }
+        /*if (spawned == false && templates.SpawnNumber >= 10)
+        {
+            if (openingDirection == 1)
+            {
+                // Need bottom door
+                foreach (GameObject room in templates.bottomRooms)
+                {
+                    if (room.name == "B")
+                    {
+                        newRoom = Instantiate(room, transform.position, room.transform.rotation);
+                        newRoom.name = room.name;
+                    }
+                } 
+            }
+            else if (openingDirection == 2)
+            {
+                // Need top door
+                foreach (GameObject room in templates.topRooms)
+                {
+                    if (room.name == "T")
+                    {
+                        newRoom = Instantiate(room, transform.position, room.transform.rotation);
+                        newRoom.name = room.name;
+                    }
+                }
+            }
+            else if (openingDirection == 3)
+            {
+                // Need left door
+                foreach (GameObject room in templates.leftRooms)
+                {
+                    if (room.name == "L")
+                    {
+                        newRoom = Instantiate(room, transform.position, room.transform.rotation);
+                        newRoom.name = room.name;
+                    }
+                }
+            }
+            else if (openingDirection == 4)
+            {
+                // Need right door
+                foreach (GameObject room in templates.rightRooms)
+                {
+                    if (room.name == "R")
+                    {
+                        newRoom = Instantiate(room, transform.position, room.transform.rotation);
+                        newRoom.name = room.name;
+                    }
+                }
+            }
+            spawned = true;
+            templates.waitTime = templates.startWaitTime;
+
+            if (transform.parent.name == "Entry Room")
+            {
+                newRoom.GetComponent<AddRoom>().nextToEntry = true;
+            }
+            templates.SpawnNumber++;
+        }*/
     }
 
     private void OnTriggerEnter(Collider other)

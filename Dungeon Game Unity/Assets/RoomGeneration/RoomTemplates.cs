@@ -34,6 +34,8 @@ public class RoomTemplates : MonoBehaviour
 
     private PlayerStats playerStats;
 
+    public int SpawnNumber = 0;
+
     private void Awake()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
@@ -48,15 +50,9 @@ public class RoomTemplates : MonoBehaviour
     {
         if (waitTime <= 0 && !spawnedBoss)
         {
-            for (int i = 0; i < rooms.Count; i++)
-            {
-                if (i == rooms.Count-1)
-                {
-                    Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
-                    rooms[i].GetComponent<AddRoom>().isBossRoom = true;
-                    spawnedBoss = true;
-                }
-            }
+            Instantiate(boss, rooms[rooms.Count-1].transform.position, Quaternion.identity);
+            rooms[rooms.Count-1].GetComponent<AddRoom>().isBossRoom = true;
+            spawnedBoss = true;
         }
         else if (waitTime > 0)
         {
