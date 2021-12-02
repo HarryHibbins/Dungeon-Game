@@ -461,7 +461,7 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.CartographerRelic)
         {
-            // Increase treasure room luck
+            playerStats.TreasureRoomChance += 20;
         }
         yield break;
     }

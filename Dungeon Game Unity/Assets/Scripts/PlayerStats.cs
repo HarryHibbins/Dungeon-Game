@@ -45,6 +45,9 @@ public class PlayerStats : MonoBehaviour
     public int GameFloors;
     public int GameRooms;
 
+    [Header("Misc")]
+    public int TreasureRoomChance;              // Out of 100
+
     public void updateAllMaxArrows(int amount)
     {
         PI_MaxNormalArrows += amount;

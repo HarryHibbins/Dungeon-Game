@@ -5,6 +5,8 @@ using UnityEngine;
 public class AddRoom : MonoBehaviour
 {
     private RoomTemplates templates;
+    public bool nextToEntry = false;
+    public bool isBossRoom = false;
 
     private void Awake()
     {

@@ -5993,10 +5993,22 @@ MonoBehaviour:
   - {fileID: 5183380349275709169, guid: 816b23fc4cf83e04dbc347fd2cec3616, type: 3}
   - {fileID: 7142495746971183068, guid: 5a67eaae76a5de04fb1d3732b68c1a26, type: 3}
   closedRoom: {fileID: 4859978853126234431, guid: a83bbf259e82c06429eb84b18a4ff687, type: 3}
+  B_TreasureRoom: {fileID: 9125759892281097463, guid: 5e914713f6e13944abc8b66e15be30db, type: 3}
+  L_TreasureRoom: {fileID: 8628088804981956397, guid: 9c60afa15d3beb04c8c045aa671da23c, type: 3}
+  LB_TreasureRoom: {fileID: 5183380349275709169, guid: 303bc0af95b6a5d4a9d3d6d3d5db9bab, type: 3}
+  LR_TreasureRoom: {fileID: 7761150944692978579, guid: bbbbd126b613895488f5a37dacabfde7, type: 3}
+  R_TreasureRoom: {fileID: 2625583467448180840, guid: 2094cfa2bc29d964799d189f17133bce, type: 3}
+  RB_TreasureRoom: {fileID: 5183380349275709169, guid: 816b23fc4cf83e04dbc347fd2cec3616, type: 3}
+  T_TreasureRoom: {fileID: 6950180639174103653, guid: e7e77608ffe625842afd37d3b82a1559, type: 3}
+  TB_TreasureRoom: {fileID: 3635325580153667647, guid: 8b8c8bb6e79fed34aab24ad2c17ef33b, type: 3}
+  TL_TreasureRoom: {fileID: 5025691487471264658, guid: 67c427f937ec76748886ce8eb750086b, type: 3}
+  TR_TreasureRoom: {fileID: 7142495746971183068, guid: 5a67eaae76a5de04fb1d3732b68c1a26, type: 3}
   rooms: []
+  possibleTreasureRooms: []
   startWaitTime: 0
   waitTime: 2
   boss: {fileID: 1143621168283638223, guid: be0fcc96ec1854846a0c1ee557ce3bfe, type: 3}
+  treasureRoom: {fileID: 0}
 --- !u!4 &875906443
 Transform:
   m_ObjectHideFlags: 0
@@ -6150,6 +6162,7 @@ MonoBehaviour:
   ArrowEffects_SlowTime: 5
   GameFloors: 0
   GameRooms: 0
+  TreasureRoomChance: 20
 --- !u!4 &932448656
 Transform:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class RoomSpawner : MonoBehaviour
     // 3 -> need left door
     // 4 -> need right door
 
+    private GameObject newRoom;
     private RoomTemplates templates;
     private int rand;
     public bool spawned = false;
@@ -31,32 +32,42 @@ public class RoomSpawner : MonoBehaviour
     {
         if (spawned == false)
         {
+            
             if (openingDirection == 1)
             {
                 // Need bottom door
                 rand = Random.Range(0, templates.bottomRooms.Length);
-                Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+                newRoom = Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+                newRoom.name = templates.bottomRooms[rand].name;
             }
             else if (openingDirection == 2)
             {
                 // Need top door
                 rand = Random.Range(0, templates.topRooms.Length);
-                Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
+                newRoom = Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
+                newRoom.name = templates.topRooms[rand].name;
             }
             else if (openingDirection == 3)
             {
                 // Need left door
                 rand = Random.Range(0, templates.leftRooms.Length);
-                Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
+                newRoom = Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
+                newRoom.name = templates.leftRooms[rand].name;
             }
             else if (openingDirection == 4)
             {
                 // Need right door
                 rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+                newRoom = Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+                newRoom.name = templates.rightRooms[rand].name;
             }
             spawned = true;
             templates.waitTime = templates.startWaitTime;
+
+            if (transform.parent.name == "Entry Room")
+            {
+                newRoom.GetComponent<AddRoom>().nextToEntry = true;
+            }
         }
     }
 
