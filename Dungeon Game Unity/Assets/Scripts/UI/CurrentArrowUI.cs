@@ -9,17 +9,15 @@ public class CurrentArrowUI : MonoBehaviour
     public Text ammoType;
     private PlayerInventory playerInventory;
     private GameObject playerObj;
-    
-    void Start()
+
+    private void Awake()
     {
         playerObj = GameObject.FindWithTag("Player");
         playerInventory = playerObj.GetComponent<PlayerInventory>();
-
     }
 
     void Update()
     {
         ammoType.text = playerInventory.equippedArrow.ToString();
-
     }
 }

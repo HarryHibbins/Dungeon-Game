@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    private GameObject gameManager;
     private PlayerStats playerStats;
 
     public ArrowTypes.Arrows equippedArrow;
@@ -19,11 +18,14 @@ public class PlayerInventory : MonoBehaviour
 
     int arrowCheck;
     int maxArrowCheck;
+
+    private void Awake()
+    {
+        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
+    }
+
     void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        playerStats = gameManager.GetComponent<PlayerStats>();
-
         MaxAmmo();
     }
 

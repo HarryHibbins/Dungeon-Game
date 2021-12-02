@@ -11,7 +11,6 @@ public class LevelLoader : MonoBehaviour
     private CameraPosition camposscript;
 
     private Transform startRoomCamPos;
-    private GameObject cameraObj;
     private Transform cameraTransform;
 
     public GameObject loadingScreen;
@@ -21,15 +20,12 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private string[] flavourTextArray;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player");
-        cameraObj = GameObject.FindGameObjectWithTag("MainCamera");
-        cameraTransform = cameraObj.GetComponent<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.U))

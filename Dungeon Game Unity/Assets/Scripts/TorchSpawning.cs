@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TorchSpawning : MonoBehaviour
 {
-    
-    private GameObject gameManager;
     private GameObject flame;
 
     private int numOfFlames;
@@ -14,12 +12,14 @@ public class TorchSpawning : MonoBehaviour
     [SerializeField] private float spawnChance;
     [SerializeField] private int minFlamesInRoom;
     [SerializeField] private int maxFlamesInRoom;
-    
+
+    private void Awake()
+    {
+        flame = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Flame>().flame;
+    }
+
     void Start()
     {
-        
-        gameManager = GameObject.FindWithTag("GameManager");
-        flame = gameManager.GetComponent<Flame>().flame;
         foreach (Transform child in transform)
         {
             

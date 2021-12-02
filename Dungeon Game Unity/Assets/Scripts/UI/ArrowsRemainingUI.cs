@@ -8,12 +8,11 @@ public class ArrowsRemainingUI : MonoBehaviour
     public Text ammoCountText;
     private PlayerInventory playerInventory;
     private GameObject playerObj;
-    
-    void Start()
+
+    private void Awake()
     {
         playerObj = GameObject.FindWithTag("Player");
         playerInventory = playerObj.GetComponent<PlayerInventory>();
-
     }
 
     void Update()

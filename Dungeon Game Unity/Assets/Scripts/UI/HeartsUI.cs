@@ -22,13 +22,13 @@ public class HeartsUI : MonoBehaviour
     private void Awake()
     {
         heartImageList = new List<HeartImage>();
+        playerObj = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = playerObj.GetComponent<PlayerHealth>();
     }
 
 
     void Start()
     {
-        playerObj = GameObject.FindGameObjectWithTag("Player");
-        playerHealth = playerObj.GetComponent<PlayerHealth>();
         setPlayerHearts();
     }
 
@@ -54,14 +54,11 @@ public class HeartsUI : MonoBehaviour
             CreateHeart(heartAnchorPos).setHeartFragments(heart.getFragments());
             //heartAnchorPos += new Vector2(75, 0);
             heartAnchorPos += new Vector2(40, 0);
-
         }
 
         playerHealth.onDamaged += playerHealth_onDamaged;
         playerHealth.onHeal  += playerHealth_onHeal;
         playerHealth.onDead += playerHealth_onDead;
-
-
     }
 
     private void playerHealth_onDamaged(object sender, System.EventArgs e)
@@ -91,9 +88,6 @@ public class HeartsUI : MonoBehaviour
         }
     }
 
-   
-
-    
     private HeartImage CreateHeart(Vector2 anchorPos)
     {
         GameObject heartObject = new GameObject("Heart", typeof(Image));
@@ -116,20 +110,17 @@ public class HeartsUI : MonoBehaviour
         heartImageList.Add(heartImage);
         
         return heartImage;
-
     }
 
     public class HeartImage
     {
-        
         private Image heartImage;
         private HeartsUI heartsUI;
         public HeartImage(HeartsUI heartsUI, Image heartImage)
         {
             this.heartsUI = heartsUI;
             this.heartImage = heartImage;
-//            this.heartImage.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
-
+            //this.heartImage.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
         }
 
         public void setHeartFragments(int fragments)
@@ -159,11 +150,4 @@ public class HeartsUI : MonoBehaviour
             }
         }
     }
-    
-    
-
-    
-
-
-
 }

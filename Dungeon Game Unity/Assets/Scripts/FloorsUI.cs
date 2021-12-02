@@ -9,7 +9,7 @@ public class FloorsUI : MonoBehaviour
     public Text RoomsText;
     private PlayerStats playerStats;
 
-    private void Start()
+    private void Awake()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
     }

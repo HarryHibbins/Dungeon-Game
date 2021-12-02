@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     private PlayerController playerController;
 
-    private void Start()
+    private void Awake()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }

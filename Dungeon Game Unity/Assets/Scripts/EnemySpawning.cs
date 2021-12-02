@@ -7,22 +7,20 @@ public class EnemySpawning : MonoBehaviour
 {
     private int numOfEnemies;
 
-    private GameObject gameManager;
     private EnemyTypes enemyTypes;
 
     [SerializeField] private int minEnemiesInRoom = 2;
     
     //Chance of spawning enemies per spawn point between 0 and 1
     [SerializeField] private float spawnChance = 0.5f;
-    
-   
-    
+
+    private void Awake()
+    {
+        enemyTypes = GameObject.FindGameObjectWithTag("GameManager").GetComponent<EnemyTypes>();
+    }
+
     void Start()
     {
-        gameManager = GameObject.FindWithTag("GameManager");
-        enemyTypes = gameManager.GetComponent<EnemyTypes>();
-        
-
         foreach (Transform child in transform)
         {
             

@@ -32,22 +32,26 @@ public class Bow : MonoBehaviour
    
     private int ammoCheck;
 
-    void Start()
+    private void Awake()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
         playerObj = GameObject.FindGameObjectWithTag("Player");
-        
+
         drawPointObj = GameObject.FindWithTag("Draw Point");
-        drawPoint = drawPointObj.transform;
-        
         firePointObj = GameObject.FindWithTag("Fire Point");
-        firePoint = firePointObj.transform;
 
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
-        playerAnimator = playerObj.GetComponent<Animator>();
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
+    }
+
+    void Start()
+    {
+        drawPoint = drawPointObj.transform;
+        firePoint = firePointObj.transform;
         //Minimum drawback value so it doesnt slow down the arrow
         drawBack = 1;
         audioSrc = GetComponent<AudioSource>();

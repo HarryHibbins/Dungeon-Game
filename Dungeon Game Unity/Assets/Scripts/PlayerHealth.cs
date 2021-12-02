@@ -16,13 +16,14 @@ public class PlayerHealth : MonoBehaviour
     public bool dead;
     private List<Heart> heartList = new List<Heart>();
 
-    //[SerializeField] private int startHeartAmount;
+
+    private void Awake()
+    {
+        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
+    }
 
     private void Start()
     {
-        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
-        //heartList = new List<Heart>();
-
         for (int i = 0; i < playerStats.playerHearts; i++)
         {
             Heart newHeart = new Heart(4);

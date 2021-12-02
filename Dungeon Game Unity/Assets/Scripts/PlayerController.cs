@@ -28,27 +28,26 @@ public class PlayerController: MonoBehaviour
 
     private PlayerHealth playerHealth;
 
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        camObj = GameObject.FindWithTag("MainCamera");
-        cam = camObj.GetComponent<Camera>();
-        
+
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
         playerInventory = GetComponent<PlayerInventory>();
         playerHealth = GetComponent<PlayerHealth>();
 
-        
-        bowObj = GameObject.FindWithTag("Bow");
-        bow = bowObj.GetComponent<Bow>();
+        bow = GameObject.FindGameObjectWithTag("Bow").GetComponent<Bow>();
 
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        playerStats = gameManager.GetComponent<PlayerStats>();
-
-        
-        currentMoveSpeed = playerStats.PM_BaseSpeed;
+        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
 
         audioSrc = GetComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        currentMoveSpeed = playerStats.PM_BaseSpeed;
     }
     
     void Update()

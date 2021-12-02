@@ -17,16 +17,21 @@ public class FixedTorch : MonoBehaviour
     public GameObject flame;
     public GameObject sparks;
     public Vector3 originalPos;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        playerTorchHolderObj = GameObject.FindWithTag("Flame Holder");
+        //playerObj = GameObject.FindWithTag("Player");
+    }
+
     void Start()
     {
         torchTimer = maxTimer;
         originalPos = this.transform.position;
-        playerObj = GameObject.FindWithTag("Player");
-        player = playerObj.GetComponent<PlayerController>();
-        anim = playerObj.GetComponent<Animator>();
-        playerTorchHolderObj = GameObject.FindWithTag("Flame Holder");
         playerTorchHolder = playerTorchHolderObj.transform;
-//        flame = this.gameObject.transform.Find("Torch (1)").gameObject;
+        //flame = this.gameObject.transform.Find("Torch (1)").gameObject;
     }
 
     void Update()

@@ -7,9 +7,14 @@ public class LookAtPlayer : MonoBehaviour
     // Start is called before the first frame update
     private GameObject playerObj;
     private Transform lookat;
-    void Start()
+
+    private void Awake()
     {
         playerObj = GameObject.FindWithTag("Player");
+    }
+
+    void Start()
+    {
         lookat = playerObj.transform;
     }
 

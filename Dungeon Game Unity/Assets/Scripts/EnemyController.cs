@@ -17,10 +17,14 @@ public class EnemyController : MonoBehaviour
     private PlayerStats playerStats;
     private GameLoot gameLoot;
 
-    void Start()
+    private void Awake()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
+    }
+
+    void Start()
+    {
         currentSpeed = enemySpeed;
         halfSpeed = enemySpeed / 2;
     }

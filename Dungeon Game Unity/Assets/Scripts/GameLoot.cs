@@ -8,7 +8,6 @@ public class GameLoot : MonoBehaviour
     //public GameObject lootPrefab;
 
     private PlayerStats playerStats;
-    private GameObject player;
     private PlayerInventory playerInventory;
     private HeartsUI heartsUI;
     private PlayerHealth playerHealth;
@@ -27,13 +26,12 @@ public class GameLoot : MonoBehaviour
     [HideInInspector]
     public int explorerRelicRooms = 0;
 
-    private void Start()
+    private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerInventory = player.GetComponent<PlayerInventory>();
+        playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
         playerStats = GetComponent<PlayerStats>();
         heartsUI = GameObject.FindGameObjectWithTag("HeartsUI").GetComponent<HeartsUI>();
-        playerHealth = player.GetComponent<PlayerHealth>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
     private void Update()

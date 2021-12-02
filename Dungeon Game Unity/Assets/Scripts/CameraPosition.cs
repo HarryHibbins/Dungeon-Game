@@ -26,12 +26,16 @@ public class CameraPosition : MonoBehaviour
     //public GameObject fogobj;
     //public ParticleSystem fog;
 
-    void Start()
+    private void Awake()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
 
         cameraObj = GameObject.FindGameObjectWithTag("MainCamera");
+    }
+
+    void Start()
+    {
         cameraTransform = cameraObj.GetComponent<Transform>();
         
         room = transform.parent.transform;

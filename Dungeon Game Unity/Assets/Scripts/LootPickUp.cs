@@ -8,7 +8,7 @@ public class LootPickUp : MonoBehaviour
     private PauseMenu pm_script;
     public LootItems.Loot LootName;
 
-    void Start()
+    private void Awake()
     {
         gl_script = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         pm_script = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
