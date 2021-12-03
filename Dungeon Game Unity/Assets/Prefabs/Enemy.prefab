@@ -545,7 +545,7 @@ Animator:
   m_GameObject: {fileID: 4953039860370835622}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 704adc9dd89a07e4da1fe10330249fa5, type: 3}
-  m_Controller: {fileID: 9100000, guid: 55688bba0bf784c4f8ae444a3c288932, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1efbbd844d93bb54c95459f5a3b55c5c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -761,7 +761,6 @@ Transform:
   - {fileID: 6860704840847323114}
   - {fileID: 1061817479335880985}
   - {fileID: 1224753614510355166}
-  - {fileID: 2126424735985485733}
   m_Father: {fileID: 4373508373197769811}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 13.118264, y: 64.09668, z: -251.71701}
@@ -1035,88 +1034,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7145725934820270484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2126424735985485733}
-  - component: {fileID: 4622939737215155235}
-  - component: {fileID: 2239591248081810935}
-  m_Layer: 0
-  m_Name: 'Bow '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2126424735985485733
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7145725934820270484}
-  m_LocalRotation: {x: 0.11059487, y: 0.036098257, z: -0.18390584, w: 0.97603506}
-  m_LocalPosition: {x: -0.06872386, y: 0.30520603, z: -0.10676831}
-  m_LocalScale: {x: 0.09634248, y: 0.48516294, z: 0.101226576}
-  m_Children: []
-  m_Father: {fileID: 764966505310996793}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 13.248, y: 1.754, z: -21.138}
---- !u!33 &4622939737215155235
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7145725934820270484}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2239591248081810935
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7145725934820270484}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b26ecc6ea1b9be94d9f149596e3de3a8, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7522238089427199080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,15 +1175,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68df48f414f003342b3de50b06317350, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0009997628
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68df48f414f003342b3de50b06317350, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5065474
+      value: 0.513
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68df48f414f003342b3de50b06317350, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0010687858
+      value: -0.013
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68df48f414f003342b3de50b06317350, type: 3}
       propertyPath: m_LocalRotation.w

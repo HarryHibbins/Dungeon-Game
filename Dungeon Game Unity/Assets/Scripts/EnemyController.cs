@@ -13,6 +13,8 @@ public class EnemyController : MonoBehaviour
     public float enemySpeed;
     public float currentSpeed;
     private float halfSpeed;
+    
+    
 
     private PlayerStats playerStats;
     private GameLoot gameLoot;
@@ -21,6 +23,7 @@ public class EnemyController : MonoBehaviour
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
+        
     }
 
     void Start()

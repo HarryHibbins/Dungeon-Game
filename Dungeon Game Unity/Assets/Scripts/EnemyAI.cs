@@ -11,6 +11,9 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    private Rigidbody rb;
+    
+    
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
@@ -18,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
 
+    private Animator anim;
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
@@ -25,20 +29,35 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+       
     }
     private void Update()
     {
+        float velocity = agent.velocity.magnitude/agent.speed;
+        if (velocity > 0.1)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+       
+        
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if(!playerInSightRange && !playerInAttackRange)
         {
+           
             Patroling();
         }
         if (playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer();
         }
+      
         if (playerInSightRange && playerInAttackRange)
         {
             AttackPlayer();
@@ -86,8 +105,6 @@ public class EnemyAI : MonoBehaviour
 
         if(!alreadyAttacked)
         {
-
-
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
