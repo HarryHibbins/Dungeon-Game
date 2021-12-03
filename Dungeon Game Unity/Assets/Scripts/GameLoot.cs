@@ -48,6 +48,35 @@ public class GameLoot : MonoBehaviour
         }
     }
 
+    public LootItems.LootRarity RandomRarity()
+    {
+        int rand = UnityEngine.Random.Range(0, 101);
+        LootItems.LootRarity rarity = LootItems.LootRarity.Common;
+
+        if (rand <= 40)
+        {
+            return LootItems.LootRarity.Common;
+        }
+        if (rand > 40 && rand <= 70)
+        {
+            return LootItems.LootRarity.Uncommon;
+        }
+        if (rand > 70 && rand <= 85)
+        {
+            return LootItems.LootRarity.Rare;
+        }
+        if (rand > 85 && rand <= 95)
+        {
+            return LootItems.LootRarity.Epic;
+        }
+        if (rand > 95 && rand <= 100)
+        {
+            return LootItems.LootRarity.Legendary;
+        }
+
+        return rarity;
+    }
+
     public void NewLootItem(LootItems.Loot lootname, string lootdesc, GameObject lootprefab, Sprite lootsprite, LootItems.LootType loottype, LootItems.LootRarity lootrarity)
     {
         LootItems temp = new LootItems(lootname, lootdesc, lootprefab, lootsprite, loottype, lootrarity);

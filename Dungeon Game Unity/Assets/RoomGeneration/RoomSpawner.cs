@@ -24,8 +24,16 @@ public class RoomSpawner : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, waitTime);
+        //Destroy(gameObject, waitTime);
         Invoke("Spawn", 0.5f);
+    }
+
+    private void Update()
+    {
+        if (templates.spawnedBoss)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Spawn()
@@ -79,40 +87,6 @@ public class RoomSpawner : MonoBehaviour
         {
             if (!other.GetComponent<RoomSpawner>().spawned && !spawned)
             {
-                /*int rand = UnityEngine.Random.Range(0, 5);
-                if (rand == 0)
-                {
-                    rand = Random.Range(0, templates.bottomRooms.Length);
-                    newRoom = Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
-                    newRoom.name = templates.bottomRooms[rand].name;
-                    Destroy(gameObject);
-                    Debug.Log("***" + newRoom.name);
-                }
-                if (rand == 1)
-                {
-                    rand = Random.Range(0, templates.topRooms.Length);
-                    newRoom = Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
-                    newRoom.name = templates.topRooms[rand].name;
-                    Destroy(gameObject);
-                    Debug.Log("***" + newRoom.name);
-                }
-                if (rand == 2)
-                {
-                    rand = Random.Range(0, templates.leftRooms.Length);
-                    newRoom = Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
-                    newRoom.name = templates.leftRooms[rand].name;
-                    Destroy(gameObject);
-                    Debug.Log("***" + newRoom.name);
-                }
-                if (rand == 3)
-                {
-                    rand = Random.Range(0, templates.rightRooms.Length);
-                    newRoom = Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
-                    newRoom.name = templates.rightRooms[rand].name;
-                    Destroy(gameObject);
-                    Debug.Log("***" + newRoom.name);
-                }*/
-
                 Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }

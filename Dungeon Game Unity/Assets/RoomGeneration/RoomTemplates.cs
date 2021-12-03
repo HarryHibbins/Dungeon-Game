@@ -30,7 +30,7 @@ public class RoomTemplates : MonoBehaviour
     public bool spawnedBoss;
     private bool spawnedTreasureRoom;
     public GameObject boss;
-    public GameObject treasureRoom;
+    private GameObject treasureRoom;
 
     private PlayerStats playerStats;
 
@@ -77,12 +77,12 @@ public class RoomTemplates : MonoBehaviour
     {
         foreach (GameObject room in rooms)
         {
-            if (!room.GetComponent<AddRoom>().isBossRoom && !room.GetComponent<AddRoom>().nextToEntry)
+            if (!room.GetComponent<AddRoom>().isBossRoom && !room.GetComponent<AddRoom>().nextToEntry && room.name != "Entry Room")
             {
                 possibleTreasureRooms.Add(room);
             }
         }
-        int rand = UnityEngine.Random.Range(0, possibleTreasureRooms.Count + 1);
+        int rand = UnityEngine.Random.Range(0, possibleTreasureRooms.Count);
         string roomName = possibleTreasureRooms[rand].name;
 
         switch (roomName)
@@ -121,7 +121,6 @@ public class RoomTemplates : MonoBehaviour
                 break;
         }
         treasureRoom.name = "*****TreasureRoom";
-        Debug.Log(possibleTreasureRooms[rand].gameObject);
         Destroy(possibleTreasureRooms[rand].gameObject);
         spawnedTreasureRoom = true;
     }
