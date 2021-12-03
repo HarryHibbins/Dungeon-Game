@@ -5031,7 +5031,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 7000
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -6432,8 +6432,8 @@ MonoBehaviour:
   possibleTreasureRooms: []
   startWaitTime: 0
   waitTime: 2
+  spawnedBoss: 0
   boss: {fileID: 1143621168283638223, guid: be0fcc96ec1854846a0c1ee557ce3bfe, type: 3}
-  treasureRoom: {fileID: 0}
   SpawnNumber: 0
 --- !u!4 &875906443
 Transform:
