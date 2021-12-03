@@ -49,6 +49,7 @@ public class EnemyController : MonoBehaviour
         {
             //Get the arrow that hit the enemy
             Arrow arrow = other.GetComponent<Arrow>();
+            arrow.arrowDespawnTimer = 2.0f;
 
             int crit_rand = UnityEngine.Random.Range(playerStats.ArrowDamage_CritChance, 101);
 

@@ -20,7 +20,7 @@ public class Arrow : MonoBehaviour
     Bow bow;
 
 
-    [SerializeField] float arrowDespawnTimer;
+    public float arrowDespawnTimer;
     public ArrowTypes.Arrows selectedArrow;
     
     private GameObject playerObj;
