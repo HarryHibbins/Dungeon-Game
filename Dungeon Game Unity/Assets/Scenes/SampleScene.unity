@@ -5993,16 +5993,16 @@ MonoBehaviour:
   - {fileID: 5183380349275709169, guid: 816b23fc4cf83e04dbc347fd2cec3616, type: 3}
   - {fileID: 7142495746971183068, guid: 5a67eaae76a5de04fb1d3732b68c1a26, type: 3}
   closedRoom: {fileID: 4859978853126234431, guid: a83bbf259e82c06429eb84b18a4ff687, type: 3}
-  B_TreasureRoom: {fileID: 9125759892281097463, guid: 5e914713f6e13944abc8b66e15be30db, type: 3}
-  L_TreasureRoom: {fileID: 8628088804981956397, guid: 9c60afa15d3beb04c8c045aa671da23c, type: 3}
-  LB_TreasureRoom: {fileID: 5183380349275709169, guid: 303bc0af95b6a5d4a9d3d6d3d5db9bab, type: 3}
-  LR_TreasureRoom: {fileID: 7761150944692978579, guid: bbbbd126b613895488f5a37dacabfde7, type: 3}
-  R_TreasureRoom: {fileID: 2625583467448180840, guid: 2094cfa2bc29d964799d189f17133bce, type: 3}
-  RB_TreasureRoom: {fileID: 5183380349275709169, guid: 816b23fc4cf83e04dbc347fd2cec3616, type: 3}
-  T_TreasureRoom: {fileID: 6950180639174103653, guid: e7e77608ffe625842afd37d3b82a1559, type: 3}
-  TB_TreasureRoom: {fileID: 3635325580153667647, guid: 8b8c8bb6e79fed34aab24ad2c17ef33b, type: 3}
-  TL_TreasureRoom: {fileID: 5025691487471264658, guid: 67c427f937ec76748886ce8eb750086b, type: 3}
-  TR_TreasureRoom: {fileID: 7142495746971183068, guid: 5a67eaae76a5de04fb1d3732b68c1a26, type: 3}
+  B_TreasureRoom: {fileID: 9125759892281097463, guid: 6c034cfb444a7ab48b45a8a6bbbc421d, type: 3}
+  L_TreasureRoom: {fileID: 8628088804981956397, guid: 19a756b512f58284d91f197f0fa377d3, type: 3}
+  LB_TreasureRoom: {fileID: 1970800116125312040, guid: 5034a95a0de3de54c9824ddec07585af, type: 3}
+  LR_TreasureRoom: {fileID: 7761150944692978579, guid: 04c07d87d9d48064aa7973834daac2cb, type: 3}
+  R_TreasureRoom: {fileID: 2625583467448180840, guid: 1a5987a6ab4fdd648b6206b3ca6b239e, type: 3}
+  RB_TreasureRoom: {fileID: 5183380349275709169, guid: 028e5a62fe362284a83576024e11ffb5, type: 3}
+  T_TreasureRoom: {fileID: 6950180639174103653, guid: 4d2de6767bc34ee47a817068cad606cb, type: 3}
+  TB_TreasureRoom: {fileID: 3635325580153667647, guid: f79a5aa41a9a44747852c7d8f14616e4, type: 3}
+  TL_TreasureRoom: {fileID: 5025691487471264658, guid: ea7d07c74656c8c41b8c4d9f219520b9, type: 3}
+  TR_TreasureRoom: {fileID: 7142495746971183068, guid: c625ab86499f2714db07028184cfc50e, type: 3}
   rooms: []
   possibleTreasureRooms: []
   startWaitTime: 0
@@ -9369,7 +9369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.003
       objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_LocalPosition.y
