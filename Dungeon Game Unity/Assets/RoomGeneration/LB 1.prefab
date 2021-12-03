@@ -3088,6 +3088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92f5373911131b43a2a5d29d4cffb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextToEntry: 0
+  isBossRoom: 0
 --- !u!1 &2034672012528552149
 GameObject:
   m_ObjectHideFlags: 0
