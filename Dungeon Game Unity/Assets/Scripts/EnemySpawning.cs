@@ -28,17 +28,18 @@ public class EnemySpawning : MonoBehaviour
             {
                 float randomValue = Random.value;
               
-                if ( randomValue <= spawnChance ) {
-                   Instantiate(getEnemyType(), child.position, child.rotation);
+                if ( randomValue <= spawnChance ) 
+                {
+                   GameObject newenemy = Instantiate(getEnemyType(), child.position, child.rotation);
                    numOfEnemies++;
-
+                    newenemy.transform.parent = this.transform.parent;
                 }
                 else {
                     //minimum of 2 enemies per room
                     if (numOfEnemies < minEnemiesInRoom)
                     {
-                        Instantiate(getEnemyType(), child.position, child.rotation);
-
+                        GameObject newenemy = Instantiate(getEnemyType(), child.position, child.rotation);
+                        newenemy.transform.parent = this.transform.parent;
                         numOfEnemies++;
                     }
                 }

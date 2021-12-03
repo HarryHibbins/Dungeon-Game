@@ -9,6 +9,7 @@ public class LevelLoader : MonoBehaviour
     public GameObject startRoom;
     private GameObject player;
     private CameraPosition camposscript;
+    private PauseMenu pauseMenu;
 
     private Transform startRoomCamPos;
     private Transform cameraTransform;
@@ -20,10 +21,22 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private string[] flavourTextArray;
 
+    private GameLoot gameLoot;
+    public Image BossChoiceOne;
+    public Image BossChoiceTwo;
+    public Image BossChoiceThree;
+
+    public GameObject bossScreenPanel;
+    private LootItems choice_one;
+    private LootItems choice_two;
+    private LootItems choice_three;
+
     private void Awake()
     {
         cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player");
+        gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
+        pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
     }
 
     void Update()
@@ -32,6 +45,89 @@ public class LevelLoader : MonoBehaviour
         {
             StartCoroutine(LoadingScreen());
         }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            ShowBossLoot();
+        }
+    }
+
+    public void ShowBossLoot()
+    {
+        bossScreenPanel.SetActive(true);
+
+        AssignBossLoot();
+
+        BossChoiceOne.sprite = choice_one.loot_sprite;
+        BossChoiceOne.SetNativeSize();
+        Vector2 currentsizeone = BossChoiceOne.rectTransform.sizeDelta;
+        BossChoiceOne.rectTransform.sizeDelta = currentsizeone / 2;
+
+        BossChoiceTwo.sprite = choice_two.loot_sprite;
+        BossChoiceTwo.SetNativeSize();
+        Vector2 currentsizetwo = BossChoiceTwo.rectTransform.sizeDelta;
+        BossChoiceTwo.rectTransform.sizeDelta = currentsizetwo / 2;
+
+        BossChoiceThree.sprite = choice_three.loot_sprite;
+        BossChoiceThree.SetNativeSize();
+        Vector2 currentsizethree = BossChoiceThree.rectTransform.sizeDelta;
+        BossChoiceThree.rectTransform.sizeDelta = currentsizethree / 2;
+    }
+
+    void AssignBossLoot()
+    {
+        List<LootItems> loot = new List<LootItems>();
+        loot = gameLoot.getLootByHighestRarityToSpawn(3);
+
+        foreach (LootItems lootitem in loot)
+        {
+            Debug.Log(lootitem.loot_name);
+        }
+
+        choice_one = loot[0];
+        choice_two = loot[1];
+        choice_three = loot[2];
+        Debug.Log("Loot One: " + choice_one.loot_name);
+        Debug.Log("Loot Two: " + choice_two.loot_name);
+        Debug.Log("Loot Three: " + choice_three.loot_name);
+    }
+
+    public void ChooseRelicOne()
+    {
+        choice_one.isActive = true;
+        if (choice_one.loot_type == LootItems.LootType.Relic)
+        {
+            choice_one.isCollected = true;
+        }
+        pauseMenu.AddToRelicUI(choice_one);
+        gameLoot.StartCoroutine(gameLoot.LootEffect(choice_one.loot_name));
+        bossScreenPanel.SetActive(false);
+        StartCoroutine(LoadingScreen());
+    }
+
+    public void ChooseRelicTwo()
+    {
+        choice_two.isActive = true;
+        if (choice_two.loot_type == LootItems.LootType.Relic)
+        {
+            choice_two.isCollected = true;
+        }
+        pauseMenu.AddToRelicUI(choice_two);
+        gameLoot.StartCoroutine(gameLoot.LootEffect(choice_two.loot_name));
+        bossScreenPanel.SetActive(false);
+        StartCoroutine(LoadingScreen());
+    }
+
+    public void ChooseRelicThree()
+    {
+        choice_three.isActive = true;
+        if (choice_three.loot_type == LootItems.LootType.Relic)
+        {
+            choice_three.isCollected = true;
+        }
+        pauseMenu.AddToRelicUI(choice_three);
+        gameLoot.StartCoroutine(gameLoot.LootEffect(choice_three.loot_name));
+        bossScreenPanel.SetActive(false);
+        StartCoroutine(LoadingScreen());
     }
 
     void LoadNewLevel()

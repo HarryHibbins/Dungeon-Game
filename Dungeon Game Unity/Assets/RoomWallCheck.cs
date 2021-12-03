@@ -7,7 +7,6 @@ public class RoomWallCheck : MonoBehaviour
     public GameObject Wall;
     public GameObject Door;
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (this.tag == "DoorTag" && other.tag == "WallTag")

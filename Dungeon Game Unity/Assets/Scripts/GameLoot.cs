@@ -26,6 +26,8 @@ public class GameLoot : MonoBehaviour
     [HideInInspector]
     public int explorerRelicRooms = 0;
 
+    public int LootCount = 0;
+
     private void Awake()
     {
         playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
@@ -50,6 +52,87 @@ public class GameLoot : MonoBehaviour
     {
         LootItems temp = new LootItems(lootname, lootdesc, lootprefab, lootsprite, loottype, lootrarity);
         lootList.Add(temp);
+    }
+
+    public List<LootItems> getLootByHighestRarityToSpawn(int loot_count)
+    {
+        LootCount = loot_count;
+        List<LootItems> LootRarityList = new List<LootItems>();
+        List<LootItems> BossList = new List<LootItems>();
+        List<LootItems> LegendaryList = new List<LootItems>();
+        List<LootItems> EpicList = new List<LootItems>();
+        List<LootItems> RareList = new List<LootItems>();
+        List<LootItems> UncommonList = new List<LootItems>();
+        List<LootItems> CommonList = new List<LootItems>();
+        foreach (LootItems item in lootList)
+        {
+            if (item.loot_rarity == LootItems.LootRarity.Boss && !item.isCollected)
+            {
+                BossList.Add(item);
+            }
+            if (item.loot_rarity == LootItems.LootRarity.Legendary && !item.isCollected)
+            {
+                LegendaryList.Add(item);
+            }
+            if (item.loot_rarity == LootItems.LootRarity.Epic && !item.isCollected)
+            {
+                EpicList.Add(item);
+            }
+            if (item.loot_rarity == LootItems.LootRarity.Rare && !item.isCollected)
+            {
+                RareList.Add(item);
+            }
+            if (item.loot_rarity == LootItems.LootRarity.Uncommon && !item.isCollected)
+            {
+                UncommonList.Add(item);
+            }
+            if (item.loot_rarity == LootItems.LootRarity.Common && !item.isCollected)
+            {
+                CommonList.Add(item);
+            }
+        }
+
+        LootRarityList.AddRange(PopulateRarityList(BossList));
+        LootRarityList.AddRange(PopulateRarityList(LegendaryList));
+        LootRarityList.AddRange(PopulateRarityList(EpicList));
+        LootRarityList.AddRange(PopulateRarityList(RareList));
+        LootRarityList.AddRange(PopulateRarityList(UncommonList));
+        LootRarityList.AddRange(PopulateRarityList(CommonList));
+        
+        if (LootRarityList != null)
+        {
+            return LootRarityList;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    List<LootItems> PopulateRarityList(List<LootItems> raritylist)
+    {
+        List<LootItems> templist = new List<LootItems>();
+        List<LootItems> newraritylist = raritylist;
+
+        if (newraritylist.Count >= LootCount)
+        {
+            for (int i = 0; i < LootCount; i++)
+            {
+                int rand = UnityEngine.Random.Range(0, newraritylist.Count);
+                templist.Add(newraritylist[rand]);
+                newraritylist.RemoveAt(rand);
+            }
+
+        }
+        else
+        {
+            for (int i = 0; i < newraritylist.Count; i++)
+            {
+                templist.Add(newraritylist[i]);
+                LootCount--;
+            }
+        }
+        return templist;
     }
 
     public LootItems getLootByName (LootItems.Loot lootname)

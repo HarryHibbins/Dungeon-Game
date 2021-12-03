@@ -27,7 +27,7 @@ public class RoomTemplates : MonoBehaviour
 
     public float startWaitTime;
     public float waitTime;
-    private bool spawnedBoss;
+    public bool spawnedBoss;
     private bool spawnedTreasureRoom;
     public GameObject boss;
     public GameObject treasureRoom;
