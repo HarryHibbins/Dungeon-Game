@@ -13,10 +13,14 @@ public class FixedTorch : MonoBehaviour
     public bool canPickUpTorch;
     public bool hasTorch;
     public float maxTimer = 30;
+    public float intensity = 150;
+    public float range = 10;
     public float torchTimer;
     public GameObject flame;
     public GameObject sparks;
+    public GameObject textBubble;
     public Vector3 originalPos;
+    public bool held = false;
 
     private void Awake()
     {
@@ -31,6 +35,7 @@ public class FixedTorch : MonoBehaviour
         torchTimer = maxTimer;
         originalPos = this.transform.position;
         playerTorchHolder = playerTorchHolderObj.transform;
+        textBubble = GameObject.FindWithTag("textBubble");
         //flame = this.gameObject.transform.Find("Torch (1)").gameObject;
     }
 
@@ -38,33 +43,41 @@ public class FixedTorch : MonoBehaviour
     {
         if (canPickUpTorch && Input.GetButtonDown("Interact"))
         {
-            
-            //if (playerTorchHolder.Find("CurrentTorch").gameObject.GetComponent<FixedTorch>().hasTorch) 
-            if(player.GetComponent<PlayerInventory>().holdingTorch)
+            if (!held)
             {
-                Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);
+                //if (playerTorchHolder.Find("CurrentTorch").gameObject.GetComponent<FixedTorch>().hasTorch) 
+                if (player.GetComponent<PlayerInventory>().holdingTorch)
+                {
+                    Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);
+                }
+
+                this.name = "CurrentTorch";
+                flame = this.gameObject.transform.Find("Torch (1)").gameObject;
+                sparks = this.gameObject.transform.Find("Fire").gameObject;
+                Debug.Log("Pick up torch");
+
+                hasTorch = true;
+                player.GetComponent<PlayerInventory>().holdingTorch = true;
+                anim.SetBool("Torch", true);
+                torchTimer = 30;
+
+                transform.position = playerTorchHolder.transform.position;
+
+                transform.parent = playerTorchHolder;
+                //  transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+
+                textBubble.GetComponent<TextMesh>().text = "";
+                held = true;
             }
 
-            this.name = "CurrentTorch";
-            flame = this.gameObject.transform.Find("Torch (1)").gameObject;
-            sparks = this.gameObject.transform.Find("Fire").gameObject;
-            Debug.Log("Pick up torch");
 
-            hasTorch = true;
-            player.GetComponent<PlayerInventory>().holdingTorch = true;
-            anim.SetBool("Torch", true);
-            torchTimer = 30;
-          
-            transform.position = playerTorchHolder.transform.position;
-            
-            transform.parent = playerTorchHolder;
-          //  transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-        }
-        
-        if (hasTorch) 
+
+            }
+
+            if (hasTorch) 
         {
             torchTimer -= Time.deltaTime;
-            flame.GetComponent<Light>().range = (torchTimer / maxTimer) * 10;
+            flame.GetComponent<Light>().range = (torchTimer / maxTimer) * range;
             sparks.GetComponent<ParticleSystem>().startSize = (torchTimer / maxTimer);
             sparks.GetComponent<ParticleSystem>().startLifetime = (torchTimer / maxTimer) * 1.5f;
             sparks.gameObject.transform.Find("Fire_Sparks").gameObject.GetComponent<ParticleSystem>().startSize = (torchTimer / maxTimer);
@@ -87,6 +100,10 @@ public class FixedTorch : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canPickUpTorch = true;
+            if (!held) 
+            {
+                textBubble.GetComponent<TextMesh>().text = "E";    
+            }
         }
     }
 
@@ -97,6 +114,7 @@ public class FixedTorch : MonoBehaviour
         if (other.CompareTag("Player"))     
         {
             canPickUpTorch = false;
+            textBubble.GetComponent<TextMesh>().text = "";
         }
     }
 }
