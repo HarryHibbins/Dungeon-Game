@@ -6420,7 +6420,7 @@ MonoBehaviour:
   closedRoom: {fileID: 4859978853126234431, guid: a83bbf259e82c06429eb84b18a4ff687, type: 3}
   B_TreasureRoom: {fileID: 9125759892281097463, guid: 6c034cfb444a7ab48b45a8a6bbbc421d, type: 3}
   L_TreasureRoom: {fileID: 8628088804981956397, guid: 19a756b512f58284d91f197f0fa377d3, type: 3}
-  LB_TreasureRoom: {fileID: 1970800116125312040, guid: 5034a95a0de3de54c9824ddec07585af, type: 3}
+  LB_TreasureRoom: {fileID: 5183380349275709169, guid: c34f023a2c0b43e41923334e2e679688, type: 3}
   LR_TreasureRoom: {fileID: 7761150944692978579, guid: 04c07d87d9d48064aa7973834daac2cb, type: 3}
   R_TreasureRoom: {fileID: 2625583467448180840, guid: 1a5987a6ab4fdd648b6206b3ca6b239e, type: 3}
   RB_TreasureRoom: {fileID: 5183380349275709169, guid: 028e5a62fe362284a83576024e11ffb5, type: 3}
