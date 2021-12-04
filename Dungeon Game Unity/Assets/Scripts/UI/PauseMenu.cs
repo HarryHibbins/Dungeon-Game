@@ -18,6 +18,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject relicPanel;
     public GameObject settingsPanel;
     public GameObject startPanel;
+    public Text relicDesc;
 
     private PlayerController playerController;
 
@@ -48,11 +49,13 @@ public class PauseMenu : MonoBehaviour
 
         if (inPauseMenu || inRelicMenu || inSettingsMenu)
         {
+            startPanel.SetActive(false);
             playerController.enabled = false;
             isPaused = true;
         }
         else
         {
+            startPanel.SetActive(true);
             playerController.enabled = true;
             isPaused = false;
         }
@@ -127,7 +130,10 @@ public class PauseMenu : MonoBehaviour
     public void AddToRelicUI(LootItems loot)
     {
         GameObject Relic = Instantiate(RelicUIPrefab, ContentArea.transform);
-
+        Relic.GetComponent<RelicDescHolder>().relicName = loot.loot_name.ToString();
+        Relic.GetComponent<RelicDescHolder>().relicDesc = loot.loot_description;
         Relic.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = loot.loot_sprite;
     }
+
+    
 }

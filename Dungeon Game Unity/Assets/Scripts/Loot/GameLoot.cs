@@ -433,11 +433,11 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.PlayerBaseSpeedRelic)
         {
-            playerStats.PM_BaseSpeed += 2;
+            playerStats.PM_BaseSpeed += 1;
         }
         else if (loot == LootItems.Loot.PlayerDrawSpeedRelic)
         {
-            playerStats.PM_DrawSpeed += 2;
+            playerStats.PM_DrawSpeed += 1;
         }
         else if (loot == LootItems.Loot.NoMovementPenaltyRelic)
         {
@@ -465,23 +465,23 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.BiggerBagNormal)
         {
-            playerStats.PI_MaxNormalArrows += 10;
+            playerStats.PI_MaxNormalArrows += 5;
         }
         else if (loot == LootItems.Loot.BiggerBagFire)
         {
-            playerStats.PI_MaxFireArrows += 10;
+            playerStats.PI_MaxFireArrows += 5;
         }
         else if (loot == LootItems.Loot.BiggerBagIce)
         {
-            playerStats.PI_MaxIceArrows += 10;
+            playerStats.PI_MaxIceArrows += 5;
         }
         else if (loot == LootItems.Loot.BiggerBagExplosive)
         {
-            playerStats.PI_MaxExplosiveArrows += 10;
+            playerStats.PI_MaxExplosiveArrows += 5;
         }
         else if (loot == LootItems.Loot.BiggerBagSpeed)
         {
-            playerStats.PI_MaxSpeedArrows += 10;
+            playerStats.PI_MaxSpeedArrows += 5;
         }
         else if (loot == LootItems.Loot.BiggerBagAll)
         {

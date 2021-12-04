@@ -2451,6 +2451,7 @@ RectTransform:
   - {fileID: 2141646412}
   - {fileID: 677589154}
   - {fileID: 2010586642}
+  - {fileID: 756713866}
   m_Father: {fileID: 695015336}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4698,7 +4699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &677589154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5608,6 +5609,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752126469}
   m_CullTransparentMesh: 1
+--- !u!1 &756713865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 756713866}
+  - component: {fileID: 756713868}
+  - component: {fileID: 756713867}
+  m_Layer: 5
+  m_Name: RelicDescBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &756713866
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756713865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1374860588}
+  m_Father: {fileID: 358544830}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 7.1967773, y: -334.60907}
+  m_SizeDelta: {x: -563.72, y: -866.6127}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &756713867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756713865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.20784314, g: 0.20784314, b: 0.20784314, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &756713868
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756713865}
+  m_CullTransparentMesh: 1
 --- !u!1 &757398771
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,7 +5884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6189,7 +6266,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 592.8154, y: 2132}
+  m_SizeDelta: {x: -15.849, y: 852}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &852184552
 MonoBehaviour:
@@ -6225,7 +6302,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 1300, y: 2100}
+  m_CellSize: {x: 100, y: 100}
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -6826,7 +6903,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 4c2e89885a83f5d4a90e6833ac39d5fc, type: 3}
     loot_sprite: {fileID: 21300000, guid: 073960711729949499f85b2773ee526c, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: The Player no longer slows down when drawing the bow.
     isActive: 0
     isCollected: 0
@@ -6835,7 +6912,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: e9f1285155bfbe7448c094c0db75294f, type: 3}
     loot_sprite: {fileID: 21300000, guid: c72e3560d9bd91f4e9e0fc0eb1401ddf, type: 3}
     loot_rarity: 5
-    loot_type: 1
+    loot_type: 2
     loot_description: Player's health is doubled, but speed is halved.
     isActive: 0
     isCollected: 0
@@ -6844,7 +6921,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: adcd48d69b7592d47a1d744773fe04d2, type: 3}
     loot_sprite: {fileID: 21300000, guid: 61f1c4ecb9f1a9641bd94354adbd3f38, type: 3}
     loot_rarity: 5
-    loot_type: 1
+    loot_type: 2
     loot_description: Player's speed is doubled, but health is halved.
     isActive: 0
     isCollected: 0
@@ -6853,7 +6930,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 7421e97f06e59d74ea06da56ddfbb148, type: 3}
     loot_sprite: {fileID: 21300000, guid: 156b73a050a8de54da02ceeacd740761, type: 3}
     loot_rarity: 4
-    loot_type: 1
+    loot_type: 2
     loot_description: Deal 10% damage back to enemies that hit you.
     isActive: 0
     isCollected: 0
@@ -6862,7 +6939,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 4207517268a95694a941be2d3c04ccb0, type: 3}
     loot_sprite: {fileID: 21300000, guid: 6365394da58f8cc46a778360a1b4a42c, type: 3}
     loot_rarity: 4
-    loot_type: 1
+    loot_type: 2
     loot_description: Chance to not consume ammo when firing the bow.
     isActive: 0
     isCollected: 0
@@ -6916,7 +6993,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: cd7deeb36bc2d2049a4fe4689d39c0e4, type: 3}
     loot_sprite: {fileID: 21300000, guid: 13ebfe4a6678c724fbd9be99024a7805, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase ammo capacity for all arrow types by 10.
     isActive: 0
     isCollected: 0
@@ -6925,7 +7002,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: ab98c7fc6bca43b4ba74f9e828861db8, type: 3}
     loot_sprite: {fileID: 21300000, guid: 7e2ce8d8baf1ae8488790d12d3ce9e5b, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase burn damage from Fire arrows.
     isActive: 0
     isCollected: 0
@@ -6934,7 +7011,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: b2c1fccc173381a48a8dd03cfe66b3d6, type: 3}
     loot_sprite: {fileID: 21300000, guid: 0b27c71744e8bc84c9e3c02f90ad4574, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase burn time from Fire arrows.
     isActive: 0
     isCollected: 0
@@ -6943,7 +7020,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 3afd049b4d714324398a9e841bf58250, type: 3}
     loot_sprite: {fileID: 21300000, guid: 91656d2505e29c4418f21d2fd7ff733a, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase bleed damage.
     isActive: 0
     isCollected: 0
@@ -6952,7 +7029,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: b0ac0872ea787e74d8b1702a4f40ebbc, type: 3}
     loot_sprite: {fileID: 21300000, guid: 7c84d41fef915224898590ac13f19a3d, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase bleed time.
     isActive: 0
     isCollected: 0
@@ -6961,7 +7038,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: ffc1247f81e76934299e1e6e29d4763f, type: 3}
     loot_sprite: {fileID: 21300000, guid: 0b7c5e6c7c83f3241a21c081a391b317, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase slow time from Ice arrows.
     isActive: 0
     isCollected: 0
@@ -6970,7 +7047,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: aaa42fffd59c62f42a96af421cc5167e, type: 3}
     loot_sprite: {fileID: 21300000, guid: 8d7e1517927a7194090f470171782963, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase chance to apply bleed.
     isActive: 0
     isCollected: 0
@@ -6997,7 +7074,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 4057461237739355192, guid: b7b7d294b6c5e6346a0a81525f0f1692, type: 3}
     loot_sprite: {fileID: 21300000, guid: 56e630ec7bdf3194b8cf53209c14007b, type: 3}
     loot_rarity: 4
-    loot_type: 1
+    loot_type: 2
     loot_description: Gain a chance to ingore incoming damage.
     isActive: 0
     isCollected: 0
@@ -7006,7 +7083,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: ddbac8a9132fc5343b76b063a2a17348, type: 3}
     loot_sprite: {fileID: 21300000, guid: c21ac051fef84dc4b8830254c03a28ff, type: 3}
     loot_rarity: 2
-    loot_type: 1
+    loot_type: 2
     loot_description: Gain 50% after standing still for 3 seconds. Removed after
       moving.
     isActive: 0
@@ -7025,7 +7102,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 2b0eded1c02e36a4a894604ac4a06e03, type: 3}
     loot_sprite: {fileID: 21300000, guid: 1206e3d8af5c18242945969cbc977494, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Gain 20% damage against bosses.
     isActive: 0
     isCollected: 0
@@ -7034,7 +7111,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: c112d04432717224aa9821720b00facc, type: 3}
     loot_sprite: {fileID: 21300000, guid: 7fb8e3fa032ca2445990722dee96274d, type: 3}
     loot_rarity: 5
-    loot_type: 1
+    loot_type: 2
     loot_description: Bosses start with 20% less health.
     isActive: 0
     isCollected: 0
@@ -7043,7 +7120,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 81b8c3743552e2d4c897db25a69c4891, type: 3}
     loot_sprite: {fileID: 21300000, guid: 01a6e4aaddf738541b91c50eb4f39d2b, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Restore 1 heart for every 10 rooms visited.
     isActive: 0
     isCollected: 0
@@ -7052,7 +7129,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 35a68532e325bb04e966592d06102a7a, type: 3}
     loot_sprite: {fileID: 21300000, guid: 4a4102f283732874bb70e5a76c80594f, type: 3}
     loot_rarity: 5
-    loot_type: 1
+    loot_type: 2
     loot_description: Remove fire and slow damage buffs. Gain 100% chance to bleed.
     isActive: 0
     isCollected: 0
@@ -7061,7 +7138,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: d61e63badb328b944a5df78268622ee6, type: 3}
     loot_sprite: {fileID: 21300000, guid: 6ae2e974069b7ee48a7ce9086df1ae48, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Gain 10% chance to crit (double damage).
     isActive: 0
     isCollected: 0
@@ -7070,7 +7147,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 9ca55acc6e1744040847f09108e6c65f, type: 3}
     loot_sprite: {fileID: 21300000, guid: e0fb92011a858134a8c16b28e60154f2, type: 3}
     loot_rarity: 4
-    loot_type: 1
+    loot_type: 2
     loot_description: After taking lethal damage, restore 50% health. (Once per run).
     isActive: 0
     isCollected: 0
@@ -7079,7 +7156,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 1f193b2b9f5695849a9e4d830ba97bb6, type: 3}
     loot_sprite: {fileID: 21300000, guid: b569881021476a64798184bbde78daf8, type: 3}
     loot_rarity: 2
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase drop luck.
     isActive: 0
     isCollected: 0
@@ -7088,7 +7165,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: 57bbac7d3cc64bb4594f9ccff922e929, type: 3}
     loot_sprite: {fileID: 21300000, guid: 4b57b8ffd7c3c774d934b8dd11f21c55, type: 3}
     loot_rarity: 5
-    loot_type: 1
+    loot_type: 2
     loot_description: Gain a small, but permanent, light source.
     isActive: 0
     isCollected: 0
@@ -7097,7 +7174,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: a2ee547d5eb18874fbb9943ce676bd58, type: 3}
     loot_sprite: {fileID: 21300000, guid: 3253495a528f8074886135304c22f84f, type: 3}
     loot_rarity: 4
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase damage of all arrow types.
     isActive: 0
     isCollected: 0
@@ -7106,7 +7183,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 919132149155446097, guid: e7bf64ac1b3e76646b02a45317adf15a, type: 3}
     loot_sprite: {fileID: 21300000, guid: 577ebf507399b9d448ef724bed251d41, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Increase chance of finding a treasure room.
     isActive: 0
     isCollected: 0
@@ -7195,6 +7272,7 @@ MonoBehaviour:
   relicPanel: {fileID: 358544829}
   settingsPanel: {fileID: 669247803}
   startPanel: {fileID: 806531521}
+  relicDesc: {fileID: 1374860589}
 --- !u!114 &932448661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8230,7 +8308,7 @@ RectTransform:
   m_Father: {fileID: 393094010}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.67467606}
+  m_AnchorMin: {x: 0, y: 0.42750895}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -9324,6 +9402,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1374860587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374860588}
+  - component: {fileID: 1374860590}
+  - component: {fileID: 1374860589}
+  m_Layer: 5
+  m_Name: RelicDescText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1374860588
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374860587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 756713866}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -60.000008, y: -60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1374860589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374860587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 30
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1374860590
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374860587}
+  m_CullTransparentMesh: 1
 --- !u!1 &1382134242
 GameObject:
   m_ObjectHideFlags: 0
@@ -11402,7 +11559,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1138089280}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.32532397
+  m_Size: 0.57249105
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11460,7 +11617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1824148932
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12290,8 +12447,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.008300781, y: -95.635925}
-  m_SizeDelta: {x: -549.3096, y: -333.02875}
+  m_AnchoredPosition: {x: -0.008300781, y: 11.291603}
+  m_SizeDelta: {x: -549.3096, y: -546.8838}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010586643
 MonoBehaviour:
@@ -12844,7 +13001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2141646412
 RectTransform:
   m_ObjectHideFlags: 0

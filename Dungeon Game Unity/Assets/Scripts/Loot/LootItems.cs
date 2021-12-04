@@ -30,6 +30,7 @@ public class LootItems
     public enum LootType
     {
         Consumable,
+        Upgrade,
         Relic,
     }
 
