@@ -23,6 +23,10 @@ public class LootPickUp : MonoBehaviour
                 gl_script.getLootByName(LootName).isCollected = true;
                 pm_script.AddToRelicUI(gl_script.getLootByName(LootName));
             }
+            if (gl_script.getLootByName(LootName).loot_type == LootItems.LootType.Upgrade)
+            {
+                pm_script.AddToRelicUI(gl_script.getLootByName(LootName));
+            }
             gl_script.StartCoroutine(gl_script.LootEffect(LootName));
             Destroy(this.gameObject);
         }

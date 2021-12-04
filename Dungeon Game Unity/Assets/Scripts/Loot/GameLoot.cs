@@ -62,9 +62,9 @@ public class GameLoot : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.M))
         {
-            SpawnLoot(new Vector3(0, 1, 0), getLootByRarityToSpawn(LootItems.LootRarity.Rare));
-            SpawnLoot(new Vector3(2, 1, 0), getLootByRarityToSpawn(LootItems.LootRarity.Epic));
-            SpawnLoot(new Vector3(0, 1, 0), getLootByNameToSpawn(LootItems.Loot.AncientLamp));
+            //SpawnLoot(new Vector3(0, 1, 0), getLootByRarityToSpawn(LootItems.LootRarity.Rare));
+            //SpawnLoot(new Vector3(2, 1, 0), getLootByRarityToSpawn(LootItems.LootRarity.Epic));
+            SpawnLoot(new Vector3(0, 1, 0), getLootByTypeToSpawn(LootItems.LootType.Upgrade));
         }
     }
 

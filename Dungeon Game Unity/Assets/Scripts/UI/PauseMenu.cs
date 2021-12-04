@@ -22,6 +22,9 @@ public class PauseMenu : MonoBehaviour
 
     private PlayerController playerController;
 
+    public List<GameObject> relicList;
+    private GameObject upgradeLoot;
+
     private void Awake()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -129,10 +132,45 @@ public class PauseMenu : MonoBehaviour
 
     public void AddToRelicUI(LootItems loot)
     {
-        GameObject Relic = Instantiate(RelicUIPrefab, ContentArea.transform);
-        Relic.GetComponent<RelicDescHolder>().relicName = loot.loot_name.ToString();
-        Relic.GetComponent<RelicDescHolder>().relicDesc = loot.loot_description;
-        Relic.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = loot.loot_sprite;
+        bool isUnique = true;
+
+        if (loot.loot_type == LootItems.LootType.Relic)
+        {
+            GameObject Relic = Instantiate(RelicUIPrefab, ContentArea.transform);
+            Relic.GetComponent<RelicDescHolder>().relicName = loot.loot_name.ToString();
+            Relic.GetComponent<RelicDescHolder>().relicDesc = loot.loot_description;
+            Relic.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = loot.loot_sprite;
+            relicList.Add(Relic);
+        }
+        else if (loot.loot_type == LootItems.LootType.Upgrade)
+        {
+            Debug.Log(loot.loot_name.ToString());
+            foreach (GameObject relic in relicList)
+            {
+                if (loot.loot_name.ToString() == relic.GetComponent<RelicDescHolder>().relicName)
+                {
+                    isUnique = false;
+                    upgradeLoot = relic;
+                }
+            }
+            if (isUnique)
+            {
+                GameObject Relic = Instantiate(RelicUIPrefab, ContentArea.transform);
+                Relic.GetComponent<RelicDescHolder>().relicName = loot.loot_name.ToString();
+                Relic.GetComponent<RelicDescHolder>().relicDesc = loot.loot_description;
+                Relic.GetComponent<RelicDescHolder>().upgradeCount++;
+                Relic.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = loot.loot_sprite;
+                relicList.Add(Relic);
+            }
+            else if (!isUnique)
+            {
+                upgradeLoot.GetComponent<RelicDescHolder>().upgradeCount++;
+            }
+        }
+
+        
+
+        
     }
 
     

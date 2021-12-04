@@ -11,10 +11,24 @@ public class RelicDescHolder : MonoBehaviour
     public string relicName;
     public string relicDesc;
     private PauseMenu pauseMenu;
+    public int upgradeCount = 0;
+    public Text countText;
 
     private void Awake()
     {
         pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
+    }
+
+    private void Update()
+    {
+        if (upgradeCount > 1)
+        {
+            countText.text = upgradeCount.ToString() + "x";
+        }
+        else
+        {
+            countText.text = "";
+        }
     }
 
     public void ShowRelicDesc()
