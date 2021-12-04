@@ -13,7 +13,7 @@ public class FixedTorch : MonoBehaviour
     public bool canPickUpTorch;
     public bool hasTorch;
     public float maxTimer = 30;
-    public float intensity = 150;
+    public float intensity = 20;
     public float range = 10;
     public float torchTimer;
     public GameObject flame;
@@ -78,6 +78,7 @@ public class FixedTorch : MonoBehaviour
         {
             torchTimer -= Time.deltaTime;
             flame.GetComponent<Light>().range = (torchTimer / maxTimer) * range;
+            flame.GetComponent<Light>().intensity *= (torchTimer / maxTimer);
             sparks.GetComponent<ParticleSystem>().startSize = (torchTimer / maxTimer);
             sparks.GetComponent<ParticleSystem>().startLifetime = (torchTimer / maxTimer) * 1.5f;
             sparks.gameObject.transform.Find("Fire_Sparks").gameObject.GetComponent<ParticleSystem>().startSize = (torchTimer / maxTimer);
