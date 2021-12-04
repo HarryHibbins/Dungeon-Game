@@ -7,8 +7,10 @@ public class GameLoot : MonoBehaviour
 {
     //public GameObject lootPrefab;
 
+    private GameObject player;
     private PlayerStats playerStats;
     private PlayerInventory playerInventory;
+    private PlayerController playerController;
     private HeartsUI heartsUI;
     private PlayerHealth playerHealth;
 
@@ -25,15 +27,33 @@ public class GameLoot : MonoBehaviour
 
     [HideInInspector]
     public int explorerRelicRooms = 0;
-
     public int LootCount = 0;
+    private float warbanner_timer = 0f;
+    private float warbanner_goal = 3f;
+    public bool warbannerDamage = false;
+
+    [SerializeField]
+    public List<ParticleSystem> warbannerPSList;
+    public GameObject warbannerps;
+    private bool isPSPlaying = false;
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
         playerStats = GetComponent<PlayerStats>();
         heartsUI = GameObject.FindGameObjectWithTag("HeartsUI").GetComponent<HeartsUI>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    }
+
+    private void Start()
+    {
+        warbannerps = player.transform.Find("WarbannerEffect").gameObject;
+        foreach (Transform child in warbannerps.transform)
+        {
+            warbannerPSList.Add(child.GetComponent<ParticleSystem>());
+        }
     }
 
     private void Update()
@@ -44,7 +64,7 @@ public class GameLoot : MonoBehaviour
         {
             SpawnLoot(new Vector3(0, 1, 0), getLootByRarityToSpawn(LootItems.LootRarity.Rare));
             SpawnLoot(new Vector3(2, 1, 0), getLootByRarityToSpawn(LootItems.LootRarity.Epic));
-            SpawnLoot(new Vector3(0, 1, 0), getLootByNameToSpawn(LootItems.Loot.NoMovementPenaltyRelic));
+            SpawnLoot(new Vector3(0, 1, 0), getLootByNameToSpawn(LootItems.Loot.AncientLamp));
         }
     }
 
@@ -52,6 +72,7 @@ public class GameLoot : MonoBehaviour
     {
         int rand = UnityEngine.Random.Range(0, 101);
         LootItems.LootRarity rarity = LootItems.LootRarity.Common;
+        rand += playerStats.AdditionalDropLuck;
 
         if (rand <= 40)
         {
@@ -526,6 +547,7 @@ public class GameLoot : MonoBehaviour
         else if (loot == LootItems.Loot.WarbannerRelic)
         {
             getLootByName(loot).isActive = true;
+            
         }
         else if (loot == LootItems.Loot.RestorePotion)
         {
@@ -561,11 +583,11 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.LuckyDiceRelic)
         {
-            //Give drop luck
+            playerStats.AdditionalDropLuck += 20;
         }
         else if (loot == LootItems.Loot.AncientLamp)
         {
-            // Set players small light source to be active
+            player.transform.Find("AncientLampLight").gameObject.SetActive(true);
         }
         else if (loot == LootItems.Loot.MysticFeather)
         {
@@ -590,7 +612,59 @@ public class GameLoot : MonoBehaviour
         }
         if (getLootByName(LootItems.Loot.WarbannerRelic).isActive)
         {
-            //Do warbanner thing
+            if (!playerController.isMovingForSound)
+            {
+                if (warbanner_timer < warbanner_goal)
+                {
+                    warbannerDamage = false;
+                    foreach (ParticleSystem ps in warbannerPSList)
+                    {
+                        ps.Stop();
+                        isPSPlaying = false;
+                    }
+                    warbanner_timer += Time.deltaTime;
+                    warbannerps.transform.parent = player.transform;
+                }
+                else if (warbanner_timer >= warbanner_goal)
+                {
+                    Debug.Log("WARBANNER DAMAGE");
+                    warbannerDamage = true;
+                    foreach (ParticleSystem ps in warbannerPSList)
+                    {
+                        if (!isPSPlaying)
+                        {
+                            ps.Clear();
+                            if (ps.name.Contains("Radius"))
+                            {
+                                ParticleSystem.MainModule psmain = ps.main;
+                                psmain.startLifetime = 20;
+                            }
+                            ps.Play();
+                            ParticleSystem.ColorOverLifetimeModule pscol = ps.colorOverLifetime;
+                            pscol.enabled = false;
+                        }
+                    }
+                    isPSPlaying = true;
+                    warbannerps.transform.parent = null;
+                }
+            }
+            else
+            {
+                warbannerDamage = false;
+                foreach (ParticleSystem ps in warbannerPSList)
+                {
+                    if (ps.name.Contains("Radius"))
+                    {
+                        ps.Clear();
+                    }
+                    ps.Stop();
+                    isPSPlaying = false;
+                    ParticleSystem.ColorOverLifetimeModule pscol = ps.colorOverLifetime;
+                    pscol.enabled = true;
+                }
+                warbanner_timer = 0;
+                warbannerps.transform.parent = player.transform;
+            }
         }
         if (getLootByName(LootItems.Loot.ExplorerRelic).isActive)
         {

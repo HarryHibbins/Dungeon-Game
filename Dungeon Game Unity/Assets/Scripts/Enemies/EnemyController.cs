@@ -68,6 +68,10 @@ public class EnemyController : MonoBehaviour
             {
                 DamageDealt *= 2;
             }
+            if (gameLoot.warbannerDamage)
+            {
+                DamageDealt *= 1.5f;
+            }
             
             //Stop the arrow 
             arrow.move = false;

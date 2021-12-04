@@ -45,8 +45,9 @@ public class PlayerStats : MonoBehaviour
     public int GameFloors;
     public int GameRooms;
 
-    [Header("Misc")]
+    [Header("Luck")]
     public int TreasureRoomChance;              // Out of 100
+    public int AdditionalDropLuck;              // Out of 100
 
     public void updateAllMaxArrows(int amount)
     {
