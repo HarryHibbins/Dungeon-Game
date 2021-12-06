@@ -63,7 +63,12 @@ public class LootItems
         SharperTipsRelic,           // Increase chance of applying bleed
         HealthPotion,               // Restore health to full
         DungeonFood,                // Restore a full heart
-        AncientHelm,                // Chance to ignore damage
+        AncientHelm,                // Does Something
+        CommonArmour,               // CommonArmour 
+        UncommonArmour,             // Uncommon Armour
+        RareArmour,                 // Rare
+        EpicArmour,                 // Epic
+        LegendaryArmour,            // Legendary 
         WarbannerRelic,             // After standing still for 3 seconds, gain 50% damage
         RestorePotion,              // Gain health regen for 10 seconds (1 heart per 5 seconds)
         ArmourPiercingArrows,       // Gain 20% damage against bosses

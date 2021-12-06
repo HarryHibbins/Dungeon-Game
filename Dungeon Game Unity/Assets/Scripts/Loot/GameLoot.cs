@@ -14,6 +14,14 @@ public class GameLoot : MonoBehaviour
     private HeartsUI heartsUI;
     private PlayerHealth playerHealth;
 
+    private GameObject helmet;
+    private GameObject visor;
+    private GameObject chestPlate;
+    private Material[] armourMat; 
+  
+    public Material[] armourMats;
+   
+    
     public List<LootItems> lootList;
     [Space(3)]
     [Header("NEW LOOT OBJECT")]
@@ -37,6 +45,7 @@ public class GameLoot : MonoBehaviour
     private GameObject warbannerps;
     private bool isPSPlaying = false;
 
+    
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -46,7 +55,11 @@ public class GameLoot : MonoBehaviour
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         warbannerPSList = new List<ParticleSystem>();
-    }
+        helmet = GameObject.FindWithTag("Helmet");
+        visor = GameObject.FindWithTag("Visor");
+        chestPlate = GameObject.FindWithTag("ChestPlate");
+        armourMat = helmet.GetComponent<Renderer>().materials;
+      }
 
     private void Start()
     {
@@ -55,6 +68,9 @@ public class GameLoot : MonoBehaviour
         {
             warbannerPSList.Add(child.GetComponent<ParticleSystem>());
         }
+        helmet.SetActive(false);
+        visor.SetActive(false);
+        
     }
 
     private void Update()
@@ -65,7 +81,14 @@ public class GameLoot : MonoBehaviour
         {
             //SpawnLoot(new Vector3(0, 1, 0), getLootByRarityToSpawn(LootItems.LootRarity.Rare));
             //SpawnLoot(new Vector3(2, 1, 0), getLootByRarityToSpawn(LootItems.LootRarity.Epic));
-            SpawnLoot(new Vector3(0, 1, 0), getLootByTypeToSpawn(LootItems.LootType.Upgrade));
+            //SpawnLoot(new Vector3(0, 1, 0), getLootByTypeToSpawn(LootItems.LootType.Upgrade));
+            //SpawnLoot(new Vector3(0, 1, 0), getLootByNameToSpawn(LootItems.Loot.AncientHelm));
+            SpawnLoot(new Vector3(1, 1, 0), getLootByNameToSpawn(LootItems.Loot.CommonArmour));
+            SpawnLoot(new Vector3(2, 1, 0), getLootByNameToSpawn(LootItems.Loot.UncommonArmour));
+            SpawnLoot(new Vector3(3, 1, 0), getLootByNameToSpawn(LootItems.Loot.RareArmour));
+            SpawnLoot(new Vector3(4, 1, 0), getLootByNameToSpawn(LootItems.Loot.EpicArmour));
+            SpawnLoot(new Vector3(5, 1, 0), getLootByNameToSpawn(LootItems.Loot.LegendaryArmour));
+           
         }
     }
 
@@ -544,6 +567,45 @@ public class GameLoot : MonoBehaviour
         else if (loot == LootItems.Loot.AncientHelm)
         {
             //Apply chance to ignore damage
+        }
+        else if (loot == LootItems.Loot.CommonArmour)
+        {
+            helmet.SetActive(true);
+            armourMat[0] = armourMats[0];
+            
+            helmet.GetComponent<MeshRenderer>().materials = armourMat;
+            visor.GetComponent<MeshRenderer>().materials = armourMat;
+            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+        }
+        else if (loot == LootItems.Loot.UncommonArmour)
+        {
+            visor.SetActive(true);
+            armourMat[0] = armourMats[1];
+           
+            helmet.GetComponent<MeshRenderer>().materials = armourMat;
+            visor.GetComponent<MeshRenderer>().materials = armourMat;
+            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+        }
+        else if (loot == LootItems.Loot.RareArmour)
+        {
+            armourMat[0] = armourMats[2];
+            helmet.GetComponent<MeshRenderer>().materials = armourMat;
+            visor.GetComponent<MeshRenderer>().materials = armourMat;
+            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+        }
+        else if (loot == LootItems.Loot.EpicArmour)
+        {
+            armourMat[0] = armourMats[3];
+            helmet.GetComponent<MeshRenderer>().materials = armourMat;
+            visor.GetComponent<MeshRenderer>().materials = armourMat;
+            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+        }
+        else if (loot == LootItems.Loot.LegendaryArmour)
+        {
+            armourMat[0] = armourMats[4];
+            helmet.GetComponent<MeshRenderer>().materials = armourMat;
+            visor.GetComponent<MeshRenderer>().materials = armourMat;
+            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
         }
         else if (loot == LootItems.Loot.WarbannerRelic)
         {

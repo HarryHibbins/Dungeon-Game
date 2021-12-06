@@ -28,6 +28,9 @@ TagManager:
   - DoorTag
   - WallTag
   - textBubble
+  - Helmet
+  - Visor
+  - ChestPlate
   layers:
   - Default
   - TransparentFX
