@@ -82,46 +82,53 @@ public class RoomTemplates : MonoBehaviour
                 possibleTreasureRooms.Add(room);
             }
         }
-        int rand = UnityEngine.Random.Range(0, possibleTreasureRooms.Count);
-        string roomName = possibleTreasureRooms[rand].name;
-
-        switch (roomName)
+        if (possibleTreasureRooms.Count > 0)
         {
-            case "B":
-                treasureRoom = Instantiate(B_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "L":
-                treasureRoom = Instantiate(L_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "LB":
-                treasureRoom = Instantiate(LB_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "LR":
-                treasureRoom = Instantiate(LR_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "R":
-                treasureRoom = Instantiate(R_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "RB":
-                treasureRoom = Instantiate(RB_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "T":
-                treasureRoom = Instantiate(T_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "TB":
-                treasureRoom = Instantiate(TB_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "TL":
-                treasureRoom = Instantiate(TL_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            case "TR":
-                treasureRoom = Instantiate(TR_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
-                break;
-            default:
-                break;
+            int rand = UnityEngine.Random.Range(0, possibleTreasureRooms.Count);
+            string roomName = possibleTreasureRooms[rand].name;
+
+            switch (roomName)
+            {
+                case "B":
+                    treasureRoom = Instantiate(B_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "L":
+                    treasureRoom = Instantiate(L_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "LB":
+                    treasureRoom = Instantiate(LB_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "LR":
+                    treasureRoom = Instantiate(LR_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "R":
+                    treasureRoom = Instantiate(R_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "RB":
+                    treasureRoom = Instantiate(RB_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "T":
+                    treasureRoom = Instantiate(T_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "TB":
+                    treasureRoom = Instantiate(TB_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "TL":
+                    treasureRoom = Instantiate(TL_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                case "TR":
+                    treasureRoom = Instantiate(TR_TreasureRoom, possibleTreasureRooms[rand].transform.position, Quaternion.identity);
+                    break;
+                default:
+                    break;
+            }
+            int roomIndex = rooms.IndexOf(possibleTreasureRooms[rand]);
+            treasureRoom.name = "*****TreasureRoom";
+            Destroy(possibleTreasureRooms[rand].gameObject);
+            possibleTreasureRooms.RemoveAt(rand);
+            rooms.RemoveAt(roomIndex);
+            possibleTreasureRooms.Clear();
         }
-        treasureRoom.name = "*****TreasureRoom";
-        Destroy(possibleTreasureRooms[rand].gameObject);
         spawnedTreasureRoom = true;
     }
 }

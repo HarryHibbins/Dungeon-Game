@@ -11,7 +11,7 @@ public class RoomWallCheck : MonoBehaviour
     {
         if (this.tag == "DoorTag" && other.tag == "WallTag")
         {
-            Debug.Log("ERROR: " + other.transform.parent.name);
+            //Debug.Log("ERROR: " + other.transform.parent.name);
 
             other.GetComponent<RoomWallCheck>().Wall.SetActive(false);
             other.GetComponent<RoomWallCheck>().Door.SetActive(true);

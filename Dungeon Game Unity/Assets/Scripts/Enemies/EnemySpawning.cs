@@ -59,13 +59,13 @@ public class EnemySpawning : MonoBehaviour
         {
             //Spawn fast enemy
             enemyToSpawn = enemyTypes.enemies[1];
-            Debug.Log("Spawn Fast enemy");
+            //Debug.Log("Spawn Fast enemy");
         }
         else if (randomValue > 2 && randomValue <= 4)
         {
             //Spawn tank enemy
             enemyToSpawn = enemyTypes.enemies[2];
-            Debug.Log("Spawn Tank enemy");
+            //Debug.Log("Spawn Tank enemy");
 
         }
         /*if (Random.Range(0, enemyTypes.enemies.Length) == 1)
@@ -76,7 +76,7 @@ public class EnemySpawning : MonoBehaviour
         {
             //Spawn normal enemy
             enemyToSpawn = enemyTypes.enemies[0];
-            Debug.Log("Spawn Normal enemy");
+            //Debug.Log("Spawn Normal enemy");
 
             
         }

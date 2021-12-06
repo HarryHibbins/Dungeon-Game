@@ -788,6 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104159420663280657}
   - component: {fileID: 7194576693859868165}
+  - component: {fileID: 782812287643002471}
   m_Layer: 0
   m_Name: Closed
   m_TagString: RoomPrefab
@@ -827,6 +828,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &782812287643002471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859978853126234431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92f5373911131b43a2a5d29d4cffb7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextToEntry: 0
+  isBossRoom: 0
 --- !u!1 &5356141533105354116
 GameObject:
   m_ObjectHideFlags: 0

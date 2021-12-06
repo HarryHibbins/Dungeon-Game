@@ -16379,11 +16379,9 @@ MonoBehaviour:
   - {fileID: 8628088804981956397, guid: 9c60afa15d3beb04c8c045aa671da23c, type: 3}
   - {fileID: 5183380349275709169, guid: 303bc0af95b6a5d4a9d3d6d3d5db9bab, type: 3}
   - {fileID: 7761150944692978579, guid: bbbbd126b613895488f5a37dacabfde7, type: 3}
-  - {fileID: 7761150944692978579, guid: 04c07d87d9d48064aa7973834daac2cb, type: 3}
   - {fileID: 5025691487471264658, guid: 67c427f937ec76748886ce8eb750086b, type: 3}
   rightRooms:
   - {fileID: 7761150944692978579, guid: bbbbd126b613895488f5a37dacabfde7, type: 3}
-  - {fileID: 7761150944692978579, guid: 04c07d87d9d48064aa7973834daac2cb, type: 3}
   - {fileID: 2625583467448180840, guid: 2094cfa2bc29d964799d189f17133bce, type: 3}
   - {fileID: 5183380349275709169, guid: 816b23fc4cf83e04dbc347fd2cec3616, type: 3}
   - {fileID: 7142495746971183068, guid: 5a67eaae76a5de04fb1d3732b68c1a26, type: 3}
