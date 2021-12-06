@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-
+    public GameObject explosionPS;
+    private bool hasExploded = false;
     public float drawBackMultiplier; 
     
     public float actualspeed;
@@ -125,10 +126,6 @@ public class Arrow : MonoBehaviour
                 break;
             }
         }
-        
-   
-
-
     }
 
    
@@ -165,7 +162,24 @@ public class Arrow : MonoBehaviour
     }
 
 
+    public void SpawnExplosion()
+    {
+        if (!hasExploded)
+        {
+            Instantiate(explosionPS, transform.position, Quaternion.Euler(-90, 0, 0));
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 4f);
+            foreach (Collider c in colliders)
+            {
+                if (c.tag == "Enemy")
+                {
+                    c.GetComponent<EnemyController>().health -= playerStats.ArrowDamage_Explosive;
+                    Debug.Log("Enemy HIT");
+                }
+            }
+            hasExploded = true;
+        }
 
+    }
 
 
     private void OnTriggerEnter(Collider other)
@@ -176,6 +190,10 @@ public class Arrow : MonoBehaviour
             Debug.Log("HIT Environment");
             move = false;
             hasLanded = true;
+            if (selectedArrow == ArrowTypes.Arrows.Explosive)
+            {
+                SpawnExplosion();
+            }
         }
         //If the arrow has hit the environment, and the player walks over it, 50% chance to pick it up, destroy gameobject. 
         if (other.gameObject.tag == "PlayerPickUp" && hasLanded )

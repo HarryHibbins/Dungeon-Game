@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] float health;
+    [SerializeField]public float health;
     private bool hit;
     private float DamageDealt;
     [SerializeField] ArrowTypes.Effects effect;
@@ -105,6 +105,7 @@ public class EnemyController : MonoBehaviour
                     }
                 case ArrowTypes.Arrows.Explosive:
                     {
+                        arrow.SpawnExplosion();
                         break;
                     }
                 case ArrowTypes.Arrows.Speed:

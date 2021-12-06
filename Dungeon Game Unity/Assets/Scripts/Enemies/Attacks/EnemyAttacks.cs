@@ -29,7 +29,7 @@ public class EnemyAttacks : MonoBehaviour
         switch (attackType)
         {
             case AttackType.singleOrb:
-                Debug.Log("Attack");
+                //Debug.Log("Attack");
                 break;
         }
     }
