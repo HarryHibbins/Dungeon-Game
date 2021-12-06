@@ -7,29 +7,33 @@ public class EnemyAttacks : MonoBehaviour
 {
     public enum AttackType
     {
-        singleOrb,
-        tripleOrb,
-        Ice,
-        Explosive,
-        Speed,
+        orb,
     }
 
     public AttackType attackType;
     
     public float walkPointRange;
     public float timeBetweenAttacks;
+    public float sightRange, attackRange;
 
-    private void Start()
-    {
-        
-    }
+
+    public Orb orb;
+
+
 
     public void Attack()
     {
         switch (attackType)
         {
-            case AttackType.singleOrb:
-                Debug.Log("Attack");
+            case AttackType.orb:
+                foreach (Transform child in transform)
+                {
+                    if (child.name == ("Fire Point"))
+                    {
+                        Orb newOrb = Instantiate(orb, child.position, child.rotation) ;
+                        newOrb.transform.parent = child.transform;
+                    }
+                }
                 break;
         }
     }

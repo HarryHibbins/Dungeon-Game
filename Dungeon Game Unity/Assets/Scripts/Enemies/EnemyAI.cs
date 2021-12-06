@@ -25,7 +25,7 @@ public class EnemyAI : MonoBehaviour
     private bool alreadyAttacked;
 
     private Animator anim;
-    public float sightRange, attackRange;
+    private float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
     private void Awake()
@@ -37,6 +37,8 @@ public class EnemyAI : MonoBehaviour
         enemyAttack = GetComponent<EnemyAttacks>();
         timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
         walkPointRange = enemyAttack.walkPointRange;
+        sightRange = enemyAttack.sightRange;
+        attackRange = enemyAttack.attackRange;
 
     }
     private void Update()

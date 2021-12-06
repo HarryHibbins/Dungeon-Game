@@ -15,7 +15,6 @@ public class EnemyController : MonoBehaviour
     private float enemySpeed;
     private float halfSpeed;
     
-    
 
     private PlayerStats playerStats;
     private GameLoot gameLoot;
