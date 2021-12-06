@@ -9,6 +9,7 @@ public class EnemyAttacks : MonoBehaviour
     public enum AttackType
     {
         orb,
+        threeorb,
         melee
     }
 
@@ -38,13 +39,26 @@ public class EnemyAttacks : MonoBehaviour
         switch (attackType)
         {
             case AttackType.orb:
-                anim.SetTrigger("Shooting");
+                anim.SetTrigger("Shoot1");
                 foreach (Transform child in transform)
                 {
                     if (child.name == ("Fire Point"))
                     {
                         Orb newOrb = Instantiate(orb, child.position, child.rotation) ;
                         newOrb.transform.parent = child.transform;
+                      
+                    }
+                }
+                break;
+            case AttackType.threeorb:
+                anim.SetTrigger("Shoot3");
+                foreach (Transform child in transform)
+                {
+                    if (child.name == ("Fire Point"))
+                    {
+                        Orb newOrb = Instantiate(orb, child.position, child.rotation) ;
+                        newOrb.transform.parent = child.transform;
+                      
                     }
                 }
                 break;

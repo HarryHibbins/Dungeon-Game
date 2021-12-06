@@ -52,11 +52,14 @@ public class EnemyController : MonoBehaviour
             
             anim.SetTrigger("Dead");
 
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Death"))
-            {
-                //Destroy(gameObject);
-            }
-            
+            StartCoroutine(OnCompleteAnimation());
+
+
+        }
+        IEnumerator OnCompleteAnimation()
+        {
+            yield return new WaitForSeconds(1);
+            Destroy(gameObject);
         }
     }
 

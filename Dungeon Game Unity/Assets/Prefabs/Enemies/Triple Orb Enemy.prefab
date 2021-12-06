@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91315fc36ece0184784dd835deed13c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
+  attackType: 1
   walkPointRange: 20
   timeBetweenAttacks: 3
   sightRange: 12
