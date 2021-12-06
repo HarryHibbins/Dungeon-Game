@@ -76,7 +76,7 @@ public class EnemyAttacks : MonoBehaviour
             {
                 inSwordHitBox = false;
                 inMeleeAttack = false;
-                Debug.Log("Hit");
+                Debug.Log("Player hit by sword");
                 playerHealth.Damage(1);
             }   
         }

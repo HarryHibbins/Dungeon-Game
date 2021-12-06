@@ -906,7 +906,7 @@ MonoBehaviour:
   walkPointRange: 20
   timeBetweenAttacks: 1.3
   sightRange: 15
-  attackRange: 0.7
+  attackRange: 0.5
   orb: {fileID: 3820640154664546967, guid: f66bc525fab653846941a29bb53d1a3a, type: 3}
 --- !u!1 &7268348505447664745
 GameObject:
