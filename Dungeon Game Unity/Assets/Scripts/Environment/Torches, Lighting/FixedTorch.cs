@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FixedTorch : MonoBehaviour
 {
+    private PlayerStats playerStats;
     private GameObject playerObj;
     private PlayerController player;
     private Animator anim;
@@ -12,7 +13,7 @@ public class FixedTorch : MonoBehaviour
     private Transform playerTorchHolder;
     public bool canPickUpTorch;
     public bool hasTorch;
-    public float maxTimer = 30;
+    //public float maxTimer = 30;
     public float intensity = 20;
     public float range = 10;
     public float torchTimer;
@@ -28,11 +29,12 @@ public class FixedTorch : MonoBehaviour
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         playerTorchHolderObj = GameObject.FindWithTag("Flame Holder");
         //playerObj = GameObject.FindWithTag("Player");
+        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
     }
 
     void Start()
     {
-        torchTimer = maxTimer;
+        torchTimer = playerStats.Torch_MaxTimer;
         originalPos = this.transform.position;
         playerTorchHolder = playerTorchHolderObj.transform;
         textBubble = GameObject.FindWithTag("textBubble");
@@ -59,7 +61,7 @@ public class FixedTorch : MonoBehaviour
                 hasTorch = true;
                 player.GetComponent<PlayerInventory>().holdingTorch = true;
                 anim.SetBool("Torch", true);
-                torchTimer = 30;
+                torchTimer = playerStats.Torch_MaxTimer;
 
                 transform.position = playerTorchHolder.transform.position;
 
@@ -77,12 +79,12 @@ public class FixedTorch : MonoBehaviour
             if (hasTorch) 
         {
             torchTimer -= Time.deltaTime;
-            flame.GetComponent<Light>().range = (torchTimer / maxTimer) * range;
-            flame.GetComponent<Light>().intensity *= (torchTimer / maxTimer);
-            sparks.GetComponent<ParticleSystem>().startSize = (torchTimer / maxTimer);
-            sparks.GetComponent<ParticleSystem>().startLifetime = (torchTimer / maxTimer) * 1.5f;
-            sparks.gameObject.transform.Find("Fire_Sparks").gameObject.GetComponent<ParticleSystem>().startSize = (torchTimer / maxTimer);
-            sparks.gameObject.transform.Find("Fire_Sparks").gameObject.GetComponent<ParticleSystem>().startLifetime = (torchTimer / maxTimer) * 1.5f;
+            flame.GetComponent<Light>().range = (torchTimer / playerStats.Torch_MaxTimer) * range;
+            flame.GetComponent<Light>().intensity *= (torchTimer / playerStats.Torch_MaxTimer);
+            sparks.GetComponent<ParticleSystem>().startSize = (torchTimer / playerStats.Torch_MaxTimer);
+            sparks.GetComponent<ParticleSystem>().startLifetime = (torchTimer / playerStats.Torch_MaxTimer) * 1.5f;
+            sparks.gameObject.transform.Find("Fire_Sparks").gameObject.GetComponent<ParticleSystem>().startSize = (torchTimer / playerStats.Torch_MaxTimer);
+            sparks.gameObject.transform.Find("Fire_Sparks").gameObject.GetComponent<ParticleSystem>().startLifetime = (torchTimer / playerStats.Torch_MaxTimer) * 1.5f;
 
             if (torchTimer < 0) 
             {

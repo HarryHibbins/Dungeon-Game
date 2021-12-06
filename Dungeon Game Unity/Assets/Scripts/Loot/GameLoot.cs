@@ -27,14 +27,13 @@ public class GameLoot : MonoBehaviour
 
     [HideInInspector]
     public int explorerRelicRooms = 0;
-    public int LootCount = 0;
+    private int LootCount = 0;
     private float warbanner_timer = 0f;
     private float warbanner_goal = 3f;
+    [HideInInspector]
     public bool warbannerDamage = false;
-
-    [SerializeField]
-    public List<ParticleSystem> warbannerPSList;
-    public GameObject warbannerps;
+    private List<ParticleSystem> warbannerPSList;
+    private GameObject warbannerps;
     private bool isPSPlaying = false;
 
     private void Awake()
@@ -596,6 +595,22 @@ public class GameLoot : MonoBehaviour
         else if (loot == LootItems.Loot.CartographerRelic)
         {
             playerStats.TreasureRoomChance += 20;
+        }
+        else if (loot == LootItems.Loot.HestiasAmulet)
+        {
+            playerStats.Torch_MaxTimer += 30;
+        }
+        else if (loot == LootItems.Loot.AncientWood)
+        {
+            playerStats.Torch_MaxTimer += 3;
+        }
+        else if (loot == LootItems.Loot.PrometheusChains)
+        {
+            playerStats.Torch_MaxIntensity += 10;
+        }
+        else if (loot == LootItems.Loot.LampOil)
+        {
+            playerStats.Torch_MaxIntensity += 3;
         }
         yield break;
     }

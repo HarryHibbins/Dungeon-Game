@@ -5090,13 +5090,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUpTorch: 0
   hasTorch: 0
-  maxTimer: 30
   intensity: 150
   range: 50
   torchTimer: 30
   flame: {fileID: 0}
   sparks: {fileID: 0}
+  textBubble: {fileID: 0}
   originalPos: {x: 0, y: 0, z: 0}
+  held: 0
 --- !u!65 &1035976005474310056
 BoxCollider:
   m_ObjectHideFlags: 0

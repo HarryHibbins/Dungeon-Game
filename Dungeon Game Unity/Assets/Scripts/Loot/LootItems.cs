@@ -75,7 +75,11 @@ public class LootItems
         LuckyDiceRelic,             // Increase drop luck
         AncientLamp,                // Gain a small permanent light source
         MysticFeather,              // All arrow types gain +5 damage
-        CartographerRelic,          // Increase chance of finding a treasure room (have to implement)
+        CartographerRelic,          // Increase chance of finding a treasure room
+        HestiasAmulet,              // Increase Torch timer by 30
+        AncientWood,                // Increase torch timer by 3
+        PrometheusChains,           // Increase torch intensity by 10
+        LampOil,                    // Increase torch intensity by 3
     }
 
     public LootItems(Loot lootname, string lootdesc, GameObject loot_prefab, Sprite lootsprite, LootType loottype , LootRarity lootrarity)

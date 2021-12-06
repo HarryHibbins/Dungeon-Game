@@ -10065,7 +10065,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9433962, g: 0.7169025, b: 0.32484868, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
@@ -16693,6 +16693,8 @@ MonoBehaviour:
   GameRooms: 0
   TreasureRoomChance: 20
   AdditionalDropLuck: 0
+  Torch_MaxTimer: 30
+  Torch_MaxIntensity: 20
 --- !u!4 &932448656
 Transform:
   m_ObjectHideFlags: 0
@@ -17081,17 +17083,50 @@ MonoBehaviour:
     loot_description: Increase chance of finding a treasure room.
     isActive: 0
     isCollected: 0
-  lootname: 38
-  lootdesc: Increase damage of all arrow types.
-  lootprefab: {fileID: 0}
-  lootsprite: {fileID: 0}
+  - element_name: HestiasAmulet
+    loot_name: 40
+    loot_prefab: {fileID: 0}
+    loot_sprite: {fileID: 21300000, guid: 24fc43af280de6a4f843a9b7c4fdd0fb, type: 3}
+    loot_rarity: 3
+    loot_type: 2
+    loot_description: Increase the burn time of torches.
+    isActive: 0
+    isCollected: 0
+  - element_name: AncientWood
+    loot_name: 41
+    loot_prefab: {fileID: 0}
+    loot_sprite: {fileID: 21300000, guid: 45a7c6bea0bb5c64db0be799bdaa91be, type: 3}
+    loot_rarity: 2
+    loot_type: 1
+    loot_description: Slightly increase burn time of torches.
+    isActive: 0
+    isCollected: 0
+  - element_name: PrometheusChains
+    loot_name: 42
+    loot_prefab: {fileID: 0}
+    loot_sprite: {fileID: 21300000, guid: 2f8f79ab00d09c048bf815eefab57284, type: 3}
+    loot_rarity: 3
+    loot_type: 2
+    loot_description: Increase the brighness of torches.
+    isActive: 0
+    isCollected: 0
+  - element_name: LampOil
+    loot_name: 43
+    loot_prefab: {fileID: 0}
+    loot_sprite: {fileID: 21300000, guid: 912f38ae2ba7919409d6e79521d8eb0e, type: 3}
+    loot_rarity: 2
+    loot_type: 1
+    loot_description: Slightly increase the brighness of torches.
+    isActive: 0
+    isCollected: 0
+  lootname: 43
+  lootdesc: Slightly increase the brighness of torches.
+  lootprefab: {fileID: 919132149155446097, guid: ffe30d260796c9b4b9180957d629edc4, type: 3}
+  lootsprite: {fileID: 21300000, guid: 912f38ae2ba7919409d6e79521d8eb0e, type: 3}
   loottype: 1
-  lootrarity: 4
+  lootrarity: 2
   explorerRelicRooms: 0
-  LootCount: 0
   warbannerDamage: 0
-  warbannerPSList: []
-  warbannerps: {fileID: 0}
 --- !u!114 &932448658
 MonoBehaviour:
   m_ObjectHideFlags: 0

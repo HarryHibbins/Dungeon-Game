@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Flicker : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public PlayerStats playerStats;
+
     public new Light light;
     public float minIntensity = 0f;
-    public float maxIntensity = 1f;
+    //public float maxIntensity = 1f;
     public int smoothing = 5;
     
     Queue<float> smoothQueue;
     float lastSum = 0;
+
+    private void Awake()
+    {
+        playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
+    }
+
     public void Reset()
     {
         smoothQueue.Clear();
@@ -40,7 +47,7 @@ public class Flicker : MonoBehaviour
         }
 
         // Generate random new item, calculate new average
-        float newVal = Random.Range(minIntensity, maxIntensity);
+        float newVal = Random.Range(minIntensity, playerStats.Torch_MaxIntensity);
         smoothQueue.Enqueue(newVal);
         lastSum += newVal;
 

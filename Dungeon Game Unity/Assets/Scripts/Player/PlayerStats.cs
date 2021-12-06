@@ -49,6 +49,10 @@ public class PlayerStats : MonoBehaviour
     public int TreasureRoomChance;              // Out of 100
     public int AdditionalDropLuck;              // Out of 100
 
+    [Header("Torches")]
+    public int Torch_MaxTimer;
+    public int Torch_MaxIntensity;
+
     public void updateAllMaxArrows(int amount)
     {
         PI_MaxNormalArrows += amount;
