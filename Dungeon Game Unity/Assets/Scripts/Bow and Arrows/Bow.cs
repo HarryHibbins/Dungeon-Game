@@ -86,15 +86,15 @@ public class Bow : MonoBehaviour
             playerController.currentMoveSpeed = playerStats.PM_DrawSpeed;
             playerAnimator.SetBool("Aiming", true);
         }
-
+        //Debug.DrawLine(firePoint.position,new Vector3(playerController.mousePos.x, 1.0f,playerController.mousePos.z) );
         if (fire)
         {
             foreach(Transform child in drawPoint)
             {
                 if (child.gameObject.tag == "Arrow")
                 {
+                    child.LookAt(new Vector3(playerController.mousePos.x, 1.0f,playerController.mousePos.z));
                     child.position = firePoint.position;
-                    child.rotation = firePoint.rotation;
                     child.GetComponent<Arrow>().move = true;
                     child.GetComponent<Arrow>().ApplyDrawBackMultiplier();
                     child.transform.parent = null;

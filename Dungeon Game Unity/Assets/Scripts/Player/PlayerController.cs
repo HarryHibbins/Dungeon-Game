@@ -28,6 +28,7 @@ public class PlayerController: MonoBehaviour
 
     private PlayerHealth playerHealth;
 
+    public Vector3 mousePos;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -94,7 +95,8 @@ public class PlayerController: MonoBehaviour
             Vector3 pointToLook = cameraRay.GetPoint(rayLength);
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.green);
 
-            transform.LookAt(new Vector3(pointToLook.x,transform.position.y,pointToLook.z));
+            mousePos = new Vector3(pointToLook.x,transform.position.y,pointToLook.z);
+            transform.LookAt(mousePos);
         }
 
         if (Input.GetButtonDown("Change Ammo") && !bow.draw && !playerHealth.dead)
