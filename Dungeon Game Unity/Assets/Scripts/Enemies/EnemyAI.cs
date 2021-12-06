@@ -26,6 +26,7 @@ public class EnemyAI : MonoBehaviour
 
     private Animator anim;
     private float sightRange, attackRange;
+    public bool canSee;
     public bool playerInSightRange, playerInAttackRange;
 
     private float velocity;
@@ -63,14 +64,28 @@ public class EnemyAI : MonoBehaviour
            
             Patroling();
         }
-        if (playerInSightRange && !playerInAttackRange)
+        if (playerInSightRange && !playerInAttackRange && canSee)
         {
             ChasePlayer();
         }
       
-        if (playerInSightRange && playerInAttackRange)
+        if (playerInSightRange && playerInAttackRange && canSee)
         {
-            AttackPlayer();
+            RaycastHit hit;
+            if (Physics.Raycast (transform.position, player.transform.position - transform.position, out hit, 20))
+            {
+                if (hit.transform.tag == "Player" && canSee)
+                {
+                    AttackPlayer();
+                }
+                else
+                {
+                    agent.SetDestination(player.position);
+
+                }
+            }
+            Debug.DrawRay(transform.position, player.transform.position - transform.position);
+            
         }
     }
     private void Patroling()
@@ -110,7 +125,7 @@ public class EnemyAI : MonoBehaviour
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-
+        
         transform.LookAt(player);
 
         if(!alreadyAttacked)
