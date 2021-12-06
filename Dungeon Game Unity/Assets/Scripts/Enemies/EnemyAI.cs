@@ -16,8 +16,8 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody rb;
 
     private EnemyAttacks enemyAttack;
-    
-    
+
+    private EnemyController EnemyController;
     
     public Vector3 walkPoint;
     private bool walkPointSet;
@@ -43,58 +43,66 @@ public class EnemyAI : MonoBehaviour
         walkPointRange = enemyAttack.walkPointRange;
         sightRange = enemyAttack.sightRange;
         attackRange = enemyAttack.attackRange;
-        
+        EnemyController = GetComponent<EnemyController>();
     }
 
 
     private void Update()
     {
-        velocity = agent.velocity.magnitude/agent.speed;
-        if (velocity > 0.1)
+        velocity = agent.velocity.magnitude / agent.speed;
+        if (EnemyController.alive)
         {
-            anim.SetBool("isWalking", true);
-        }
-        else
-        {
-            anim.SetBool("isWalking", false);
-        }
-       
-        
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
-        if(!playerInSightRange && !playerInAttackRange)
-        {
-           
-            Patroling();
-        }
-        if (playerInSightRange && !playerInAttackRange && canSee)
-        {
-            ChasePlayer();
-        }
-      
-        if (playerInSightRange && playerInAttackRange && canSee)
-        {
-            RaycastHit hit;
-            //Plus 0.8 for the height orb
-            if (Physics.Raycast (transform.position + new Vector3(0,0.8f,0), player.transform.position - transform.position, out hit, 20) && enemyAttack.attackType == EnemyAttacks.AttackType.orb)
+            if (velocity > 0.1)
             {
-                if (hit.transform.tag == "Player" )
+                anim.SetBool("isWalking", true);
+            }
+            else
+            {
+                anim.SetBool("isWalking", false);
+            }
+
+
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+            if (!playerInSightRange && !playerInAttackRange)
+            {
+
+                Patroling();
+            }
+
+            if (playerInSightRange && !playerInAttackRange && canSee)
+            {
+                ChasePlayer();
+            }
+
+            if (playerInSightRange && playerInAttackRange && canSee)
+            {
+                RaycastHit hit;
+                //Plus 0.8 for the height orb
+                if (Physics.Raycast(transform.position + new Vector3(0, 0.8f, 0),
+                        player.transform.position - transform.position, out hit, 20) &&
+                    enemyAttack.attackType == EnemyAttacks.AttackType.orb)
+                {
+                    if (hit.transform.tag == "Player")
+                    {
+                        AttackPlayer();
+                    }
+                    else
+                    {
+                        agent.SetDestination(player.position);
+                    }
+                }
+                else if (enemyAttack.attackType == EnemyAttacks.AttackType.melee)
                 {
                     AttackPlayer();
+
                 }
-                else
-                {
-                    agent.SetDestination(player.position);
-                }
-            }
-            else if (enemyAttack.attackType == EnemyAttacks.AttackType.melee)
-            {
-                AttackPlayer();
+
+                Debug.DrawRay(transform.position + new Vector3(0, 0.8f, 0),
+                    player.transform.position - transform.position);
 
             }
-            Debug.DrawRay(transform.position + new Vector3(0,0.8f,0), player.transform.position - transform.position);
-
         }
     }
     private void Patroling()

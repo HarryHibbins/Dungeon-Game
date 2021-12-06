@@ -38,6 +38,7 @@ public class EnemyAttacks : MonoBehaviour
         switch (attackType)
         {
             case AttackType.orb:
+                anim.SetTrigger("Shooting");
                 foreach (Transform child in transform)
                 {
                     if (child.name == ("Fire Point"))

@@ -11,11 +11,12 @@ public class EnemyController : MonoBehaviour
     private float DamageDealt;
     [SerializeField] ArrowTypes.Effects effect;
     private NavMeshAgent agent;
+    private Animator anim;
 
     private float enemySpeed;
     private float halfSpeed;
-    
 
+    public bool alive;
     private PlayerStats playerStats;
     private GameLoot gameLoot;
 
@@ -24,7 +25,8 @@ public class EnemyController : MonoBehaviour
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         agent = GetComponent<NavMeshAgent>();
-
+        anim = GetComponent<Animator>();
+        alive = true;
     }
 
     void Start()
@@ -35,7 +37,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (hit)
+        if (alive && hit)
         {
             //Deal damage to the enemy if hit
             Debug.Log("Enemy hit: " + DamageDealt + "dmg");
@@ -44,17 +46,24 @@ public class EnemyController : MonoBehaviour
             hit = false;
         }
 
-        if (health <= 0)
+        if (alive && health <= 0)
         {
-            //Add animation here
-            Destroy(gameObject);
+            alive = false;
+            
+            anim.SetTrigger("Dead");
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Death"))
+            {
+                //Destroy(gameObject);
+            }
+            
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         //If enemy is hit by the arrow round the damage value from the arrow worked out with the multiplier 
-        if (other.CompareTag("Arrow"))
+        if (alive && other.CompareTag("Arrow"))
         {
             //Get the arrow that hit the enemy
             Arrow arrow = other.GetComponent<Arrow>();
