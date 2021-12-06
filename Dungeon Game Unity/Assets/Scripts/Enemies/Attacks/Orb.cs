@@ -18,6 +18,7 @@ public class Orb : MonoBehaviour
     private bool charged;
     void Awake()
     {
+
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         StartCoroutine(stopCharging());
     }
@@ -50,9 +51,12 @@ public class Orb : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerHealth.Damage(1);
+            Debug.Log("Player hit by Orb");
+            Destroy(gameObject);
+
             
-        }
-        else
+        } 
+        if (other.gameObject.layer == LayerMask.NameToLayer("Environment") || other.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             Destroy(gameObject);
         }

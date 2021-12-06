@@ -57,24 +57,18 @@ public class EnemySpawning : MonoBehaviour
               
         if ( randomValue <= 2 ) 
         {
-            //Spawn fast enemy
+            //Spawn Triple Orb enemy
             enemyToSpawn = enemyTypes.enemies[1];
-            //Debug.Log("Spawn Fast enemy");
         }
-        else if (randomValue > 2 && randomValue <= 4)
+        else if (randomValue > 2 && randomValue <= 5)
         {
-            //Spawn tank enemy
+            //Spawn Warrior enemy
             enemyToSpawn = enemyTypes.enemies[2];
-            //Debug.Log("Spawn Tank enemy");
 
         }
-        /*if (Random.Range(0, enemyTypes.enemies.Length) == 1)
-        {
-            enemyToSpawn = enemyTypes.enemies[1];
-        }*/
         else
         {
-            //Spawn normal enemy
+            //Spawn Single Orb enemy
             enemyToSpawn = enemyTypes.enemies[0];
             //Debug.Log("Spawn Normal enemy");
 

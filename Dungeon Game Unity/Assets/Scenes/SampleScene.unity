@@ -17469,7 +17469,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 4897852437753320127, guid: 5ec46dfff503e2444ae4cb8d882fe7b1, type: 3}
   - {fileID: 5636007088544805308, guid: 125d7d78fd9879c40b3546af653a8567, type: 3}
-  - {fileID: 4897852437753320127, guid: 5ec46dfff503e2444ae4cb8d882fe7b1, type: 3}
+  - {fileID: 7268348505447664745, guid: afb402df8cc1a7d4e8d0334d76acc5b7, type: 3}
   BossEnemy: {fileID: 0}
 --- !u!114 &932448662
 MonoBehaviour:

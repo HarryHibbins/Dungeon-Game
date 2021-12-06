@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -42,6 +44,8 @@ public class EnemyAI : MonoBehaviour
         attackRange = enemyAttack.attackRange;
 
     }
+
+
     private void Update()
     {
         float velocity = agent.velocity.magnitude/agent.speed;
@@ -71,20 +75,25 @@ public class EnemyAI : MonoBehaviour
         if (playerInSightRange && playerInAttackRange && canSee)
         {
             RaycastHit hit;
-            if (Physics.Raycast (transform.position, player.transform.position - transform.position, out hit, 20))
+            //Plus 0.8 for the height orb
+            if (Physics.Raycast (transform.position + new Vector3(0,0.8f,0), player.transform.position - transform.position, out hit, 20) && enemyAttack.attackType == EnemyAttacks.AttackType.orb)
             {
-                if (hit.transform.tag == "Player" && canSee)
+                if (hit.transform.tag == "Player" )
                 {
                     AttackPlayer();
                 }
                 else
                 {
                     agent.SetDestination(player.position);
-
                 }
             }
-            Debug.DrawRay(transform.position, player.transform.position - transform.position);
-            
+            else if (enemyAttack.attackType == EnemyAttacks.AttackType.melee)
+            {
+                AttackPlayer();
+
+            }
+            Debug.DrawRay(transform.position + new Vector3(0,0.8f,0), player.transform.position - transform.position);
+
         }
     }
     private void Patroling()
@@ -124,8 +133,12 @@ public class EnemyAI : MonoBehaviour
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-        
-        transform.LookAt(player);
+
+        if (enemyAttack.attackType == EnemyAttacks.AttackType.orb)
+        {
+            transform.LookAt(player);
+            
+        }
 
         if(!alreadyAttacked)
         {
