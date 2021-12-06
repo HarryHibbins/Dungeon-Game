@@ -43,7 +43,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.65639305, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.6154709, a: 1}
   m_Intensity: 10.724746
   m_Range: 3.4
   m_SpotAngle: 30
@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 4911054162952015068}
   - component: {fileID: 6434810561685294428}
   - component: {fileID: 3457621674613174118}
+  - component: {fileID: 3829885166137490724}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -435,6 +436,20 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &3829885166137490724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874683808342199119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88711bc35bfb05149a21b5982ef28fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestLight: {fileID: 8141124673478826049}
+  chestPS: {fileID: 3380709518002784036}
 --- !u!1 &7640603649737155768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5340,6 +5355,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1773867482820333091, guid: 20996e577bcfc194eb51d055fc956bc5, type: 3}
       propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773867482820333091, guid: 20996e577bcfc194eb51d055fc956bc5, type: 3}
+      propertyPath: CollisionModule.enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

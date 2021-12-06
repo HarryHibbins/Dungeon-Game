@@ -24,6 +24,7 @@ public class OpenChest : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact") && !opened)
             {
+                opened = true;
                 StartCoroutine(OpenLootChest());
             }
         }

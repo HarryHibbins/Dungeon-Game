@@ -32,6 +32,7 @@ public class GameLoot : MonoBehaviour
     private float warbanner_goal = 3f;
     [HideInInspector]
     public bool warbannerDamage = false;
+    //[SerializeField] [HideInInspector]
     private List<ParticleSystem> warbannerPSList;
     private GameObject warbannerps;
     private bool isPSPlaying = false;
@@ -44,6 +45,7 @@ public class GameLoot : MonoBehaviour
         heartsUI = GameObject.FindGameObjectWithTag("HeartsUI").GetComponent<HeartsUI>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        warbannerPSList = new List<ParticleSystem>();
     }
 
     private void Start()
@@ -642,7 +644,6 @@ public class GameLoot : MonoBehaviour
                 }
                 else if (warbanner_timer >= warbanner_goal)
                 {
-                    Debug.Log("WARBANNER DAMAGE");
                     warbannerDamage = true;
                     foreach (ParticleSystem ps in warbannerPSList)
                     {

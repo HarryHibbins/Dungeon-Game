@@ -17085,7 +17085,7 @@ MonoBehaviour:
     isCollected: 0
   - element_name: HestiasAmulet
     loot_name: 40
-    loot_prefab: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: ba05c94e02673ff4c83e26d23074d4c1, type: 3}
     loot_sprite: {fileID: 21300000, guid: 24fc43af280de6a4f843a9b7c4fdd0fb, type: 3}
     loot_rarity: 3
     loot_type: 2
@@ -17094,7 +17094,7 @@ MonoBehaviour:
     isCollected: 0
   - element_name: AncientWood
     loot_name: 41
-    loot_prefab: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: 6cf47a4635170144da5b508f784b03b1, type: 3}
     loot_sprite: {fileID: 21300000, guid: 45a7c6bea0bb5c64db0be799bdaa91be, type: 3}
     loot_rarity: 2
     loot_type: 1
@@ -17103,7 +17103,7 @@ MonoBehaviour:
     isCollected: 0
   - element_name: PrometheusChains
     loot_name: 42
-    loot_prefab: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: 3c02cee1e282d524bb96bf3e5c317d43, type: 3}
     loot_sprite: {fileID: 21300000, guid: 2f8f79ab00d09c048bf815eefab57284, type: 3}
     loot_rarity: 3
     loot_type: 2
@@ -17112,7 +17112,7 @@ MonoBehaviour:
     isCollected: 0
   - element_name: LampOil
     loot_name: 43
-    loot_prefab: {fileID: 0}
+    loot_prefab: {fileID: 919132149155446097, guid: ffe30d260796c9b4b9180957d629edc4, type: 3}
     loot_sprite: {fileID: 21300000, guid: 912f38ae2ba7919409d6e79521d8eb0e, type: 3}
     loot_rarity: 2
     loot_type: 1
