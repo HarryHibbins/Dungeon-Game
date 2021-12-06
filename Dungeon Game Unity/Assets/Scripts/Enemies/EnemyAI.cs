@@ -12,14 +12,17 @@ public class EnemyAI : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     private Rigidbody rb;
+
+    private EnemyAttacks enemyAttack;
+    
     
     
     public Vector3 walkPoint;
-    bool walkPointSet;
-    public float walkPointRange;
+    private bool walkPointSet;
+    private float walkPointRange;
 
-    public float timeBetweenAttacks;
-    bool alreadyAttacked;
+    private float timeBetweenAttacks;
+    private bool alreadyAttacked;
 
     private Animator anim;
     public float sightRange, attackRange;
@@ -30,7 +33,11 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-       
+
+        enemyAttack = GetComponent<EnemyAttacks>();
+        timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
+        walkPointRange = enemyAttack.walkPointRange;
+
     }
     private void Update()
     {
@@ -106,6 +113,7 @@ public class EnemyAI : MonoBehaviour
         if(!alreadyAttacked)
         {
             alreadyAttacked = true;
+            enemyAttack.Attack();
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }

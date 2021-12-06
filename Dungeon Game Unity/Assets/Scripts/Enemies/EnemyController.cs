@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class EnemyController : MonoBehaviour
     private bool hit;
     private float DamageDealt;
     [SerializeField] ArrowTypes.Effects effect;
+    private NavMeshAgent agent;
 
-    public float enemySpeed;
-    public float currentSpeed;
+    private float enemySpeed;
     private float halfSpeed;
     
     
@@ -23,18 +24,18 @@ public class EnemyController : MonoBehaviour
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
-        
+        agent = GetComponent<NavMeshAgent>();
+
     }
 
     void Start()
     {
-        currentSpeed = enemySpeed;
-        halfSpeed = enemySpeed / 2;
+        enemySpeed = agent.speed;
+        halfSpeed = agent.speed / 2;
     }
 
     void Update()
     {
-        halfSpeed = enemySpeed / 2;
         if (hit)
         {
             //Deal damage to the enemy if hit
@@ -42,6 +43,12 @@ public class EnemyController : MonoBehaviour
             health -= DamageDealt;
             StartCoroutine(ApplyEffectDamage(effect));
             hit = false;
+        }
+
+        if (health <= 0)
+        {
+            //Add animation here
+            Destroy(gameObject);
         }
     }
 
@@ -156,7 +163,7 @@ public class EnemyController : MonoBehaviour
                     }
                 case ArrowTypes.Effects.Slow:
                     {
-                        currentSpeed = halfSpeed;
+                        agent.speed = halfSpeed;
                         break;
                     }
             }
@@ -164,6 +171,6 @@ public class EnemyController : MonoBehaviour
             yield return new WaitForSeconds(1);
             progress++;
         }
-        currentSpeed = enemySpeed;
+        agent.speed = enemySpeed;
     }
 }

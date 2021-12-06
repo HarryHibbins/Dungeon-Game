@@ -477,7 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8697142595205507542}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Single Orb Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 158427106297637040}
   - component: {fileID: 7231824555100155147}
   - component: {fileID: 1176453120154953482}
+  - component: {fileID: 3531886772187114746}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -605,8 +606,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5
-  timeBetweenAttacks: 0.5
   sightRange: 8
   attackRange: 3
   playerInSightRange: 0
@@ -647,8 +646,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   effect: 0
-  enemySpeed: 0
-  currentSpeed: 0
+--- !u!114 &3531886772187114746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4953039860370835622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91315fc36ece0184784dd835deed13c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: 0
+  walkPointRange: 0
+  timeBetweenAttacks: 0
 --- !u!1 &5650520386014626413
 GameObject:
   m_ObjectHideFlags: 0
