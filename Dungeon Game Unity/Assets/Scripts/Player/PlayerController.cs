@@ -53,7 +53,8 @@ public class PlayerController: MonoBehaviour
     void Update()
     {
         //Set movement values
-        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+        
         moveVelocity = moveInput * currentMoveSpeed;
 
         if (moveInput.x != 0 || moveInput.z != 0)

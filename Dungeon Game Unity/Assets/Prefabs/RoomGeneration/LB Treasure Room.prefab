@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 671741783685291017}
   - component: {fileID: 5896441897399707189}
   - component: {fileID: 2341315711983464238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorDetails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1481,7 +1481,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6342163054423781491}
   - component: {fileID: 926831037869571730}
-  m_Layer: 0
+  - component: {fileID: 6262405192196078001}
+  - component: {fileID: 491450103414505131}
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1518,6 +1520,51 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 1
+--- !u!114 &6262405192196078001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798463680620016208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 192
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 1891f99732dafad47a7797859573d44e, type: 2}
+--- !u!114 &491450103414505131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798463680620016208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Size: {x: 26, y: 1, z: 26}
+  m_Center: {x: -0.94903564, y: 4.0413427, z: -0.80927086}
+  m_Area: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &5931507998792089603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3925,6 +3972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crateDark (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
 --- !u!4 &4280545536281980680 stripped
@@ -3999,6 +4050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
 --- !u!4 &684657043547627041 stripped
@@ -4072,6 +4127,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
@@ -4398,6 +4457,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
       propertyPath: m_Name
       value: arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
@@ -4935,6 +4998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crateDark
       objectReference: {fileID: 0}
+    - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
 --- !u!4 &2512225702040608578 stripped
@@ -5132,6 +5199,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
       propertyPath: m_Name
       value: wall_gateDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
@@ -5424,16 +5495,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: potionSmall_blue
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfa788c72a6d5ec46811d3fa23446949, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfa788c72a6d5ec46811d3fa23446949, type: 3}
---- !u!4 &1272585549332130130 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dfa788c72a6d5ec46811d3fa23446949, type: 3}
-  m_PrefabInstance: {fileID: 1595286565851090617}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937376304945755112 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dfa788c72a6d5ec46811d3fa23446949, type: 3}
+  m_PrefabInstance: {fileID: 1595286565851090617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1272585549332130130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dfa788c72a6d5ec46811d3fa23446949, type: 3}
   m_PrefabInstance: {fileID: 1595286565851090617}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &7347668115782006805
@@ -5920,6 +5995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_gate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -6250,16 +6329,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: bucket (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92e75e4abfa866748a9fb4663561048f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92e75e4abfa866748a9fb4663561048f, type: 3}
---- !u!4 &2020956057803299603 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 92e75e4abfa866748a9fb4663561048f, type: 3}
-  m_PrefabInstance: {fileID: 1981963918145715448}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1675392384050545065 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 92e75e4abfa866748a9fb4663561048f, type: 3}
+  m_PrefabInstance: {fileID: 1981963918145715448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2020956057803299603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 92e75e4abfa866748a9fb4663561048f, type: 3}
   m_PrefabInstance: {fileID: 1981963918145715448}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &4946877593286737164
@@ -7348,6 +7431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bricks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfb33b5488d375d47b389976d0df2959, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb33b5488d375d47b389976d0df2959, type: 3}
 --- !u!4 &2713422233115227069 stripped
@@ -7736,6 +7823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
 --- !u!4 &2610906068172176769 stripped
@@ -8066,16 +8157,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_end_broken
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04b2775f632b91b4f9f7a813452d5dcd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b2775f632b91b4f9f7a813452d5dcd, type: 3}
---- !u!4 &2534071166688290345 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04b2775f632b91b4f9f7a813452d5dcd, type: 3}
-  m_PrefabInstance: {fileID: 2639229441825210818}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2909612195798301843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 04b2775f632b91b4f9f7a813452d5dcd, type: 3}
+  m_PrefabInstance: {fileID: 2639229441825210818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2534071166688290345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04b2775f632b91b4f9f7a813452d5dcd, type: 3}
   m_PrefabInstance: {fileID: 2639229441825210818}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &1457473822070895159
@@ -8157,6 +8252,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
@@ -8286,6 +8385,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cratePlatform_large (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8041985928701741468, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
 --- !u!4 &4738744619454835610 stripped
@@ -8414,16 +8517,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: pillar
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
---- !u!4 &2478576926271046675 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
-  m_PrefabInstance: {fileID: 2733427586764956664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2967445791094726313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
+  m_PrefabInstance: {fileID: 2733427586764956664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2478576926271046675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
   m_PrefabInstance: {fileID: 2733427586764956664}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &6046643200556502578
@@ -8626,16 +8733,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookOpenA
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: def038bf20e7b1e4697867e1b6044047, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def038bf20e7b1e4697867e1b6044047, type: 3}
---- !u!4 &2446369898614655562 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: def038bf20e7b1e4697867e1b6044047, type: 3}
-  m_PrefabInstance: {fileID: 2772520872917855649}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3078369613542772976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: def038bf20e7b1e4697867e1b6044047, type: 3}
+  m_PrefabInstance: {fileID: 2772520872917855649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2446369898614655562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: def038bf20e7b1e4697867e1b6044047, type: 3}
   m_PrefabInstance: {fileID: 2772520872917855649}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &4534529223572563244
@@ -8725,6 +8836,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7825c9a2a6208514aa84ccea8ecbdf14, type: 3}
       propertyPath: m_Name
       value: wall_gateCorner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7825c9a2a6208514aa84ccea8ecbdf14, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 7825c9a2a6208514aa84ccea8ecbdf14, type: 3}
       propertyPath: m_Convex
@@ -8989,6 +9104,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
       propertyPath: m_Name
       value: weaponRack (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
@@ -9432,6 +9551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_gate
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -9629,6 +9752,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
       propertyPath: m_Name
       value: door_gate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
       propertyPath: m_Enabled
@@ -9840,6 +9967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
 --- !u!4 &3041360315521715639 stripped
@@ -9914,6 +10045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: arrow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
 --- !u!4 &3049539224257314555 stripped
@@ -9979,6 +10114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Name
       value: wall_gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Convex
@@ -10115,6 +10254,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Name
       value: wall_gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Convex
@@ -10313,6 +10456,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
       propertyPath: m_Name
       value: barrelDark
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
@@ -10674,16 +10821,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: pillar_broken
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 810079bdfa8b59446880b7e1206e1cde, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810079bdfa8b59446880b7e1206e1cde, type: 3}
---- !u!1 &3752831072505584584 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 810079bdfa8b59446880b7e1206e1cde, type: 3}
-  m_PrefabInstance: {fileID: 4095410521622406809}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4566486567376257394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 810079bdfa8b59446880b7e1206e1cde, type: 3}
+  m_PrefabInstance: {fileID: 4095410521622406809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3752831072505584584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 810079bdfa8b59446880b7e1206e1cde, type: 3}
   m_PrefabInstance: {fileID: 4095410521622406809}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &5463499233559921037
@@ -11778,6 +11929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_gate
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -12058,6 +12213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_gate
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -12334,6 +12493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
 --- !u!4 &5035923915971996397 stripped
@@ -12606,6 +12769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bucket
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92e75e4abfa866748a9fb4663561048f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92e75e4abfa866748a9fb4663561048f, type: 3}
 --- !u!4 &4944782908158719349 stripped
@@ -12811,6 +12978,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
@@ -13348,6 +13519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
 --- !u!4 &5597767259346339723 stripped
@@ -13818,6 +13993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bricks
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfb33b5488d375d47b389976d0df2959, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb33b5488d375d47b389976d0df2959, type: 3}
 --- !u!4 &5349596805154408262 stripped
@@ -14284,6 +14463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cratePlatform_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2cf3d358a5f82d549b562476abc0e925, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cf3d358a5f82d549b562476abc0e925, type: 3}
 --- !u!1 &6701257925593283122 stripped
@@ -14500,6 +14683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_gateDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
 --- !u!1 &6658384731181158334 stripped
@@ -14712,6 +14899,10 @@ PrefabInstance:
     - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
       propertyPath: m_Name
       value: crateDark
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
@@ -15171,6 +15362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrelDark (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
 --- !u!4 &5781150506648785754 stripped
@@ -15469,6 +15664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaffold_high
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0b2558cc962cb8c4199564cf7ea325f9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2558cc962cb8c4199564cf7ea325f9, type: 3}
 --- !u!4 &6835483454263720229 stripped
@@ -15560,6 +15759,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
@@ -15890,6 +16093,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3a61db11f6ecbfa4e9cbf204409d10d1, type: 3}
       propertyPath: m_Name
       value: tableLarge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a61db11f6ecbfa4e9cbf204409d10d1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a61db11f6ecbfa4e9cbf204409d10d1, type: 3}
@@ -16841,6 +17048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cratePlatform_large
       objectReference: {fileID: 0}
+    - target: {fileID: 8041985928701741468, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
 --- !u!4 &4120299956049434909 stripped
@@ -16906,6 +17117,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7825c9a2a6208514aa84ccea8ecbdf14, type: 3}
       propertyPath: m_Name
       value: wall_gateCorner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7825c9a2a6208514aa84ccea8ecbdf14, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 7825c9a2a6208514aa84ccea8ecbdf14, type: 3}
       propertyPath: m_Convex
@@ -17248,6 +17463,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
@@ -17909,6 +18128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_end_broken (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04b2775f632b91b4f9f7a813452d5dcd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b2775f632b91b4f9f7a813452d5dcd, type: 3}
 --- !u!4 &7116858555980630400 stripped
@@ -18037,6 +18260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
 --- !u!1 &7668934699262555287 stripped
@@ -18145,6 +18372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_shatteredBricks (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144ef2fd6183846aa2fc5af1cc8f97, type: 3}
 --- !u!4 &7014724008109103670 stripped
@@ -18207,16 +18438,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableMedium (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
---- !u!1 &7777188730943976226 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
-  m_PrefabInstance: {fileID: 7435291406519438963}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6964200403875817880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
+  m_PrefabInstance: {fileID: 7435291406519438963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7777188730943976226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
   m_PrefabInstance: {fileID: 7435291406519438963}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8269961768165959894
@@ -18967,6 +19202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_gateDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
 --- !u!4 &7619844969830050260 stripped
@@ -19125,6 +19364,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ab0503d2428cc4e9e56b43f5b5c7f4, type: 3}
       propertyPath: m_Name
       value: bench
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ab0503d2428cc4e9e56b43f5b5c7f4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2ab0503d2428cc4e9e56b43f5b5c7f4, type: 3}
@@ -19288,6 +19531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cratePlatform_large
       objectReference: {fileID: 0}
+    - target: {fileID: 8041985928701741468, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
 --- !u!4 &1483780065006019743 stripped
@@ -19419,6 +19666,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
       propertyPath: m_Name
       value: door_gate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
       propertyPath: m_Convex
@@ -19952,16 +20203,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_gateDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
---- !u!1 &9079942639803185785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
-  m_PrefabInstance: {fileID: 8269460387991717672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8451496275619373251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
+  m_PrefabInstance: {fileID: 8269460387991717672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9079942639803185785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a73a5f7ef1f8d8443a5c9324cbafb347, type: 3}
   m_PrefabInstance: {fileID: 8269460387991717672}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8961864880019861849
@@ -20697,6 +20952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_gate
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 6fe5b1504b813cf4fb5f8ba8ef27ea3c, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -20766,6 +21025,10 @@ PrefabInstance:
     - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
       propertyPath: m_Name
       value: crateDark (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
@@ -20894,6 +21157,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 274f6b3489b0b2741b4c0385245493e1, type: 3}
       propertyPath: m_Name
       value: arrow_green_broken
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 274f6b3489b0b2741b4c0385245493e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 274f6b3489b0b2741b4c0385245493e1, type: 3}
@@ -21166,6 +21433,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
       propertyPath: m_Name
       value: weaponRack
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
@@ -21642,6 +21913,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
       propertyPath: m_Name
       value: door_gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 4b6dcf6ed0c75c24ca3e07f43d1c5f27, type: 3}
       propertyPath: m_Convex

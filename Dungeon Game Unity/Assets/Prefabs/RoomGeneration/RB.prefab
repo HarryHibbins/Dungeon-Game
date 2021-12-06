@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 671741783685291017}
   - component: {fileID: 5896441897399707189}
   - component: {fileID: 2341315711983464238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorDetails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1702,7 +1702,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6342163054423781491}
   - component: {fileID: 926831037869571730}
-  m_Layer: 0
+  - component: {fileID: 1024776243111067141}
+  - component: {fileID: 2735517085006874710}
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1739,6 +1741,51 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 1
+--- !u!114 &1024776243111067141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798463680620016208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 192
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 1d54891c2e2ad164db3a5d46ec73b038, type: 2}
+--- !u!114 &2735517085006874710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798463680620016208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Size: {x: 26, y: 1, z: 26}
+  m_Center: {x: -0.94903564, y: 4.0413427, z: -0.80927086}
+  m_Area: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &5905185752516244918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,6 +2887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &473724359521247274 stripped
@@ -2967,6 +3018,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -3162,6 +3217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: axeDouble_uncommon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
 --- !u!4 &375442861167153718 stripped
@@ -3290,16 +3349,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaffold_small_low_railing
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
---- !u!1 &613524462619292935 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
-  m_PrefabInstance: {fileID: 307024252763261014}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &272605848270745533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+  m_PrefabInstance: {fileID: 307024252763261014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &613524462619292935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
   m_PrefabInstance: {fileID: 307024252763261014}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &2374484072454194321
@@ -3382,6 +3445,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f245f6e0e42723548b5228320ba47124, type: 3}
       propertyPath: m_Name
       value: shield_uncommon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f245f6e0e42723548b5228320ba47124, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f245f6e0e42723548b5228320ba47124, type: 3}
@@ -3775,6 +3842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: axeDouble_uncommon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
 --- !u!4 &44001061805513960 stripped
@@ -3837,6 +3908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crossbow_rare
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47fe0b68e482f4044af787556317f6bd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47fe0b68e482f4044af787556317f6bd, type: 3}
 --- !u!4 &22957104882377727 stripped
@@ -3898,6 +3973,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -4316,6 +4395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &837076524272422234 stripped
@@ -4510,6 +4593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaffold_small_low_railing
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
 --- !u!4 &761527222596080417 stripped
@@ -4597,14 +4684,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
---- !u!4 &770571178207656270 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
-  m_PrefabInstance: {fileID: 953398739169828517}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &142512976254526452 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
+  m_PrefabInstance: {fileID: 953398739169828517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &770571178207656270 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78a9c4d630be8e041b8f1ea8c6bcffa4, type: 3}
   m_PrefabInstance: {fileID: 953398739169828517}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8167764034580778616
@@ -4767,6 +4854,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &703683277174413507 stripped
@@ -4841,6 +4932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shield_arrows
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74f5bee6b9a3078439331f0239a44251, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74f5bee6b9a3078439331f0239a44251, type: 3}
 --- !u!4 &713237717562788268 stripped
@@ -4914,6 +5009,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 68df48f414f003342b3de50b06317350, type: 3}
       propertyPath: m_Name
       value: skeleton_bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 68df48f414f003342b3de50b06317350, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68df48f414f003342b3de50b06317350, type: 3}
@@ -5054,6 +5153,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 18e11837e1f219440b0035ab44801e99, type: 3}
       propertyPath: m_Name
       value: axeDouble_rare
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18e11837e1f219440b0035ab44801e99, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18e11837e1f219440b0035ab44801e99, type: 3}
@@ -5248,6 +5351,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
       propertyPath: m_Name
       value: arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
@@ -5707,6 +5814,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &1467446135467298791 stripped
@@ -5768,6 +5879,10 @@ PrefabInstance:
     - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
       propertyPath: m_Name
       value: crateDark
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
@@ -6095,6 +6210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
 --- !u!4 &1314160811484248371 stripped
@@ -6169,16 +6288,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: bone_half
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29b49fcbe66b2ad48a8bf95e625d18ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b49fcbe66b2ad48a8bf95e625d18ad, type: 3}
---- !u!1 &1803753506957736381 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 29b49fcbe66b2ad48a8bf95e625d18ad, type: 3}
-  m_PrefabInstance: {fileID: 1569875640685528300}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1316151627675394823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29b49fcbe66b2ad48a8bf95e625d18ad, type: 3}
+  m_PrefabInstance: {fileID: 1569875640685528300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1803753506957736381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 29b49fcbe66b2ad48a8bf95e625d18ad, type: 3}
   m_PrefabInstance: {fileID: 1569875640685528300}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &4395095937844105135
@@ -6326,6 +6449,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfa788c72a6d5ec46811d3fa23446949, type: 3}
       propertyPath: m_Name
       value: potionSmall_blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfa788c72a6d5ec46811d3fa23446949, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfa788c72a6d5ec46811d3fa23446949, type: 3}
@@ -6653,6 +6780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: staff_common
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e32e51925e4e0704a890781c84708355, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e32e51925e4e0704a890781c84708355, type: 3}
 --- !u!4 &1165802921364415112 stripped
@@ -6924,6 +7055,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5b3a338e4467a514cb8875b090a92f7c, type: 3}
       propertyPath: m_Name
       value: dagger_rare (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5b3a338e4467a514cb8875b090a92f7c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3a338e4467a514cb8875b090a92f7c, type: 3}
@@ -7503,6 +7638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shield
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 287596a3992e53e4cb1146cee4268376, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287596a3992e53e4cb1146cee4268376, type: 3}
 --- !u!4 &2048893705105423757 stripped
@@ -7708,6 +7847,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 69e50724f43396240a167fdf370f675c, type: 3}
       propertyPath: m_Name
       value: dagger_uncommon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69e50724f43396240a167fdf370f675c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69e50724f43396240a167fdf370f675c, type: 3}
@@ -7980,6 +8123,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
       propertyPath: m_Name
       value: weaponRack (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
@@ -8457,14 +8604,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
---- !u!4 &1754373940446132689 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
-  m_PrefabInstance: {fileID: 2293019064685239866}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1374470217187337067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
+  m_PrefabInstance: {fileID: 2293019064685239866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1754373940446132689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
   m_PrefabInstance: {fileID: 2293019064685239866}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8705351413796278326
@@ -8621,16 +8768,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcaseWide (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
---- !u!1 &3190564067136454391 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
-  m_PrefabInstance: {fileID: 2343631904143967142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2813898409100665933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+  m_PrefabInstance: {fileID: 2343631904143967142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3190564067136454391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
   m_PrefabInstance: {fileID: 2343631904143967142}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &9093634711290234865
@@ -8832,6 +8983,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
       propertyPath: m_Name
       value: weaponRack (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
@@ -9097,6 +9252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcaseWide (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
 --- !u!1 &3447176677657699651 stripped
@@ -9176,6 +9335,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40431f4f94716a74ab2c1eddc861f387, type: 3}
       propertyPath: m_Name
       value: axe_uncommon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40431f4f94716a74ab2c1eddc861f387, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40431f4f94716a74ab2c1eddc861f387, type: 3}
@@ -9305,16 +9468,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: body_broken
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3bfdcbf05ebd3c344aac0453afc1725a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfdcbf05ebd3c344aac0453afc1725a, type: 3}
---- !u!4 &2648291090455726510 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3bfdcbf05ebd3c344aac0453afc1725a, type: 3}
-  m_PrefabInstance: {fileID: 2542888689530269253}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3425917822482666260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bfdcbf05ebd3c344aac0453afc1725a, type: 3}
+  m_PrefabInstance: {fileID: 2542888689530269253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2648291090455726510 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3bfdcbf05ebd3c344aac0453afc1725a, type: 3}
   m_PrefabInstance: {fileID: 2542888689530269253}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &5170457948313261167
@@ -9506,6 +9673,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7d3a073404c830547899ef1b4f7a5bb0, type: 3}
       propertyPath: m_Name
       value: skeleton_staff
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7d3a073404c830547899ef1b4f7a5bb0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3a073404c830547899ef1b4f7a5bb0, type: 3}
@@ -9713,6 +9884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sword_rare (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4822d620646f2ca4ab9f6d662aeceb53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4822d620646f2ca4ab9f6d662aeceb53, type: 3}
 --- !u!4 &2622111483568761091 stripped
@@ -9786,6 +9961,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 69e50724f43396240a167fdf370f675c, type: 3}
       propertyPath: m_Name
       value: dagger_uncommon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69e50724f43396240a167fdf370f675c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69e50724f43396240a167fdf370f675c, type: 3}
@@ -9993,6 +10172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: quiver_full
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 948adc826e53cc847b4d68b53baf5044, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 948adc826e53cc847b4d68b53baf5044, type: 3}
 --- !u!4 &2524813766586712990 stripped
@@ -10067,16 +10250,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableSmall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f6772eb0a0d0f64481a7572b81f9b21, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6772eb0a0d0f64481a7572b81f9b21, type: 3}
---- !u!1 &2912097061308389193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f6772eb0a0d0f64481a7572b81f9b21, type: 3}
-  m_PrefabInstance: {fileID: 2641555832838547992}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2531595242093579763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8f6772eb0a0d0f64481a7572b81f9b21, type: 3}
+  m_PrefabInstance: {fileID: 2641555832838547992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2912097061308389193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f6772eb0a0d0f64481a7572b81f9b21, type: 3}
   m_PrefabInstance: {fileID: 2641555832838547992}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &2290406971264410780
@@ -10212,6 +10399,10 @@ PrefabInstance:
     - target: {fileID: 8041985928701741468, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
       propertyPath: m_Name
       value: cratePlatform_large (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041985928701741468, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
@@ -10407,6 +10598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &2437560476676897954 stripped
@@ -10534,6 +10729,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: def038bf20e7b1e4697867e1b6044047, type: 3}
       propertyPath: m_Name
       value: bookOpenA
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: def038bf20e7b1e4697867e1b6044047, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def038bf20e7b1e4697867e1b6044047, type: 3}
@@ -10895,6 +11094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &2309336790315454457 stripped
@@ -10957,16 +11160,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
---- !u!4 &2319765040836108043 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
-  m_PrefabInstance: {fileID: 2863110132153891040}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3132999761604871601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+  m_PrefabInstance: {fileID: 2863110132153891040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2319765040836108043 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
   m_PrefabInstance: {fileID: 2863110132153891040}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &102985191612224450
@@ -11395,6 +11602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: axe_uncommon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40431f4f94716a74ab2c1eddc861f387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40431f4f94716a74ab2c1eddc861f387, type: 3}
 --- !u!4 &3365208971787731754 stripped
@@ -11655,6 +11866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &3143955037936504586 stripped
@@ -11795,6 +12010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shield (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 287596a3992e53e4cb1146cee4268376, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287596a3992e53e4cb1146cee4268376, type: 3}
 --- !u!4 &3131297839121386435 stripped
@@ -11868,6 +12087,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
       propertyPath: m_Name
       value: arrow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0f8a31876188c49aff3e7f385a6ded, type: 3}
@@ -12286,6 +12509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrelDark
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
 --- !u!1 &4489408188829997127 stripped
@@ -12580,6 +12807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sword_common (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 283c3215249387a4683de05c66c850e3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283c3215249387a4683de05c66c850e3, type: 3}
 --- !u!4 &3651421024762988059 stripped
@@ -12792,14 +13023,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
---- !u!4 &3552607298215609110 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
-  m_PrefabInstance: {fileID: 3947366584479606013}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4181228519644879276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
+  m_PrefabInstance: {fileID: 3947366584479606013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3552607298215609110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
   m_PrefabInstance: {fileID: 3947366584479606013}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &4169553374761436841
@@ -12886,6 +13117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: axeDouble_uncommon (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
 --- !u!4 &3557389031040538988 stripped
@@ -12960,16 +13195,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: shield_rare (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
---- !u!1 &4194041695910437268 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
-  m_PrefabInstance: {fileID: 3960163129692134597}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3566826848956152622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
+  m_PrefabInstance: {fileID: 3960163129692134597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4194041695910437268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
   m_PrefabInstance: {fileID: 3960163129692134597}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &4145562021452273790
@@ -13056,6 +13295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &3519168843751306952 stripped
@@ -13117,6 +13360,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -13245,6 +13492,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -13385,6 +13636,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
       propertyPath: m_Name
       value: shield_rare
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
@@ -13612,6 +13867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shield_rare (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
 --- !u!4 &4401156838314715488 stripped
@@ -13673,6 +13932,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2fd5fd14b8d48f242813a0ddcddb9501, type: 3}
       propertyPath: m_Name
       value: scaffold_small_low_cornerLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2fd5fd14b8d48f242813a0ddcddb9501, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fd5fd14b8d48f242813a0ddcddb9501, type: 3}
@@ -14151,6 +14414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: banner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
 --- !u!4 &4268387435502695957 stripped
@@ -14278,6 +14545,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
       propertyPath: m_Name
       value: weaponRack (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
@@ -14413,14 +14684,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
---- !u!1 &3746605951114037118 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
-  m_PrefabInstance: {fileID: 4557633558546053679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4086259027581083076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
+  m_PrefabInstance: {fileID: 4557633558546053679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3746605951114037118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 17e738914c2ef7346b8783ba58917466, type: 3}
   m_PrefabInstance: {fileID: 4557633558546053679}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &6897004710418574005
@@ -14503,6 +14774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
 --- !u!4 &4096789949187693859 stripped
@@ -14576,6 +14851,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fa2080a7c6707d8489755d2e73bdd569, type: 3}
       propertyPath: m_Name
       value: skeleton_helmet_full (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa2080a7c6707d8489755d2e73bdd569, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa2080a7c6707d8489755d2e73bdd569, type: 3}
@@ -14705,6 +14984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &5165072288791174951 stripped
@@ -14766,6 +15049,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
       propertyPath: m_Name
       value: axeDouble_uncommon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
@@ -14964,6 +15251,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 589fb9c3d0a11ef4cbb4455ad9d54a79, type: 3}
       propertyPath: m_Name
       value: bookcase (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 589fb9c3d0a11ef4cbb4455ad9d54a79, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 589fb9c3d0a11ef4cbb4455ad9d54a79, type: 3}
@@ -15177,16 +15468,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaffold_small_low_railing
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
---- !u!1 &5730302886246331483 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
-  m_PrefabInstance: {fileID: 4847924667397605642}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4957883411238481633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+  m_PrefabInstance: {fileID: 4847924667397605642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5730302886246331483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
   m_PrefabInstance: {fileID: 4847924667397605642}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8159664618938540295
@@ -15522,6 +15817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &4748503725184771027 stripped
@@ -15653,6 +15952,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
       propertyPath: m_Name
       value: bookcaseWide
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
@@ -15799,6 +16102,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -15994,6 +16301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &5752481777325157452 stripped
@@ -16056,6 +16367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &5722201251966450236 stripped
@@ -16117,6 +16432,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -16378,6 +16697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: banner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
 --- !u!4 &5526353650206403732 stripped
@@ -16439,6 +16762,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
       propertyPath: m_Name
       value: banner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
@@ -16832,16 +17159,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcaseWide (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
---- !u!1 &4712331243909779100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
-  m_PrefabInstance: {fileID: 5594871090967655373}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5345281139550966822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+  m_PrefabInstance: {fileID: 5594871090967655373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4712331243909779100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
   m_PrefabInstance: {fileID: 5594871090967655373}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &6264622983271037262
@@ -17444,6 +17775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcaseWide (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
 --- !u!4 &6280823673241581172 stripped
@@ -17668,6 +18003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bone_half (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29b49fcbe66b2ad48a8bf95e625d18ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b49fcbe66b2ad48a8bf95e625d18ad, type: 3}
 --- !u!1 &6808315372598448106 stripped
@@ -17752,16 +18091,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcaseWide (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
---- !u!1 &6913286439282337233 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
-  m_PrefabInstance: {fileID: 5994718481461794944}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6105541683146047339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+  m_PrefabInstance: {fileID: 5994718481461794944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6913286439282337233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
   m_PrefabInstance: {fileID: 5994718481461794944}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &1714406286930063195
@@ -17897,6 +18240,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -18356,6 +18703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrelDark (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21cc5ee867cc0284dab539b949dca97f, type: 3}
 --- !u!1 &6589071288242702816 stripped
@@ -18608,6 +18959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skeleton_helmet_full (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa2080a7c6707d8489755d2e73bdd569, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa2080a7c6707d8489755d2e73bdd569, type: 3}
 --- !u!4 &6875500221194877472 stripped
@@ -18735,6 +19090,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 283c3215249387a4683de05c66c850e3, type: 3}
       propertyPath: m_Name
       value: sword_common
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 283c3215249387a4683de05c66c850e3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283c3215249387a4683de05c66c850e3, type: 3}
@@ -18930,16 +19289,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaffold_high
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0b2558cc962cb8c4199564cf7ea325f9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2558cc962cb8c4199564cf7ea325f9, type: 3}
---- !u!1 &6167489821221757855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b2558cc962cb8c4199564cf7ea325f9, type: 3}
-  m_PrefabInstance: {fileID: 6437397043799367374}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6835483454263720229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0b2558cc962cb8c4199564cf7ea325f9, type: 3}
+  m_PrefabInstance: {fileID: 6437397043799367374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6167489821221757855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b2558cc962cb8c4199564cf7ea325f9, type: 3}
   m_PrefabInstance: {fileID: 6437397043799367374}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &3168210922559567299
@@ -19410,16 +19773,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableLarge
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a61db11f6ecbfa4e9cbf204409d10d1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a61db11f6ecbfa4e9cbf204409d10d1, type: 3}
---- !u!4 &6733735503170577655 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a61db11f6ecbfa4e9cbf204409d10d1, type: 3}
-  m_PrefabInstance: {fileID: 6555466162675008284}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6212953661494754893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a61db11f6ecbfa4e9cbf204409d10d1, type: 3}
+  m_PrefabInstance: {fileID: 6555466162675008284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6733735503170577655 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a61db11f6ecbfa4e9cbf204409d10d1, type: 3}
   m_PrefabInstance: {fileID: 6555466162675008284}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &4099767839757566914
@@ -20678,16 +21045,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcaseWide (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
---- !u!4 &6388589004122986680 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
-  m_PrefabInstance: {fileID: 6855158838103572307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6044678927048753666 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+  m_PrefabInstance: {fileID: 6855158838103572307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6388589004122986680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
   m_PrefabInstance: {fileID: 6855158838103572307}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &2446861490344236938
@@ -20932,6 +21303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
 --- !u!4 &6369899838715650988 stripped
@@ -21005,6 +21380,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6519fe47748b03e4b948ee9f41659f62, type: 3}
       propertyPath: m_Name
       value: quiver_purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6519fe47748b03e4b948ee9f41659f62, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6519fe47748b03e4b948ee9f41659f62, type: 3}
@@ -21277,6 +21656,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -21934,6 +22317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sword_common (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 283c3215249387a4683de05c66c850e3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283c3215249387a4683de05c66c850e3, type: 3}
 --- !u!4 &7125001702542981433 stripped
@@ -22062,6 +22449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
 --- !u!1 &7668934699262555287 stripped
@@ -22173,6 +22564,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f245f6e0e42723548b5228320ba47124, type: 3}
       propertyPath: m_Name
       value: shield_uncommon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f245f6e0e42723548b5228320ba47124, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f245f6e0e42723548b5228320ba47124, type: 3}
@@ -22302,16 +22697,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableMedium (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
---- !u!1 &7777188730943976226 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
-  m_PrefabInstance: {fileID: 7435291406519438963}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6964200403875817880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
+  m_PrefabInstance: {fileID: 7435291406519438963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7777188730943976226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
   m_PrefabInstance: {fileID: 7435291406519438963}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8269961768165959894
@@ -22476,6 +22875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skeleton_helmet_full
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa2080a7c6707d8489755d2e73bdd569, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa2080a7c6707d8489755d2e73bdd569, type: 3}
 --- !u!4 &6918999916936954748 stripped
@@ -22629,16 +23032,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaffold_small_low_railing
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
---- !u!4 &6932479178737324572 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
-  m_PrefabInstance: {fileID: 7475874673911363063}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7745854607198144678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+  m_PrefabInstance: {fileID: 7475874673911363063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6932479178737324572 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
   m_PrefabInstance: {fileID: 7475874673911363063}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &7043664142494298072
@@ -23040,6 +23447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: banner
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e37624e4081a04d82ea5be0fadc0d1, type: 3}
 --- !u!4 &7897001193519828293 stripped
@@ -23102,6 +23513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &7902380294718741656 stripped
@@ -23163,6 +23578,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
       propertyPath: m_Name
       value: weaponRack (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
@@ -23244,14 +23663,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
---- !u!1 &7386360474165133360 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
-  m_PrefabInstance: {fileID: 7656390286919368033}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7911222676824857226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
+  m_PrefabInstance: {fileID: 7656390286919368033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7386360474165133360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ebc56be85b55a5944946d3bf92330e8d, type: 3}
   m_PrefabInstance: {fileID: 7656390286919368033}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &4254218878464444564
@@ -23416,16 +23835,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: lootSackB
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d4ae58b09cd50d14c81222ac575f4d74, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4ae58b09cd50d14c81222ac575f4d74, type: 3}
---- !u!4 &7840572621284105902 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d4ae58b09cd50d14c81222ac575f4d74, type: 3}
-  m_PrefabInstance: {fileID: 7729855087940974917}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7459262730033857556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d4ae58b09cd50d14c81222ac575f4d74, type: 3}
+  m_PrefabInstance: {fileID: 7729855087940974917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7840572621284105902 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d4ae58b09cd50d14c81222ac575f4d74, type: 3}
   m_PrefabInstance: {fileID: 7729855087940974917}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &1503194996536496673
@@ -23496,16 +23919,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
---- !u!1 &7426766989141593890 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
-  m_PrefabInstance: {fileID: 7768785136500142707}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7807831727972390296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+  m_PrefabInstance: {fileID: 7768785136500142707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7426766989141593890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
   m_PrefabInstance: {fileID: 7768785136500142707}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &4543143539685815072
@@ -23588,6 +24015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shield_uncommon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f245f6e0e42723548b5228320ba47124, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f245f6e0e42723548b5228320ba47124, type: 3}
 --- !u!4 &7814592721095100116 stripped
@@ -23649,6 +24080,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 07dc844d938a94347af93fd31b941e22, type: 3}
       propertyPath: m_Name
       value: crossbow_uncommon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07dc844d938a94347af93fd31b941e22, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07dc844d938a94347af93fd31b941e22, type: 3}
@@ -23777,6 +24212,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -24050,6 +24489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bench
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ab0503d2428cc4e9e56b43f5b5c7f4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: e2ab0503d2428cc4e9e56b43f5b5c7f4, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -24220,16 +24663,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcaseWide (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
---- !u!1 &7181339969791882811 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
-  m_PrefabInstance: {fileID: 8027762502568725354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7557864859660070017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
+  m_PrefabInstance: {fileID: 8027762502568725354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7181339969791882811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88e2a651555126a44a1d93d3247b2388, type: 3}
   m_PrefabInstance: {fileID: 8027762502568725354}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &3170054581245990495
@@ -24312,6 +24759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
 --- !u!4 &8627598478855195422 stripped
@@ -24373,6 +24824,10 @@ PrefabInstance:
     - target: {fileID: 8041985928701741468, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
       propertyPath: m_Name
       value: cratePlatform_large
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041985928701741468, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 065d09b3669db7f4db67bfc2a5011655, type: 3}
@@ -24567,6 +25022,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -24827,6 +25286,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
       propertyPath: m_Name
       value: floorDecoration_wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
@@ -25100,6 +25563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
 --- !u!4 &8299300746615414033 stripped
@@ -25298,6 +25765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcase
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 589fb9c3d0a11ef4cbb4455ad9d54a79, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 589fb9c3d0a11ef4cbb4455ad9d54a79, type: 3}
 --- !u!1 &8777166926629179503 stripped
@@ -25456,6 +25927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dagger_rare
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5b3a338e4467a514cb8875b090a92f7c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3a338e4467a514cb8875b090a92f7c, type: 3}
 --- !u!4 &8268728302950285374 stripped
@@ -25584,6 +26059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crateDark (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4433037920383942414, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec47afa38042684eb93c3f226575dcc, type: 3}
 --- !u!4 &4641451949707974591 stripped
@@ -25646,16 +26125,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaffold_small_low_railing
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
---- !u!4 &8114748581350423509 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
-  m_PrefabInstance: {fileID: 8581566940055755838}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8923513757537100143 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+  m_PrefabInstance: {fileID: 8581566940055755838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8114748581350423509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
   m_PrefabInstance: {fileID: 8581566940055755838}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &6114281715174305341
@@ -25726,6 +26209,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 274f6b3489b0b2741b4c0385245493e1, type: 3}
       propertyPath: m_Name
       value: arrow_green_broken
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 274f6b3489b0b2741b4c0385245493e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 274f6b3489b0b2741b4c0385245493e1, type: 3}
@@ -25800,6 +26287,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
       propertyPath: m_Name
       value: weaponRack (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
@@ -25995,6 +26486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &9215991233642817488 stripped
@@ -26189,16 +26684,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: weaponRack
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
---- !u!1 &8494422538177813050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
-  m_PrefabInstance: {fileID: 8728866248137647979}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9126985444114382976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
+  m_PrefabInstance: {fileID: 8728866248137647979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8494422538177813050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02b40ba894a46da43bba683bb10b440c, type: 3}
   m_PrefabInstance: {fileID: 8728866248137647979}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &4240250312633184518
@@ -26269,6 +26768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &9102766550096958851 stripped
@@ -26330,6 +26833,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
       propertyPath: m_Name
       value: scaffold_small_low_railing
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
@@ -26544,16 +27051,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableMedium
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
---- !u!1 &8572780375955425821 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
-  m_PrefabInstance: {fileID: 8807294319234807628}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9057709686340653223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
+  m_PrefabInstance: {fileID: 8807294319234807628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8572780375955425821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 987c4204a34cce140bcbcbccb82d013a, type: 3}
   m_PrefabInstance: {fileID: 8807294319234807628}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &7778561274699542099
@@ -26888,6 +27399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: staff_rare
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 19fac5f4696efda44b4e6f65637035de, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19fac5f4696efda44b4e6f65637035de, type: 3}
 --- !u!4 &8899308681681143780 stripped
@@ -27015,6 +27530,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
       propertyPath: m_Name
       value: axeDouble_uncommon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd65de764c694d49a77201d4fc50f52, type: 3}
@@ -27144,6 +27663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorDecoration_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d2f6f4830ba164783a0dab6c294bfa, type: 3}
 --- !u!4 &8798452529516431581 stripped
@@ -27217,6 +27740,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4822d620646f2ca4ab9f6d662aeceb53, type: 3}
       propertyPath: m_Name
       value: sword_rare
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4822d620646f2ca4ab9f6d662aeceb53, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4822d620646f2ca4ab9f6d662aeceb53, type: 3}
@@ -27478,16 +28005,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaffold_small_low_railing
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
---- !u!1 &8316193816149200540 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
-  m_PrefabInstance: {fileID: 9198716481055142861}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8656726188585112614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
+  m_PrefabInstance: {fileID: 9198716481055142861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8316193816149200540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad1507e0cd349c248b26ff3f289063f8, type: 3}
   m_PrefabInstance: {fileID: 9198716481055142861}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &3429160917693001923
