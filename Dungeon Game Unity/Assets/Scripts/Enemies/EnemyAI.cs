@@ -31,6 +31,7 @@ public class EnemyAI : MonoBehaviour
     public bool canSee;
     public bool playerInSightRange, playerInAttackRange;
 
+    private float velocity;
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -42,13 +43,13 @@ public class EnemyAI : MonoBehaviour
         walkPointRange = enemyAttack.walkPointRange;
         sightRange = enemyAttack.sightRange;
         attackRange = enemyAttack.attackRange;
-
+        
     }
 
 
     private void Update()
     {
-        float velocity = agent.velocity.magnitude/agent.speed;
+        velocity = agent.velocity.magnitude/agent.speed;
         if (velocity > 0.1)
         {
             anim.SetBool("isWalking", true);

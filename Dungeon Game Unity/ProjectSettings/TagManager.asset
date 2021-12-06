@@ -28,6 +28,9 @@ TagManager:
   - DoorTag
   - WallTag
   - textBubble
+  - Helmet
+  - Visor
+  - ChestPlate
   layers:
   - Default
   - TransparentFX
@@ -38,7 +41,7 @@ TagManager:
   - Environment
   - Player
   - Wall
-  - 
+  - Enemy
   - 
   - 
   - 
