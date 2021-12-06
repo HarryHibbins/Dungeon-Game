@@ -8435,16 +8435,20 @@ PrefabInstance:
       value: 29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0143c8717d51cc499b2d3bc27d7a9d2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.76679
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a0143c8717d51cc499b2d3bc27d7a9d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.91
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0143c8717d51cc499b2d3bc27d7a9d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0143c8717d51cc499b2d3bc27d7a9d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.03
+      value: -12.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0143c8717d51cc499b2d3bc27d7a9d2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8474,6 +8478,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: a0143c8717d51cc499b2d3bc27d7a9d2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -949549019624148122, guid: cd6d5dec8cd789540af70432d8a8e470, type: 3}
     - target: {fileID: 919132149155446097, guid: a0143c8717d51cc499b2d3bc27d7a9d2, type: 3}
       propertyPath: m_Name
       value: scaffold_small_high_railing_long
@@ -19861,16 +19869,20 @@ PrefabInstance:
       value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9570e7aa0672c4458f2b452ff420dff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.76679
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d9570e7aa0672c4458f2b452ff420dff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.9267
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9570e7aa0672c4458f2b452ff420dff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9570e7aa0672c4458f2b452ff420dff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.98
+      value: -12.812
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9570e7aa0672c4458f2b452ff420dff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19900,6 +19912,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: d9570e7aa0672c4458f2b452ff420dff, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1199414998079016314, guid: d85a4550bea71054fa9c04cf23dbd15d, type: 3}
     - target: {fileID: 919132149155446097, guid: d9570e7aa0672c4458f2b452ff420dff, type: 3}
       propertyPath: m_Name
       value: scaffold_small_high_railing
