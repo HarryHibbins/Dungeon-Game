@@ -52,5 +52,9 @@ public class Orb : MonoBehaviour
             playerHealth.Damage(1);
             
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

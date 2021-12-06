@@ -8,6 +8,7 @@ public class EnemyAttacks : MonoBehaviour
     public enum AttackType
     {
         orb,
+        melee
     }
 
     public AttackType attackType;
@@ -35,7 +36,11 @@ public class EnemyAttacks : MonoBehaviour
                     }
                 }
                 break;
+            case AttackType.melee:
+                
+                break;
         }
+
     }
 
 }

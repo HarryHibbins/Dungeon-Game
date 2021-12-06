@@ -70,7 +70,21 @@ public class EnemyAI : MonoBehaviour
       
         if (playerInSightRange && playerInAttackRange && canSee)
         {
-            AttackPlayer();
+            RaycastHit hit;
+            if (Physics.Raycast (transform.position, player.transform.position - transform.position, out hit, 20))
+            {
+                if (hit.transform.tag == "Player" && canSee)
+                {
+                    AttackPlayer();
+                }
+                else
+                {
+                    agent.SetDestination(player.position);
+
+                }
+            }
+            Debug.DrawRay(transform.position, player.transform.position - transform.position);
+            
         }
     }
     private void Patroling()
@@ -110,7 +124,7 @@ public class EnemyAI : MonoBehaviour
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-
+        
         transform.LookAt(player);
 
         if(!alreadyAttacked)
