@@ -26,6 +26,7 @@ public class EnemyAI : MonoBehaviour
 
     private Animator anim;
     private float sightRange, attackRange;
+    public bool canSee;
     public bool playerInSightRange, playerInAttackRange;
 
     private void Awake()
@@ -62,12 +63,12 @@ public class EnemyAI : MonoBehaviour
            
             Patroling();
         }
-        if (playerInSightRange && !playerInAttackRange)
+        if (playerInSightRange && !playerInAttackRange && canSee)
         {
             ChasePlayer();
         }
       
-        if (playerInSightRange && playerInAttackRange)
+        if (playerInSightRange && playerInAttackRange && canSee)
         {
             AttackPlayer();
         }

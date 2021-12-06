@@ -32,6 +32,9 @@ public class CameraPosition : MonoBehaviour
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
 
         cameraObj = GameObject.FindGameObjectWithTag("MainCamera");
+
+
+
     }
 
     void Start()
@@ -117,12 +120,28 @@ public class CameraPosition : MonoBehaviour
                         gameLoot.explorerRelicRooms++;
                     }
                 }
+                foreach (Transform child in transform.parent)
+                {
+                    if (child.tag == ("Enemy"))
+                    {
+                        child.GetComponentInChildren<EnemyAI>().canSee = true;
+                    }
+                }
             }
             else
             {
                 moveCamera = false;
                 inRoom = false;
                 Debug.Log("Exit room");
+                
+                foreach (Transform child in transform.parent)
+                {
+                    if (child.tag == ("Enemy"))
+                    {
+                        child.GetComponent<EnemyAI>().canSee = false;
+
+                    }
+                }
 
             }
             
