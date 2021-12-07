@@ -15,11 +15,14 @@ public class PlayerHealth : MonoBehaviour
 
     public bool dead;
     private List<Heart> heartList = new List<Heart>();
-
+    private GameObject player;
+    private Animator anim;
 
     private void Awake()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
+        player = GameObject.FindWithTag("Player");
+        anim = player.GetComponent<Animator>();
     }
 
     private void Start()
@@ -81,6 +84,7 @@ public class PlayerHealth : MonoBehaviour
         {
             if (onDead != null) onDead(this, EventArgs.Empty);
             Debug.Log("Dead");
+            anim.SetTrigger("Dead");
             dead = true;
 
         }

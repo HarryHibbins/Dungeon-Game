@@ -890,6 +890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   effect: 0
+  alive: 0
 --- !u!114 &1595750831464870444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,7 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91315fc36ece0184784dd835deed13c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
+  attackType: 2
   walkPointRange: 20
   timeBetweenAttacks: 1.3
   sightRange: 15

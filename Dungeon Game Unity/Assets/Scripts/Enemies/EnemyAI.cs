@@ -82,7 +82,7 @@ public class EnemyAI : MonoBehaviour
                 //Plus 0.8 for the height orb
                 if (Physics.Raycast(transform.position + new Vector3(0, 0.8f, 0),
                         player.transform.position - transform.position, out hit, 20) &&
-                    enemyAttack.attackType == EnemyAttacks.AttackType.orb)
+                    enemyAttack.attackType == EnemyAttacks.AttackType.orb || enemyAttack.attackType == EnemyAttacks.AttackType.threeorb)
                 {
                     if (hit.transform.tag == "Player")
                     {
