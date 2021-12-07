@@ -325,6 +325,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2266082296349354169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7082964667331130711}
+  m_Layer: 0
+  m_Name: effectSpawn
+  m_TagString: effectSpawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7082964667331130711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266082296349354169}
+  m_LocalRotation: {x: -0, y: -0, z: -2.9607664e-15, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1738215917549035955}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2372532364962386458
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +707,7 @@ Transform:
   - {fileID: 3270876582720593976}
   - {fileID: 995212237161157093}
   - {fileID: 995212236782145211}
+  - {fileID: 7082964667331130711}
   m_Father: {fileID: 8466135483712146133}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -790,6 +821,9 @@ MonoBehaviour:
   health: 100
   effect: 0
   alive: 0
+  firePS: {fileID: 5020449609901880840, guid: 663b269e9bf95424cb814ed235217d85, type: 3}
+  icePS: {fileID: 5020449609901880840, guid: c39839a216fdde044bd99dd9a81a2f53, type: 3}
+  effectSpawn: {fileID: 0}
 --- !u!114 &4381012945447391225
 MonoBehaviour:
   m_ObjectHideFlags: 0
