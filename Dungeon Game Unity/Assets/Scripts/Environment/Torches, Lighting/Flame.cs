@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class Flame : MonoBehaviour
 {
-
     public GameObject flame;
 }
