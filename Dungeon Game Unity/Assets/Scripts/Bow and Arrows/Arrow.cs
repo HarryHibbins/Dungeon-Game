@@ -144,7 +144,8 @@ public class Arrow : MonoBehaviour
 
         if (move)
         {
-            
+            //hard coded fix for arrows being scaled weridly because of the movement of the player at the time of being shot
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             //Apply Forward Translation
             transform.Translate((Vector3.forward * actualspeed) * Time.deltaTime);
             //Apply Downward Translation for gravity

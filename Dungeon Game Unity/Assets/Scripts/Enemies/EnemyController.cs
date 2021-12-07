@@ -71,7 +71,12 @@ public class EnemyController : MonoBehaviour
         {
             //Get the arrow that hit the enemy
             Arrow arrow = other.GetComponent<Arrow>();
-            arrow.arrowDespawnTimer = 2.0f;
+            //Stop the arrow 
+            arrow.move = false;
+            arrow.GetComponent<Transform>().parent = transform;
+            
+            //arrow.arrowDespawnTimer = 2.0f;
+            Destroy(arrow.gameObject);
 
             int crit_rand = UnityEngine.Random.Range(playerStats.ArrowDamage_CritChance, 101);
 
@@ -92,9 +97,7 @@ public class EnemyController : MonoBehaviour
                 DamageDealt *= 1.5f;
             }
             
-            //Stop the arrow 
-            arrow.move = false;
-            arrow.GetComponent<Transform>().parent = transform;
+
             int rand = UnityEngine.Random.Range(1, (playerStats.ArrowEffects_BleedChance + 1));
 
             //Apply Effect
