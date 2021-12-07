@@ -6,19 +6,21 @@ public class BonceOrbCollision : MonoBehaviour
 {
     private GameObject player;
     private PlayerHealth playerHealth;
+    private BossOneBehaviour bossScript;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+        bossScript = this.transform.parent.GetComponent<BossOneBehaviour>();
     }
 
     private void OnParticleCollision(GameObject other)
     {
         if (other.tag == "Player")
         {
-            playerHealth.Damage(1);
+            playerHealth.Damage(bossScript.attackOneDamage);
             Debug.Log("PLAYER HIT");
         }
     }

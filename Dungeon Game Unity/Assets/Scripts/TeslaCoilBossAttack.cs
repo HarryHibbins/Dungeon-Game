@@ -5,7 +5,7 @@ public class TeslaCoilBossAttack : MonoBehaviour
 {
     private LineRenderer lRend;
     public Transform transformPointA;
-    public Transform transformPointB;
+    //public Transform transformPointB;
     private readonly int pointsCount = 5;
     private readonly int half = 2;
     private float randomness;
@@ -29,6 +29,8 @@ public class TeslaCoilBossAttack : MonoBehaviour
     public float timerToDamage = 3;
     private float damageTimer = 0;
 
+    private BossOneBehaviour bossScript;
+
     private void Start ()
     {
         lRend = GetComponent<LineRenderer>();
@@ -36,6 +38,7 @@ public class TeslaCoilBossAttack : MonoBehaviour
         lRend.positionCount = pointsCount;
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+        bossScript = this.transform.parent.GetComponent<BossOneBehaviour>();
     }
 
     private void Update()
@@ -52,7 +55,7 @@ public class TeslaCoilBossAttack : MonoBehaviour
                 }
                 else if (damageTimer >= timerToDamage)
                 {
-                    playerHealth.Damage(1);
+                    playerHealth.Damage(bossScript.attackTwoDamage);
                     damageTimer = 0;
                 }
             }
@@ -74,12 +77,12 @@ public class TeslaCoilBossAttack : MonoBehaviour
             timer = 0;
 
             points[pointIndexA] = transformPointA.position;
-            points[pointIndexE] = transformPointB.position;
+            points[pointIndexE] = player.transform.position;
             points[pointIndexC] = GetCenter(points[pointIndexA], points[pointIndexE]);
             points[pointIndexB] = GetCenter(points[pointIndexA], points[pointIndexC]);
             points[pointIndexD] = GetCenter(points[pointIndexC], points[pointIndexE]);
 
-            float distance = Vector3.Distance(transformPointA.position, transformPointB.position) / points.Length;
+            float distance = Vector3.Distance(transformPointA.position, player.transform.position) / points.Length;
             mainTextureScale.x = distance;
             mainTextureOffset.x = Random.Range(-randomness, randomness);
             lRend.material.SetTextureScale(mainTexture, mainTextureScale);

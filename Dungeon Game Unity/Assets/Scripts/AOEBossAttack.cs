@@ -7,22 +7,20 @@ public class AOEBossAttack : MonoBehaviour
     public GameObject ringEffect;
     private GameObject player;
     private PlayerHealth playerHealth;
+    private BossTwoBehaviour bossScript;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+        bossScript = this.transform.parent.GetComponent<BossTwoBehaviour>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            StartCoroutine(StartAOEAttack());
-            //Debug.DrawRay(transform.position, player.transform.position - transform.position);
-        }
+        StartCoroutine(StartAOEAttack());
     }
+
 
     public IEnumerator StartAOEAttack()
     {
@@ -30,11 +28,11 @@ public class AOEBossAttack : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         RaycastHit hit;
-        if (Physics.Raycast (transform.position, player.transform.position - transform.position, out hit, 10))
+        if (Physics.Raycast (transform.position, player.transform.position - transform.position, out hit))
         {
             if (hit.transform.tag == "Player")
             {
-                playerHealth.Damage(4);
+                playerHealth.Damage(bossScript.attackTwoDamage);
                 Debug.LogError("HIT PLAYER");
             }
 

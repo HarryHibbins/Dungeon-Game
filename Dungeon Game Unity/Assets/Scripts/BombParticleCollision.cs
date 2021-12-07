@@ -7,36 +7,49 @@ public class BombParticleCollision : MonoBehaviour
     private GameObject player;
     private PlayerHealth playerHealth;
 
+    private ParticleSystem ps;
+    private List<ParticleCollisionEvent> collisionEvents;
+    private Vector3 position;
+
+    private BossTwoBehaviour bossScript;
+
     // Start is called before the first frame update
     void Start()
     {
+        ps = this.GetComponent<ParticleSystem>();
+        collisionEvents = new List<ParticleCollisionEvent>();
+
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+        bossScript = this.transform.parent.GetComponent<BossTwoBehaviour>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnParticleCollision(GameObject other)
     {
-        Transform position = this.transform;
+        
+        int numCollisionEvents = ps.GetCollisionEvents(other, collisionEvents);
+        int i = 0;
+        while (i < numCollisionEvents)
+        {
+            position = collisionEvents[i].intersection;
+            i++;
+        }
+
         if (other.layer == LayerMask.NameToLayer("Environment"))
         {
             OnExplosion(position);
         }
     }
 
-    void OnExplosion(Transform pos)
+    void OnExplosion(Vector3 pos)
     {
-        Collider[] colliders = Physics.OverlapSphere(pos.position, 4f);
+        Collider[] colliders = Physics.OverlapSphere(position, 4f);
         foreach (Collider c in colliders)
         {
             if (c.tag == "Player")
             {
-                playerHealth.Damage(1);
+                playerHealth.Damage(bossScript.attackOneDamage);
                 Debug.Log("Player HIT");
             }
         }

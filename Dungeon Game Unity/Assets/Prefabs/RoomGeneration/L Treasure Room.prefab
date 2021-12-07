@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 1059918635498739152}
   m_Layer: 0
   m_Name: WallCheckCollider
-  m_TagString: DoorTag
+  m_TagString: WallTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1018,6 +1018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3240104e479b37a4db8948fad648a55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraPosition: {fileID: 0}
+  room: {fileID: 0}
   spawnChance: 0.3
   minFlamesInRoom: 1
   maxFlamesInRoom: 2

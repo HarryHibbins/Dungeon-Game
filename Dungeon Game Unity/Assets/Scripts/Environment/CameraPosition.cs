@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CameraPosition : MonoBehaviour
 {
+    private RoomTemplates templates;
     private PlayerStats playerStats;
     private GameLoot gameLoot;
 
@@ -32,7 +33,7 @@ public class CameraPosition : MonoBehaviour
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
 
         cameraObj = GameObject.FindGameObjectWithTag("MainCamera");
-
+        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
 
 
     }
@@ -106,6 +107,12 @@ public class CameraPosition : MonoBehaviour
                 var sz = fog.sizeOverLifetime;
                 sz.enabled = true;
                 fog.Stop();*/
+                if (room.name == "Boss Room")
+                {
+                    Debug.Log("IN BOSS ROOM1");
+                    templates.boss.SetActive(true);
+                    
+                }
                 if (!room.name.Contains("Entry Room"))
                 {
                     fadeout = true;
@@ -133,7 +140,7 @@ public class CameraPosition : MonoBehaviour
                 moveCamera = false;
                 inRoom = false;
                 Debug.Log("Exit room");
-                
+
                 foreach (Transform child in transform.parent)
                 {
                     if (child.tag == ("Enemy"))

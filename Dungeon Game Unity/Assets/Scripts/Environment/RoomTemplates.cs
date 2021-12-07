@@ -10,6 +10,7 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] rightRooms;
 
     public GameObject closedRoom;
+    public GameObject bossRoom;
 
     public GameObject B_TreasureRoom;
     public GameObject L_TreasureRoom;
@@ -30,6 +31,7 @@ public class RoomTemplates : MonoBehaviour
     public float waitTime;
     public bool spawnedBoss;
     private bool spawnedTreasureRoom;
+    public List<GameObject> bosses;
     public GameObject boss;
     private GameObject treasureRoom;
 
@@ -51,8 +53,17 @@ public class RoomTemplates : MonoBehaviour
     {
         if (waitTime <= 0 && !spawnedBoss)
         {
-            Instantiate(boss, rooms[rooms.Count-1].transform.position, Quaternion.identity);
-            rooms[rooms.Count-1].GetComponent<AddRoom>().isBossRoom = true;
+            GameObject boss_room = Instantiate(bossRoom, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
+            Destroy(rooms[rooms.Count - 1]);
+            rooms[rooms.Count - 1].GetComponent<AddRoom>().isBossRoom = true;
+            rooms[rooms.Count - 1].name = "Boss Room";
+
+
+            int rand = UnityEngine.Random.Range(0, bosses.Count+1);
+            boss = Instantiate(bosses[rand], rooms[rooms.Count-1].transform.position, Quaternion.identity);
+            //boss = GameObject.FindGameObjectWithTag("Boss");
+            boss.SetActive(false);
+            
             spawnedBoss = true;
         }
         else if (waitTime > 0)
