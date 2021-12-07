@@ -21,11 +21,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Background");
         //FindObjectOfType<AudioManager>().Play("Enemysteps"); Currently glitched
-        //FindObjectOfType<AudioManager>().Play("Playerdamage"); Doesn't work on incoming projectiles just melee
-        //FindObjectOfType<AudioManager>().Play("UIbutton"); Not sure where code is for button clicks, works on ESC
-        //FindObjectOfType<AudioManager>().Play("Chestopen"); Not sure on where code is / when to play it
-        //FindObjectOfType<AudioManager>().Play("Lootsound"); Not sure on where code is / when to play it
         //FindObjectOfType<AudioManager>().Play("Trapdoor"); Not sure on where code is / when to play it
         //FindObjectOfType<AudioManager>().Play("Electric"); Not sure on where code is / when to play it
         //FindObjectOfType<AudioManager>().Play("Bossmusic"); Not sure on where code is / when to play it

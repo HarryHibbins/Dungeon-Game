@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 1645474467}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &19974554
 Transform:
   m_ObjectHideFlags: 19
@@ -13605,8 +13606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Bowfire
-    clip: {fileID: 8300000, guid: cec6adff5ba27674284b8316d2823b0c, type: 3}
-    volume: 0.303
+    clip: {fileID: 8300000, guid: adeea56882bbb834fb661f59c1ddf61b, type: 3}
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -13659,14 +13660,14 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Lootsound
-    clip: {fileID: 8300000, guid: 86aff23a24e9dfa48a8f881cbadff1fb, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: 7cc3cfd23cb3b8947b30a06af831e98d, type: 3}
+    volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Chestopen
     clip: {fileID: 8300000, guid: a25ee980c96f2f646b298dab4770db92, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -13691,6 +13692,12 @@ MonoBehaviour:
   - name: Bossmusic
     clip: {fileID: 8300000, guid: dbf22a9bf0d10104e8b0469f4cd96b8d, type: 3}
     volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Background
+    clip: {fileID: 8300000, guid: b23d92f417f45fc46b826c27bb2b2e20, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -26466,7 +26473,7 @@ MonoBehaviour:
   TreasureRoomChance: 20
   AdditionalDropLuck: 0
   Torch_MaxTimer: 30
-  Torch_MaxIntensity: 200
+  Torch_MaxIntensity: 20
 --- !u!4 &932448656
 Transform:
   m_ObjectHideFlags: 0
@@ -68211,7 +68218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907467085988597040, guid: e8478de415d49734eaec9f268ff713f2, type: 3}
       propertyPath: m_Intensity
-      value: 11.936621
+      value: 47.746483
       objectReference: {fileID: 0}
     - target: {fileID: 8907467085988597040, guid: e8478de415d49734eaec9f268ff713f2, type: 3}
       propertyPath: m_AreaSize.x
