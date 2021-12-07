@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1745019859016640552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745019859016640598}
+  - component: {fileID: 1745019859016640553}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1745019859016640598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745019859016640552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1745019859016640553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745019859016640552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9052f3015f1dc49907d5dbdcd3fef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Bowfire
+    clip: {fileID: 8300000, guid: adeea56882bbb834fb661f59c1ddf61b, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Torchout
+    clip: {fileID: 8300000, guid: 355447527074521428dc4fe63690fada, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemysteps
+    clip: {fileID: 8300000, guid: dd2f048c30311774484c0555a89f7c4a, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemyattack
+    clip: {fileID: 8300000, guid: 8daf3bd513e376847a6c7e71394a807c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 7dae7edd5e3f53f4e8a92648ecaab1fd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Arrowimpact
+    clip: {fileID: 8300000, guid: e74f9ca0214748f4990df0bc3b5642cb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Playerdamage
+    clip: {fileID: 8300000, guid: e1569075dd6be294ebe17f57fe5de8d2, type: 3}
+    volume: 0.5
+    pitch: 1.25
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemydamage
+    clip: {fileID: 8300000, guid: 4641f4216a5d7134d8b7148f4f180363, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Trapdoor
+    clip: {fileID: 8300000, guid: a21d5faa9ab465a41bc44ae3bd156441, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lootsound
+    clip: {fileID: 8300000, guid: 7cc3cfd23cb3b8947b30a06af831e98d, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Chestopen
+    clip: {fileID: 8300000, guid: a25ee980c96f2f646b298dab4770db92, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UIbutton
+    clip: {fileID: 8300000, guid: 72186fa39db5cf24d8b3e13f591b3eb9, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemymelee
+    clip: {fileID: 8300000, guid: 839a927f72e8eba48bc53f6d5785c4ef, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Electric
+    clip: {fileID: 8300000, guid: bf9b0bf5ae683af46bd352aaaa00c112, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bossmusic
+    clip: {fileID: 8300000, guid: dbf22a9bf0d10104e8b0469f4cd96b8d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Background
+    clip: {fileID: 8300000, guid: b23d92f417f45fc46b826c27bb2b2e20, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
