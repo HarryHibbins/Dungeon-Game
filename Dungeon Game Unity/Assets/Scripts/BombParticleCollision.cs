@@ -38,6 +38,7 @@ public class BombParticleCollision : MonoBehaviour
 
         if (other.layer == LayerMask.NameToLayer("Environment"))
         {
+            FindObjectOfType<AudioManager>().Play("Explosion");
             OnExplosion(position);
         }
     }

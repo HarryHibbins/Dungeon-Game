@@ -21,6 +21,7 @@ public class BossOneBehaviour : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Bossmusic");
         maxHealth = enemyController.health;
         attackOne.SetActive(false);
         attackTwo.SetActive(false);
@@ -40,6 +41,7 @@ public class BossOneBehaviour : MonoBehaviour
         attackOne.SetActive(true);
         yield return new WaitForSeconds(10);
         attackTwo.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("Electric");
         yield return new WaitForSeconds(10);
         attackOne.SetActive(false);
         attackTwo.SetActive(false);

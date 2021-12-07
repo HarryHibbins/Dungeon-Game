@@ -21,6 +21,7 @@ public class BossTwoBehaviour : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Bossmusic");
         maxHealth = enemyController.health;
         attackOne.SetActive(false);
         attackTwo.SetActive(false);

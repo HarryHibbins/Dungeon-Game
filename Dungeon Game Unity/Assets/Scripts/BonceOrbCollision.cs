@@ -20,8 +20,15 @@ public class BonceOrbCollision : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Playerdamage");
             playerHealth.Damage(bossScript.attackOneDamage);
             Debug.Log("PLAYER HIT");
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Environment"))
+        {
+            FindObjectOfType<AudioManager>().Play("Ballbounce");
+        }
     }
+
 }

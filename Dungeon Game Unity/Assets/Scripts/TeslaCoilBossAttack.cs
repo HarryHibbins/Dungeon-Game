@@ -55,6 +55,7 @@ public class TeslaCoilBossAttack : MonoBehaviour
                 }
                 else if (damageTimer >= timerToDamage)
                 {
+                    FindObjectOfType<AudioManager>().Play("Playerdamage");
                     playerHealth.Damage(bossScript.attackTwoDamage);
                     damageTimer = 0;
                 }
