@@ -46,7 +46,7 @@ public class EnemyAttacks : MonoBehaviour
                     {
                         Orb newOrb = Instantiate(orb, child.position, child.rotation) ;
                         newOrb.transform.parent = child.transform;
-                      
+                        FindObjectOfType<AudioManager>().Play("Enemyattack");
                     }
                 }
                 break;

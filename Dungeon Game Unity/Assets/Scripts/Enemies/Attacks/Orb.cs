@@ -50,12 +50,12 @@ public class Orb : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Enemymelee");
             playerHealth.Damage(1);
-            Debug.Log("Player hit by Orb");
+            Debug.LogWarning("Player Hit");
+            FindObjectOfType<AudioManager>().Play("Playerdamage");
             Destroy(gameObject);
-
-            
-        } 
+        }
         if (other.gameObject.layer == LayerMask.NameToLayer("Environment") || other.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             Destroy(gameObject);

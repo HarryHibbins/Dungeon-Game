@@ -39,6 +39,7 @@ public class EnemyController : MonoBehaviour
     {
         if (alive && hit)
         {
+            FindObjectOfType<AudioManager>().Play("Enemydamage");
             //Deal damage to the enemy if hit
             Debug.Log("Enemy hit: " + DamageDealt + "dmg");
             health -= DamageDealt;

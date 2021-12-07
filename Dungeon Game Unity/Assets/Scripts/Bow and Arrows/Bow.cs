@@ -75,6 +75,7 @@ public class Bow : MonoBehaviour
         //Release left click to fire arrow
         else if (Input.GetButtonUp("Fire1") && draw)
         {
+            FindObjectOfType<AudioManager>().Play("Bowfire");
             draw = false;
             fire = true;
             audioSrc.Stop();
