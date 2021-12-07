@@ -73,6 +73,7 @@ public class PauseMenu : MonoBehaviour
             else if (inRelicMenu)
             {
                 CloseRelicMenu();
+                PauseGame();
             }
             else if (inSettingsMenu)
             {
@@ -83,6 +84,18 @@ public class PauseMenu : MonoBehaviour
                 PauseGame();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Tab)) 
+        {
+            if (!inRelicMenu)
+            {
+                OpenRelicMenu();
+            }
+            else
+            {
+                CloseRelicMenu();
+            }
+        }
+        
     }
 
     public void PauseGame()
@@ -113,9 +126,9 @@ public class PauseMenu : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("UIbutton");
         inRelicMenu = false;
-        inPauseMenu = true;
+        inPauseMenu = false;
         relicPanel.SetActive(false);
-        pausePanel.SetActive(true);
+        //pausePanel.SetActive(true);
     }
 
     public void OpenSettingsMenu()
