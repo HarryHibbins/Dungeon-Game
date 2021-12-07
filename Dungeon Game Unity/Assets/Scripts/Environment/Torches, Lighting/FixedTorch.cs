@@ -50,6 +50,7 @@ public class FixedTorch : MonoBehaviour
                 //if (playerTorchHolder.Find("CurrentTorch").gameObject.GetComponent<FixedTorch>().hasTorch) 
                 if (player.GetComponent<PlayerInventory>().holdingTorch)
                 {
+                    Debug.Log("destroy current torch");
                     Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);
                 }
 

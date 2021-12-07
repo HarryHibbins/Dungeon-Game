@@ -306,7 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 1645474467}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &19974554
 Transform:
   m_ObjectHideFlags: 19
@@ -26173,6 +26172,7 @@ MonoBehaviour:
   TR_TreasureRoom: {fileID: 7142495746971183068, guid: c625ab86499f2714db07028184cfc50e, type: 3}
   rooms: []
   possibleTreasureRooms: []
+  roomCount: 0
   startWaitTime: 0
   waitTime: 2
   spawnedBoss: 0
@@ -26411,7 +26411,6 @@ GameObject:
   - component: {fileID: 932448656}
   - component: {fileID: 932448655}
   - component: {fileID: 932448657}
-  - component: {fileID: 932448658}
   - component: {fileID: 932448659}
   - component: {fileID: 932448660}
   - component: {fileID: 932448661}
@@ -26467,7 +26466,7 @@ MonoBehaviour:
   TreasureRoomChance: 20
   AdditionalDropLuck: 0
   Torch_MaxTimer: 30
-  Torch_MaxIntensity: 20
+  Torch_MaxIntensity: 200
 --- !u!4 &932448656
 Transform:
   m_ObjectHideFlags: 0
@@ -26499,7 +26498,7 @@ MonoBehaviour:
   - {fileID: -4973734387028869240, guid: 3875dad6977c3da4484ac9b5ca777553, type: 3}
   - {fileID: -905690159841262435, guid: b8a34abe3e62fd441ad31b51fb8568cf, type: 3}
   - {fileID: -921838784202127032, guid: 2481c71f5e0c6f14fab0ccf6eca1b8bd, type: 3}
-  - {fileID: -1580535799172915004, guid: 3421743d76f8e3c4fbe5ca50ad3cbf5e, type: 3}
+  - {fileID: -1580535799172915004, guid: 7a5930ea0706e944797426665cd6046b, type: 3}
   lootList:
   - element_name: QuiverNormal
     loot_name: 0
@@ -26754,7 +26753,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: WarbannerRelic
-    loot_name: 28
+    loot_name: 33
     loot_prefab: {fileID: 919132149155446097, guid: ddbac8a9132fc5343b76b063a2a17348, type: 3}
     loot_sprite: {fileID: 21300000, guid: c21ac051fef84dc4b8830254c03a28ff, type: 3}
     loot_rarity: 2
@@ -26764,7 +26763,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: RestorePotion
-    loot_name: 29
+    loot_name: 34
     loot_prefab: {fileID: 919132149155446097, guid: 037458cd65ef5344999a140f5865a3f0, type: 3}
     loot_sprite: {fileID: 21300000, guid: 83ccf9bbd4f72e34ea0f07268fac9d26, type: 3}
     loot_rarity: 1
@@ -26773,7 +26772,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: ArmourPiercingArrows
-    loot_name: 30
+    loot_name: 35
     loot_prefab: {fileID: 919132149155446097, guid: 2b0eded1c02e36a4a894604ac4a06e03, type: 3}
     loot_sprite: {fileID: 21300000, guid: 1206e3d8af5c18242945969cbc977494, type: 3}
     loot_rarity: 3
@@ -26782,7 +26781,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: PreservedInsectRelic
-    loot_name: 31
+    loot_name: 36
     loot_prefab: {fileID: 919132149155446097, guid: c112d04432717224aa9821720b00facc, type: 3}
     loot_sprite: {fileID: 21300000, guid: 7fb8e3fa032ca2445990722dee96274d, type: 3}
     loot_rarity: 5
@@ -26791,7 +26790,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: ExplorerRelic
-    loot_name: 32
+    loot_name: 37
     loot_prefab: {fileID: 919132149155446097, guid: 81b8c3743552e2d4c897db25a69c4891, type: 3}
     loot_sprite: {fileID: 21300000, guid: 01a6e4aaddf738541b91c50eb4f39d2b, type: 3}
     loot_rarity: 3
@@ -26903,7 +26902,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 4057461237739355192, guid: 459b1b903b674f4408c9205cde7f3431, type: 3}
     loot_sprite: {fileID: 21300000, guid: 56e630ec7bdf3194b8cf53209c14007b, type: 3}
     loot_rarity: 0
-    loot_type: 1
+    loot_type: 2
     loot_description: Armour
     isActive: 0
     isCollected: 0
@@ -26912,7 +26911,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 4057461237739355192, guid: 0a52a6722e2f51245930d3c3a58cce09, type: 3}
     loot_sprite: {fileID: 21300000, guid: 56e630ec7bdf3194b8cf53209c14007b, type: 3}
     loot_rarity: 1
-    loot_type: 1
+    loot_type: 2
     loot_description: Armour
     isActive: 0
     isCollected: 0
@@ -26921,7 +26920,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 4057461237739355192, guid: cd8a5d4d725178248ab01049c939d0ab, type: 3}
     loot_sprite: {fileID: 21300000, guid: 56e630ec7bdf3194b8cf53209c14007b, type: 3}
     loot_rarity: 2
-    loot_type: 1
+    loot_type: 2
     loot_description: Armour
     isActive: 0
     isCollected: 0
@@ -26930,7 +26929,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 4057461237739355192, guid: 860ee99b9d3af974ba1ca541b750133e, type: 3}
     loot_sprite: {fileID: 21300000, guid: 56e630ec7bdf3194b8cf53209c14007b, type: 3}
     loot_rarity: 3
-    loot_type: 1
+    loot_type: 2
     loot_description: Armour
     isActive: 0
     isCollected: 0
@@ -26939,7 +26938,7 @@ MonoBehaviour:
     loot_prefab: {fileID: 4057461237739355192, guid: aaa4383acb1a9b948b4b087e31459424, type: 3}
     loot_sprite: {fileID: 21300000, guid: 56e630ec7bdf3194b8cf53209c14007b, type: 3}
     loot_rarity: 4
-    loot_type: 1
+    loot_type: 2
     loot_description: Armour
     isActive: 0
     isCollected: 0
@@ -26956,24 +26955,10 @@ MonoBehaviour:
   lootdesc: Armour
   lootprefab: {fileID: 4057461237739355192, guid: aaa4383acb1a9b948b4b087e31459424, type: 3}
   lootsprite: {fileID: 21300000, guid: 56e630ec7bdf3194b8cf53209c14007b, type: 3}
-  loottype: 1
+  loottype: 2
   lootrarity: 4
   explorerRelicRooms: 0
   warbannerDamage: 0
---- !u!114 &932448658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932448654}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42059c954a1baf94caf78905e75ccdd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  flame: {fileID: 0}
 --- !u!114 &932448659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39908,6 +39893,46 @@ PrefabInstance:
     - target: {fileID: 1969966981564108437, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_LayerMask.m_Bits
       value: 375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.438
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.77748215
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.45912224
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.32802144
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.27772322
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 63.652
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 35.076
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -17.12
       objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_RootOrder
