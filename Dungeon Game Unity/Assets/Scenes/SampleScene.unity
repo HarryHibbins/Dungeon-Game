@@ -306,7 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 1645474467}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &19974554
 Transform:
   m_ObjectHideFlags: 19
@@ -26173,6 +26172,7 @@ MonoBehaviour:
   TR_TreasureRoom: {fileID: 7142495746971183068, guid: c625ab86499f2714db07028184cfc50e, type: 3}
   rooms: []
   possibleTreasureRooms: []
+  roomCount: 0
   startWaitTime: 0
   waitTime: 2
   spawnedBoss: 0
@@ -26466,7 +26466,7 @@ MonoBehaviour:
   TreasureRoomChance: 20
   AdditionalDropLuck: 0
   Torch_MaxTimer: 30
-  Torch_MaxIntensity: 20
+  Torch_MaxIntensity: 200
 --- !u!4 &932448656
 Transform:
   m_ObjectHideFlags: 0

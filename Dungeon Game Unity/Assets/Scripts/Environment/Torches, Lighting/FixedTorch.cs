@@ -50,6 +50,7 @@ public class FixedTorch : MonoBehaviour
                 //if (playerTorchHolder.Find("CurrentTorch").gameObject.GetComponent<FixedTorch>().hasTorch) 
                 if (player.GetComponent<PlayerInventory>().holdingTorch)
                 {
+                    Debug.Log("destroy current torch");
                     Destroy(playerTorchHolder.Find("CurrentTorch").gameObject);
                 }
 
@@ -68,7 +69,6 @@ public class FixedTorch : MonoBehaviour
                 transform.parent = playerTorchHolder;
                 //  transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
 
-                textBubble.GetComponent<TextMesh>().text = "";
                 held = true;
             }
 
@@ -104,10 +104,7 @@ public class FixedTorch : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canPickUpTorch = true;
-            if (!held) 
-            {
-                textBubble.GetComponent<TextMesh>().text = "E";    
-            }
+
         }
     }
 
@@ -118,7 +115,6 @@ public class FixedTorch : MonoBehaviour
         if (other.CompareTag("Player"))     
         {
             canPickUpTorch = false;
-            textBubble.GetComponent<TextMesh>().text = "";
         }
     }
 }

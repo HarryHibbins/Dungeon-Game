@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = System.Random;
 
 public class EnemyController : MonoBehaviour
 {
@@ -78,6 +79,24 @@ public class EnemyController : MonoBehaviour
         IEnumerator OnCompleteAnimation()
         {
             yield return new WaitForSeconds(1);
+            Vector3 pos = new Vector3(transform.position.x, 1.0f, transform.position.z);
+            
+            float randomValue = UnityEngine.Random.value;
+
+           
+            
+            if (randomValue <= 0.75f)
+            {
+                gameLoot.SpawnLoot(pos,gameLoot.getLootByTypeToSpawn(LootItems.LootType.Consumable));
+            }
+
+            if (randomValue <= 0.25f)
+            {
+                pos.x += 1.0f;
+                gameLoot.SpawnLoot(pos,gameLoot.getLootByRarityToSpawn(gameLoot.RandomRarity()));
+
+            }
+            
             Destroy(transform.parent.gameObject);
         }
 
