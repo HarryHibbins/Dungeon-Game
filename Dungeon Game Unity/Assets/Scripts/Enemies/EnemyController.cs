@@ -113,16 +113,30 @@ public class EnemyController : MonoBehaviour
             }
             case ArrowTypes.Effects.Burn:
             {
-                Debug.Log("Burningggggg");
                 yield return new WaitForSeconds(playerStats.ArrowEffects_BurnTime);
-                Debug.Log("Burningggggg After ");
-                onFire = false;
+                foreach (Transform child in transform)
+                {
+                    if (child.tag == "OnFire")
+                    {
+                        Destroy(child.gameObject);
+                        onFire = false;
+
+                    }
+                }
                 break;
             }
             case ArrowTypes.Effects.Slow:
             {
                 yield return new WaitForSeconds(playerStats.ArrowEffects_SlowTime);
-                onIce = false;
+                foreach (Transform child in transform)
+                {
+                    if (child.tag == "OnIce")
+                    {
+                        Destroy(child.gameObject);
+                        onIce = false;
+
+                    }
+                }
                 break;
             }
         }
@@ -225,7 +239,6 @@ public class EnemyController : MonoBehaviour
                     time = playerStats.ArrowEffects_BleedTime;
                     ps = Instantiate(bleedPS, effectSpawn.position, Quaternion.Euler(0, 0, 0));
                     ps.transform.parent = transform;
-                    onFire = true;
                     
                     break;
                 }
@@ -247,8 +260,16 @@ public class EnemyController : MonoBehaviour
             case ArrowTypes.Effects.Slow:
                 {
                     time = playerStats.ArrowEffects_SlowTime;
-                    ps = Instantiate(icePS, effectSpawn.position, Quaternion.Euler(-90, 0, 0));
-                    ps.transform.parent = transform;
+                    if (!onIce)
+                    {
+                        ps = Instantiate(icePS, effectSpawn.position, Quaternion.Euler(-90, 0, 0));
+                        ps.transform.parent = transform;
+                        onIce = true;
+                        StartCoroutine(CheckForEffect(ArrowTypes.Effects.Slow));
+
+                    }
+
+                    
                     break;
                 }
         }
@@ -277,7 +298,8 @@ public class EnemyController : MonoBehaviour
             progress++;
         }
 
-        Destroy(ps);
+        
+
         agent.speed = enemySpeed;
     }
 }
