@@ -24,6 +24,7 @@ public class RoomTemplates : MonoBehaviour
 
     public List<GameObject> rooms;
     public List<GameObject> possibleTreasureRooms;
+    public int roomCount;
 
     public float startWaitTime;
     public float waitTime;

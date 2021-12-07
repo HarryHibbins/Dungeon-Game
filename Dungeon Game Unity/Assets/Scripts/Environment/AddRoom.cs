@@ -19,5 +19,6 @@ public class AddRoom : MonoBehaviour
     private void Start()
     {
         templates.rooms.Add(this.gameObject);
+        templates.roomCount = templates.rooms.Count;
     }
 }
