@@ -138,7 +138,7 @@ public class CameraPosition : MonoBehaviour
                 {
                     if (child.tag == ("Enemy"))
                     {
-                        child.GetComponent<EnemyAI>().canSee = false;
+                        child.GetComponentInChildren<EnemyAI>().canSee = false;
 
                     }
                 }

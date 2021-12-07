@@ -75,7 +75,7 @@ public class EnemyController : MonoBehaviour
         IEnumerator OnCompleteAnimation()
         {
             yield return new WaitForSeconds(1);
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 

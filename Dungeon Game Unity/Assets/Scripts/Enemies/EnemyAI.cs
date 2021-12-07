@@ -64,11 +64,12 @@ public class EnemyAI : MonoBehaviour
             playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
             playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-            if (!playerInSightRange && !playerInAttackRange)
+            if (/*!playerInSightRange && !playerInAttackRange || playerInSightRange &&*/ !canSee)
             {
-
                 Patroling();
+
             }
+
 
             if (playerInSightRange && !playerInAttackRange && canSee)
             {
@@ -98,11 +99,15 @@ public class EnemyAI : MonoBehaviour
 
                 }
 
+
                 Debug.DrawRay(transform.position + new Vector3(0, 0.8f, 0),
                     player.transform.position - transform.position);
 
             }
+            
+            
         }
+        
     }
     private void Patroling()
     {
@@ -121,6 +126,8 @@ public class EnemyAI : MonoBehaviour
         {
             walkPointSet = false;
         }
+
+        
     }
     private void SearchWalkPoint()
     {
@@ -155,6 +162,7 @@ public class EnemyAI : MonoBehaviour
             enemyAttack.Attack();
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+
     }
     private void ResetAttack()
     {

@@ -1,10 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class TorchSpawning : MonoBehaviour
 {
     private GameObject flame;
+    [SerializeField] CameraPosition cameraPosition;
+    [SerializeField] private GameObject room;
+    private bool torchesSpawned;
 
     private int numOfFlames;
     
@@ -16,9 +21,26 @@ public class TorchSpawning : MonoBehaviour
     private void Awake()
     {
         flame = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Flame>().flame;
+        room = transform.parent.gameObject;
+        cameraPosition = room.GetComponentInChildren<CameraPosition>();
+        if (transform.parent.name == "Entry Room")
+        {
+            spawnTorches();
+        }
+    }
+    
+    private void Update()
+    {
+        if (cameraPosition.hasVisited && !torchesSpawned && transform.parent.name != "Entry Room" /*|| transform.parent.name != "Closed"*/)
+        {
+            spawnTorches();
+        }
+
+
+
     }
 
-    void Start()
+    private void spawnTorches()
     {
         foreach (Transform child in transform)
         {
@@ -43,7 +65,14 @@ public class TorchSpawning : MonoBehaviour
                 }
             }
 
-        }  
+        }
+
+        torchesSpawned = true;
+    }
+
+    void Start()
+    {
+        
     }
 
 }

@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 1645474467}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &19974554
 Transform:
   m_ObjectHideFlags: 19
@@ -67200,8 +67201,8 @@ GameObject:
   - component: {fileID: 2690677319519554180}
   - component: {fileID: 2690677319519554179}
   - component: {fileID: 2690677319519554184}
-  - component: {fileID: 2690677319519554183}
   - component: {fileID: 2690677319519554185}
+  - component: {fileID: 2690677319519554183}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
