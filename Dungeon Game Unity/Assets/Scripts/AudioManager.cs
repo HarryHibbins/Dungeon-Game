@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
         //FindObjectOfType<AudioManager>().Play("Enemysteps"); Currently glitched
         //FindObjectOfType<AudioManager>().Play("Trapdoor"); Not sure on where code is / when to play it
         //FindObjectOfType<AudioManager>().Play("Electric"); Not sure on where code is / when to play it
-        //FindObjectOfType<AudioManager>().Play("Bossmusic"); Not sure on where code is / when to play it
+        //FindObjectOfType<AudioManager>().Play("Bossmusic"); //Not sure on where code is / when to play it
     }
 
     public void Play (string name)

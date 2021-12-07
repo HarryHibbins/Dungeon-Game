@@ -18,6 +18,7 @@ public class LootPickUp : MonoBehaviour
     {
         if(other.gameObject.tag == "PlayerPickUp")
         {
+            FindObjectOfType<AudioManager>().Play("Ding");
             if (gl_script.getLootByName(LootName).loot_type == LootItems.LootType.Relic)
             {
                 gl_script.getLootByName(LootName).isCollected = true;
