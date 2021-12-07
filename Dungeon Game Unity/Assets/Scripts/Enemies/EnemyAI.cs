@@ -78,6 +78,8 @@ public class EnemyAI : MonoBehaviour
 
             if (playerInSightRange && playerInAttackRange && canSee)
             {
+                Debug.DrawRay(transform.position + new Vector3(0, 0.8f, 0),
+                    player.transform.position - transform.position);
                 RaycastHit hit;
                 //Plus 0.8 for the height orb
                 if (Physics.Raycast(transform.position + new Vector3(0, 0.8f, 0),
@@ -100,8 +102,7 @@ public class EnemyAI : MonoBehaviour
                 }
 
 
-                Debug.DrawRay(transform.position + new Vector3(0, 0.8f, 0),
-                    player.transform.position - transform.position);
+                
 
             }
             
@@ -150,7 +151,7 @@ public class EnemyAI : MonoBehaviour
     {
         agent.SetDestination(transform.position);
 
-        if (enemyAttack.attackType == EnemyAttacks.AttackType.orb)
+        if (enemyAttack.attackType == EnemyAttacks.AttackType.orb || enemyAttack.attackType == EnemyAttacks.AttackType.threeorb)
         {
             transform.LookAt(player);
             

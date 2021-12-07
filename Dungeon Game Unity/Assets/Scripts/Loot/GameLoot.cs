@@ -558,11 +558,11 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.HealthPotion)
         {
-            playerHealth.Heal(playerHealth.GetMaxHealth());
+            playerHealth.Heal(4);
         }
         else if (loot == LootItems.Loot.DungeonFood)
         {
-            playerHealth.Heal(4);
+            playerHealth.Heal(1);
         }
         else if (loot == LootItems.Loot.AncientHelm)
         {
@@ -761,9 +761,9 @@ public class GameLoot : MonoBehaviour
     IEnumerator RestorePotion()
     {
         yield return new WaitForSeconds(5);
-        playerHealth.Heal(1);
+        playerHealth.Heal(2);
         yield return new WaitForSeconds(5);
-        playerHealth.Heal(1);
+        playerHealth.Heal(2);
         yield break;
     }
 }
