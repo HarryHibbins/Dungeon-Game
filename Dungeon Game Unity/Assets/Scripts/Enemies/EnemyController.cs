@@ -22,10 +22,13 @@ public class EnemyController : MonoBehaviour
 
     public GameObject firePS;
     public GameObject icePS;
+    public GameObject bleedPS;
     [SerializeField]
     private Transform effectSpawn;
     private GameObject ps;
 
+    public bool onFire;
+    public bool onIce;
     private void Awake()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
@@ -77,8 +80,35 @@ public class EnemyController : MonoBehaviour
             yield return new WaitForSeconds(1);
             Destroy(transform.parent.gameObject);
         }
+
+        
     }
 
+    IEnumerator CheckForEffect(ArrowTypes.Effects effect)
+    {
+        switch (effect)
+        {
+            case ArrowTypes.Effects.NONE:
+            {
+                break;
+            }
+            case ArrowTypes.Effects.Burn:
+            {
+                Debug.Log("Burningggggg");
+                yield return new WaitForSeconds(playerStats.ArrowEffects_BurnTime);
+                Debug.Log("Burningggggg After ");
+                onFire = false;
+                break;
+            }
+            case ArrowTypes.Effects.Slow:
+            {
+                yield return new WaitForSeconds(playerStats.ArrowEffects_SlowTime);
+                onIce = false;
+                break;
+            }
+        }
+        yield break;
+    }
     private void OnTriggerEnter(Collider other)
     {
         //If enemy is hit by the arrow round the damage value from the arrow worked out with the multiplier 
@@ -89,7 +119,10 @@ public class EnemyController : MonoBehaviour
             //Stop the arrow 
             arrow.move = false;
             arrow.GetComponent<Transform>().parent = transform;
-
+            
+            ps = Instantiate(bleedPS, effectSpawn.position, Quaternion.Euler(0, 0, 0));
+            ps.transform.parent = transform;
+            
             //arrow.arrowDespawnTimer = 2.0f;
             Destroy(arrow.gameObject);
 
@@ -128,10 +161,7 @@ public class EnemyController : MonoBehaviour
                     }
                     case ArrowTypes.Arrows.Fire:
                     {
-                        if (effect != ArrowTypes.Effects.Burn)
-                        {
-                            effect = ArrowTypes.Effects.Burn;
-                        }
+                        effect = ArrowTypes.Effects.Burn;
                         break;
                     }
                     case ArrowTypes.Arrows.Ice:
@@ -167,19 +197,32 @@ public class EnemyController : MonoBehaviour
             case ArrowTypes.Effects.NONE:
                 {
                     time = 0;
+                    ps = Instantiate(bleedPS, effectSpawn.position, Quaternion.Euler(0, 0, 0));
+                    ps.transform.parent = transform;
                     break;
                 }
             case ArrowTypes.Effects.Bleed:
                 {
                     time = playerStats.ArrowEffects_BleedTime;
+                    ps = Instantiate(bleedPS, effectSpawn.position, Quaternion.Euler(0, 0, 0));
+                    ps.transform.parent = transform;
+                    onFire = true;
+                    
                     break;
                 }
             case ArrowTypes.Effects.Burn:
                 {
                     time = playerStats.ArrowEffects_BurnTime;
-                    ps = Instantiate(firePS, effectSpawn.position, Quaternion.Euler(-90, 0, 0));
-                    ps.transform.parent = transform;
-                    Debug.Log("Spawned Effect");
+                    
+                    if (!onFire)
+                    {
+                        ps = Instantiate(firePS, effectSpawn.position, Quaternion.Euler(-90, 0, 0));
+                        ps.transform.parent = transform;
+                        onFire = true;
+                        StartCoroutine(CheckForEffect(ArrowTypes.Effects.Burn));
+                    }
+                    
+                    
                     break;
                 }
             case ArrowTypes.Effects.Slow:
@@ -190,7 +233,7 @@ public class EnemyController : MonoBehaviour
                     break;
                 }
         }
-        while (progress != time)
+        while (progress <= time)
         {
             switch (effect)
             {
@@ -202,13 +245,11 @@ public class EnemyController : MonoBehaviour
                 case ArrowTypes.Effects.Burn:
                     {
                         health -= playerStats.ArrowEffects_BurnDamage;
-                        
                         break;
                     }
                 case ArrowTypes.Effects.Slow:
                     {
                         agent.speed = halfSpeed;
-                       
                         break;
                     }
             }
@@ -216,6 +257,7 @@ public class EnemyController : MonoBehaviour
             yield return new WaitForSeconds(1);
             progress++;
         }
+
         Destroy(ps);
         agent.speed = enemySpeed;
     }

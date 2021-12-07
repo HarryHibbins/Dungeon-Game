@@ -680,6 +680,7 @@ MonoBehaviour:
   alive: 0
   firePS: {fileID: 5020449609901880840, guid: 663b269e9bf95424cb814ed235217d85, type: 3}
   icePS: {fileID: 5020449609901880840, guid: c39839a216fdde044bd99dd9a81a2f53, type: 3}
+  bleedPS: {fileID: 1313271750565757734, guid: 705c2affc87157b4fbc0e3a35118da1c, type: 3}
   effectSpawn: {fileID: 0}
 --- !u!114 &3531886772187114746
 MonoBehaviour:
