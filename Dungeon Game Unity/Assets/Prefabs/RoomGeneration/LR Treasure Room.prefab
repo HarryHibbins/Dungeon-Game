@@ -1628,7 +1628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6885fe0e5eb187245993a9659b6526bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minEnemiesInRoom: 4
+  minEnemiesInRoom: 2
+  maxEnemiesInRoom: 3
   spawnChance: 0.3
 --- !u!1 &5431848116541666141
 GameObject:

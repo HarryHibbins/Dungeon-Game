@@ -27,6 +27,9 @@ public class PlayerController: MonoBehaviour
     private PlayerStats playerStats;
 
     private PlayerHealth playerHealth;
+    [SerializeField] private ParticleSystem ps;
+
+
 
     public Vector3 mousePos;
     private void Awake()
@@ -44,6 +47,7 @@ public class PlayerController: MonoBehaviour
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
 
         audioSrc = GetComponent<AudioSource>();
+
     }
 
     void Start()
@@ -77,10 +81,19 @@ public class PlayerController: MonoBehaviour
                 audioSrc.Play();
             }
         }
+        
 
         else
             audioSrc.Stop();
 
+        if (playerInventory.getSelectedArrowAmmo() >= 1)
+        {
+            ps.gameObject.SetActive(true);
+        }
+        else
+        {
+            ps.gameObject.SetActive(false);
+        }
 
 
         //Create raycast for players aim
@@ -117,6 +130,7 @@ public class PlayerController: MonoBehaviour
     {
         if (!playerHealth.dead)
         {
+           
             if (playerInventory.equippedArrow != ArrowTypes.Arrows.Speed)
             {
                 playerInventory.equippedArrow += 1;
@@ -125,6 +139,76 @@ public class PlayerController: MonoBehaviour
             {
                 playerInventory.equippedArrow = 0;
             }
+            
+            foreach (Transform child in transform)
+            {
+                if (child.name == "Current Arrow PS")
+                {
+                    ps = child.GetComponent<ParticleSystem>();
+                }
+            }
+
+
+             switch (playerInventory.equippedArrow)
+             {
+                   
+                 
+
+                 case ArrowTypes.Arrows.Normal:
+                 {
+
+
+                     var col = ps.colorOverLifetime;
+                     col.enabled = true;
+                     col.color = new Color(255, 255, 255, 100);
+
+
+                     break;
+                 }
+                 case ArrowTypes.Arrows.Fire:
+                 {
+
+
+                     var col = ps.colorOverLifetime;
+                     col.enabled = true;
+                     col.color = new Color(255, 0, 0, 100);
+
+                     break;
+                 }
+                 case ArrowTypes.Arrows.Ice:
+                 {
+
+
+                     var col = ps.colorOverLifetime;
+                     col.enabled = true;
+                     col.color = new Color(0, 255, 255, 100);
+
+
+                     break;
+                 }
+                 case ArrowTypes.Arrows.Explosive:
+                 {
+
+
+                     var col = ps.colorOverLifetime;
+                     col.enabled = true;
+                     col.color = new Color(255, 255, 0, 100);
+
+                     break;
+                 }
+                 case ArrowTypes.Arrows.Speed:
+                 {
+
+
+                     var col = ps.colorOverLifetime;
+                     col.enabled = true;
+                     col.color = new Color(0, 255, 0, 100);
+
+
+
+                     break;
+                 }
+             }
         }
     }
 }

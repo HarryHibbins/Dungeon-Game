@@ -9,7 +9,8 @@ public class EnemySpawning : MonoBehaviour
 
     private EnemyTypes enemyTypes;
 
-    [SerializeField] private int minEnemiesInRoom = 2;
+    [SerializeField] private int minEnemiesInRoom = 1;
+    [SerializeField] private int maxEnemiesInRoom = 3;
     
     //Chance of spawning enemies per spawn point between 0 and 1
     [SerializeField] private float spawnChance = 0.5f;
@@ -28,7 +29,7 @@ public class EnemySpawning : MonoBehaviour
             {
                 float randomValue = Random.value;
               
-                if ( randomValue <= spawnChance ) 
+                if ( randomValue <= spawnChance && numOfEnemies < maxEnemiesInRoom) 
                 {
                    GameObject newenemy = Instantiate(getEnemyType(), child.position, child.rotation);
                    numOfEnemies++;
