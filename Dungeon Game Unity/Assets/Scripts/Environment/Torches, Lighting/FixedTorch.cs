@@ -88,6 +88,7 @@ public class FixedTorch : MonoBehaviour
 
             if (torchTimer < 0) 
             {
+                FindObjectOfType<AudioManager>().Play("Torchout");
                 Destroy(this.gameObject);
                 hasTorch = false;
                 player.GetComponent<PlayerInventory>().holdingTorch = false;

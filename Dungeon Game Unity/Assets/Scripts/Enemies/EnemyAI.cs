@@ -130,6 +130,7 @@ public class EnemyAI : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        FindObjectOfType<AudioManager>().Play("Enemysteps");
     }
     private void AttackPlayer()
     {

@@ -7,8 +7,9 @@ public class Arrow : MonoBehaviour
 {
     public GameObject explosionPS;
     private bool hasExploded = false;
-    public float drawBackMultiplier; 
-    
+    public float drawBackMultiplier;
+
+    public float arrowtype;
     public float actualspeed;
     public float actualDamage;
     private float arrowTypeDamageBonus;
@@ -68,8 +69,7 @@ public class Arrow : MonoBehaviour
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Normal;
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Normal;
-                
-                
+
                 var col = ps.colorOverLifetime;
                 col.enabled = true;
                 col.color = new Color(255, 255, 255, 100);
@@ -81,7 +81,7 @@ public class Arrow : MonoBehaviour
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Fire;
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Fire;
-                
+
                 var col = ps.colorOverLifetime;
                 col.enabled = true;
                 col.color = new Color(255, 0, 0, 100);
@@ -92,7 +92,7 @@ public class Arrow : MonoBehaviour
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Ice;
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Ice;
-                
+
                 var col = ps.colorOverLifetime;
                 col.enabled = true;
                 col.color = new Color(0, 255, 255, 100);
@@ -115,8 +115,7 @@ public class Arrow : MonoBehaviour
             {
                 arrowTypeDamageBonus = playerStats.ArrowDamage_Speed;
                 arrowTypeSpeedBonus = playerStats.ArrowSpeed_Speed;
-                
-                
+
                 var col = ps.colorOverLifetime;
                 col.enabled = true;
                 col.color = new Color(0, 255, 0, 100);
@@ -172,6 +171,7 @@ public class Arrow : MonoBehaviour
             {
                 if (c.tag == "Enemy")
                 {
+                    FindObjectOfType<AudioManager>().Play("Explosion");
                     c.GetComponent<EnemyController>().health -= playerStats.ArrowDamage_Explosive;
                     Debug.Log("Enemy HIT");
                 }
@@ -192,7 +192,12 @@ public class Arrow : MonoBehaviour
             hasLanded = true;
             if (selectedArrow == ArrowTypes.Arrows.Explosive)
             {
+                FindObjectOfType<AudioManager>().Play("Explosion");
                 SpawnExplosion();
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Play("Arrowimpact");
             }
         }
         //If the arrow has hit the environment, and the player walks over it, 50% chance to pick it up, destroy gameobject. 

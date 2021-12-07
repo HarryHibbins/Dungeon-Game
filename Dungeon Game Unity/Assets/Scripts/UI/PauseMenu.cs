@@ -65,6 +65,7 @@ public class PauseMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            FindObjectOfType<AudioManager>().Play("UIbutton");
             if (inPauseMenu)
             {
                 ResumeGame();
