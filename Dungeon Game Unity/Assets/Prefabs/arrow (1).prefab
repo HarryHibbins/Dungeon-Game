@@ -102,9 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPS: {fileID: 1313271750565757734, guid: 77213faf385cb2343aa5a0e604d4aa51, type: 3}
   drawBackMultiplier: 2
+  arrowtype: 0
   actualspeed: 0
   actualDamage: 0
-  gravity: 1.5
+  gravity: 1
   arrowDespawnTimer: 30
   selectedArrow: 0
   move: 0
