@@ -24,8 +24,10 @@ public class OpenChest : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact") && !opened)
             {
+                FindObjectOfType<AudioManager>().Play("Chestopen");
                 opened = true;
                 StartCoroutine(OpenLootChest());
+                FindObjectOfType<AudioManager>().Play("Lootsound");
             }
         }
     }

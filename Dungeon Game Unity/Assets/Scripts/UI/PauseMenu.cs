@@ -94,6 +94,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        FindObjectOfType<AudioManager>().Play("UIbutton");
         pausePanel.SetActive(false);
         inPauseMenu = false;
         Time.timeScale = 1;
@@ -101,6 +102,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenRelicMenu()
     {
+        FindObjectOfType<AudioManager>().Play("UIbutton");
         inPauseMenu = false;
         inRelicMenu = true;
         pausePanel.SetActive(false);
@@ -109,6 +111,7 @@ public class PauseMenu : MonoBehaviour
 
     public void CloseRelicMenu()
     {
+        FindObjectOfType<AudioManager>().Play("UIbutton");
         inRelicMenu = false;
         inPauseMenu = true;
         relicPanel.SetActive(false);
@@ -117,6 +120,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenSettingsMenu()
     {
+        FindObjectOfType<AudioManager>().Play("UIbutton");
         inPauseMenu = false;
         inSettingsMenu = true;
         pausePanel.SetActive(false);
@@ -125,6 +129,7 @@ public class PauseMenu : MonoBehaviour
 
     public void CloseSettingsMenu()
     {
+        FindObjectOfType<AudioManager>().Play("UIbutton");
         inPauseMenu = true;
         inSettingsMenu = false;
         pausePanel.SetActive(true);
