@@ -52,6 +52,7 @@ public class EnemyController : MonoBehaviour
             alive = false;
             
             anim.SetTrigger("Dead");
+            agent.speed = 0;
 
             StartCoroutine(OnCompleteAnimation());
 

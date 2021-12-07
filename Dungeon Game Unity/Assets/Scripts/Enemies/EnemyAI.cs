@@ -46,7 +46,6 @@ public class EnemyAI : MonoBehaviour
         EnemyController = GetComponent<EnemyController>();
     }
 
-
     private void Update()
     {
         velocity = agent.velocity.magnitude / agent.speed;

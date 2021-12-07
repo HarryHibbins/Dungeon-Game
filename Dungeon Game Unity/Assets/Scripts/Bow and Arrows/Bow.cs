@@ -29,7 +29,7 @@ public class Bow : MonoBehaviour
     public float drawBack;
     [SerializeField] private float maxDrawBack;
 
-   
+
     private int ammoCheck;
 
     private void Awake()
@@ -46,6 +46,7 @@ public class Bow : MonoBehaviour
 
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
+        
     }
 
     void Start()
@@ -87,7 +88,8 @@ public class Bow : MonoBehaviour
             playerController.currentMoveSpeed = playerStats.PM_DrawSpeed;
             playerAnimator.SetBool("Aiming", true);
         }
-        Debug.DrawLine(firePoint.position,new Vector3(playerController.mousePos.x, 0.5f,playerController.mousePos.z) );
+
+        //Debug.DrawLine(firePoint.position,new Vector3(playerController.mousePos.x, 0.5f,playerController.mousePos.z) );
         if (fire)
         {
             foreach(Transform child in drawPoint)
