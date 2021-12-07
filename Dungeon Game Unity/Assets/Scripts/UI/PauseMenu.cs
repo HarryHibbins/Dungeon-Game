@@ -84,7 +84,7 @@ public class PauseMenu : MonoBehaviour
                 PauseGame();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Tab)) 
+        if (Input.GetKeyDown(KeyCode.Tab) && !inPauseMenu && !inSettingsMenu) 
         {
             if (!inRelicMenu)
             {
