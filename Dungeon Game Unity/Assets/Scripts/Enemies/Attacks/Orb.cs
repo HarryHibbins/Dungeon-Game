@@ -50,7 +50,6 @@ public class Orb : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            FindObjectOfType<AudioManager>().Play("Enemymelee");
             playerHealth.Damage(1);
             Debug.LogWarning("Player Hit");
             FindObjectOfType<AudioManager>().Play("Playerdamage");

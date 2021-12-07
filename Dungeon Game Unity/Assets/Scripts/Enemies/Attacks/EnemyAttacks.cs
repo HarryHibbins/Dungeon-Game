@@ -89,10 +89,12 @@ public class EnemyAttacks : MonoBehaviour
 
             if (inMeleeAttack && inSwordHitBox)
             {
+                FindObjectOfType<AudioManager>().Play("Enemymelee");
                 inSwordHitBox = false;
                 inMeleeAttack = false;
                 Debug.Log("Player hit by sword");
                 playerHealth.Damage(1);
+                FindObjectOfType<AudioManager>().Play("Playerdamage");
             }   
         }
         
