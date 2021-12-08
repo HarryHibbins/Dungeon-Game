@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public bool inRelicMenu = false;
     public bool inSettingsMenu = false;
     public bool inControlsMenu = false;
+    public bool inDeathMenu = false;
 
     private bool fadeStart = false;
 
@@ -20,6 +22,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsPanel;
     public GameObject controlsPanel;
     public GameObject startPanel;
+    public GameObject deathPanel;
+    public Button deathButton;
     public Text relicDesc;
 
     private PlayerController playerController;
@@ -36,6 +40,7 @@ public class PauseMenu : MonoBehaviour
     {
         fadeStart = true;
         startPanel.SetActive(true);
+        deathButton.onClick.AddListener(ReturnToMenu);
     }
 
     private void Update()
@@ -85,6 +90,10 @@ public class PauseMenu : MonoBehaviour
             {
                 CloseControlsMenu();
             }
+            /*else if (inDeathMenu) 
+            {
+                ReturnToMenu();            
+            }*/
             else
             {
                 PauseGame();
@@ -100,6 +109,12 @@ public class PauseMenu : MonoBehaviour
             {
                 CloseRelicMenu();
             }
+        }
+
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().dead) 
+        {
+            PauseGame();
+            OpenDeathMenu();                    
         }
         
     }
@@ -153,6 +168,15 @@ public class PauseMenu : MonoBehaviour
         inSettingsMenu = false;
         pausePanel.SetActive(true);
         settingsPanel.SetActive(false);
+    }
+
+    public void OpenDeathMenu()
+    {
+        FindObjectOfType<AudioManager>().Play("UIbutton");
+        inPauseMenu = false;
+        inDeathMenu = true;
+        pausePanel.SetActive(false);
+        deathPanel.SetActive(true);
     }
 
     public void AddToRelicUI(LootItems loot)
@@ -215,4 +239,12 @@ public class PauseMenu : MonoBehaviour
         pausePanel.SetActive(true);
         controlsPanel.SetActive(false);
     }
+
+    // Call this with the button on the death screen
+    public void ReturnToMenu() 
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    
 }
