@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 1645474467}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &19974554
 Transform:
   m_ObjectHideFlags: 19
@@ -30145,6 +30146,10 @@ PrefabInstance:
     - target: {fileID: 3023848132740938928, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228355322085673361, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
+      propertyPath: m_TagString
+      value: CameraPositions
       objectReference: {fileID: 0}
     - target: {fileID: 8632693054780121758, guid: 1d4a345fc601b53498e3aeccbb5df217, type: 3}
       propertyPath: m_RootOrder
