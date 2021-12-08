@@ -545,6 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadePanel: {fileID: 831024932}
+  controlsPanel: {fileID: 0}
 --- !u!1 &428039862
 GameObject:
   m_ObjectHideFlags: 0
@@ -16540,6 +16541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1745019859016640553, guid: b5acee147021ff54c92998705b36d489, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1626b3ddfd683ac4b8e0950297c950e0, type: 3}
     - target: {fileID: 1745019859016640553, guid: b5acee147021ff54c92998705b36d489, type: 3}
       propertyPath: sounds.Array.data[15].loop
       value: 1

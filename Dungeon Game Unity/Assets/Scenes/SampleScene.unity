@@ -306,7 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 1645474467}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &19974554
 Transform:
   m_ObjectHideFlags: 19
@@ -38006,6 +38005,10 @@ PrefabInstance:
       propertyPath: sounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: 85f086eb7cb42014ca0aa01972fe40f1, type: 3}
+    - target: {fileID: 1745019859016640553, guid: b5acee147021ff54c92998705b36d489, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1626b3ddfd683ac4b8e0950297c950e0, type: 3}
     - target: {fileID: 1745019859016640553, guid: b5acee147021ff54c92998705b36d489, type: 3}
       propertyPath: sounds.Array.data[13].clip
       value: 
