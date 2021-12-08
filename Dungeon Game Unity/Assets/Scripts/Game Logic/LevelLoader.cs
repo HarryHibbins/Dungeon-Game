@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEditor.Networking.PlayerConnection;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -180,13 +181,18 @@ public class LevelLoader : MonoBehaviour
         }*/
 
 
-        cameraTransform = camTrans;
-        /*Quaternion temp = cameraTransform.rotation;
-        temp.y = 0;
-        temp.x = 54;
-        cameraTransform.rotation = temp;*/
+        
         camposscript = StartRoom.GetComponentInChildren<CameraPosition>();
         camposscript.inRoom = true;
+        
+        
+        /*cameraTransform = camposscript
+            .cameraPositions[player.GetComponent<PlayerController>().CameraPos];*/
+
+        cameraTransform.position = new Vector3(2, 15, -12);
+        Quaternion temp = Quaternion.Euler(54.5f,0,0);
+        player.GetComponent<PlayerController>().CameraPos = 0;
+        cameraTransform.rotation = temp;
     }
 
     IEnumerator LoadingScreen()

@@ -27,7 +27,7 @@ public class CameraPosition : MonoBehaviour
 
     //public GameObject fogobj;
     //public ParticleSystem fog;
-    [SerializeField] Transform[] cameraPositions;
+    public Transform[] cameraPositions;
     private PlayerController playerController;
     
 
