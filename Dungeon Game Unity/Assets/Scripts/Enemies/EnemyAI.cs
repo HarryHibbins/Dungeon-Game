@@ -66,13 +66,14 @@ public class EnemyAI : MonoBehaviour
 
             if (/*!playerInSightRange && !playerInAttackRange || playerInSightRange &&*/ !canSee)
             {
+                //Debug.Log("Patroling");
                 Patroling();
-
             }
 
 
             if (playerInSightRange && !playerInAttackRange && canSee)
             {
+                //Debug.Log("ChasePlayer");
                 ChasePlayer();
             }
 
