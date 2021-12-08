@@ -25,9 +25,12 @@ public class MainMenu : MonoBehaviour
         inControlsMenu = true;
     }
 
-    private void Start()
+    private void Awake()
     {
+        fadeout = false;
+        inControlsMenu = false;
         fadePanel.SetActive(false);
+        Debug.Log("Now");
         Color panelcol = fadePanel.GetComponent<Image>().color;
         panelcol.a = 0;
         fadePanel.GetComponent<Image>().color = panelcol;
