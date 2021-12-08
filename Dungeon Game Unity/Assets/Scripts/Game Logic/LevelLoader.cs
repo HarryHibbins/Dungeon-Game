@@ -7,6 +7,7 @@ using System;
 public class LevelLoader : MonoBehaviour
 {
     public GameObject startRoom;
+    public RoomTemplates templates;
     private GameObject player;
     private CameraPosition camposscript;
     private PauseMenu pauseMenu;
@@ -37,6 +38,7 @@ public class LevelLoader : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
+        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
     }
 
     void Update()
@@ -152,7 +154,11 @@ public class LevelLoader : MonoBehaviour
             Destroy(boss.gameObject);
         }
 
+        Destroy(templates.boss);
+        templates.spawnedBoss = false;
+        templates.waitTime = templates.startWaitTime;
         GameObject StartRoom = Instantiate(startRoom, new Vector3(0, 0, 0), Quaternion.identity);
+        startRoom.GetComponentInChildren<RoomSpawner>().waitTime = 4;
         player.transform.position = StartRoom.transform.position;
 
         foreach (Transform child in StartRoom.transform)

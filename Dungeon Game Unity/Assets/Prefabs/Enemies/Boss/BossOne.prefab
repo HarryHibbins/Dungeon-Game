@@ -85,6 +85,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1387158055837910496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8127765729210101077}
+  m_Layer: 0
+  m_Name: SpawnEffectPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8127765729210101077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387158055837910496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5137660250468696073}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2995183015045331788
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +302,7 @@ GameObject:
   - component: {fileID: 5478473273046244018}
   - component: {fileID: 7703892804754835644}
   - component: {fileID: 4761005448476541718}
+  - component: {fileID: -4588128994532003126}
   m_Layer: 0
   m_Name: BossOne
   m_TagString: Boss
@@ -294,6 +325,7 @@ Transform:
   - {fileID: 7640970395198394986}
   - {fileID: 7640970395208073185}
   - {fileID: 7640970394568701570}
+  - {fileID: 8127765729210101077}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -386,9 +418,12 @@ MonoBehaviour:
   health: 1000
   effect: 0
   alive: 0
-  firePS: {fileID: 0}
-  icePS: {fileID: 0}
-  effectSpawn: {fileID: 0}
+  firePS: {fileID: 5020449609901880840, guid: 663b269e9bf95424cb814ed235217d85, type: 3}
+  icePS: {fileID: 5020449609901880840, guid: c39839a216fdde044bd99dd9a81a2f53, type: 3}
+  bleedPS: {fileID: 1313271750565757734, guid: 705c2affc87157b4fbc0e3a35118da1c, type: 3}
+  effectSpawn: {fileID: 8127765729210101077}
+  onFire: 0
+  onIce: 0
 --- !u!64 &4761005448476541718
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -403,6 +438,28 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3808482991751739692, guid: 764b187303671d14da946520fdc0837b, type: 3}
+--- !u!195 &-4588128994532003126
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478473273046244019}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.18
+  m_BaseOffset: -0.06
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &6457177293233283805
 GameObject:
   m_ObjectHideFlags: 0
