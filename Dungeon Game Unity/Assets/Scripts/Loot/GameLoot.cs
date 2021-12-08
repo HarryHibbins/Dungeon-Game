@@ -562,7 +562,7 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.AncientHelm)
         {
-            //Apply chance to ignore damage
+            getLootByName(loot).isActive = true;
         }
         else if (loot == LootItems.Loot.CommonArmour)
         {

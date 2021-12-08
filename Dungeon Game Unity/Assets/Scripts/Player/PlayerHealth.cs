@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     private PlayerStats playerStats;
+    private GameLoot gameLoot;
 
     public const int maxFragmentAmount = 4;
     public event EventHandler onDamaged;
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         player = GameObject.FindWithTag("Player");
         anim = player.GetComponent<Animator>();
+        gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
     }
 
     private void Start()
@@ -59,6 +61,15 @@ public class PlayerHealth : MonoBehaviour
 
     public void Damage(int damageAmount)
     {
+        if (gameLoot.getLootByName(LootItems.Loot.AncientHelm).isActive)
+        {
+            int rand = UnityEngine.Random.Range(0, 101);
+            if (rand <= 20)
+            {
+                damageAmount = 0;
+            }
+        }
+
         for (int i = heartList.Count-1; i >= 0; i--)
         {
             Heart heart = heartList[i];//Current Heart
@@ -82,11 +93,18 @@ public class PlayerHealth : MonoBehaviour
 
         if (isDead())
         {
-            if (onDead != null) onDead(this, EventArgs.Empty);
-            Debug.Log("Dead");
-            anim.SetTrigger("Dead");
-            dead = true;
-
+            if (gameLoot.getLootByName(LootItems.Loot.LizardTailRelic).isActive)
+            {
+                Heal(playerStats.playerHearts * 4);
+                gameLoot.getLootByName(LootItems.Loot.LizardTailRelic).isActive = false;
+            }
+            else
+            {
+                if (onDead != null) onDead(this, EventArgs.Empty);
+                Debug.Log("Dead");
+                anim.SetTrigger("Dead");
+                dead = true;
+            }
         }
     }
 

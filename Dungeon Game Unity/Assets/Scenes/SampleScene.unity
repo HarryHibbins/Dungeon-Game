@@ -511,7 +511,7 @@ RectTransform:
   - {fileID: 1181960699}
   - {fileID: 1792880254}
   m_Father: {fileID: 695015336}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -21878,7 +21878,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: AssassinRelic
-    loot_name: 33
+    loot_name: 38
     loot_prefab: {fileID: 919132149155446097, guid: 35a68532e325bb04e966592d06102a7a, type: 3}
     loot_sprite: {fileID: 21300000, guid: 4a4102f283732874bb70e5a76c80594f, type: 3}
     loot_rarity: 5
@@ -21887,7 +21887,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: BetterBowRelic
-    loot_name: 34
+    loot_name: 39
     loot_prefab: {fileID: 919132149155446097, guid: d61e63badb328b944a5df78268622ee6, type: 3}
     loot_sprite: {fileID: 21300000, guid: 6ae2e974069b7ee48a7ce9086df1ae48, type: 3}
     loot_rarity: 3
@@ -21896,7 +21896,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: LizardTailRelic
-    loot_name: 35
+    loot_name: 40
     loot_prefab: {fileID: 919132149155446097, guid: 9ca55acc6e1744040847f09108e6c65f, type: 3}
     loot_sprite: {fileID: 21300000, guid: e0fb92011a858134a8c16b28e60154f2, type: 3}
     loot_rarity: 4
@@ -21905,7 +21905,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: LuckyDiceRelic
-    loot_name: 36
+    loot_name: 41
     loot_prefab: {fileID: 919132149155446097, guid: 1f193b2b9f5695849a9e4d830ba97bb6, type: 3}
     loot_sprite: {fileID: 21300000, guid: b569881021476a64798184bbde78daf8, type: 3}
     loot_rarity: 2
@@ -21914,7 +21914,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: AncientLamp
-    loot_name: 37
+    loot_name: 42
     loot_prefab: {fileID: 919132149155446097, guid: 57bbac7d3cc64bb4594f9ccff922e929, type: 3}
     loot_sprite: {fileID: 21300000, guid: 4b57b8ffd7c3c774d934b8dd11f21c55, type: 3}
     loot_rarity: 5
@@ -21923,7 +21923,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: MysticFeather
-    loot_name: 38
+    loot_name: 43
     loot_prefab: {fileID: 919132149155446097, guid: a2ee547d5eb18874fbb9943ce676bd58, type: 3}
     loot_sprite: {fileID: 21300000, guid: 3253495a528f8074886135304c22f84f, type: 3}
     loot_rarity: 4
@@ -21932,7 +21932,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: CartographerRelic
-    loot_name: 39
+    loot_name: 44
     loot_prefab: {fileID: 919132149155446097, guid: e7bf64ac1b3e76646b02a45317adf15a, type: 3}
     loot_sprite: {fileID: 21300000, guid: 577ebf507399b9d448ef724bed251d41, type: 3}
     loot_rarity: 3
@@ -21941,7 +21941,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: HestiasAmulet
-    loot_name: 40
+    loot_name: 45
     loot_prefab: {fileID: 919132149155446097, guid: ba05c94e02673ff4c83e26d23074d4c1, type: 3}
     loot_sprite: {fileID: 21300000, guid: 24fc43af280de6a4f843a9b7c4fdd0fb, type: 3}
     loot_rarity: 3
@@ -21950,7 +21950,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: AncientWood
-    loot_name: 41
+    loot_name: 46
     loot_prefab: {fileID: 919132149155446097, guid: 6cf47a4635170144da5b508f784b03b1, type: 3}
     loot_sprite: {fileID: 21300000, guid: 45a7c6bea0bb5c64db0be799bdaa91be, type: 3}
     loot_rarity: 2
@@ -21959,7 +21959,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: PrometheusChains
-    loot_name: 42
+    loot_name: 47
     loot_prefab: {fileID: 919132149155446097, guid: 3c02cee1e282d524bb96bf3e5c317d43, type: 3}
     loot_sprite: {fileID: 21300000, guid: 2f8f79ab00d09c048bf815eefab57284, type: 3}
     loot_rarity: 3
@@ -21968,7 +21968,7 @@ MonoBehaviour:
     isActive: 0
     isCollected: 0
   - element_name: LampOil
-    loot_name: 43
+    loot_name: 48
     loot_prefab: {fileID: 919132149155446097, guid: ffe30d260796c9b4b9180957d629edc4, type: 3}
     loot_sprite: {fileID: 21300000, guid: 912f38ae2ba7919409d6e79521d8eb0e, type: 3}
     loot_rarity: 2
@@ -38229,6 +38229,7 @@ MonoBehaviour:
   currentMoveSpeed: 0
   isMovingForSound: 0
   ps: {fileID: 514158844}
+  CameraPos: 0
   mousePos: {x: 0, y: 0, z: 0}
 --- !u!54 &2690677319519554181
 Rigidbody:
