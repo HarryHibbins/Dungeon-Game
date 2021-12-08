@@ -29,6 +29,8 @@ public class PlayerController: MonoBehaviour
     private PlayerHealth playerHealth;
     [SerializeField] private ParticleSystem ps;
 
+    public int CameraPos;
+
 
 
     public Vector3 mousePos;
@@ -58,8 +60,26 @@ public class PlayerController: MonoBehaviour
     void Update()
     {
         //Set movement values
-        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
-        
+        if (CameraPos == 0)
+        {
+            moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+        }
+
+        else if (CameraPos == 1)
+        {
+            moveInput = new Vector3(-Input.GetAxisRaw("Vertical"), 0f, Input.GetAxisRaw("Horizontal")).normalized;
+
+        }
+        else if (CameraPos == 2)
+        {
+            moveInput = new Vector3(-Input.GetAxisRaw("Horizontal"), 0f, -Input.GetAxisRaw("Vertical")).normalized;
+        }
+        else if (CameraPos == 3)
+        {
+            moveInput = new Vector3(Input.GetAxisRaw("Vertical"), 0f, -Input.GetAxisRaw("Horizontal")).normalized;
+
+        }
+
         moveVelocity = moveInput * currentMoveSpeed;
 
         if (moveInput.x != 0 || moveInput.z != 0)
@@ -151,9 +171,6 @@ public class PlayerController: MonoBehaviour
 
              switch (playerInventory.equippedArrow)
              {
-                   
-                 
-
                  case ArrowTypes.Arrows.Normal:
                  {
 

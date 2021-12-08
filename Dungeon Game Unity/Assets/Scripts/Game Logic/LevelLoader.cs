@@ -37,6 +37,7 @@ public class LevelLoader : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
+        //LoadNewLevel();
     }
 
     void Update()
