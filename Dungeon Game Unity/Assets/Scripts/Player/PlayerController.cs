@@ -92,7 +92,6 @@ public class PlayerController: MonoBehaviour
         }
         else
         {
-            playerInventory.equippedArrow++;
             ps.gameObject.SetActive(false);
         }
 
