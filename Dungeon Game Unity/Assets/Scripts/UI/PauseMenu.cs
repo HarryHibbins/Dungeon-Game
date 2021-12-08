@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public bool inPauseMenu = false;
     public bool inRelicMenu = false;
     public bool inSettingsMenu = false;
+    public bool inControlsMenu = false;
 
     private bool fadeStart = false;
 
@@ -17,6 +18,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pausePanel;
     public GameObject relicPanel;
     public GameObject settingsPanel;
+    public GameObject controlsPanel;
     public GameObject startPanel;
     public Text relicDesc;
 
@@ -50,7 +52,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        if (inPauseMenu || inRelicMenu || inSettingsMenu)
+        if (inPauseMenu || inRelicMenu || inSettingsMenu || inControlsMenu)
         {
             startPanel.SetActive(false);
             playerController.enabled = false;
@@ -79,12 +81,16 @@ public class PauseMenu : MonoBehaviour
             {
                 CloseSettingsMenu();
             }
+            else if (inControlsMenu)
+            {
+                CloseControlsMenu();
+            }
             else
             {
                 PauseGame();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Tab) && !inPauseMenu && !inSettingsMenu) 
+        if (Input.GetKeyDown(KeyCode.Tab) && !inPauseMenu && !inSettingsMenu && !inControlsMenu) 
         {
             if (!inRelicMenu)
             {
@@ -192,5 +198,21 @@ public class PauseMenu : MonoBehaviour
         
     }
 
-    
+    public void OpenControlsMenu()
+    {
+        FindObjectOfType<AudioManager>().Play("UIbutton");
+        inPauseMenu = false;
+        inControlsMenu = true;
+        pausePanel.SetActive(false);
+        controlsPanel.SetActive(true);
+    }
+
+    public void CloseControlsMenu()
+    {
+        FindObjectOfType<AudioManager>().Play("UIbutton");
+        inPauseMenu = true;
+        inControlsMenu = false;
+        pausePanel.SetActive(true);
+        controlsPanel.SetActive(false);
+    }
 }

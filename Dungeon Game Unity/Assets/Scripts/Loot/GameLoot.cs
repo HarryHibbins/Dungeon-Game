@@ -70,7 +70,6 @@ public class GameLoot : MonoBehaviour
         }
         helmet.SetActive(false);
         visor.SetActive(false);
-        
     }
 
     private void Update()

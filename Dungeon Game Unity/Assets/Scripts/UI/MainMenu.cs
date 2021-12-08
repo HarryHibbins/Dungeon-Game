@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public GameObject fadePanel;
+    public GameObject controlsPanel;
     private bool fadeout = false;
+    private bool inControlsMenu = false;
 
     public void PlayGame()
     {
@@ -15,6 +17,12 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Play");
         fadePanel.SetActive(true);
         fadeout = true;
+    }
+
+    public void OpenControls()
+    {
+        controlsPanel.SetActive(true);
+        inControlsMenu = true;
     }
 
     private void Start()
@@ -38,6 +46,16 @@ public class MainMenu : MonoBehaviour
                 fadeout = false;
                 SceneManager.LoadScene(1);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (inControlsMenu)
+            {
+                controlsPanel.SetActive(false);
+                inControlsMenu = false;
+            }
+            
         }
     }
 }

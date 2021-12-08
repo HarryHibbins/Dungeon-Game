@@ -55,6 +55,7 @@ public class RoomTemplates : MonoBehaviour
         {
             GameObject boss_room = Instantiate(bossRoom, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
             Destroy(rooms[rooms.Count - 1]);
+
             rooms[rooms.Count - 1].GetComponent<AddRoom>().isBossRoom = true;
             rooms[rooms.Count - 1].name = "Boss Room";
 
