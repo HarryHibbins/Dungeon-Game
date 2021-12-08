@@ -9,6 +9,7 @@ public class LevelLoader : MonoBehaviour
     public GameObject startRoom;
     public RoomTemplates templates;
     private GameObject player;
+    private GameObject entryRoomCam;
     private CameraPosition camposscript;
     private PauseMenu pauseMenu;
 
@@ -32,6 +33,8 @@ public class LevelLoader : MonoBehaviour
     private LootItems choice_two;
     private LootItems choice_three;
 
+    private Transform camTrans;
+
     private void Awake()
     {
         cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
@@ -39,6 +42,12 @@ public class LevelLoader : MonoBehaviour
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         pauseMenu = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>();
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+
+    }
+
+    private void Start()
+    {
+        camTrans = cameraTransform;
     }
 
     void Update()
@@ -161,15 +170,21 @@ public class LevelLoader : MonoBehaviour
         startRoom.GetComponentInChildren<RoomSpawner>().waitTime = 4;
         player.transform.position = StartRoom.transform.position;
 
+        /*List<GameObject> newlist;
         foreach (Transform child in StartRoom.transform)
         {
-            if (child.tag == "Camera Position")
+            if (child.tag == "CameraPositions")
             {
-                startRoomCamPos = child;
+                startRoomCamPos = child.GetChild(0).transform;
             }
-        }
+        }*/
 
-        cameraTransform.position = startRoomCamPos.position;
+
+        cameraTransform = camTrans;
+        /*Quaternion temp = cameraTransform.rotation;
+        temp.y = 0;
+        temp.x = 54;
+        cameraTransform.rotation = temp;*/
         camposscript = StartRoom.GetComponentInChildren<CameraPosition>();
         camposscript.inRoom = true;
     }
