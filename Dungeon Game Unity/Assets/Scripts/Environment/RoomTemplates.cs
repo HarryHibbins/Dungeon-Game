@@ -55,11 +55,12 @@ public class RoomTemplates : MonoBehaviour
         {
             GameObject boss_room = Instantiate(bossRoom, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
             Destroy(rooms[rooms.Count - 1]);
+
             rooms[rooms.Count - 1].GetComponent<AddRoom>().isBossRoom = true;
             rooms[rooms.Count - 1].name = "Boss Room";
+            boss_room.name = "Boss Room";
 
-
-            int rand = UnityEngine.Random.Range(0, bosses.Count+1);
+            int rand = UnityEngine.Random.Range(0, bosses.Count-1);
             boss = Instantiate(bosses[rand], rooms[rooms.Count-1].transform.position, Quaternion.identity);
             //boss = GameObject.FindGameObjectWithTag("Boss");
             boss.SetActive(false);

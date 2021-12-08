@@ -7,13 +7,22 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public GameObject fadePanel;
+    public GameObject controlsPanel;
     private bool fadeout = false;
+    private bool inControlsMenu = false;
 
     public void PlayGame()
     {
+        FindObjectOfType<AudioManager>().Play("Trapdoor");
         Debug.Log("Play");
         fadePanel.SetActive(true);
         fadeout = true;
+    }
+
+    public void OpenControls()
+    {
+        controlsPanel.SetActive(true);
+        inControlsMenu = true;
     }
 
     private void Start()
@@ -28,6 +37,7 @@ public class MainMenu : MonoBehaviour
     {
         if (fadeout)
         {
+            FindObjectOfType<AudioManager>().Play("Background");
             Color panelcol = fadePanel.GetComponent<Image>().color;
             panelcol.a += (Time.deltaTime);
             fadePanel.GetComponent<Image>().color = panelcol;
@@ -36,6 +46,16 @@ public class MainMenu : MonoBehaviour
                 fadeout = false;
                 SceneManager.LoadScene(1);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (inControlsMenu)
+            {
+                controlsPanel.SetActive(false);
+                inControlsMenu = false;
+            }
+            
         }
     }
 }

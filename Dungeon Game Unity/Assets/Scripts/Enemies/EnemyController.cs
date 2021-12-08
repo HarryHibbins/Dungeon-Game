@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     public bool alive;
     private PlayerStats playerStats;
     private GameLoot gameLoot;
+    private LevelLoader levelLoader;
 
     public GameObject firePS;
     public GameObject icePS;
@@ -30,10 +31,14 @@ public class EnemyController : MonoBehaviour
 
     public bool onFire;
     public bool onIce;
+
+    private bool showLoot = false;
+
     private void Awake()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
+        levelLoader = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LevelLoader>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         alive = true;
@@ -73,9 +78,14 @@ public class EnemyController : MonoBehaviour
             agent.speed = 0;
 
             StartCoroutine(OnCompleteAnimation());
-
-
         }
+
+        if (this.tag == "Boss" && health <= 0 && !showLoot)
+        {
+            showLoot = true;
+            levelLoader.ShowBossLoot();
+        }
+
         IEnumerator OnCompleteAnimation()
         {
             yield return new WaitForSeconds(1);

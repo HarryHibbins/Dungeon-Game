@@ -45,6 +45,7 @@ public class GameLoot : MonoBehaviour
     private GameObject warbannerps;
     private bool isPSPlaying = false;
 
+    private int armourNum = 0;
     
     private void Awake()
     {
@@ -70,7 +71,6 @@ public class GameLoot : MonoBehaviour
         }
         helmet.SetActive(false);
         visor.SetActive(false);
-        
     }
 
     private void Update()
@@ -566,42 +566,69 @@ public class GameLoot : MonoBehaviour
         }
         else if (loot == LootItems.Loot.CommonArmour)
         {
-            helmet.SetActive(true);
-            armourMat[0] = armourMats[0];
+            if (armourNum < (int)loot)
+            {
+                helmet.SetActive(true);
+                armourMat[0] = armourMats[0];
             
-            helmet.GetComponent<MeshRenderer>().materials = armourMat;
-            visor.GetComponent<MeshRenderer>().materials = armourMat;
-            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+                helmet.GetComponent<MeshRenderer>().materials = armourMat;
+                visor.GetComponent<MeshRenderer>().materials = armourMat;
+                chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+                armourNum = (int)loot;
+            }
         }
         else if (loot == LootItems.Loot.UncommonArmour)
         {
-            visor.SetActive(true);
-            armourMat[0] = armourMats[1];
-           
-            helmet.GetComponent<MeshRenderer>().materials = armourMat;
-            visor.GetComponent<MeshRenderer>().materials = armourMat;
-            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+            if (armourNum < (int)loot)
+            {
+                helmet.SetActive(true);
+                visor.SetActive(true);
+                armourMat[0] = armourMats[1];
+
+                helmet.GetComponent<MeshRenderer>().materials = armourMat;
+                visor.GetComponent<MeshRenderer>().materials = armourMat;
+                chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+                armourNum = (int)loot;
+            }
         }
         else if (loot == LootItems.Loot.RareArmour)
         {
-            armourMat[0] = armourMats[2];
-            helmet.GetComponent<MeshRenderer>().materials = armourMat;
-            visor.GetComponent<MeshRenderer>().materials = armourMat;
-            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+            if (armourNum < (int)loot)
+            {
+                armourMat[0] = armourMats[2];
+                helmet.SetActive(true);
+                visor.SetActive(true);
+                helmet.GetComponent<MeshRenderer>().materials = armourMat;
+                visor.GetComponent<MeshRenderer>().materials = armourMat;
+                chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+                armourNum = (int)loot;
+            }
         }
         else if (loot == LootItems.Loot.EpicArmour)
         {
-            armourMat[0] = armourMats[3];
-            helmet.GetComponent<MeshRenderer>().materials = armourMat;
-            visor.GetComponent<MeshRenderer>().materials = armourMat;
-            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+            if (armourNum < (int)loot)
+            {
+                armourMat[0] = armourMats[3];
+                helmet.SetActive(true);
+                visor.SetActive(true);
+                helmet.GetComponent<MeshRenderer>().materials = armourMat;
+                visor.GetComponent<MeshRenderer>().materials = armourMat;
+                chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+                armourNum = (int)loot;
+            }
         }
         else if (loot == LootItems.Loot.LegendaryArmour)
         {
-            armourMat[0] = armourMats[4];
-            helmet.GetComponent<MeshRenderer>().materials = armourMat;
-            visor.GetComponent<MeshRenderer>().materials = armourMat;
-            chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+            if (armourNum < (int)loot)
+            {
+                armourMat[0] = armourMats[4];
+                helmet.SetActive(true);
+                visor.SetActive(true);
+                helmet.GetComponent<MeshRenderer>().materials = armourMat;
+                visor.GetComponent<MeshRenderer>().materials = armourMat;
+                chestPlate.GetComponent<MeshRenderer>().materials = armourMat;
+                armourNum = (int)loot;
+            }
         }
         else if (loot == LootItems.Loot.WarbannerRelic)
         {
