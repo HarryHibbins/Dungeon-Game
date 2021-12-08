@@ -21,6 +21,7 @@ public class EnemyController : MonoBehaviour
     private PlayerStats playerStats;
     private GameLoot gameLoot;
     private LevelLoader levelLoader;
+    private GameObject player;
 
     public GameObject firePS;
     public GameObject icePS;
@@ -36,6 +37,7 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         playerStats = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerStats>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
         levelLoader = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LevelLoader>();
@@ -60,6 +62,11 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        if (this.tag == "Boss")
+        {
+            this.transform.LookAt(player.transform.position);
+        }
+
         if (alive && hit)
         {
             FindObjectOfType<AudioManager>().Play("Enemydamage");

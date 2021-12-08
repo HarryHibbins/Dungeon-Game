@@ -129,7 +129,7 @@ public class CameraPosition : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && inRoom && !moveCamera)
+        if (Input.GetKeyDown(KeyCode.E) && inRoom && !moveCamera)
         {
             Debug.Log("Rotate camera");
             if (playerController.CameraPos <= 2)
@@ -147,7 +147,7 @@ public class CameraPosition : MonoBehaviour
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.Alpha1) && inRoom && !moveCamera)
+        else if (Input.GetKeyDown(KeyCode.Q) && inRoom && !moveCamera)
         {
             Debug.Log("Rotate camera");
             if (playerController.CameraPos >= 1)

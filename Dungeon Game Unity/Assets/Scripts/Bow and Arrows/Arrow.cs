@@ -198,7 +198,7 @@ public class Arrow : MonoBehaviour
             }
             else
             {
-                FindObjectOfType<AudioManager>().Play("Arrowimpact");
+                //FindObjectOfType<AudioManager>().Play("Arrowimpact");
             }
         }
         //If the arrow has hit the environment, and the player walks over it, 50% chance to pick it up, destroy gameobject. 

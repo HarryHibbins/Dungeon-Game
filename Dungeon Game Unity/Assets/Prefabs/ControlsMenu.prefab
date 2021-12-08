@@ -1316,7 +1316,7 @@ GameObject:
   - component: {fileID: 1412684474379060137}
   - component: {fileID: 90733121603177564}
   m_Layer: 5
-  m_Name: EKeyImage
+  m_Name: FEKeyImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1369,7 +1369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e64abb0143b3e6348af939470a7a1a34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8229f5188b02ebd4a9b508cd014445c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
