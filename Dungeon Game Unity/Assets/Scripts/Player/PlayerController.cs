@@ -92,6 +92,7 @@ public class PlayerController: MonoBehaviour
         }
         else
         {
+            playerInventory.equippedArrow++;
             ps.gameObject.SetActive(false);
         }
 
@@ -147,65 +148,42 @@ public class PlayerController: MonoBehaviour
                     ps = child.GetComponent<ParticleSystem>();
                 }
             }
-
-
+            
              switch (playerInventory.equippedArrow)
              {
-                   
-                 
-
                  case ArrowTypes.Arrows.Normal:
                  {
-
-
                      var col = ps.colorOverLifetime;
                      col.enabled = true;
                      col.color = new Color(255, 255, 255, 100);
-
-
                      break;
                  }
                  case ArrowTypes.Arrows.Fire:
                  {
-
-
                      var col = ps.colorOverLifetime;
                      col.enabled = true;
                      col.color = new Color(255, 0, 0, 100);
-
                      break;
                  }
                  case ArrowTypes.Arrows.Ice:
                  {
-
-
                      var col = ps.colorOverLifetime;
                      col.enabled = true;
                      col.color = new Color(0, 255, 255, 100);
-
-
                      break;
                  }
                  case ArrowTypes.Arrows.Explosive:
                  {
-
-
                      var col = ps.colorOverLifetime;
                      col.enabled = true;
                      col.color = new Color(255, 255, 0, 100);
-
                      break;
                  }
                  case ArrowTypes.Arrows.Speed:
                  {
-
-
                      var col = ps.colorOverLifetime;
                      col.enabled = true;
                      col.color = new Color(0, 255, 0, 100);
-
-
-
                      break;
                  }
              }
