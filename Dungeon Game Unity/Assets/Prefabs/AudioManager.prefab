@@ -87,7 +87,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Enemydamage
-    clip: {fileID: 8300000, guid: 4641f4216a5d7134d8b7148f4f180363, type: 3}
+    clip: {fileID: 8300000, guid: 1626b3ddfd683ac4b8e0950297c950e0, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
