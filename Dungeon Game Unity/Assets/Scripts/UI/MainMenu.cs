@@ -14,7 +14,6 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         FindObjectOfType<AudioManager>().Play("Trapdoor");
-        Debug.Log("Play");
         fadePanel.SetActive(true);
         fadeout = true;
     }
@@ -30,7 +29,6 @@ public class MainMenu : MonoBehaviour
         fadeout = false;
         inControlsMenu = false;
         fadePanel.SetActive(false);
-        Debug.Log("Now");
         Color panelcol = fadePanel.GetComponent<Image>().color;
         panelcol.a = 0;
         fadePanel.GetComponent<Image>().color = panelcol;

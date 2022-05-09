@@ -174,7 +174,6 @@ public class Arrow : MonoBehaviour
                 {
                     FindObjectOfType<AudioManager>().Play("Explosion");
                     c.GetComponent<EnemyController>().health -= playerStats.ArrowDamage_Explosive;
-                    Debug.Log("Enemy HIT");
                 }
             }
             hasExploded = true;
@@ -188,7 +187,6 @@ public class Arrow : MonoBehaviour
         //If enemy is hit by the arrow round the damage value from the arrow worked out with the multiplier 
         if (other.gameObject.layer == LayerMask.NameToLayer("Environment") && hasBeanFried)
         {
-            Debug.Log("HIT Environment");
             move = false;
             hasLanded = true;
             if (selectedArrow == ArrowTypes.Arrows.Explosive)

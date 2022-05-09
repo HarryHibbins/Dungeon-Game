@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyAttacks : MonoBehaviour
@@ -21,17 +20,28 @@ public class EnemyAttacks : MonoBehaviour
     
     private PlayerHealth playerHealth;
     
-    private Animator anim;
+    public Animator anim;
 
     public Orb orb; 
     private bool inMeleeAttack;
 
     private bool inSwordHitBox;
+    public GameObject objectForMeleeAnim;
 
     private void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        anim = GetComponent<Animator>();
+
+        if (attackType == AttackType.melee)
+        {
+            anim = objectForMeleeAnim.GetComponent<Animator>();
+        }
+        else
+        {
+            anim = GetComponent<Animator>();
+        }
+        
+
     }
 
     public void Attack()
@@ -77,9 +87,10 @@ public class EnemyAttacks : MonoBehaviour
         if (attackType == AttackType.melee)
         {
          
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Sword_Attack"))
             {
                 inMeleeAttack = true;
+                Debug.Log("IN MELEE ATTACK");
             }
             else
             {
@@ -107,6 +118,8 @@ public class EnemyAttacks : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inSwordHitBox = true;
+            Debug.Log("IN SWORD HIT BOX");
+            Debug.Log("ANIM STATE: "+ anim.GetCurrentAnimatorStateInfo(0).IsName("Sword_Attack"));
         }
     }
 

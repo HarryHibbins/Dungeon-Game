@@ -27,6 +27,7 @@ public class PlayerController: MonoBehaviour
     private PlayerStats playerStats;
 
     private PlayerHealth playerHealth;
+    
     [SerializeField] private ParticleSystem ps;
 
     public int CameraPos;
@@ -42,7 +43,10 @@ public class PlayerController: MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         playerInventory = GetComponent<PlayerInventory>();
+       
         playerHealth = GetComponent<PlayerHealth>();
+ 
+        
 
         bow = GameObject.FindGameObjectWithTag("Bow").GetComponent<Bow>();
 

@@ -606,6 +606,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
+  enemyAttack: {fileID: 4381012945447391225}
   walkPoint: {x: 0, y: 0, z: 0}
   canSee: 0
   playerInSightRange: 0
@@ -651,6 +652,8 @@ MonoBehaviour:
   icePS: {fileID: 5020449609901880840, guid: c39839a216fdde044bd99dd9a81a2f53, type: 3}
   bleedPS: {fileID: 1313271750565757734, guid: 705c2affc87157b4fbc0e3a35118da1c, type: 3}
   effectSpawn: {fileID: 0}
+  onFire: 0
+  onIce: 0
 --- !u!114 &4381012945447391225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,7 +671,9 @@ MonoBehaviour:
   timeBetweenAttacks: 3
   sightRange: 12
   attackRange: 8
+  anim: {fileID: 0}
   orb: {fileID: 3820640154664546967, guid: f66bc525fab653846941a29bb53d1a3a, type: 3}
+  objectForMeleeAnim: {fileID: 0}
 --- !u!1 &5636007088544805308
 GameObject:
   m_ObjectHideFlags: 0

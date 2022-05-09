@@ -306,7 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 1645474467}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &19974554
 Transform:
   m_ObjectHideFlags: 19
@@ -21440,10 +21439,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce8fb4bfee3deb46b1750874c5f1dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHearts: 5
+  playerHearts: 3
   PM_BaseSpeed: 5
   PM_DrawSpeed: 3
-  PI_MaxNormalArrows: 20
+  PI_MaxNormalArrows: 50
   PI_MaxFireArrows: 5
   PI_MaxIceArrows: 5
   PI_MaxExplosiveArrows: 5
@@ -37286,6 +37285,7 @@ MonoBehaviour:
   heart2Sprite: {fileID: 21300000, guid: 3dddd179d32c9264788ff0acda0d4c2e, type: 3}
   heart1Sprite: {fileID: 21300000, guid: b69f5b0c7e51eb541b3581c6db9ddb38, type: 3}
   heart0Sprite: {fileID: 21300000, guid: fbfab76c2a3ad104d9b42c6b4166fbb2, type: 3}
+  playerHealth: {fileID: 0}
 --- !u!1 &2058666766
 GameObject:
   m_ObjectHideFlags: 0

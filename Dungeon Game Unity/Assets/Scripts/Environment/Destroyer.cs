@@ -17,7 +17,6 @@ public class Destroyer : MonoBehaviour
         {
             roomTemplates.rooms.Remove(other.gameObject);
             Destroy(other.gameObject);
-            Debug.Log("DESTROYED");
         }
         
     }

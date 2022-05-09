@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,22 +16,19 @@ public class HeartsUI : MonoBehaviour
     
     private List<HeartImage> heartImageList;
     private GameObject playerObj;
-    private PlayerHealth playerHealth;
+    [SerializeField] private PlayerHealth playerHealth;
     
     
 
-    private void Awake()
+    private void Start()
     {
         heartImageList = new List<HeartImage>();
         playerObj = GameObject.FindGameObjectWithTag("Player");
         playerHealth = playerObj.GetComponent<PlayerHealth>();
-    }
-
-
-    void Start()
-    {
         setPlayerHearts();
     }
+
+
 
     public void UpdateHearts (int amount)
     {
@@ -46,6 +44,7 @@ public class HeartsUI : MonoBehaviour
 
     public void setPlayerHearts( )
     {
+        
         List<PlayerHealth.Heart> heartList = playerHealth.getHeartList();
         Vector2 heartAnchorPos = new Vector2(0, 0);
         for (int i = 0; i < heartList.Count; i++)

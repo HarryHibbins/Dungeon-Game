@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Networking.PlayerConnection;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -25,17 +24,14 @@ public class PlayerHealth : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         anim = player.GetComponent<Animator>();
         gameLoot = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameLoot>();
-    }
-
-    private void Start()
-    {
+        
         for (int i = 0; i < playerStats.playerHearts; i++)
         {
             Heart newHeart = new Heart(4);
             heartList.Add(newHeart);
         }
-        
     }
+
 
     public void UpdateHearts (int amount)
     {

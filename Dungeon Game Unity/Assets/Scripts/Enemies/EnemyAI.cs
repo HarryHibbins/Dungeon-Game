@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
 
     private Rigidbody rb;
 
-    private EnemyAttacks enemyAttack;
+    public EnemyAttacks enemyAttack;
 
     private EnemyController EnemyController;
     
@@ -38,7 +38,6 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
-        enemyAttack = GetComponent<EnemyAttacks>();
         timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
         walkPointRange = enemyAttack.walkPointRange;
         sightRange = enemyAttack.sightRange;

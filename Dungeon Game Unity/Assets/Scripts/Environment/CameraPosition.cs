@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Networking.PlayerConnection;
 using UnityEngine;
 
 public class CameraPosition : MonoBehaviour
@@ -179,14 +178,12 @@ public class CameraPosition : MonoBehaviour
                 moveCamera= true;
                 StartCoroutine(stopRotating());
                 inRoom = true;
-                Debug.Log("Enter room");
                 /*var main = fog.main;
                 var sz = fog.sizeOverLifetime;
                 sz.enabled = true;
                 fog.Stop();*/
                 if (room.name == "Boss Room")
                 {
-                    Debug.Log("IN BOSS ROOM1");
                     templates.boss.SetActive(true);
                     
                 }
@@ -216,7 +213,6 @@ public class CameraPosition : MonoBehaviour
             {
                 moveCamera = false;
                 inRoom = false;
-                Debug.Log("Exit room");
 
                 foreach (Transform child in transform.parent)
                 {
