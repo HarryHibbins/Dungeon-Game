@@ -1761,10 +1761,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f2122d43f15884cb66a317b264984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
+  moveCamera: 0
   inRoom: 0
   FOW_Ceiling: {fileID: 769294617202391988}
   hasVisited: 0
-  cameraPositions: []
+  cameraPositions:
+  - {fileID: 9077093801821213771}
+  - {fileID: 576592007746878567}
+  - {fileID: 2254946257104604646}
+  - {fileID: 3917492165057032014}
 --- !u!65 &4806932889505472632
 BoxCollider:
   m_ObjectHideFlags: 0
