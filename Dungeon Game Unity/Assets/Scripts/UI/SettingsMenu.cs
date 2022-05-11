@@ -14,6 +14,7 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
+        directionalLight.intensity = PlayerPrefs.GetFloat("Lighting");
         lightingSlider.value = directionalLight.intensity;
         volumeSlider.value = AudioListener.volume * 5;
     }
@@ -25,6 +26,14 @@ public class SettingsMenu : MonoBehaviour
 
         AudioListener.volume = volumeSlider.value / 5;
         volumeValueText.text = volumeSlider.value.ToString();
+
+        
     }
 
+
+    public void OnChanged()
+    {
+        PlayerPrefs.SetFloat("Lighting", lightingSlider.value);
+        directionalLight.intensity = PlayerPrefs.GetFloat("Lighting");
+    }
 }
